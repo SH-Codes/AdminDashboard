@@ -54,7 +54,11 @@
 
         private void viewMembersButton_Click(object sender, EventArgs e)
         {
-            
+            switchPanel.Controls.Clear();
+            ViewMembersForm ViewMembers = new ViewMembersForm();
+            ViewMembers.TopLevel = false;
+            switchPanel.Controls.Add(ViewMembers);
+            ViewMembers.Show();
         }
 
         private void addMembersButton_Click(object sender, EventArgs e)

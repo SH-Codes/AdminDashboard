@@ -60,7 +60,7 @@
             mainPanel.Controls.Add(containerPanel);
             mainPanel.Location = new Point(0, -2);
             mainPanel.Name = "mainPanel";
-            mainPanel.Size = new Size(1284, 732);
+            mainPanel.Size = new Size(1350, 730);
             mainPanel.TabIndex = 0;
             // 
             // timeDisplayLabel
@@ -84,9 +84,9 @@
             logoutButton.ForeColor = Color.White;
             logoutButton.Image = (Image)resources.GetObject("logoutButton.Image");
             logoutButton.ImageAlign = ContentAlignment.MiddleLeft;
-            logoutButton.Location = new Point(2, 661);
+            logoutButton.Location = new Point(0, 659);
             logoutButton.Name = "logoutButton";
-            logoutButton.Size = new Size(227, 45);
+            logoutButton.Size = new Size(229, 45);
             logoutButton.TabIndex = 4;
             logoutButton.Text = "Logout";
             logoutButton.UseVisualStyleBackColor = true;
@@ -102,9 +102,9 @@
             settingsButton.ForeColor = Color.White;
             settingsButton.Image = (Image)resources.GetObject("settingsButton.Image");
             settingsButton.ImageAlign = ContentAlignment.MiddleLeft;
-            settingsButton.Location = new Point(3, 587);
+            settingsButton.Location = new Point(0, 585);
             settingsButton.Name = "settingsButton";
-            settingsButton.Size = new Size(226, 45);
+            settingsButton.Size = new Size(229, 45);
             settingsButton.TabIndex = 3;
             settingsButton.Text = "Settings";
             settingsButton.UseVisualStyleBackColor = true;
@@ -121,9 +121,9 @@
             reportsButton.ForeColor = Color.White;
             reportsButton.Image = (Image)resources.GetObject("reportsButton.Image");
             reportsButton.ImageAlign = ContentAlignment.MiddleLeft;
-            reportsButton.Location = new Point(3, 394);
+            reportsButton.Location = new Point(0, 392);
             reportsButton.Name = "reportsButton";
-            reportsButton.Size = new Size(226, 45);
+            reportsButton.Size = new Size(229, 45);
             reportsButton.TabIndex = 2;
             reportsButton.Text = "Reports";
             reportsButton.UseVisualStyleBackColor = false;
@@ -140,9 +140,9 @@
             financesButton.ForeColor = Color.White;
             financesButton.Image = (Image)resources.GetObject("financesButton.Image");
             financesButton.ImageAlign = ContentAlignment.MiddleLeft;
-            financesButton.Location = new Point(3, 322);
+            financesButton.Location = new Point(0, 320);
             financesButton.Name = "financesButton";
-            financesButton.Size = new Size(226, 45);
+            financesButton.Size = new Size(229, 45);
             financesButton.TabIndex = 1;
             financesButton.Text = "Finances";
             financesButton.UseVisualStyleBackColor = false;
@@ -160,9 +160,9 @@
             dashboardButton.ForeColor = Color.White;
             dashboardButton.Image = (Image)resources.GetObject("dashboardButton.Image");
             dashboardButton.ImageAlign = ContentAlignment.MiddleLeft;
-            dashboardButton.Location = new Point(2, 249);
+            dashboardButton.Location = new Point(0, 247);
             dashboardButton.Name = "dashboardButton";
-            dashboardButton.Size = new Size(227, 45);
+            dashboardButton.Size = new Size(229, 45);
             dashboardButton.TabIndex = 0;
             dashboardButton.Text = "Dashboard";
             dashboardButton.UseVisualStyleBackColor = false;
@@ -180,7 +180,7 @@
             containerPanel.Controls.Add(viewMembersButton);
             containerPanel.Location = new Point(229, 85);
             containerPanel.Name = "containerPanel";
-            containerPanel.Size = new Size(1032, 621);
+            containerPanel.Size = new Size(1098, 619);
             containerPanel.TabIndex = 0;
             // 
             // switchPanel
@@ -189,7 +189,7 @@
             switchPanel.BackColor = Color.White;
             switchPanel.Location = new Point(24, 81);
             switchPanel.Name = "switchPanel";
-            switchPanel.Size = new Size(978, 511);
+            switchPanel.Size = new Size(1052, 513);
             switchPanel.TabIndex = 5;
             switchPanel.Paint += switchPanel_Paint;
             // 
@@ -203,7 +203,7 @@
             button1.FlatAppearance.MouseDownBackColor = Color.Snow;
             button1.FlatAppearance.MouseOverBackColor = Color.Snow;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(974, 26);
+            button1.Location = new Point(1040, 26);
             button1.Name = "button1";
             button1.Size = new Size(25, 25);
             button1.TabIndex = 4;
@@ -218,7 +218,7 @@
             searchbarTextBox.Location = new Point(584, 25);
             searchbarTextBox.Name = "searchbarTextBox";
             searchbarTextBox.PlaceholderText = "  Search by keyword (eg. Name or Member ID)";
-            searchbarTextBox.Size = new Size(418, 27);
+            searchbarTextBox.Size = new Size(484, 27);
             searchbarTextBox.TabIndex = 3;
             // 
             // bookingsButton
@@ -258,10 +258,13 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1284, 729);
+            ClientSize = new Size(1350, 727);
             Controls.Add(mainPanel);
+            MaximumSize = new Size(1920, 1080);
+            MinimumSize = new Size(1024, 766);
             Name = "MainForm";
             Text = "Admin System";
+            WindowState = FormWindowState.Maximized;
             mainPanel.ResumeLayout(false);
             mainPanel.PerformLayout();
             containerPanel.ResumeLayout(false);

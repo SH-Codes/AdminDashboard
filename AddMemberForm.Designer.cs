@@ -46,7 +46,7 @@
             memberEmploymentLabel = new Label();
             memberEmploymentStatusComboBox = new ComboBox();
             membershipSatusLabel = new Label();
-            comboBox1 = new ComboBox();
+            memberStatusComboBox = new ComboBox();
             memberOccupationLabel = new Label();
             memberOccupationtextBox = new TextBox();
             memberPhoneNumbertextBox = new TextBox();
@@ -69,7 +69,7 @@
             memberDeleteButton = new Button();
             veiwFileButton = new Button();
             makePaymentButton = new Button();
-            button7 = new Button();
+            memberNextButton = new Button();
             SuspendLayout();
             // 
             // memebrFirstNameTextBox
@@ -228,28 +228,31 @@
             // 
             // membershipSatusLabel
             // 
+            membershipSatusLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             membershipSatusLabel.AutoSize = true;
             membershipSatusLabel.Font = new Font("Segoe UI", 11F);
-            membershipSatusLabel.Location = new Point(625, 44);
+            membershipSatusLabel.Location = new Point(699, 44);
             membershipSatusLabel.Name = "membershipSatusLabel";
             membershipSatusLabel.Size = new Size(139, 20);
             membershipSatusLabel.TabIndex = 24;
             membershipSatusLabel.Text = "Membership Status:";
             // 
-            // comboBox1
+            // memberStatusComboBox
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "", "Male", "Female" });
-            comboBox1.Location = new Point(770, 44);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(175, 23);
-            comboBox1.TabIndex = 25;
+            memberStatusComboBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            memberStatusComboBox.FormattingEnabled = true;
+            memberStatusComboBox.Items.AddRange(new object[] { "", "Active", "Inactive", "Deceased" });
+            memberStatusComboBox.Location = new Point(844, 44);
+            memberStatusComboBox.Name = "memberStatusComboBox";
+            memberStatusComboBox.Size = new Size(175, 23);
+            memberStatusComboBox.TabIndex = 25;
             // 
             // memberOccupationLabel
             // 
+            memberOccupationLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             memberOccupationLabel.AutoSize = true;
             memberOccupationLabel.Font = new Font("Segoe UI", 11F);
-            memberOccupationLabel.Location = new Point(459, 101);
+            memberOccupationLabel.Location = new Point(529, 101);
             memberOccupationLabel.Name = "memberOccupationLabel";
             memberOccupationLabel.Size = new Size(88, 20);
             memberOccupationLabel.TabIndex = 26;
@@ -257,7 +260,8 @@
             // 
             // memberOccupationtextBox
             // 
-            memberOccupationtextBox.Location = new Point(579, 100);
+            memberOccupationtextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            memberOccupationtextBox.Location = new Point(649, 100);
             memberOccupationtextBox.Name = "memberOccupationtextBox";
             memberOccupationtextBox.Size = new Size(225, 23);
             memberOccupationtextBox.TabIndex = 27;
@@ -265,16 +269,18 @@
             // 
             // memberPhoneNumbertextBox
             // 
-            memberPhoneNumbertextBox.Location = new Point(579, 141);
+            memberPhoneNumbertextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            memberPhoneNumbertextBox.Location = new Point(649, 141);
             memberPhoneNumbertextBox.Name = "memberPhoneNumbertextBox";
             memberPhoneNumbertextBox.Size = new Size(225, 23);
             memberPhoneNumbertextBox.TabIndex = 28;
             // 
             // memberPhoneNumberLabel
             // 
+            memberPhoneNumberLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             memberPhoneNumberLabel.AutoSize = true;
             memberPhoneNumberLabel.Font = new Font("Segoe UI", 11F);
-            memberPhoneNumberLabel.Location = new Point(459, 142);
+            memberPhoneNumberLabel.Location = new Point(529, 142);
             memberPhoneNumberLabel.Name = "memberPhoneNumberLabel";
             memberPhoneNumberLabel.Size = new Size(111, 20);
             memberPhoneNumberLabel.TabIndex = 29;
@@ -282,7 +288,8 @@
             // 
             // memberMobileNumberTextBox
             // 
-            memberMobileNumberTextBox.Location = new Point(579, 188);
+            memberMobileNumberTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            memberMobileNumberTextBox.Location = new Point(649, 188);
             memberMobileNumberTextBox.Name = "memberMobileNumberTextBox";
             memberMobileNumberTextBox.Size = new Size(225, 23);
             memberMobileNumberTextBox.TabIndex = 30;
@@ -290,9 +297,10 @@
             // 
             // memberMobileNumberLabel
             // 
+            memberMobileNumberLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             memberMobileNumberLabel.AutoSize = true;
             memberMobileNumberLabel.Font = new Font("Segoe UI", 11F);
-            memberMobileNumberLabel.Location = new Point(459, 189);
+            memberMobileNumberLabel.Location = new Point(529, 189);
             memberMobileNumberLabel.Name = "memberMobileNumberLabel";
             memberMobileNumberLabel.Size = new Size(117, 20);
             memberMobileNumberLabel.TabIndex = 31;
@@ -300,16 +308,18 @@
             // 
             // memberEmailAddressTextBox
             // 
-            memberEmailAddressTextBox.Location = new Point(579, 238);
+            memberEmailAddressTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            memberEmailAddressTextBox.Location = new Point(649, 238);
             memberEmailAddressTextBox.Name = "memberEmailAddressTextBox";
             memberEmailAddressTextBox.Size = new Size(225, 23);
             memberEmailAddressTextBox.TabIndex = 32;
             // 
             // memberEmailAddressLabel
             // 
+            memberEmailAddressLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             memberEmailAddressLabel.AutoSize = true;
             memberEmailAddressLabel.Font = new Font("Segoe UI", 11F);
-            memberEmailAddressLabel.Location = new Point(464, 239);
+            memberEmailAddressLabel.Location = new Point(534, 239);
             memberEmailAddressLabel.Name = "memberEmailAddressLabel";
             memberEmailAddressLabel.Size = new Size(106, 20);
             memberEmailAddressLabel.TabIndex = 33;
@@ -317,16 +327,18 @@
             // 
             // addressLine1TextBox
             // 
-            addressLine1TextBox.Location = new Point(579, 286);
+            addressLine1TextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            addressLine1TextBox.Location = new Point(649, 286);
             addressLine1TextBox.Name = "addressLine1TextBox";
             addressLine1TextBox.Size = new Size(225, 23);
             addressLine1TextBox.TabIndex = 34;
             // 
             // addressLine1Label
             // 
+            addressLine1Label.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             addressLine1Label.AutoSize = true;
             addressLine1Label.Font = new Font("Segoe UI", 11F);
-            addressLine1Label.Location = new Point(464, 287);
+            addressLine1Label.Location = new Point(534, 287);
             addressLine1Label.Name = "addressLine1Label";
             addressLine1Label.Size = new Size(105, 20);
             addressLine1Label.TabIndex = 35;
@@ -334,16 +346,18 @@
             // 
             // addressLine2TextBox
             // 
-            addressLine2TextBox.Location = new Point(579, 334);
+            addressLine2TextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            addressLine2TextBox.Location = new Point(649, 334);
             addressLine2TextBox.Name = "addressLine2TextBox";
             addressLine2TextBox.Size = new Size(225, 23);
             addressLine2TextBox.TabIndex = 36;
             // 
             // addressLine2Label
             // 
+            addressLine2Label.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             addressLine2Label.AutoSize = true;
             addressLine2Label.Font = new Font("Segoe UI", 11F);
-            addressLine2Label.Location = new Point(464, 335);
+            addressLine2Label.Location = new Point(534, 335);
             addressLine2Label.Name = "addressLine2Label";
             addressLine2Label.Size = new Size(105, 20);
             addressLine2Label.TabIndex = 37;
@@ -351,16 +365,18 @@
             // 
             // zoneAreaTextBox
             // 
-            zoneAreaTextBox.Location = new Point(579, 388);
+            zoneAreaTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            zoneAreaTextBox.Location = new Point(649, 388);
             zoneAreaTextBox.Name = "zoneAreaTextBox";
             zoneAreaTextBox.Size = new Size(225, 23);
             zoneAreaTextBox.TabIndex = 38;
             // 
             // zoneAreaLabel
             // 
+            zoneAreaLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             zoneAreaLabel.AutoSize = true;
             zoneAreaLabel.Font = new Font("Segoe UI", 11F);
-            zoneAreaLabel.Location = new Point(464, 389);
+            zoneAreaLabel.Location = new Point(534, 389);
             zoneAreaLabel.Name = "zoneAreaLabel";
             zoneAreaLabel.Size = new Size(81, 20);
             zoneAreaLabel.TabIndex = 39;
@@ -368,16 +384,18 @@
             // 
             // postalCodeTextBox
             // 
-            postalCodeTextBox.Location = new Point(579, 437);
+            postalCodeTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            postalCodeTextBox.Location = new Point(649, 437);
             postalCodeTextBox.Name = "postalCodeTextBox";
             postalCodeTextBox.Size = new Size(225, 23);
             postalCodeTextBox.TabIndex = 40;
             // 
             // postalCodeLabel
             // 
+            postalCodeLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             postalCodeLabel.AutoSize = true;
             postalCodeLabel.Font = new Font("Segoe UI", 11F);
-            postalCodeLabel.Location = new Point(466, 438);
+            postalCodeLabel.Location = new Point(536, 438);
             postalCodeLabel.Name = "postalCodeLabel";
             postalCodeLabel.Size = new Size(90, 20);
             postalCodeLabel.TabIndex = 41;
@@ -385,8 +403,8 @@
             // 
             // memberSaveButton
             // 
-            memberSaveButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            memberSaveButton.Location = new Point(835, 100);
+            memberSaveButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            memberSaveButton.Location = new Point(909, 102);
             memberSaveButton.Name = "memberSaveButton";
             memberSaveButton.Size = new Size(110, 23);
             memberSaveButton.TabIndex = 42;
@@ -395,8 +413,8 @@
             // 
             // memberClearButton
             // 
-            memberClearButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            memberClearButton.Location = new Point(835, 141);
+            memberClearButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            memberClearButton.Location = new Point(909, 143);
             memberClearButton.Name = "memberClearButton";
             memberClearButton.Size = new Size(110, 23);
             memberClearButton.TabIndex = 43;
@@ -406,7 +424,7 @@
             // memberUpdateButton
             // 
             memberUpdateButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            memberUpdateButton.Location = new Point(835, 188);
+            memberUpdateButton.Location = new Point(909, 188);
             memberUpdateButton.Name = "memberUpdateButton";
             memberUpdateButton.Size = new Size(110, 23);
             memberUpdateButton.TabIndex = 44;
@@ -416,7 +434,7 @@
             // memberDeleteButton
             // 
             memberDeleteButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            memberDeleteButton.Location = new Point(835, 238);
+            memberDeleteButton.Location = new Point(909, 238);
             memberDeleteButton.Name = "memberDeleteButton";
             memberDeleteButton.Size = new Size(110, 23);
             memberDeleteButton.TabIndex = 45;
@@ -426,7 +444,7 @@
             // veiwFileButton
             // 
             veiwFileButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            veiwFileButton.Location = new Point(835, 286);
+            veiwFileButton.Location = new Point(909, 286);
             veiwFileButton.Name = "veiwFileButton";
             veiwFileButton.Size = new Size(110, 23);
             veiwFileButton.TabIndex = 46;
@@ -436,29 +454,30 @@
             // makePaymentButton
             // 
             makePaymentButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            makePaymentButton.Location = new Point(835, 334);
+            makePaymentButton.Location = new Point(909, 334);
             makePaymentButton.Name = "makePaymentButton";
             makePaymentButton.Size = new Size(110, 23);
             makePaymentButton.TabIndex = 47;
             makePaymentButton.Text = "Make Payment";
             makePaymentButton.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // memberNextButton
             // 
-            button7.Location = new Point(835, 438);
-            button7.Name = "button7";
-            button7.Size = new Size(110, 23);
-            button7.TabIndex = 48;
-            button7.Text = "Next";
-            button7.UseVisualStyleBackColor = true;
+            memberNextButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            memberNextButton.Location = new Point(909, 435);
+            memberNextButton.Name = "memberNextButton";
+            memberNextButton.Size = new Size(110, 23);
+            memberNextButton.TabIndex = 48;
+            memberNextButton.Text = "Next";
+            memberNextButton.UseVisualStyleBackColor = true;
             // 
             // AddMemberForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(978, 511);
-            Controls.Add(button7);
+            ClientSize = new Size(1052, 513);
+            Controls.Add(memberNextButton);
             Controls.Add(makePaymentButton);
             Controls.Add(veiwFileButton);
             Controls.Add(memberDeleteButton);
@@ -481,7 +500,7 @@
             Controls.Add(memberPhoneNumbertextBox);
             Controls.Add(memberOccupationtextBox);
             Controls.Add(memberOccupationLabel);
-            Controls.Add(comboBox1);
+            Controls.Add(memberStatusComboBox);
             Controls.Add(membershipSatusLabel);
             Controls.Add(memberEmploymentStatusComboBox);
             Controls.Add(memberEmploymentLabel);
@@ -528,7 +547,7 @@
         private Label memberEmploymentLabel;
         private ComboBox memberEmploymentStatusComboBox;
         private Label membershipSatusLabel;
-        private ComboBox comboBox1;
+        private ComboBox memberStatusComboBox;
         private Label memberOccupationLabel;
         private TextBox memberOccupationtextBox;
         private TextBox memberPhoneNumbertextBox;
@@ -551,6 +570,6 @@
         private Button memberDeleteButton;
         private Button veiwFileButton;
         private Button makePaymentButton;
-        private Button button7;
+        private Button memberNextButton;
     }
 }
