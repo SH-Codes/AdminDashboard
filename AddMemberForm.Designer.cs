@@ -129,9 +129,9 @@
             AddNewMemberLabel.Font = new Font("Segoe UI", 26F, FontStyle.Bold);
             AddNewMemberLabel.Location = new Point(24, 21);
             AddNewMemberLabel.Name = "AddNewMemberLabel";
-            AddNewMemberLabel.Size = new Size(174, 47);
+            AddNewMemberLabel.Size = new Size(324, 47);
             AddNewMemberLabel.TabIndex = 7;
-            AddNewMemberLabel.Text = "Add New";
+            AddNewMemberLabel.Text = "Add New Member";
             // 
             // memberLastNameTextBox
             // 
