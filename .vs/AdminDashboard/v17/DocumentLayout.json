@@ -1,44 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\source\\AdminDashboard\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\source\\admindashboard\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\source\\admindashboard\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\source\\admindashboard\\viewmembersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:viewmembersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\source\\admindashboard\\addmemberform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:addmemberform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\source\\admindashboard\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\source\\admindashboard\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\source\\admindashboard\\addmemberform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:addmemberform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\source\\admindashboard\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\source\\admindashboard\\dashboardform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:dashboardform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -46,124 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ViewMembersForm.cs [Design]",
-              "DocumentMoniker": "D:\\source\\AdminDashboard\\ViewMembersForm.cs",
-              "RelativeDocumentMoniker": "ViewMembersForm.cs",
-              "ToolTip": "D:\\source\\AdminDashboard\\ViewMembersForm.cs [Design]",
-              "RelativeToolTip": "ViewMembersForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T18:45:20.558Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "D:\\source\\AdminDashboard\\MainForm.cs",
-              "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "D:\\source\\AdminDashboard\\MainForm.cs [Design]",
-              "RelativeToolTip": "MainForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T20:43:54.53Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "D:\\source\\AdminDashboard\\MainForm.cs",
-              "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "D:\\source\\AdminDashboard\\MainForm.cs",
-              "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAtwD0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T23:00:14.895Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AddMemberForm.cs [Design]",
-              "DocumentMoniker": "D:\\source\\AdminDashboard\\AddMemberForm.cs",
-              "RelativeDocumentMoniker": "AddMemberForm.cs",
-              "ToolTip": "D:\\source\\AdminDashboard\\AddMemberForm.cs [Design]",
-              "RelativeToolTip": "AddMemberForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T16:35:42.688Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "dashboardForm.cs [Design]",
-              "DocumentMoniker": "D:\\source\\AdminDashboard\\dashboardForm.cs",
-              "RelativeDocumentMoniker": "dashboardForm.cs",
-              "ToolTip": "D:\\source\\AdminDashboard\\dashboardForm.cs [Design]",
-              "RelativeToolTip": "dashboardForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T20:27:02.206Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MainForm.Designer.cs",
-              "DocumentMoniker": "D:\\source\\AdminDashboard\\MainForm.Designer.cs",
-              "RelativeDocumentMoniker": "MainForm.Designer.cs",
-              "ToolTip": "D:\\source\\AdminDashboard\\MainForm.Designer.cs",
-              "RelativeToolTip": "MainForm.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T23:49:17.033Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "D:\\source\\AdminDashboard\\.gitignore",
-              "RelativeDocumentMoniker": ".gitignore",
-              "ToolTip": "D:\\source\\AdminDashboard\\.gitignore",
-              "RelativeToolTip": ".gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-18T17:59:14.069Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AddMemberForm.Designer.cs",
-              "DocumentMoniker": "D:\\source\\AdminDashboard\\AddMemberForm.Designer.cs",
-              "RelativeDocumentMoniker": "AddMemberForm.Designer.cs",
-              "ToolTip": "D:\\source\\AdminDashboard\\AddMemberForm.Designer.cs",
-              "RelativeToolTip": "AddMemberForm.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T22:45:09.251Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "dashboardForm.Designer.cs",
-              "DocumentMoniker": "D:\\source\\AdminDashboard\\dashboardForm.Designer.cs",
-              "RelativeDocumentMoniker": "dashboardForm.Designer.cs",
-              "ToolTip": "D:\\source\\AdminDashboard\\dashboardForm.Designer.cs",
-              "RelativeToolTip": "dashboardForm.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T19:53:42.127Z",
-              "EditorCaption": ""
             }
           ]
         }

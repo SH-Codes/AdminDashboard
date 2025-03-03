@@ -2,6 +2,7 @@
 {
     public partial class MainForm : Form
     {
+
         public MainForm()
         {
             InitializeComponent();
@@ -64,10 +65,10 @@
         private void addMembersButton_Click(object sender, EventArgs e)
         {
             switchPanel.Controls.Clear();
-            AddMemberForm addNewMemberForm = new AddMemberForm();
-            addNewMemberForm.TopLevel = false;
-            switchPanel.Controls.Add(addNewMemberForm);
-            addNewMemberForm.Show();
+            AddMemberForm addNewMember = new AddMemberForm(this);
+            addNewMember.TopLevel = false;
+            switchPanel.Controls.Add(addNewMember);
+            addNewMember.Show();
         }
     }
 }
