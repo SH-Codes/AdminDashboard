@@ -23,3 +23,28 @@ D:\source\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.genruntimeconfi
 D:\source\AdminDashboard\obj\Debug\net8.0-windows\ref\AdminDashboard.dll
 D:\source\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.SacramentalLifeForm.resources
 D:\source\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.ActivitiesForm.resources
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\bin\Debug\net8.0-windows\AdminDashboard.exe
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\bin\Debug\net8.0-windows\AdminDashboard.deps.json
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\bin\Debug\net8.0-windows\AdminDashboard.runtimeconfig.json
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\bin\Debug\net8.0-windows\AdminDashboard.dll
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\bin\Debug\net8.0-windows\AdminDashboard.pdb
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.ActivitiesForm.resources
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.AddMemberForm.resources
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.DashboardForm.resources
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.DependentsForm.resources
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.MainForm.resources
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.Properties.Resources.resources
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.SacramentalLifeForm.resources
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.SpousesForm.resources
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.ViewMembersForm.resources
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.csproj.GenerateResource.cache
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.AssemblyInfoInputs.cache
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.AssemblyInfo.cs
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.csproj.CoreCompileInputs.cache
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.sourcelink.json
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.dll
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\refint\AdminDashboard.dll
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.pdb
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.genruntimeconfig.cache
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\ref\AdminDashboard.dll
