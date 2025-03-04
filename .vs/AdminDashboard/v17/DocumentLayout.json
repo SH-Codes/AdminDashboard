@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\source\\AdminDashboard\\",
+  "WorkspaceRootPath": "C:\\Users\\Sacred Heart Catholi\\source\\repos\\SH-Codes\\AdminDashboard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\source\\admindashboard\\academichistoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:academichistoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\source\\admindashboard\\paymentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|C:\\Users\\Sacred Heart Catholi\\source\\repos\\SH-Codes\\AdminDashboard\\paymentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:paymentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|D:\\source\\AdminDashboard\\addmemberform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|C:\\Users\\Sacred Heart Catholi\\source\\repos\\SH-Codes\\AdminDashboard\\addmemberform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:addmemberform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|D:\\source\\AdminDashboard\\dependentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|c:\\users\\sacred heart catholi\\source\\repos\\sh-codes\\admindashboard\\academichistoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:academichistoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|C:\\Users\\Sacred Heart Catholi\\source\\repos\\SH-Codes\\AdminDashboard\\dependentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:dependentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -26,23 +26,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PaymentsForm.cs [Design]",
-              "DocumentMoniker": "D:\\source\\AdminDashboard\\PaymentsForm.cs",
+              "DocumentMoniker": "C:\\Users\\Sacred Heart Catholi\\source\\repos\\SH-Codes\\AdminDashboard\\PaymentsForm.cs",
               "RelativeDocumentMoniker": "PaymentsForm.cs",
-              "ToolTip": "D:\\source\\AdminDashboard\\PaymentsForm.cs [Design]",
+              "ToolTip": "C:\\Users\\Sacred Heart Catholi\\source\\repos\\SH-Codes\\AdminDashboard\\PaymentsForm.cs [Design]",
               "RelativeToolTip": "PaymentsForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-03T20:17:08.964Z",
@@ -50,21 +50,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "AddMemberForm.cs [Design]",
-              "DocumentMoniker": "D:\\source\\AdminDashboard\\AddMemberForm.cs",
+              "DocumentMoniker": "C:\\Users\\Sacred Heart Catholi\\source\\repos\\SH-Codes\\AdminDashboard\\AddMemberForm.cs",
               "RelativeDocumentMoniker": "AddMemberForm.cs",
               "ToolTip": "C:\\Users\\Sacred Heart Catholi\\source\\repos\\SH-Codes\\AdminDashboard\\AddMemberForm.cs [Design]",
+              "RelativeToolTip": "AddMemberForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T09:26:10.254Z"
+              "WhenOpened": "2025-03-03T09:26:10.254Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "AcademicHistoryForm.cs [Design]",
-              "DocumentMoniker": "D:\\source\\AdminDashboard\\AcademicHistoryForm.cs",
+              "DocumentMoniker": "C:\\Users\\Sacred Heart Catholi\\source\\repos\\SH-Codes\\AdminDashboard\\AcademicHistoryForm.cs",
               "RelativeDocumentMoniker": "AcademicHistoryForm.cs",
-              "ToolTip": "D:\\source\\AdminDashboard\\AcademicHistoryForm.cs [Design]",
+              "ToolTip": "C:\\Users\\Sacred Heart Catholi\\source\\repos\\SH-Codes\\AdminDashboard\\AcademicHistoryForm.cs [Design]",
               "RelativeToolTip": "AcademicHistoryForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-03T09:25:03.505Z",
@@ -74,9 +76,10 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "DependentsForm.cs [Design]",
-              "DocumentMoniker": "D:\\source\\AdminDashboard\\DependentsForm.cs",
+              "DocumentMoniker": "C:\\Users\\Sacred Heart Catholi\\source\\repos\\SH-Codes\\AdminDashboard\\DependentsForm.cs",
               "RelativeDocumentMoniker": "DependentsForm.cs",
               "ToolTip": "C:\\Users\\Sacred Heart Catholi\\source\\repos\\SH-Codes\\AdminDashboard\\DependentsForm.cs [Design]",
+              "RelativeToolTip": "DependentsForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-03T09:10:59.082Z"
             }
