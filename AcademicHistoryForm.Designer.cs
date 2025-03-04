@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             memberNextButton = new Button();
-            makePaymentButton = new Button();
-            memberDeleteButton = new Button();
-            memberUpdateButton = new Button();
+            academicNextButton = new Button();
+            academicDeleteButton = new Button();
+            academicUpdateButton = new Button();
             academicClearButton = new Button();
             academicSaveButton = new Button();
             academicYearObtainedDateTimePicker = new DateTimePicker();
@@ -45,7 +45,7 @@
             academicIDTextBox = new TextBox();
             highestGradePassedCombox = new ComboBox();
             subjectPassedCheckedListBox = new CheckedListBox();
-            academicSteamtextBox = new TextBox();
+            academicFieldOfStudytextBox = new TextBox();
             fieldOfStudyLabel = new Label();
             SuspendLayout();
             // 
@@ -59,35 +59,35 @@
             memberNextButton.Text = "Next";
             memberNextButton.UseVisualStyleBackColor = true;
             // 
-            // makePaymentButton
+            // academicNextButton
             // 
-            makePaymentButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            makePaymentButton.Location = new Point(914, 326);
-            makePaymentButton.Name = "makePaymentButton";
-            makePaymentButton.Size = new Size(110, 23);
-            makePaymentButton.TabIndex = 91;
-            makePaymentButton.Text = "Make Payment";
-            makePaymentButton.UseVisualStyleBackColor = true;
+            academicNextButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            academicNextButton.Location = new Point(914, 381);
+            academicNextButton.Name = "academicNextButton";
+            academicNextButton.Size = new Size(110, 23);
+            academicNextButton.TabIndex = 91;
+            academicNextButton.Text = "Previous";
+            academicNextButton.UseVisualStyleBackColor = true;
             // 
-            // memberDeleteButton
+            // academicDeleteButton
             // 
-            memberDeleteButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            memberDeleteButton.Location = new Point(914, 233);
-            memberDeleteButton.Name = "memberDeleteButton";
-            memberDeleteButton.Size = new Size(110, 23);
-            memberDeleteButton.TabIndex = 89;
-            memberDeleteButton.Text = "Delete";
-            memberDeleteButton.UseVisualStyleBackColor = true;
+            academicDeleteButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            academicDeleteButton.Location = new Point(914, 233);
+            academicDeleteButton.Name = "academicDeleteButton";
+            academicDeleteButton.Size = new Size(110, 23);
+            academicDeleteButton.TabIndex = 89;
+            academicDeleteButton.Text = "Delete";
+            academicDeleteButton.UseVisualStyleBackColor = true;
             // 
-            // memberUpdateButton
+            // academicUpdateButton
             // 
-            memberUpdateButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            memberUpdateButton.Location = new Point(914, 188);
-            memberUpdateButton.Name = "memberUpdateButton";
-            memberUpdateButton.Size = new Size(110, 23);
-            memberUpdateButton.TabIndex = 88;
-            memberUpdateButton.Text = "Update";
-            memberUpdateButton.UseVisualStyleBackColor = true;
+            academicUpdateButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            academicUpdateButton.Location = new Point(914, 188);
+            academicUpdateButton.Name = "academicUpdateButton";
+            academicUpdateButton.Size = new Size(110, 23);
+            academicUpdateButton.TabIndex = 88;
+            academicUpdateButton.Text = "Update";
+            academicUpdateButton.UseVisualStyleBackColor = true;
             // 
             // academicClearButton
             // 
@@ -193,7 +193,7 @@
             // highestGradePassedCombox
             // 
             highestGradePassedCombox.FormattingEnabled = true;
-            highestGradePassedCombox.Items.AddRange(new object[] { "", "Grade 10", "Grade 11", "Grade 12" });
+            highestGradePassedCombox.Items.AddRange(new object[] { "", "Grade 10", "Grade 11", "Grade 12", "FET College", "University" });
             highestGradePassedCombox.Location = new Point(192, 190);
             highestGradePassedCombox.Name = "highestGradePassedCombox";
             highestGradePassedCombox.Size = new Size(225, 23);
@@ -202,18 +202,18 @@
             // subjectPassedCheckedListBox
             // 
             subjectPassedCheckedListBox.FormattingEnabled = true;
-            subjectPassedCheckedListBox.Items.AddRange(new object[] { "English Home Language", "English First Additional Language", "IsiZulu Home Language", "IsiZulu First Additional Language", "Afrikaans", "Mathematics", "Mathematical Literacy", "Physical Sciences", "Life Sciences", "Life Orientation", "Civil Technology", "Engineering Graphics and Design", "Accounting", "Business Studies", "Computer Studies", "Hospitality", "Travel and Tourism", "Geography", "History", "French", "Bible Studies", "Creative Art" });
+            subjectPassedCheckedListBox.Items.AddRange(new object[] { "Accounting", "Afrikaans", "Argricultural Management Practices", "Argricultural Sciences", "Argricultural Technology", "Business Studies", "Civil Technology", "Computer Application Technology", "Consumer Studies", "Dance Studies", "Dramatic Arts", "Economics", "Electrical Technology", "English Home Language", "English First Additional Language", "Engineering Graphics and Design", "Geography", "History", "Hospitality Studies", "Information Technology", "Life Sciences", "Life Orientation", "IsiZulu Home Language", "IsiZulu First Additional Language", "Mathematics", "Mathematical Literacy", "Mechanical Technology", "Music", "Physical Sciences", "Religious Studies", "Tourism and Visual Arts" });
             subjectPassedCheckedListBox.Location = new Point(192, 281);
             subjectPassedCheckedListBox.Name = "subjectPassedCheckedListBox";
             subjectPassedCheckedListBox.Size = new Size(225, 112);
             subjectPassedCheckedListBox.TabIndex = 97;
             // 
-            // academicSteamtextBox
+            // academicFieldOfStudytextBox
             // 
-            academicSteamtextBox.Location = new Point(192, 421);
-            academicSteamtextBox.Name = "academicSteamtextBox";
-            academicSteamtextBox.Size = new Size(225, 23);
-            academicSteamtextBox.TabIndex = 98;
+            academicFieldOfStudytextBox.Location = new Point(192, 421);
+            academicFieldOfStudytextBox.Name = "academicFieldOfStudytextBox";
+            academicFieldOfStudytextBox.Size = new Size(225, 23);
+            academicFieldOfStudytextBox.TabIndex = 98;
             // 
             // fieldOfStudyLabel
             // 
@@ -232,14 +232,14 @@
             BackColor = Color.White;
             ClientSize = new Size(1052, 513);
             Controls.Add(fieldOfStudyLabel);
-            Controls.Add(academicSteamtextBox);
+            Controls.Add(academicFieldOfStudytextBox);
             Controls.Add(subjectPassedCheckedListBox);
             Controls.Add(highestGradePassedCombox);
             Controls.Add(academicIDTextBox);
             Controls.Add(memberNextButton);
-            Controls.Add(makePaymentButton);
-            Controls.Add(memberDeleteButton);
-            Controls.Add(memberUpdateButton);
+            Controls.Add(academicNextButton);
+            Controls.Add(academicDeleteButton);
+            Controls.Add(academicUpdateButton);
             Controls.Add(academicClearButton);
             Controls.Add(academicSaveButton);
             Controls.Add(academicYearObtainedDateTimePicker);
@@ -259,9 +259,9 @@
 
         #endregion
         private Button memberNextButton;
-        private Button makePaymentButton;
-        private Button memberDeleteButton;
-        private Button memberUpdateButton;
+        private Button academicNextButton;
+        private Button academicDeleteButton;
+        private Button academicUpdateButton;
         private Button academicClearButton;
         private Button academicSaveButton;
         private DateTimePicker academicYearObtainedDateTimePicker;
@@ -276,7 +276,7 @@
         private TextBox academicIDTextBox;
         private ComboBox highestGradePassedCombox;
         private CheckedListBox subjectPassedCheckedListBox;
-        private TextBox academicSteamtextBox;
+        private TextBox academicFieldOfStudytextBox;
         private Label fieldOfStudyLabel;
     }
 }
