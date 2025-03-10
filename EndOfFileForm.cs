@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace AdminDashboard
 {
-    public partial class AcademicHistoryForm: Form
+    public partial class EndOfFileForm: Form
     {
-        public MainForm MainForm { get; private set; }
-        public AcademicHistoryForm(MainForm mainForm)
+        public EndOfFileForm()
         {
             InitializeComponent();
-            MainForm = mainForm;
         }
     }
 }

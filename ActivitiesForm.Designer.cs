@@ -99,6 +99,7 @@
             activityPrevButton.TabIndex = 90;
             activityPrevButton.Text = "Previous";
             activityPrevButton.UseVisualStyleBackColor = true;
+            activityPrevButton.Click += activityPrevButton_Click;
             // 
             // activityDeleteButton
             // 
@@ -455,6 +456,7 @@
             activityNextButton.TabIndex = 110;
             activityNextButton.Text = "Next";
             activityNextButton.UseVisualStyleBackColor = true;
+            activityNextButton.Click += activityNextButton_Click;
             // 
             // ActivitiesForm
             // 

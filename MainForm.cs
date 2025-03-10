@@ -2,6 +2,11 @@
 {
     public partial class MainForm : Form
     {
+      
+        public Panel SwitchPanel // Public getter property
+        {
+            get { return switchPanel; }
+        }
 
         public MainForm()
         {
@@ -69,6 +74,16 @@
             addNewMember.TopLevel = false;
             switchPanel.Controls.Add(addNewMember);
             addNewMember.Show();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        internal void LoadForm(SpousesForm spousesForm)
+        {
+            throw new NotImplementedException();
         }
     }
 }

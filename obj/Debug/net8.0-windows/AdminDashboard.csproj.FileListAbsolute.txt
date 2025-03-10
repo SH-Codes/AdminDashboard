@@ -28,11 +28,14 @@ C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\bin\Debug\net
 C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\bin\Debug\net8.0-windows\AdminDashboard.runtimeconfig.json
 C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\bin\Debug\net8.0-windows\AdminDashboard.dll
 C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\bin\Debug\net8.0-windows\AdminDashboard.pdb
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.AcademicHistoryForm.resources
 C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.ActivitiesForm.resources
 C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.AddMemberForm.resources
 C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.DashboardForm.resources
 C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.DependentsForm.resources
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.EndOfFileForm.resources
 C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.MainForm.resources
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.PaymentsForm.resources
 C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.Properties.Resources.resources
 C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.SacramentalLifeForm.resources
 C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.SpousesForm.resources

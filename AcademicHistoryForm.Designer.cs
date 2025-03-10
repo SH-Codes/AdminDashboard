@@ -37,7 +37,7 @@
             academicYearObtainedDateTimePicker = new DateTimePicker();
             subjectLabel = new Label();
             yearObtainedLabel = new Label();
-            highestLabel = new Label();
+            highestGradePassedLabel = new Label();
             membershipNumberLabel = new Label();
             academicHistoryMembershipNumberTextBox = new TextBox();
             academicIDLabel = new Label();
@@ -136,15 +136,15 @@
             yearObtainedLabel.TabIndex = 58;
             yearObtainedLabel.Text = "Year Obtained:";
             // 
-            // highestLabel
+            // highestGradePassedLabel
             // 
-            highestLabel.AutoSize = true;
-            highestLabel.Font = new Font("Segoe UI", 11F);
-            highestLabel.Location = new Point(34, 189);
-            highestLabel.Name = "highestLabel";
-            highestLabel.Size = new Size(107, 20);
-            highestLabel.TabIndex = 56;
-            highestLabel.Text = "Highest Grade:";
+            highestGradePassedLabel.AutoSize = true;
+            highestGradePassedLabel.Font = new Font("Segoe UI", 11F);
+            highestGradePassedLabel.Location = new Point(34, 189);
+            highestGradePassedLabel.Name = "highestGradePassedLabel";
+            highestGradePassedLabel.Size = new Size(107, 20);
+            highestGradePassedLabel.TabIndex = 56;
+            highestGradePassedLabel.Text = "Highest Grade:";
             // 
             // membershipNumberLabel
             // 
@@ -245,7 +245,7 @@
             Controls.Add(academicYearObtainedDateTimePicker);
             Controls.Add(subjectLabel);
             Controls.Add(yearObtainedLabel);
-            Controls.Add(highestLabel);
+            Controls.Add(highestGradePassedLabel);
             Controls.Add(membershipNumberLabel);
             Controls.Add(academicHistoryMembershipNumberTextBox);
             Controls.Add(academicIDLabel);
@@ -267,8 +267,8 @@
         private DateTimePicker academicYearObtainedDateTimePicker;
         private Label subjectLabel;
         private Label yearObtainedLabel;
-        private TextBox higestGradePassed;
-        private Label highestLabel;
+        //private TextBox higestGradePassed;
+        private Label highestGradePassedLabel;
         private Label membershipNumberLabel;
         private TextBox academicHistoryMembershipNumberTextBox;
         private Label academicIDLabel;

@@ -10,11 +10,32 @@ using System.Windows.Forms;
 
 namespace AdminDashboard
 {
-    public partial class SacramentalLifeForm: Form
+    public partial class SacramentalLifeForm : Form
     {
-        public SacramentalLifeForm()
+
+        public MainForm MainForm { get; private set; }
+        public SacramentalLifeForm(MainForm mainFormRef)
         {
             InitializeComponent();
+            this.MainForm = mainFormRef;
+        }
+
+        private void sacramentalPreviousButton_Click(object sender, EventArgs e)
+        {
+            MainForm.SwitchPanel.Controls.Clear();
+            DependentsForm dependentsForm = new DependentsForm(MainForm);
+            dependentsForm.TopLevel = false;
+            MainForm.SwitchPanel.Controls.Add(dependentsForm);
+            dependentsForm.Show();
+        }
+
+        private void sacramentalNextButton_Click(object sender, EventArgs e)
+        {
+            MainForm.SwitchPanel.Controls.Clear();
+            ActivitiesForm activitiesForm = new ActivitiesForm(MainForm);
+            activitiesForm.TopLevel = false;
+            MainForm.SwitchPanel.Controls.Add(activitiesForm);
+            activitiesForm.Show();
         }
     }
 }

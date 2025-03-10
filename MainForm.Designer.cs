@@ -38,7 +38,7 @@
             dashboardButton = new Button();
             containerPanel = new Panel();
             switchPanel = new Panel();
-            button1 = new Button();
+            searchbarRunButton = new Button();
             searchbarTextBox = new TextBox();
             bookingsButton = new Button();
             addMembersButton = new Button();
@@ -173,7 +173,7 @@
             containerPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             containerPanel.BackColor = Color.WhiteSmoke;
             containerPanel.Controls.Add(switchPanel);
-            containerPanel.Controls.Add(button1);
+            containerPanel.Controls.Add(searchbarRunButton);
             containerPanel.Controls.Add(searchbarTextBox);
             containerPanel.Controls.Add(bookingsButton);
             containerPanel.Controls.Add(addMembersButton);
@@ -193,22 +193,22 @@
             switchPanel.TabIndex = 5;
             switchPanel.Paint += switchPanel_Paint;
             // 
-            // button1
+            // searchbarRunButton
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button1.BackColor = Color.White;
-            button1.BackgroundImageLayout = ImageLayout.Center;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderColor = Color.White;
-            button1.FlatAppearance.MouseDownBackColor = Color.Snow;
-            button1.FlatAppearance.MouseOverBackColor = Color.Snow;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(1040, 26);
-            button1.Name = "button1";
-            button1.Size = new Size(25, 25);
-            button1.TabIndex = 4;
-            button1.Text = "X";
-            button1.UseVisualStyleBackColor = false;
+            searchbarRunButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            searchbarRunButton.BackColor = Color.White;
+            searchbarRunButton.BackgroundImageLayout = ImageLayout.Center;
+            searchbarRunButton.Cursor = Cursors.Hand;
+            searchbarRunButton.FlatAppearance.BorderColor = Color.White;
+            searchbarRunButton.FlatAppearance.MouseDownBackColor = Color.Snow;
+            searchbarRunButton.FlatAppearance.MouseOverBackColor = Color.Snow;
+            searchbarRunButton.FlatStyle = FlatStyle.Flat;
+            searchbarRunButton.Location = new Point(1040, 26);
+            searchbarRunButton.Name = "searchbarRunButton";
+            searchbarRunButton.Size = new Size(25, 25);
+            searchbarRunButton.TabIndex = 4;
+            searchbarRunButton.Text = "X";
+            searchbarRunButton.UseVisualStyleBackColor = false;
             // 
             // searchbarTextBox
             // 
@@ -265,6 +265,7 @@
             Name = "MainForm";
             Text = "Admin System";
             WindowState = FormWindowState.Maximized;
+            Load += MainForm_Load;
             mainPanel.ResumeLayout(false);
             mainPanel.PerformLayout();
             containerPanel.ResumeLayout(false);
@@ -280,7 +281,7 @@
         private Button addMembersButton;
         private Button viewMembersButton;
         private TextBox searchbarTextBox;
-        private Button button1;
+        private Button searchbarRunButton;
         private Panel switchPanel;
         private Button reportsButton;
         private Button financesButton;

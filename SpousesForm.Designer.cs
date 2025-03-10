@@ -30,7 +30,7 @@
         {
             memberEmploymentComboBox = new ComboBox();
             memberEmploymentLabel = new Label();
-            memberNextButton = new Button();
+            spousesNextButton = new Button();
             spousePreviousButton = new Button();
             memberDeleteButton = new Button();
             memberUpdateButton = new Button();
@@ -84,15 +84,16 @@
             memberEmploymentLabel.TabIndex = 93;
             memberEmploymentLabel.Text = "Employment Status:";
             // 
-            // memberNextButton
+            // spousesNextButton
             // 
-            memberNextButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            memberNextButton.Location = new Point(914, 421);
-            memberNextButton.Name = "memberNextButton";
-            memberNextButton.Size = new Size(110, 23);
-            memberNextButton.TabIndex = 92;
-            memberNextButton.Text = "Next";
-            memberNextButton.UseVisualStyleBackColor = true;
+            spousesNextButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            spousesNextButton.Location = new Point(914, 421);
+            spousesNextButton.Name = "spousesNextButton";
+            spousesNextButton.Size = new Size(110, 23);
+            spousesNextButton.TabIndex = 92;
+            spousesNextButton.Text = "Next";
+            spousesNextButton.UseVisualStyleBackColor = true;
+            spousesNextButton.Click += memberNextButton_Click;
             // 
             // spousePreviousButton
             // 
@@ -401,7 +402,7 @@
             Controls.Add(spouseIDTextBox);
             Controls.Add(memberEmploymentComboBox);
             Controls.Add(memberEmploymentLabel);
-            Controls.Add(memberNextButton);
+            Controls.Add(spousesNextButton);
             Controls.Add(spousePreviousButton);
             Controls.Add(memberDeleteButton);
             Controls.Add(memberUpdateButton);
@@ -443,7 +444,7 @@
 
         private ComboBox memberEmploymentComboBox;
         private Label memberEmploymentLabel;
-        private Button memberNextButton;
+        private Button spousesNextButton;
         private Button spousePreviousButton;
         private Button memberDeleteButton;
         private Button memberUpdateButton;

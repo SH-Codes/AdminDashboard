@@ -80,6 +80,7 @@
             dependentNextButton.TabIndex = 127;
             dependentNextButton.Text = "Next";
             dependentNextButton.UseVisualStyleBackColor = true;
+            dependentNextButton.Click += dependentNextButton_Click;
             // 
             // dependentPreviousButton
             // 
@@ -90,6 +91,7 @@
             dependentPreviousButton.TabIndex = 126;
             dependentPreviousButton.Text = "Previous";
             dependentPreviousButton.UseVisualStyleBackColor = true;
+            dependentPreviousButton.Click += dependentPreviousButton_Click;
             // 
             // dependentUpdateButton
             // 

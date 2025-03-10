@@ -14,13 +14,13 @@ namespace AdminDashboard
     public partial class AddMemberForm : Form
 
     {
+        public MainForm MainForm { get; private set; }
 
-        private MainForm parentForm;
-        public AddMemberForm(MainForm parent)
+        public AddMemberForm(MainForm MainFormRef)
         {
             InitializeComponent();
-            parentForm = parent;
-            
+            this.MainForm = MainFormRef;
+
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -50,11 +50,11 @@ namespace AdminDashboard
 
         private void memberNextButton_Click(object sender, EventArgs e)
         {
-            //parentForm.switchPanel.Controls.Clear();
-            //SpousesForm spousesForm = new SpousesForm(this);
-            //spousesForm.TopLevel = false;
-            //parentForm.switchPanel.Controls.Add(spousesForm);
-            //spousesForm.Show();
+            MainForm.SwitchPanel.Controls.Clear(); // Use the public property
+            SpousesForm spousesForm = new SpousesForm(MainForm);
+            spousesForm.TopLevel = false;
+            MainForm.SwitchPanel.Controls.Add(spousesForm);
+            spousesForm.Show();
         }
     }
 }

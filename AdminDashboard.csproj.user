@@ -16,6 +16,9 @@
     <Compile Update="DependentsForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="EndOfFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
