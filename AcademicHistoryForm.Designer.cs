@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            memberNextButton = new Button();
             academicNextButton = new Button();
+            academicPreviousButton = new Button();
             academicDeleteButton = new Button();
             academicUpdateButton = new Button();
             academicClearButton = new Button();
@@ -49,25 +49,27 @@
             fieldOfStudyLabel = new Label();
             SuspendLayout();
             // 
-            // memberNextButton
-            // 
-            memberNextButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            memberNextButton.Location = new Point(914, 421);
-            memberNextButton.Name = "memberNextButton";
-            memberNextButton.Size = new Size(110, 23);
-            memberNextButton.TabIndex = 92;
-            memberNextButton.Text = "Next";
-            memberNextButton.UseVisualStyleBackColor = true;
-            // 
             // academicNextButton
             // 
             academicNextButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            academicNextButton.Location = new Point(914, 381);
+            academicNextButton.Location = new Point(914, 421);
             academicNextButton.Name = "academicNextButton";
             academicNextButton.Size = new Size(110, 23);
-            academicNextButton.TabIndex = 91;
-            academicNextButton.Text = "Previous";
+            academicNextButton.TabIndex = 92;
+            academicNextButton.Text = "Next";
             academicNextButton.UseVisualStyleBackColor = true;
+            academicNextButton.Click += memberNextButton_Click;
+            // 
+            // academicPreviousButton
+            // 
+            academicPreviousButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            academicPreviousButton.Location = new Point(914, 381);
+            academicPreviousButton.Name = "academicPreviousButton";
+            academicPreviousButton.Size = new Size(110, 23);
+            academicPreviousButton.TabIndex = 91;
+            academicPreviousButton.Text = "Previous";
+            academicPreviousButton.UseVisualStyleBackColor = true;
+            academicPreviousButton.Click += academicPreviousButton_Click;
             // 
             // academicDeleteButton
             // 
@@ -236,8 +238,8 @@
             Controls.Add(subjectPassedCheckedListBox);
             Controls.Add(highestGradePassedCombox);
             Controls.Add(academicIDTextBox);
-            Controls.Add(memberNextButton);
             Controls.Add(academicNextButton);
+            Controls.Add(academicPreviousButton);
             Controls.Add(academicDeleteButton);
             Controls.Add(academicUpdateButton);
             Controls.Add(academicClearButton);
@@ -258,8 +260,8 @@
         }
 
         #endregion
-        private Button memberNextButton;
         private Button academicNextButton;
+        private Button academicPreviousButton;
         private Button academicDeleteButton;
         private Button academicUpdateButton;
         private Button academicClearButton;

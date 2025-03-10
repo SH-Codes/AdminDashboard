@@ -10,13 +10,31 @@ using System.Windows.Forms;
 
 namespace AdminDashboard
 {
-    public partial class AcademicHistoryForm: Form
+    public partial class AcademicHistoryForm : Form
     {
         public MainForm MainForm { get; private set; }
         public AcademicHistoryForm(MainForm mainForm)
         {
             InitializeComponent();
             MainForm = mainForm;
+        }
+
+        private void memberNextButton_Click(object sender, EventArgs e)
+        {
+            MainForm.SwitchPanel.Controls.Clear();
+            EndOfFileForm endOfFileForm = new EndOfFileForm(MainForm);
+            endOfFileForm.TopLevel = false;
+            MainForm.SwitchPanel.Controls.Add(endOfFileForm);
+            endOfFileForm.Show();
+        }
+
+        private void academicPreviousButton_Click(object sender, EventArgs e)
+        {
+            MainForm.SwitchPanel.Controls.Clear();
+            ActivitiesForm activitiesForm = new ActivitiesForm(MainForm);
+            activitiesForm.TopLevel = false;
+            MainForm.SwitchPanel.Controls.Add(activitiesForm);
+            activitiesForm.Show();
         }
     }
 }

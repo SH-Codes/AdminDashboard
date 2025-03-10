@@ -79,6 +79,7 @@
             // 
             // clergysNamesLabel
             // 
+            clergysNamesLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             clergysNamesLabel.AutoSize = true;
             clergysNamesLabel.Font = new Font("Segoe UI", 11F);
             clergysNamesLabel.Location = new Point(29, 393);
@@ -271,6 +272,7 @@
             // 
             // sponsorsNamesLabel
             // 
+            sponsorsNamesLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             sponsorsNamesLabel.AutoSize = true;
             sponsorsNamesLabel.Font = new Font("Segoe UI", 11F);
             sponsorsNamesLabel.Location = new Point(29, 354);
@@ -281,6 +283,7 @@
             // 
             // mothersNamesLabel
             // 
+            mothersNamesLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             mothersNamesLabel.AutoSize = true;
             mothersNamesLabel.Font = new Font("Segoe UI", 11F);
             mothersNamesLabel.Location = new Point(29, 314);
@@ -291,6 +294,7 @@
             // 
             // fathersNamesLabel
             // 
+            fathersNamesLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             fathersNamesLabel.AutoSize = true;
             fathersNamesLabel.Font = new Font("Segoe UI", 11F);
             fathersNamesLabel.Location = new Point(29, 275);
@@ -301,6 +305,7 @@
             // 
             // placeOfBaptismLabel
             // 
+            placeOfBaptismLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             placeOfBaptismLabel.AutoSize = true;
             placeOfBaptismLabel.Font = new Font("Segoe UI", 11F);
             placeOfBaptismLabel.Location = new Point(26, 235);
@@ -311,6 +316,7 @@
             // 
             // baptismDateLabel
             // 
+            baptismDateLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             baptismDateLabel.AutoSize = true;
             baptismDateLabel.Font = new Font("Segoe UI", 11F);
             baptismDateLabel.Location = new Point(26, 197);
@@ -321,6 +327,7 @@
             // 
             // isBaptisedLabel
             // 
+            isBaptisedLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             isBaptisedLabel.AutoSize = true;
             isBaptisedLabel.Font = new Font("Segoe UI", 11F);
             isBaptisedLabel.Location = new Point(26, 153);
@@ -331,6 +338,7 @@
             // 
             // sacramentalMembershipNumberLabel
             // 
+            sacramentalMembershipNumberLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             sacramentalMembershipNumberLabel.AutoSize = true;
             sacramentalMembershipNumberLabel.Font = new Font("Segoe UI", 11F);
             sacramentalMembershipNumberLabel.Location = new Point(26, 111);
@@ -341,6 +349,7 @@
             // 
             // sacramentalMembershipNumberTextBox
             // 
+            sacramentalMembershipNumberTextBox.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             sacramentalMembershipNumberTextBox.Location = new Point(184, 110);
             sacramentalMembershipNumberTextBox.Name = "sacramentalMembershipNumberTextBox";
             sacramentalMembershipNumberTextBox.Size = new Size(225, 23);
@@ -348,6 +357,7 @@
             // 
             // sacramentalIDLabel
             // 
+            sacramentalIDLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             sacramentalIDLabel.AutoSize = true;
             sacramentalIDLabel.Font = new Font("Segoe UI", 11F);
             sacramentalIDLabel.Location = new Point(26, 73);
@@ -368,6 +378,7 @@
             // 
             // sacrementalIDTextBox
             // 
+            sacrementalIDTextBox.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             sacrementalIDTextBox.Location = new Point(184, 72);
             sacrementalIDTextBox.Name = "sacrementalIDTextBox";
             sacrementalIDTextBox.Size = new Size(225, 23);
@@ -375,6 +386,7 @@
             // 
             // isBaptisedcComboBox
             // 
+            isBaptisedcComboBox.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             isBaptisedcComboBox.FormattingEnabled = true;
             isBaptisedcComboBox.Items.AddRange(new object[] { "", "Yes", "No" });
             isBaptisedcComboBox.Location = new Point(184, 152);
@@ -384,6 +396,7 @@
             // 
             // baptismDateTimePicker
             // 
+            baptismDateTimePicker.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             baptismDateTimePicker.Location = new Point(184, 196);
             baptismDateTimePicker.Name = "baptismDateTimePicker";
             baptismDateTimePicker.Size = new Size(225, 23);
@@ -391,6 +404,7 @@
             // 
             // placeOfBaptismTextBox
             // 
+            placeOfBaptismTextBox.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             placeOfBaptismTextBox.Location = new Point(184, 234);
             placeOfBaptismTextBox.Name = "placeOfBaptismTextBox";
             placeOfBaptismTextBox.Size = new Size(225, 23);
@@ -398,6 +412,7 @@
             // 
             // fathersNameTextBox
             // 
+            fathersNameTextBox.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             fathersNameTextBox.Location = new Point(184, 274);
             fathersNameTextBox.Name = "fathersNameTextBox";
             fathersNameTextBox.Size = new Size(225, 23);
@@ -412,6 +427,7 @@
             // 
             // sponsorsNamesTextBox
             // 
+            sponsorsNamesTextBox.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             sponsorsNamesTextBox.Location = new Point(184, 353);
             sponsorsNamesTextBox.Name = "sponsorsNamesTextBox";
             sponsorsNamesTextBox.Size = new Size(225, 23);
@@ -419,6 +435,7 @@
             // 
             // clergysNamesTextBox
             // 
+            clergysNamesTextBox.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             clergysNamesTextBox.Location = new Point(184, 392);
             clergysNamesTextBox.Name = "clergysNamesTextBox";
             clergysNamesTextBox.Size = new Size(225, 23);
@@ -426,6 +443,7 @@
             // 
             // holyEucharistLabel
             // 
+            holyEucharistLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             holyEucharistLabel.AutoSize = true;
             holyEucharistLabel.Font = new Font("Segoe UI", 11F);
             holyEucharistLabel.Location = new Point(29, 438);
@@ -436,6 +454,7 @@
             // 
             // holyEucharistComboBox
             // 
+            holyEucharistComboBox.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             holyEucharistComboBox.FormattingEnabled = true;
             holyEucharistComboBox.Items.AddRange(new object[] { "", "Yes", "No" });
             holyEucharistComboBox.Location = new Point(184, 437);

@@ -53,6 +53,7 @@
             nextOfKinLabel = new Label();
             phoneNumberTextBox = new TextBox();
             phoneNumberLabel = new Label();
+            endOfFilePreviousButton = new Button();
             SuspendLayout();
             // 
             // clergyNameTextBox
@@ -277,12 +278,24 @@
             phoneNumberLabel.TabIndex = 126;
             phoneNumberLabel.Text = "Phone Number:";
             // 
+            // endOfFilePreviousButton
+            // 
+            endOfFilePreviousButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            endOfFilePreviousButton.Location = new Point(906, 399);
+            endOfFilePreviousButton.Name = "endOfFilePreviousButton";
+            endOfFilePreviousButton.Size = new Size(110, 23);
+            endOfFilePreviousButton.TabIndex = 128;
+            endOfFilePreviousButton.Text = "Previous";
+            endOfFilePreviousButton.UseVisualStyleBackColor = true;
+            endOfFilePreviousButton.Click += endOfFilePreviousButton_Click;
+            // 
             // EndOfFileForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1036, 474);
+            Controls.Add(endOfFilePreviousButton);
             Controls.Add(phoneNumberTextBox);
             Controls.Add(phoneNumberLabel);
             Controls.Add(nextOfKinTextBox);
@@ -343,5 +356,6 @@
         private Label nextOfKinLabel;
         private TextBox phoneNumberTextBox;
         private Label phoneNumberLabel;
+        private Button endOfFilePreviousButton;
     }
 }

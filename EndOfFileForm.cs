@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace AdminDashboard
 {
-    public partial class EndOfFileForm: Form
+    public partial class EndOfFileForm : Form
     {
-        public EndOfFileForm()
+        public MainForm MainForm { get; private set; }
+        public EndOfFileForm(MainForm mainForm)
         {
             InitializeComponent();
+            MainForm = mainForm;
+        }
+
+        private void endOfFilePreviousButton_Click(object sender, EventArgs e)
+        {
+            MainForm.SwitchPanel.Controls.Clear();
+            AcademicHistoryForm academicHistoryForm = new AcademicHistoryForm(MainForm);
+            academicHistoryForm.TopLevel = false;
+            MainForm.SwitchPanel.Controls.Add(academicHistoryForm);
+            academicHistoryForm.Show();
         }
     }
 }
