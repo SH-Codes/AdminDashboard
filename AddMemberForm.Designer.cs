@@ -35,7 +35,6 @@
             membershipNumberTextBox = new TextBox();
             registrationDateLabel = new Label();
             AddNewMemberLabel = new Label();
-            memberLastNameTextBox = new TextBox();
             memberLastNameLabel = new Label();
             memberGenderComboBox = new ComboBox();
             birthDateLabel = new Label();
@@ -72,6 +71,7 @@
             memberNextButton = new Button();
             memberEmploymentComboBox = new ComboBox();
             memberEmploymentStatusLabel = new Label();
+            memberLastNameTextBox = new TextBox();
             SuspendLayout();
             // 
             // memberFirstNameTextBox
@@ -80,6 +80,7 @@
             memberFirstNameTextBox.Name = "memberFirstNameTextBox";
             memberFirstNameTextBox.Size = new Size(225, 23);
             memberFirstNameTextBox.TabIndex = 13;
+            memberFirstNameTextBox.TextChanged += memberFirstNameTextBox_TextChanged;
             // 
             // firstNameLabel
             // 
@@ -107,6 +108,7 @@
             registrationDateTimePicker.Name = "registrationDateTimePicker";
             registrationDateTimePicker.Size = new Size(225, 23);
             registrationDateTimePicker.TabIndex = 10;
+            registrationDateTimePicker.ValueChanged += registrationDateTimePicker_ValueChanged;
             // 
             // membershipNumberTextBox
             // 
@@ -134,14 +136,6 @@
             AddNewMemberLabel.Size = new Size(367, 47);
             AddNewMemberLabel.TabIndex = 7;
             AddNewMemberLabel.Text = "Member Information";
-            // 
-            // memberLastNameTextBox
-            // 
-            memberLastNameTextBox.Location = new Point(187, 228);
-            memberLastNameTextBox.Name = "memberLastNameTextBox";
-            memberLastNameTextBox.Size = new Size(225, 23);
-            memberLastNameTextBox.TabIndex = 15;
-            memberLastNameTextBox.TextChanged += textBox3_TextChanged;
             // 
             // memberLastNameLabel
             // 
@@ -178,6 +172,7 @@
             birthDateTimePicker.Name = "birthDateTimePicker";
             birthDateTimePicker.Size = new Size(225, 23);
             birthDateTimePicker.TabIndex = 18;
+            birthDateTimePicker.ValueChanged += birthDateTimePicker_ValueChanged;
             // 
             // memberGenderLabel
             // 
@@ -227,6 +222,7 @@
             memberMaritalStatusComboBox.Name = "memberMaritalStatusComboBox";
             memberMaritalStatusComboBox.Size = new Size(225, 23);
             memberMaritalStatusComboBox.TabIndex = 23;
+            memberMaritalStatusComboBox.SelectedIndexChanged += memberMaritalStatusComboBox_SelectedIndexChanged;
             // 
             // membershipSatusLabel
             // 
@@ -462,6 +458,7 @@
             makePaymentButton.TabIndex = 47;
             makePaymentButton.Text = "Make Payment";
             makePaymentButton.UseVisualStyleBackColor = true;
+            makePaymentButton.Click += makePaymentButton_Click;
             // 
             // memberNextButton
             // 
@@ -482,6 +479,7 @@
             memberEmploymentComboBox.Name = "memberEmploymentComboBox";
             memberEmploymentComboBox.Size = new Size(225, 23);
             memberEmploymentComboBox.TabIndex = 50;
+            memberEmploymentComboBox.SelectedIndexChanged += memberEmploymentComboBox_SelectedIndexChanged;
             // 
             // memberEmploymentStatusLabel
             // 
@@ -493,12 +491,21 @@
             memberEmploymentStatusLabel.TabIndex = 49;
             memberEmploymentStatusLabel.Text = "Employment Status:";
             // 
+            // memberLastNameTextBox
+            // 
+            memberLastNameTextBox.Location = new Point(187, 228);
+            memberLastNameTextBox.Name = "memberLastNameTextBox";
+            memberLastNameTextBox.Size = new Size(225, 23);
+            memberLastNameTextBox.TabIndex = 52;
+            memberLastNameTextBox.TextChanged += memberLastNameTextBox_TextChanged_1;
+            // 
             // AddMemberForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1052, 513);
+            Controls.Add(memberLastNameTextBox);
             Controls.Add(memberEmploymentComboBox);
             Controls.Add(memberEmploymentStatusLabel);
             Controls.Add(memberNextButton);
@@ -534,7 +541,6 @@
             Controls.Add(birthDateTimePicker);
             Controls.Add(birthDateLabel);
             Controls.Add(memberGenderComboBox);
-            Controls.Add(memberLastNameTextBox);
             Controls.Add(memberLastNameLabel);
             Controls.Add(memberFirstNameTextBox);
             Controls.Add(firstNameLabel);
@@ -560,7 +566,6 @@
         private TextBox membershipNumberTextBox;
         private Label registrationDateLabel;
         private Label AddNewMemberLabel;
-        private TextBox memberLastNameTextBox;
         private Label memberLastNameLabel;
         private ComboBox memberGenderComboBox;
         private Label birthDateLabel;
@@ -597,5 +602,6 @@
         private Button memberNextButton;
         private ComboBox memberEmploymentComboBox;
         private Label memberEmploymentStatusLabel;
+        private TextBox memberLastNameTextBox;
     }
 }

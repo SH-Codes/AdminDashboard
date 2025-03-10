@@ -2,7 +2,7 @@
 {
     public partial class MainForm : Form
     {
-      
+
         public Panel SwitchPanel // Public getter property
         {
             get { return switchPanel; }
@@ -18,10 +18,10 @@
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
+        //private void button2_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
         private void switchPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -78,12 +78,38 @@
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            
+            UpdateTimeAndGreeting();
+            mainFormTimer.Start();
         }
 
         internal void LoadForm(SpousesForm spousesForm)
         {
             throw new NotImplementedException();
+        }
+
+        private void mainFormTimer_Tick(object sender, EventArgs e)
+        {
+            UpdateTimeAndGreeting();
+        }
+
+        private void UpdateTimeAndGreeting()
+        {
+            DateTime now = DateTime.Now;
+            string greeting;
+
+            if (now.Hour >= 0 && now.Hour < 12)
+            {
+                greeting = "Good Morning";
+            }
+            else if (now.Hour >= 12 && now.Hour < 18)
+            {
+                greeting = "Good Afternoon";
+            }
+            else
+            {
+                greeting = "Good Evening";
+            }
+            timeDisplayLabel.Text = $"{greeting}, {now:dddd, dd MMM yyyy, HH:mm:ss}";
         }
     }
 }

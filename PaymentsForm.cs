@@ -12,9 +12,11 @@ namespace AdminDashboard
 {
     public partial class PaymentsForm: Form
     {
-        public PaymentsForm()
+        public MainForm MainForm { get; private set; }
+        public PaymentsForm(MainForm mainForm)
         {
             InitializeComponent();
+            MainForm = mainForm;
         }
     }
 }

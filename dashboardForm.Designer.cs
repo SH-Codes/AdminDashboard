@@ -46,7 +46,7 @@
             // 
             // totalMemberPanel
             // 
-            totalMemberPanel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            totalMemberPanel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             totalMemberPanel.BackColor = SystemColors.GradientInactiveCaption;
             totalMemberPanel.Location = new Point(37, 108);
             totalMemberPanel.Name = "totalMemberPanel";
@@ -55,7 +55,7 @@
             // 
             // totalFundsPanel
             // 
-            totalFundsPanel.Anchor = AnchorStyles.Top;
+            totalFundsPanel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             totalFundsPanel.BackColor = Color.FromArgb(192, 255, 192);
             totalFundsPanel.Location = new Point(373, 108);
             totalFundsPanel.Name = "totalFundsPanel";
@@ -64,7 +64,6 @@
             // 
             // monthlyNewMemberTotalpanel
             // 
-            monthlyNewMemberTotalpanel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             monthlyNewMemberTotalpanel.BackColor = Color.FromArgb(255, 255, 192);
             monthlyNewMemberTotalpanel.Location = new Point(710, 108);
             monthlyNewMemberTotalpanel.Name = "monthlyNewMemberTotalpanel";

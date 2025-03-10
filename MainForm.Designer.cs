@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             mainPanel = new Panel();
+            dashboardButton = new Button();
             timeDisplayLabel = new Label();
             logoutButton = new Button();
             settingsButton = new Button();
             reportsButton = new Button();
             financesButton = new Button();
-            dashboardButton = new Button();
             containerPanel = new Panel();
             switchPanel = new Panel();
             searchbarRunButton = new Button();
@@ -43,6 +44,7 @@
             bookingsButton = new Button();
             addMembersButton = new Button();
             viewMembersButton = new Button();
+            mainFormTimer = new System.Windows.Forms.Timer(components);
             mainPanel.SuspendLayout();
             containerPanel.SuspendLayout();
             SuspendLayout();
@@ -51,17 +53,39 @@
             // 
             mainPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             mainPanel.BackColor = SystemColors.Highlight;
+            mainPanel.Controls.Add(dashboardButton);
             mainPanel.Controls.Add(timeDisplayLabel);
             mainPanel.Controls.Add(logoutButton);
             mainPanel.Controls.Add(settingsButton);
             mainPanel.Controls.Add(reportsButton);
             mainPanel.Controls.Add(financesButton);
-            mainPanel.Controls.Add(dashboardButton);
             mainPanel.Controls.Add(containerPanel);
             mainPanel.Location = new Point(0, -2);
             mainPanel.Name = "mainPanel";
-            mainPanel.Size = new Size(1350, 730);
+            mainPanel.Size = new Size(1350, 747);
             mainPanel.TabIndex = 0;
+            // 
+            // dashboardButton
+            // 
+            dashboardButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            dashboardButton.BackColor = SystemColors.Highlight;
+            dashboardButton.BackgroundImageLayout = ImageLayout.Center;
+            dashboardButton.Cursor = Cursors.Hand;
+            dashboardButton.FlatAppearance.BorderColor = SystemColors.Highlight;
+            dashboardButton.FlatAppearance.CheckedBackColor = Color.White;
+            dashboardButton.FlatStyle = FlatStyle.Flat;
+            dashboardButton.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            dashboardButton.ForeColor = Color.White;
+            dashboardButton.Image = (Image)resources.GetObject("dashboardButton.Image");
+            dashboardButton.ImageAlign = ContentAlignment.MiddleLeft;
+            dashboardButton.Location = new Point(0, 264);
+            dashboardButton.Name = "dashboardButton";
+            dashboardButton.Padding = new Padding(15, 0, 0, 0);
+            dashboardButton.Size = new Size(229, 45);
+            dashboardButton.TabIndex = 0;
+            dashboardButton.Text = "Dashboard";
+            dashboardButton.UseVisualStyleBackColor = false;
+            dashboardButton.Click += dashboardButton_Click;
             // 
             // timeDisplayLabel
             // 
@@ -84,8 +108,9 @@
             logoutButton.ForeColor = Color.White;
             logoutButton.Image = (Image)resources.GetObject("logoutButton.Image");
             logoutButton.ImageAlign = ContentAlignment.MiddleLeft;
-            logoutButton.Location = new Point(0, 659);
+            logoutButton.Location = new Point(0, 676);
             logoutButton.Name = "logoutButton";
+            logoutButton.Padding = new Padding(15, 0, 0, 0);
             logoutButton.Size = new Size(229, 45);
             logoutButton.TabIndex = 4;
             logoutButton.Text = "Logout";
@@ -97,13 +122,15 @@
             settingsButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             settingsButton.Cursor = Cursors.Hand;
             settingsButton.FlatAppearance.BorderColor = SystemColors.Highlight;
+            settingsButton.FlatAppearance.CheckedBackColor = Color.White;
             settingsButton.FlatStyle = FlatStyle.Flat;
             settingsButton.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             settingsButton.ForeColor = Color.White;
             settingsButton.Image = (Image)resources.GetObject("settingsButton.Image");
             settingsButton.ImageAlign = ContentAlignment.MiddleLeft;
-            settingsButton.Location = new Point(0, 585);
+            settingsButton.Location = new Point(0, 602);
             settingsButton.Name = "settingsButton";
+            settingsButton.Padding = new Padding(15, 0, 0, 0);
             settingsButton.Size = new Size(229, 45);
             settingsButton.TabIndex = 3;
             settingsButton.Text = "Settings";
@@ -116,13 +143,15 @@
             reportsButton.BackColor = SystemColors.Highlight;
             reportsButton.Cursor = Cursors.Hand;
             reportsButton.FlatAppearance.BorderColor = SystemColors.Highlight;
+            reportsButton.FlatAppearance.CheckedBackColor = Color.White;
             reportsButton.FlatStyle = FlatStyle.Flat;
             reportsButton.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             reportsButton.ForeColor = Color.White;
             reportsButton.Image = (Image)resources.GetObject("reportsButton.Image");
             reportsButton.ImageAlign = ContentAlignment.MiddleLeft;
-            reportsButton.Location = new Point(0, 392);
+            reportsButton.Location = new Point(0, 409);
             reportsButton.Name = "reportsButton";
+            reportsButton.Padding = new Padding(15, 0, 0, 0);
             reportsButton.Size = new Size(229, 45);
             reportsButton.TabIndex = 2;
             reportsButton.Text = "Reports";
@@ -135,38 +164,20 @@
             financesButton.BackColor = SystemColors.Highlight;
             financesButton.Cursor = Cursors.Hand;
             financesButton.FlatAppearance.BorderColor = SystemColors.Highlight;
+            financesButton.FlatAppearance.CheckedBackColor = Color.White;
             financesButton.FlatStyle = FlatStyle.Flat;
             financesButton.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
             financesButton.ForeColor = Color.White;
             financesButton.Image = (Image)resources.GetObject("financesButton.Image");
             financesButton.ImageAlign = ContentAlignment.MiddleLeft;
-            financesButton.Location = new Point(0, 320);
+            financesButton.Location = new Point(0, 337);
             financesButton.Name = "financesButton";
+            financesButton.Padding = new Padding(15, 0, 0, 0);
             financesButton.Size = new Size(229, 45);
             financesButton.TabIndex = 1;
             financesButton.Text = "Finances";
             financesButton.UseVisualStyleBackColor = false;
             financesButton.Click += financesButton_Click;
-            // 
-            // dashboardButton
-            // 
-            dashboardButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            dashboardButton.BackColor = SystemColors.Highlight;
-            dashboardButton.BackgroundImageLayout = ImageLayout.Center;
-            dashboardButton.Cursor = Cursors.Hand;
-            dashboardButton.FlatAppearance.BorderColor = SystemColors.Highlight;
-            dashboardButton.FlatStyle = FlatStyle.Flat;
-            dashboardButton.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            dashboardButton.ForeColor = Color.White;
-            dashboardButton.Image = (Image)resources.GetObject("dashboardButton.Image");
-            dashboardButton.ImageAlign = ContentAlignment.MiddleLeft;
-            dashboardButton.Location = new Point(0, 247);
-            dashboardButton.Name = "dashboardButton";
-            dashboardButton.Size = new Size(229, 45);
-            dashboardButton.TabIndex = 0;
-            dashboardButton.Text = "Dashboard";
-            dashboardButton.UseVisualStyleBackColor = false;
-            dashboardButton.Click += dashboardButton_Click;
             // 
             // containerPanel
             // 
@@ -180,7 +191,7 @@
             containerPanel.Controls.Add(viewMembersButton);
             containerPanel.Location = new Point(229, 85);
             containerPanel.Name = "containerPanel";
-            containerPanel.Size = new Size(1098, 619);
+            containerPanel.Size = new Size(1098, 636);
             containerPanel.TabIndex = 0;
             // 
             // switchPanel
@@ -189,7 +200,7 @@
             switchPanel.BackColor = Color.White;
             switchPanel.Location = new Point(24, 81);
             switchPanel.Name = "switchPanel";
-            switchPanel.Size = new Size(1052, 513);
+            switchPanel.Size = new Size(1052, 530);
             switchPanel.TabIndex = 5;
             switchPanel.Paint += switchPanel_Paint;
             // 
@@ -253,18 +264,24 @@
             viewMembersButton.UseVisualStyleBackColor = true;
             viewMembersButton.Click += viewMembersButton_Click;
             // 
+            // mainFormTimer
+            // 
+            mainFormTimer.Tick += mainFormTimer_Tick;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.White;
-            ClientSize = new Size(1350, 727);
+            ClientSize = new Size(1350, 745);
             Controls.Add(mainPanel);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximumSize = new Size(1920, 1080);
             MinimumSize = new Size(1024, 766);
             Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Admin System";
-            WindowState = FormWindowState.Maximized;
             Load += MainForm_Load;
             mainPanel.ResumeLayout(false);
             mainPanel.PerformLayout();
@@ -289,5 +306,6 @@
         private Button logoutButton;
         private Button settingsButton;
         private Label timeDisplayLabel;
+        private System.Windows.Forms.Timer mainFormTimer;
     }
 }
