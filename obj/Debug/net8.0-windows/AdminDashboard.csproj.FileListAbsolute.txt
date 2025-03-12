@@ -54,3 +54,10 @@ D:\source\AdminDashboard\obj\Debug\net8.0-windows\refint\AdminDashboard.dll
 D:\source\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.pdb
 D:\source\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.genruntimeconfig.cache
 D:\source\AdminDashboard\obj\Debug\net8.0-windows\ref\AdminDashboard.dll
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.csproj.AssemblyReference.cache
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\bin\Debug\net8.0-windows\System.Web.DataVisualization.Design.dll
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\bin\Debug\net8.0-windows\System.Web.DataVisualization.dll
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\bin\Debug\net8.0-windows\System.Windows.Forms.DataVisualization.Design.dll
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\bin\Debug\net8.0-windows\System.Windows.Forms.DataVisualization.dll
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\bin\Debug\net8.0-windows\OxyPlot.dll
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDas.BD46C1CD.Up2Date

@@ -80,7 +80,7 @@
             memberFirstNameTextBox.Name = "memberFirstNameTextBox";
             memberFirstNameTextBox.Size = new Size(225, 23);
             memberFirstNameTextBox.TabIndex = 13;
-            memberFirstNameTextBox.TextChanged += memberFirstNameTextBox_TextChanged;
+            memberFirstNameTextBox.Validating += memberFirstNameTextBox_Validating;
             // 
             // firstNameLabel
             // 
@@ -114,6 +114,7 @@
             // 
             membershipNumberTextBox.Location = new Point(187, 138);
             membershipNumberTextBox.Name = "membershipNumberTextBox";
+            membershipNumberTextBox.ReadOnly = true;
             membershipNumberTextBox.Size = new Size(225, 23);
             membershipNumberTextBox.TabIndex = 9;
             // 
@@ -155,6 +156,7 @@
             memberGenderComboBox.Name = "memberGenderComboBox";
             memberGenderComboBox.Size = new Size(225, 23);
             memberGenderComboBox.TabIndex = 16;
+            memberGenderComboBox.Validating += memberGenderComboBox_Validating;
             // 
             // birthDateLabel
             // 
@@ -192,11 +194,12 @@
             memberRaceComboBox.Name = "memberRaceComboBox";
             memberRaceComboBox.Size = new Size(225, 23);
             memberRaceComboBox.TabIndex = 20;
-            memberRaceComboBox.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
-            // 
-            // memberRaceLabel
-            // 
-            memberRaceLabel.AutoSize = true;
+            memberRaceComboBox.Validating += memberRaceComboBox_Validating
+;
+        // 
+        // memberRaceLabel
+        // 
+        memberRaceLabel.AutoSize = true;
             memberRaceLabel.Font = new Font("Segoe UI", 11F);
             memberRaceLabel.Location = new Point(32, 369);
             memberRaceLabel.Name = "memberRaceLabel";
@@ -222,7 +225,7 @@
             memberMaritalStatusComboBox.Name = "memberMaritalStatusComboBox";
             memberMaritalStatusComboBox.Size = new Size(225, 23);
             memberMaritalStatusComboBox.TabIndex = 23;
-            memberMaritalStatusComboBox.SelectedIndexChanged += memberMaritalStatusComboBox_SelectedIndexChanged;
+            memberMaritalStatusComboBox.Validating += memberMaritalStatusComboBox_Validating;
             // 
             // membershipSatusLabel
             // 
@@ -263,7 +266,7 @@
             memberOccupationTextBox.Name = "memberOccupationTextBox";
             memberOccupationTextBox.Size = new Size(225, 23);
             memberOccupationTextBox.TabIndex = 27;
-            memberOccupationTextBox.TextChanged += textBox1_TextChanged;
+            memberOccupationTextBox.Validating += memberOccupationTextBox_Validating;
             // 
             // memberPhoneNumberTextBox
             // 
@@ -291,11 +294,12 @@
             memberMobileNumberTextBox.Name = "memberMobileNumberTextBox";
             memberMobileNumberTextBox.Size = new Size(225, 23);
             memberMobileNumberTextBox.TabIndex = 30;
-            memberMobileNumberTextBox.TextChanged += textBox3_TextChanged_1;
-            // 
-            // memberMobileNumberLabel
-            // 
-            memberMobileNumberLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            memberMobileNumberTextBox.Validating += memberMobileNumberTextBox_Validating
+;
+        // 
+        // memberMobileNumberLabel
+        // 
+        memberMobileNumberLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             memberMobileNumberLabel.AutoSize = true;
             memberMobileNumberLabel.Font = new Font("Segoe UI", 11F);
             memberMobileNumberLabel.Location = new Point(529, 184);
@@ -479,7 +483,7 @@
             memberEmploymentComboBox.Name = "memberEmploymentComboBox";
             memberEmploymentComboBox.Size = new Size(225, 23);
             memberEmploymentComboBox.TabIndex = 50;
-            memberEmploymentComboBox.SelectedIndexChanged += memberEmploymentComboBox_SelectedIndexChanged;
+            memberEmploymentComboBox.Validating += memberEmploymentComboBox_Validating;
             // 
             // memberEmploymentStatusLabel
             // 
@@ -497,7 +501,7 @@
             memberLastNameTextBox.Name = "memberLastNameTextBox";
             memberLastNameTextBox.Size = new Size(225, 23);
             memberLastNameTextBox.TabIndex = 52;
-            memberLastNameTextBox.TextChanged += memberLastNameTextBox_TextChanged_1;
+            memberLastNameTextBox.Validating += memberLastNameTextBox_Validating;
             // 
             // AddMemberForm
             // 
