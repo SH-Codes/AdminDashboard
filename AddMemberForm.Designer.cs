@@ -69,14 +69,16 @@
             viewFileButton = new Button();
             makePaymentButton = new Button();
             memberNextButton = new Button();
-            memberEmploymentComboBox = new ComboBox();
-            memberEmploymentStatusLabel = new Label();
+            memberTitleComboBox = new ComboBox();
+            memberTitleLabel = new Label();
             memberLastNameTextBox = new TextBox();
+            comboBox1 = new ComboBox();
+            label1 = new Label();
             SuspendLayout();
             // 
             // memberFirstNameTextBox
             // 
-            memberFirstNameTextBox.Location = new Point(187, 183);
+            memberFirstNameTextBox.Location = new Point(187, 226);
             memberFirstNameTextBox.Name = "memberFirstNameTextBox";
             memberFirstNameTextBox.Size = new Size(225, 23);
             memberFirstNameTextBox.TabIndex = 13;
@@ -86,7 +88,7 @@
             // 
             firstNameLabel.AutoSize = true;
             firstNameLabel.Font = new Font("Segoe UI", 11F);
-            firstNameLabel.Location = new Point(29, 184);
+            firstNameLabel.Location = new Point(29, 227);
             firstNameLabel.Name = "firstNameLabel";
             firstNameLabel.Size = new Size(99, 20);
             firstNameLabel.TabIndex = 12;
@@ -117,6 +119,7 @@
             membershipNumberTextBox.ReadOnly = true;
             membershipNumberTextBox.Size = new Size(225, 23);
             membershipNumberTextBox.TabIndex = 9;
+            membershipNumberTextBox.TextChanged += membershipNumberTextBox_TextChanged;
             // 
             // registrationDateLabel
             // 
@@ -142,7 +145,7 @@
             // 
             memberLastNameLabel.AutoSize = true;
             memberLastNameLabel.Font = new Font("Segoe UI", 11F);
-            memberLastNameLabel.Location = new Point(29, 229);
+            memberLastNameLabel.Location = new Point(29, 272);
             memberLastNameLabel.Name = "memberLastNameLabel";
             memberLastNameLabel.Size = new Size(82, 20);
             memberLastNameLabel.TabIndex = 14;
@@ -152,7 +155,7 @@
             // 
             memberGenderComboBox.FormattingEnabled = true;
             memberGenderComboBox.Items.AddRange(new object[] { "", "Male", "Female" });
-            memberGenderComboBox.Location = new Point(187, 321);
+            memberGenderComboBox.Location = new Point(187, 364);
             memberGenderComboBox.Name = "memberGenderComboBox";
             memberGenderComboBox.Size = new Size(225, 23);
             memberGenderComboBox.TabIndex = 16;
@@ -162,7 +165,7 @@
             // 
             birthDateLabel.AutoSize = true;
             birthDateLabel.Font = new Font("Segoe UI", 11F);
-            birthDateLabel.Location = new Point(29, 276);
+            birthDateLabel.Location = new Point(29, 319);
             birthDateLabel.Name = "birthDateLabel";
             birthDateLabel.Size = new Size(79, 20);
             birthDateLabel.TabIndex = 17;
@@ -170,7 +173,7 @@
             // 
             // birthDateTimePicker
             // 
-            birthDateTimePicker.Location = new Point(187, 275);
+            birthDateTimePicker.Location = new Point(187, 318);
             birthDateTimePicker.Name = "birthDateTimePicker";
             birthDateTimePicker.Size = new Size(225, 23);
             birthDateTimePicker.TabIndex = 18;
@@ -180,7 +183,7 @@
             // 
             memberGenderLabel.AutoSize = true;
             memberGenderLabel.Font = new Font("Segoe UI", 11F);
-            memberGenderLabel.Location = new Point(32, 322);
+            memberGenderLabel.Location = new Point(32, 365);
             memberGenderLabel.Name = "memberGenderLabel";
             memberGenderLabel.Size = new Size(60, 20);
             memberGenderLabel.TabIndex = 19;
@@ -190,18 +193,17 @@
             // 
             memberRaceComboBox.FormattingEnabled = true;
             memberRaceComboBox.Items.AddRange(new object[] { "", "Black", "Colour", "Indian", "White", "Other" });
-            memberRaceComboBox.Location = new Point(187, 368);
+            memberRaceComboBox.Location = new Point(187, 411);
             memberRaceComboBox.Name = "memberRaceComboBox";
             memberRaceComboBox.Size = new Size(225, 23);
             memberRaceComboBox.TabIndex = 20;
-            memberRaceComboBox.Validating += memberRaceComboBox_Validating
-;
-        // 
-        // memberRaceLabel
-        // 
-        memberRaceLabel.AutoSize = true;
+            memberRaceComboBox.Validating += memberRaceComboBox_Validating;
+            // 
+            // memberRaceLabel
+            // 
+            memberRaceLabel.AutoSize = true;
             memberRaceLabel.Font = new Font("Segoe UI", 11F);
-            memberRaceLabel.Location = new Point(32, 369);
+            memberRaceLabel.Location = new Point(32, 412);
             memberRaceLabel.Name = "memberRaceLabel";
             memberRaceLabel.Size = new Size(41, 20);
             memberRaceLabel.TabIndex = 21;
@@ -211,7 +213,7 @@
             // 
             memberMaritalStatusLabel.AutoSize = true;
             memberMaritalStatusLabel.Font = new Font("Segoe UI", 11F);
-            memberMaritalStatusLabel.Location = new Point(32, 417);
+            memberMaritalStatusLabel.Location = new Point(32, 460);
             memberMaritalStatusLabel.Name = "memberMaritalStatusLabel";
             memberMaritalStatusLabel.Size = new Size(103, 20);
             memberMaritalStatusLabel.TabIndex = 22;
@@ -221,7 +223,7 @@
             // 
             memberMaritalStatusComboBox.FormattingEnabled = true;
             memberMaritalStatusComboBox.Items.AddRange(new object[] { "", "Single", "Married", "Devorced", "Separated", "Widowed" });
-            memberMaritalStatusComboBox.Location = new Point(187, 416);
+            memberMaritalStatusComboBox.Location = new Point(187, 459);
             memberMaritalStatusComboBox.Name = "memberMaritalStatusComboBox";
             memberMaritalStatusComboBox.Size = new Size(225, 23);
             memberMaritalStatusComboBox.TabIndex = 23;
@@ -247,13 +249,14 @@
             memberStatusComboBox.Name = "memberStatusComboBox";
             memberStatusComboBox.Size = new Size(175, 23);
             memberStatusComboBox.TabIndex = 25;
+            memberStatusComboBox.SelectedIndexChanged += memberStatusComboBox_SelectedIndexChanged;
             // 
             // memberOccupationLabel
             // 
             memberOccupationLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             memberOccupationLabel.AutoSize = true;
             memberOccupationLabel.Font = new Font("Segoe UI", 11F);
-            memberOccupationLabel.Location = new Point(529, 101);
+            memberOccupationLabel.Location = new Point(537, 146);
             memberOccupationLabel.Name = "memberOccupationLabel";
             memberOccupationLabel.Size = new Size(88, 20);
             memberOccupationLabel.TabIndex = 26;
@@ -262,7 +265,7 @@
             // memberOccupationTextBox
             // 
             memberOccupationTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            memberOccupationTextBox.Location = new Point(649, 100);
+            memberOccupationTextBox.Location = new Point(657, 145);
             memberOccupationTextBox.Name = "memberOccupationTextBox";
             memberOccupationTextBox.Size = new Size(225, 23);
             memberOccupationTextBox.TabIndex = 27;
@@ -271,17 +274,18 @@
             // memberPhoneNumberTextBox
             // 
             memberPhoneNumberTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            memberPhoneNumberTextBox.Location = new Point(649, 138);
+            memberPhoneNumberTextBox.Location = new Point(657, 183);
             memberPhoneNumberTextBox.Name = "memberPhoneNumberTextBox";
             memberPhoneNumberTextBox.Size = new Size(225, 23);
             memberPhoneNumberTextBox.TabIndex = 28;
+            memberPhoneNumberTextBox.Validating += memberPhoneNumberTextBox_Validating;
             // 
             // memberPhoneNumberLabel
             // 
             memberPhoneNumberLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             memberPhoneNumberLabel.AutoSize = true;
             memberPhoneNumberLabel.Font = new Font("Segoe UI", 11F);
-            memberPhoneNumberLabel.Location = new Point(529, 139);
+            memberPhoneNumberLabel.Location = new Point(537, 184);
             memberPhoneNumberLabel.Name = "memberPhoneNumberLabel";
             memberPhoneNumberLabel.Size = new Size(111, 20);
             memberPhoneNumberLabel.TabIndex = 29;
@@ -290,19 +294,18 @@
             // memberMobileNumberTextBox
             // 
             memberMobileNumberTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            memberMobileNumberTextBox.Location = new Point(649, 183);
+            memberMobileNumberTextBox.Location = new Point(657, 228);
             memberMobileNumberTextBox.Name = "memberMobileNumberTextBox";
             memberMobileNumberTextBox.Size = new Size(225, 23);
             memberMobileNumberTextBox.TabIndex = 30;
-            memberMobileNumberTextBox.Validating += memberMobileNumberTextBox_Validating
-;
-        // 
-        // memberMobileNumberLabel
-        // 
-        memberMobileNumberLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            memberMobileNumberTextBox.Validating += memberMobileNumberTextBox_Validating;
+            // 
+            // memberMobileNumberLabel
+            // 
+            memberMobileNumberLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             memberMobileNumberLabel.AutoSize = true;
             memberMobileNumberLabel.Font = new Font("Segoe UI", 11F);
-            memberMobileNumberLabel.Location = new Point(529, 184);
+            memberMobileNumberLabel.Location = new Point(537, 229);
             memberMobileNumberLabel.Name = "memberMobileNumberLabel";
             memberMobileNumberLabel.Size = new Size(117, 20);
             memberMobileNumberLabel.TabIndex = 31;
@@ -311,17 +314,18 @@
             // memberEmailAddressTextBox
             // 
             memberEmailAddressTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            memberEmailAddressTextBox.Location = new Point(649, 228);
+            memberEmailAddressTextBox.Location = new Point(657, 273);
             memberEmailAddressTextBox.Name = "memberEmailAddressTextBox";
             memberEmailAddressTextBox.Size = new Size(225, 23);
             memberEmailAddressTextBox.TabIndex = 32;
+            memberEmailAddressTextBox.Validating += memberEmailAddressTextBox_Validating;
             // 
             // memberEmailAddressLabel
             // 
             memberEmailAddressLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             memberEmailAddressLabel.AutoSize = true;
             memberEmailAddressLabel.Font = new Font("Segoe UI", 11F);
-            memberEmailAddressLabel.Location = new Point(534, 229);
+            memberEmailAddressLabel.Location = new Point(542, 274);
             memberEmailAddressLabel.Name = "memberEmailAddressLabel";
             memberEmailAddressLabel.Size = new Size(106, 20);
             memberEmailAddressLabel.TabIndex = 33;
@@ -330,17 +334,18 @@
             // addressLine1TextBox
             // 
             addressLine1TextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            addressLine1TextBox.Location = new Point(649, 275);
+            addressLine1TextBox.Location = new Point(657, 320);
             addressLine1TextBox.Name = "addressLine1TextBox";
             addressLine1TextBox.Size = new Size(225, 23);
             addressLine1TextBox.TabIndex = 34;
+            addressLine1TextBox.Validating += addressLine1TextBox_Validating;
             // 
             // addressLine1Label
             // 
             addressLine1Label.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             addressLine1Label.AutoSize = true;
             addressLine1Label.Font = new Font("Segoe UI", 11F);
-            addressLine1Label.Location = new Point(534, 276);
+            addressLine1Label.Location = new Point(542, 321);
             addressLine1Label.Name = "addressLine1Label";
             addressLine1Label.Size = new Size(105, 20);
             addressLine1Label.TabIndex = 35;
@@ -349,17 +354,18 @@
             // addressLine2TextBox
             // 
             addressLine2TextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            addressLine2TextBox.Location = new Point(649, 321);
+            addressLine2TextBox.Location = new Point(657, 366);
             addressLine2TextBox.Name = "addressLine2TextBox";
             addressLine2TextBox.Size = new Size(225, 23);
             addressLine2TextBox.TabIndex = 36;
+            addressLine2TextBox.Validating += addressLine2TextBox_Validating;
             // 
             // addressLine2Label
             // 
             addressLine2Label.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             addressLine2Label.AutoSize = true;
             addressLine2Label.Font = new Font("Segoe UI", 11F);
-            addressLine2Label.Location = new Point(534, 322);
+            addressLine2Label.Location = new Point(542, 367);
             addressLine2Label.Name = "addressLine2Label";
             addressLine2Label.Size = new Size(105, 20);
             addressLine2Label.TabIndex = 37;
@@ -368,17 +374,18 @@
             // zoneAreaTextBox
             // 
             zoneAreaTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            zoneAreaTextBox.Location = new Point(649, 370);
+            zoneAreaTextBox.Location = new Point(657, 415);
             zoneAreaTextBox.Name = "zoneAreaTextBox";
             zoneAreaTextBox.Size = new Size(225, 23);
             zoneAreaTextBox.TabIndex = 38;
+            zoneAreaTextBox.Validating += addressLine2TextBox_Validating;
             // 
             // zoneAreaLabel
             // 
             zoneAreaLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             zoneAreaLabel.AutoSize = true;
             zoneAreaLabel.Font = new Font("Segoe UI", 11F);
-            zoneAreaLabel.Location = new Point(534, 371);
+            zoneAreaLabel.Location = new Point(542, 416);
             zoneAreaLabel.Name = "zoneAreaLabel";
             zoneAreaLabel.Size = new Size(81, 20);
             zoneAreaLabel.TabIndex = 39;
@@ -387,17 +394,18 @@
             // postalCodeTextBox
             // 
             postalCodeTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            postalCodeTextBox.Location = new Point(649, 418);
+            postalCodeTextBox.Location = new Point(657, 463);
             postalCodeTextBox.Name = "postalCodeTextBox";
             postalCodeTextBox.Size = new Size(225, 23);
             postalCodeTextBox.TabIndex = 40;
+            postalCodeTextBox.Validating += postalCodeTextBox_Validating;
             // 
             // postalCodeLabel
             // 
             postalCodeLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             postalCodeLabel.AutoSize = true;
             postalCodeLabel.Font = new Font("Segoe UI", 11F);
-            postalCodeLabel.Location = new Point(536, 419);
+            postalCodeLabel.Location = new Point(544, 464);
             postalCodeLabel.Name = "postalCodeLabel";
             postalCodeLabel.Size = new Size(90, 20);
             postalCodeLabel.TabIndex = 41;
@@ -412,6 +420,7 @@
             memberSaveButton.TabIndex = 42;
             memberSaveButton.Text = "Save";
             memberSaveButton.UseVisualStyleBackColor = true;
+            memberSaveButton.Click += memberSaveButton_Click;
             // 
             // memberClearButton
             // 
@@ -475,33 +484,52 @@
             memberNextButton.UseVisualStyleBackColor = true;
             memberNextButton.Click += memberNextButton_Click;
             // 
-            // memberEmploymentComboBox
+            // memberTitleComboBox
             // 
-            memberEmploymentComboBox.FormattingEnabled = true;
-            memberEmploymentComboBox.Items.AddRange(new object[] { "", "Unemployed", "Employed", "Self-Employed", "Pensioner", "Student" });
-            memberEmploymentComboBox.Location = new Point(187, 458);
-            memberEmploymentComboBox.Name = "memberEmploymentComboBox";
-            memberEmploymentComboBox.Size = new Size(225, 23);
-            memberEmploymentComboBox.TabIndex = 50;
-            memberEmploymentComboBox.Validating += memberEmploymentComboBox_Validating;
+            memberTitleComboBox.FormattingEnabled = true;
+            memberTitleComboBox.Items.AddRange(new object[] { "", "Mr", "Ms", "Mrs", "Dr", "Adv" });
+            memberTitleComboBox.Location = new Point(187, 185);
+            memberTitleComboBox.Name = "memberTitleComboBox";
+            memberTitleComboBox.Size = new Size(225, 23);
+            memberTitleComboBox.TabIndex = 50;
+            memberTitleComboBox.Validating += memberEmploymentComboBox_Validating;
             // 
-            // memberEmploymentStatusLabel
+            // memberTitleLabel
             // 
-            memberEmploymentStatusLabel.AutoSize = true;
-            memberEmploymentStatusLabel.Font = new Font("Segoe UI", 11F);
-            memberEmploymentStatusLabel.Location = new Point(32, 459);
-            memberEmploymentStatusLabel.Name = "memberEmploymentStatusLabel";
-            memberEmploymentStatusLabel.Size = new Size(140, 20);
-            memberEmploymentStatusLabel.TabIndex = 49;
-            memberEmploymentStatusLabel.Text = "Employment Status:";
+            memberTitleLabel.AutoSize = true;
+            memberTitleLabel.Font = new Font("Segoe UI", 11F);
+            memberTitleLabel.Location = new Point(32, 185);
+            memberTitleLabel.Name = "memberTitleLabel";
+            memberTitleLabel.Size = new Size(41, 20);
+            memberTitleLabel.TabIndex = 49;
+            memberTitleLabel.Text = "Title:";
             // 
             // memberLastNameTextBox
             // 
-            memberLastNameTextBox.Location = new Point(187, 228);
+            memberLastNameTextBox.Location = new Point(187, 271);
             memberLastNameTextBox.Name = "memberLastNameTextBox";
             memberLastNameTextBox.Size = new Size(225, 23);
             memberLastNameTextBox.TabIndex = 52;
             memberLastNameTextBox.Validating += memberLastNameTextBox_Validating;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "", "Unemployed", "Employed", "Self-Employed", "Pensioner", "Student" });
+            comboBox1.Location = new Point(657, 102);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(225, 23);
+            comboBox1.TabIndex = 54;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11F);
+            label1.Location = new Point(502, 103);
+            label1.Name = "label1";
+            label1.Size = new Size(140, 20);
+            label1.TabIndex = 53;
+            label1.Text = "Employment Status:";
             // 
             // AddMemberForm
             // 
@@ -509,9 +537,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1052, 513);
+            Controls.Add(comboBox1);
+            Controls.Add(label1);
             Controls.Add(memberLastNameTextBox);
-            Controls.Add(memberEmploymentComboBox);
-            Controls.Add(memberEmploymentStatusLabel);
+            Controls.Add(memberTitleComboBox);
+            Controls.Add(memberTitleLabel);
             Controls.Add(memberNextButton);
             Controls.Add(makePaymentButton);
             Controls.Add(viewFileButton);
@@ -604,8 +634,10 @@
         private Button viewFileButton;
         private Button makePaymentButton;
         private Button memberNextButton;
-        private ComboBox memberEmploymentComboBox;
-        private Label memberEmploymentStatusLabel;
+        private ComboBox memberTitleComboBox;
+        private Label memberTitleLabel;
         private TextBox memberLastNameTextBox;
+        private ComboBox comboBox1;
+        private Label label1;
     }
 }

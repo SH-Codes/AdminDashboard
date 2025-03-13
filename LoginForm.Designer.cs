@@ -76,7 +76,6 @@
             LoginButton.BackColor = SystemColors.Highlight;
             LoginButton.BackgroundImageLayout = ImageLayout.None;
             LoginButton.Cursor = Cursors.Hand;
-            LoginButton.FlatAppearance.BorderColor = SystemColors.Highlight;
             LoginButton.ForeColor = Color.White;
             LoginButton.Location = new Point(599, 333);
             LoginButton.Name = "LoginButton";
