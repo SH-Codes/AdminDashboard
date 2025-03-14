@@ -1,7 +1,10 @@
-﻿namespace AdminDashboard
+﻿using System.Drawing.Drawing2D;
+
+namespace AdminDashboard
 {
     public partial class MainForm : Form
     {
+        //private int cornerRadius = 30; // Adjust this for roundnes
 
         public Panel SwitchPanel // Public getter property
         {
@@ -11,6 +14,47 @@
         public MainForm()
         {
             InitializeComponent();
+            //this.FormBorderStyle = FormBorderStyle.Sizable;
+            //this.StartPosition = FormStartPosition.CenterScreen;
+            //this.BackColor = Color.White;
+
+            dashboardButton.Paint += new PaintEventHandler(dashboardButton_Paint);
+        }
+
+        //protected override void OnPaint(PaintEventArgs e)
+        //{
+        //    base.OnPaint(e);
+
+        //    using (GraphicsPath path = new GraphicsPath())
+        //    {
+        //        path.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90);
+        //        path.AddArc(this.Width - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90);
+        //        path.AddArc(this.Width - cornerRadius, this.Height - cornerRadius, cornerRadius, cornerRadius, 0, 90);
+        //        path.AddArc(0, this.Height - cornerRadius, cornerRadius, cornerRadius, 90, 90);
+        //        path.CloseFigure();
+
+        //        this.Region = new Region(path);
+        //    }
+        //}
+
+        private void dashboardButton_Paint(object sender, PaintEventArgs e)
+        {
+            int cornerRadius = 16; // Adjust for roundness
+
+            // Enable anti-aliasing for smooth edges
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
+            using (System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath())
+            {
+                path.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90);
+                path.AddArc(dashboardButton.Width - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90);
+                path.AddArc(dashboardButton.Width - cornerRadius, dashboardButton.Height - cornerRadius, cornerRadius, cornerRadius, 0, 90);
+                path.AddArc(0, dashboardButton.Height - cornerRadius, cornerRadius, cornerRadius, 90, 90);
+                path.CloseFigure();
+
+                // Apply rounded region
+                dashboardButton.Region = new Region(path);
+            }
         }
 
         private void overviewButton_Click(object sender, EventArgs e)
@@ -25,7 +69,20 @@
 
         private void switchPanel_Paint(object sender, PaintEventArgs e)
         {
+            int cornerRadius = 16; // Adjust this to change the roundness
 
+            using (GraphicsPath path = new GraphicsPath())
+            {
+                // Define rounded rectangle path
+                path.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90);
+                path.AddArc(containerPanel.Width - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90);
+                path.AddArc(containerPanel.Width - cornerRadius, containerPanel.Height - cornerRadius, cornerRadius, cornerRadius, 0, 90);
+                path.AddArc(0, containerPanel.Height - cornerRadius, cornerRadius, cornerRadius, 90, 90);
+                path.CloseFigure();
+
+                // Apply the path as the region of the panel
+                containerPanel.Region = new Region(path);
+            }
         }
 
         private void dashboardButton_Click(object sender, EventArgs e)
@@ -116,6 +173,43 @@
                 greeting = "Good Evening";
             }
             timeDisplayLabel.Text = $"{greeting}, {now:dddd, dd MMM yyyy, HH:mm:ss}";
+        }
+
+        private void containerPanel_Paint(object sender, PaintEventArgs e)
+        {
+            int cornerRadius = 16; // Adjust this to change the roundness
+
+            using (GraphicsPath path = new GraphicsPath())
+            {
+                // Define rounded rectangle path
+                path.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90);
+                path.AddArc(containerPanel.Width - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90);
+                path.AddArc(containerPanel.Width - cornerRadius, containerPanel.Height - cornerRadius, cornerRadius, cornerRadius, 0, 90);
+                path.AddArc(0, containerPanel.Height - cornerRadius, cornerRadius, cornerRadius, 90, 90);
+                path.CloseFigure();
+
+                // Apply the path as the region of the panel
+                containerPanel.Region = new Region(path);
+            }
+        }
+
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+            int cornerRadius = 20; // Adjust this to change the roundness
+
+            using (GraphicsPath path = new GraphicsPath())
+            {
+                // Define rounded rectangle path
+                path.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90);
+                path.AddArc(containerPanel.Width - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90);
+                path.AddArc(containerPanel.Width - cornerRadius, containerPanel.Height - cornerRadius, cornerRadius, cornerRadius, 0, 90);
+                path.AddArc(0, containerPanel.Height - cornerRadius, cornerRadius, cornerRadius, 90, 90);
+                path.CloseFigure();
+
+                // Apply the path as the region of the panel
+                containerPanel.Region = new Region(path);
+            }
+
         }
     }
 }

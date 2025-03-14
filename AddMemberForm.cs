@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D; // Required for GraphicsPath
 using System.Text.RegularExpressions; // Required for regex validation
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace AdminDashboard
 {
     public partial class AddMemberForm : Form
+
 
     {
         public MainForm MainForm { get; private set; }
@@ -21,7 +23,28 @@ namespace AdminDashboard
         {
             InitializeComponent();
             this.MainForm = MainFormRef;
+            //this.FormBorderStyle = FormBorderStyle.None;
+            //this.StartPosition = FormStartPosition.CenterScreen;
+            //this.BackColor = Color.White;
 
+        }
+
+        private int cornerRadius = 16; // Adjust this for roundnes
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+
+            using (GraphicsPath path = new GraphicsPath())
+            {
+                path.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90);
+                path.AddArc(this.Width - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90);
+                path.AddArc(this.Width - cornerRadius, this.Height - cornerRadius, cornerRadius, cornerRadius, 0, 90);
+                path.AddArc(0, this.Height - cornerRadius, cornerRadius, cornerRadius, 90, 90);
+                path.CloseFigure();
+
+                this.Region = new Region(path);
+            }
         }
 
         private void AddMemberForm_Load(object sender, EventArgs e)
