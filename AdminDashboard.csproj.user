@@ -19,6 +19,9 @@
     <Compile Update="EndOfFileForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FinancesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -28,7 +31,13 @@
     <Compile Update="PaymentsForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="SacramentalLifeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="SpousesForm.cs">

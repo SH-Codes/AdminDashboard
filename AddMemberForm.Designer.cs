@@ -183,7 +183,7 @@
             // 
             memberGenderLabel.AutoSize = true;
             memberGenderLabel.Font = new Font("Segoe UI", 11F);
-            memberGenderLabel.Location = new Point(32, 365);
+            memberGenderLabel.Location = new Point(29, 365);
             memberGenderLabel.Name = "memberGenderLabel";
             memberGenderLabel.Size = new Size(60, 20);
             memberGenderLabel.TabIndex = 19;
@@ -203,7 +203,7 @@
             // 
             memberRaceLabel.AutoSize = true;
             memberRaceLabel.Font = new Font("Segoe UI", 11F);
-            memberRaceLabel.Location = new Point(32, 412);
+            memberRaceLabel.Location = new Point(29, 412);
             memberRaceLabel.Name = "memberRaceLabel";
             memberRaceLabel.Size = new Size(41, 20);
             memberRaceLabel.TabIndex = 21;
@@ -213,7 +213,7 @@
             // 
             memberMaritalStatusLabel.AutoSize = true;
             memberMaritalStatusLabel.Font = new Font("Segoe UI", 11F);
-            memberMaritalStatusLabel.Location = new Point(32, 460);
+            memberMaritalStatusLabel.Location = new Point(29, 460);
             memberMaritalStatusLabel.Name = "memberMaritalStatusLabel";
             memberMaritalStatusLabel.Size = new Size(103, 20);
             memberMaritalStatusLabel.TabIndex = 22;
@@ -256,7 +256,7 @@
             memberOccupationLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             memberOccupationLabel.AutoSize = true;
             memberOccupationLabel.Font = new Font("Segoe UI", 11F);
-            memberOccupationLabel.Location = new Point(537, 146);
+            memberOccupationLabel.Location = new Point(554, 148);
             memberOccupationLabel.Name = "memberOccupationLabel";
             memberOccupationLabel.Size = new Size(88, 20);
             memberOccupationLabel.TabIndex = 26;
@@ -285,7 +285,7 @@
             memberPhoneNumberLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             memberPhoneNumberLabel.AutoSize = true;
             memberPhoneNumberLabel.Font = new Font("Segoe UI", 11F);
-            memberPhoneNumberLabel.Location = new Point(537, 184);
+            memberPhoneNumberLabel.Location = new Point(531, 184);
             memberPhoneNumberLabel.Name = "memberPhoneNumberLabel";
             memberPhoneNumberLabel.Size = new Size(111, 20);
             memberPhoneNumberLabel.TabIndex = 29;
@@ -305,7 +305,7 @@
             memberMobileNumberLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             memberMobileNumberLabel.AutoSize = true;
             memberMobileNumberLabel.Font = new Font("Segoe UI", 11F);
-            memberMobileNumberLabel.Location = new Point(537, 229);
+            memberMobileNumberLabel.Location = new Point(525, 229);
             memberMobileNumberLabel.Name = "memberMobileNumberLabel";
             memberMobileNumberLabel.Size = new Size(117, 20);
             memberMobileNumberLabel.TabIndex = 31;
@@ -325,7 +325,7 @@
             memberEmailAddressLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             memberEmailAddressLabel.AutoSize = true;
             memberEmailAddressLabel.Font = new Font("Segoe UI", 11F);
-            memberEmailAddressLabel.Location = new Point(542, 274);
+            memberEmailAddressLabel.Location = new Point(536, 274);
             memberEmailAddressLabel.Name = "memberEmailAddressLabel";
             memberEmailAddressLabel.Size = new Size(106, 20);
             memberEmailAddressLabel.TabIndex = 33;
@@ -345,11 +345,11 @@
             addressLine1Label.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             addressLine1Label.AutoSize = true;
             addressLine1Label.Font = new Font("Segoe UI", 11F);
-            addressLine1Label.Location = new Point(542, 321);
+            addressLine1Label.Location = new Point(534, 321);
             addressLine1Label.Name = "addressLine1Label";
-            addressLine1Label.Size = new Size(105, 20);
+            addressLine1Label.Size = new Size(108, 20);
             addressLine1Label.TabIndex = 35;
-            addressLine1Label.Text = "Address Line 1";
+            addressLine1Label.Text = "Address Line 1:";
             // 
             // addressLine2TextBox
             // 
@@ -365,11 +365,11 @@
             addressLine2Label.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             addressLine2Label.AutoSize = true;
             addressLine2Label.Font = new Font("Segoe UI", 11F);
-            addressLine2Label.Location = new Point(542, 367);
+            addressLine2Label.Location = new Point(534, 367);
             addressLine2Label.Name = "addressLine2Label";
-            addressLine2Label.Size = new Size(105, 20);
+            addressLine2Label.Size = new Size(108, 20);
             addressLine2Label.TabIndex = 37;
-            addressLine2Label.Text = "Address Line 2";
+            addressLine2Label.Text = "Address Line 2:";
             // 
             // zoneAreaTextBox
             // 
@@ -385,7 +385,7 @@
             zoneAreaLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             zoneAreaLabel.AutoSize = true;
             zoneAreaLabel.Font = new Font("Segoe UI", 11F);
-            zoneAreaLabel.Location = new Point(542, 416);
+            zoneAreaLabel.Location = new Point(561, 416);
             zoneAreaLabel.Name = "zoneAreaLabel";
             zoneAreaLabel.Size = new Size(81, 20);
             zoneAreaLabel.TabIndex = 39;
@@ -405,7 +405,7 @@
             postalCodeLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             postalCodeLabel.AutoSize = true;
             postalCodeLabel.Font = new Font("Segoe UI", 11F);
-            postalCodeLabel.Location = new Point(544, 464);
+            postalCodeLabel.Location = new Point(552, 463);
             postalCodeLabel.Name = "postalCodeLabel";
             postalCodeLabel.Size = new Size(90, 20);
             postalCodeLabel.TabIndex = 41;
@@ -498,7 +498,7 @@
             // 
             memberTitleLabel.AutoSize = true;
             memberTitleLabel.Font = new Font("Segoe UI", 11F);
-            memberTitleLabel.Location = new Point(32, 185);
+            memberTitleLabel.Location = new Point(29, 185);
             memberTitleLabel.Name = "memberTitleLabel";
             memberTitleLabel.Size = new Size(41, 20);
             memberTitleLabel.TabIndex = 49;

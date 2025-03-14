@@ -97,16 +97,29 @@ namespace AdminDashboard
 
         private void financesButton_Click(object sender, EventArgs e)
         {
-
+            switchPanel.Controls.Clear();
+            FinancesForm financesForm = new FinancesForm();
+            financesForm.TopLevel = false;
+            switchPanel.Controls.Add(financesForm);
+            financesForm.Show();
         }
 
         private void reportsButton_Click(object sender, EventArgs e)
         {
-
+            switchPanel.Controls.Clear();
+            ReportsForm reportsForm = new ReportsForm();
+            reportsForm.TopLevel = false;
+            switchPanel.Controls.Add(reportsForm);
+            reportsForm.Show();
         }
 
         private void settingsButton_Click(object sender, EventArgs e)
         {
+            switchPanel.Controls.Clear();
+            SettingsForm settingsForm = new SettingsForm();
+            settingsForm.TopLevel = false;
+            switchPanel.Controls.Add(settingsForm);
+            settingsForm.Show();
 
         }
 
