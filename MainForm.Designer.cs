@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             mainPanel = new Panel();
+            menuButton = new Button();
             dashboardButton = new Button();
             timeDisplayLabel = new Label();
             reportsButton = new Button();
@@ -53,6 +54,7 @@
             // 
             mainPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             mainPanel.BackColor = SystemColors.Highlight;
+            mainPanel.Controls.Add(menuButton);
             mainPanel.Controls.Add(dashboardButton);
             mainPanel.Controls.Add(timeDisplayLabel);
             mainPanel.Controls.Add(reportsButton);
@@ -65,6 +67,26 @@
             mainPanel.Size = new Size(1350, 747);
             mainPanel.TabIndex = 0;
             mainPanel.Paint += mainPanel_Paint;
+            // 
+            // menuButton
+            // 
+            menuButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            menuButton.BackColor = SystemColors.Highlight;
+            menuButton.BackgroundImageLayout = ImageLayout.Center;
+            menuButton.Cursor = Cursors.Hand;
+            menuButton.FlatAppearance.BorderColor = SystemColors.Highlight;
+            menuButton.FlatAppearance.CheckedBackColor = Color.White;
+            menuButton.FlatStyle = FlatStyle.Flat;
+            menuButton.Font = new Font("Segoe UI", 11F);
+            menuButton.ForeColor = Color.White;
+            menuButton.Image = (Image)resources.GetObject("menuButton.Image");
+            menuButton.ImageAlign = ContentAlignment.MiddleLeft;
+            menuButton.Location = new Point(12, 27);
+            menuButton.Name = "menuButton";
+            menuButton.Padding = new Padding(15, 0, 0, 0);
+            menuButton.Size = new Size(68, 45);
+            menuButton.TabIndex = 6;
+            menuButton.UseVisualStyleBackColor = false;
             // 
             // dashboardButton
             // 
@@ -189,7 +211,7 @@
             searchbarTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             searchbarTextBox.BorderStyle = BorderStyle.FixedSingle;
             searchbarTextBox.Font = new Font("Segoe UI", 11F);
-            searchbarTextBox.Location = new Point(584, 25);
+            searchbarTextBox.Location = new Point(592, 25);
             searchbarTextBox.Name = "searchbarTextBox";
             searchbarTextBox.PlaceholderText = "  Search by keyword (eg. Name or Member ID)";
             searchbarTextBox.Size = new Size(484, 27);
@@ -309,5 +331,6 @@
         private Button settingsButton;
         private Label timeDisplayLabel;
         private System.Windows.Forms.Timer mainFormTimer;
+        private Button menuButton;
     }
 }

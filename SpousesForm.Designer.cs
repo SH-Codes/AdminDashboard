@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            memberEmploymentComboBox = new ComboBox();
+            spouseEmploymentStatusComboBox = new ComboBox();
             memberEmploymentLabel = new Label();
             spousesNextButton = new Button();
             spousePreviousButton = new Button();
             memberDeleteButton = new Button();
             memberUpdateButton = new Button();
             memberClearButton = new Button();
-            memberSaveButton = new Button();
+            spouseSaveButton = new Button();
             spouseReligionLabel = new Label();
             spouseReligionTextBox = new TextBox();
             spouseEmailAddressLabel = new Label();
@@ -44,7 +44,7 @@
             spouseMobileNumberTextBox = new TextBox();
             spousePhoneNumberLabel = new Label();
             spousePhoneNumberTextBox = new TextBox();
-            spouseOccupationtextBox = new TextBox();
+            spouseOccupationTextBox = new TextBox();
             spouseOccupationLabel = new Label();
             memberRaceLabel = new Label();
             spouseRaceComboBox = new ComboBox();
@@ -65,14 +65,15 @@
             spouseLastNameLabel = new Label();
             SuspendLayout();
             // 
-            // memberEmploymentComboBox
+            // spouseEmploymentStatusComboBox
             // 
-            memberEmploymentComboBox.FormattingEnabled = true;
-            memberEmploymentComboBox.Items.AddRange(new object[] { "", "Unemployed", "Employed", "Self-Employed", "Pensioner", "Student" });
-            memberEmploymentComboBox.Location = new Point(192, 463);
-            memberEmploymentComboBox.Name = "memberEmploymentComboBox";
-            memberEmploymentComboBox.Size = new Size(225, 23);
-            memberEmploymentComboBox.TabIndex = 94;
+            spouseEmploymentStatusComboBox.FormattingEnabled = true;
+            spouseEmploymentStatusComboBox.Items.AddRange(new object[] { "", "Unemployed", "Employed", "Self-Employed", "Pensioner", "Student" });
+            spouseEmploymentStatusComboBox.Location = new Point(192, 463);
+            spouseEmploymentStatusComboBox.Name = "spouseEmploymentStatusComboBox";
+            spouseEmploymentStatusComboBox.Size = new Size(225, 23);
+            spouseEmploymentStatusComboBox.TabIndex = 94;
+            spouseEmploymentStatusComboBox.Validating += spouseEmploymentStatusComboBox_Validating;
             // 
             // memberEmploymentLabel
             // 
@@ -87,7 +88,7 @@
             // spousesNextButton
             // 
             spousesNextButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            spousesNextButton.Location = new Point(914, 421);
+            spousesNextButton.Location = new Point(914, 461);
             spousesNextButton.Name = "spousesNextButton";
             spousesNextButton.Size = new Size(110, 23);
             spousesNextButton.TabIndex = 92;
@@ -98,7 +99,7 @@
             // spousePreviousButton
             // 
             spousePreviousButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            spousePreviousButton.Location = new Point(914, 375);
+            spousePreviousButton.Location = new Point(914, 415);
             spousePreviousButton.Name = "spousePreviousButton";
             spousePreviousButton.Size = new Size(110, 23);
             spousePreviousButton.TabIndex = 91;
@@ -136,15 +137,16 @@
             memberClearButton.Text = "Clear";
             memberClearButton.UseVisualStyleBackColor = true;
             // 
-            // memberSaveButton
+            // spouseSaveButton
             // 
-            memberSaveButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            memberSaveButton.Location = new Point(914, 107);
-            memberSaveButton.Name = "memberSaveButton";
-            memberSaveButton.Size = new Size(110, 23);
-            memberSaveButton.TabIndex = 86;
-            memberSaveButton.Text = "Save";
-            memberSaveButton.UseVisualStyleBackColor = true;
+            spouseSaveButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            spouseSaveButton.Location = new Point(914, 107);
+            spouseSaveButton.Name = "spouseSaveButton";
+            spouseSaveButton.Size = new Size(110, 23);
+            spouseSaveButton.TabIndex = 86;
+            spouseSaveButton.Text = "Save";
+            spouseSaveButton.UseVisualStyleBackColor = true;
+            spouseSaveButton.Click += spouseSaveButton_Click;
             // 
             // spouseReligionLabel
             // 
@@ -164,6 +166,7 @@
             spouseReligionTextBox.Name = "spouseReligionTextBox";
             spouseReligionTextBox.Size = new Size(225, 23);
             spouseReligionTextBox.TabIndex = 78;
+            spouseReligionTextBox.Validating += spouseReligionTextBox_Validating;
             // 
             // spouseEmailAddressLabel
             // 
@@ -183,6 +186,7 @@
             spouseEmailAddressTextBox.Name = "spouseEmailAddressTextBox";
             spouseEmailAddressTextBox.Size = new Size(225, 23);
             spouseEmailAddressTextBox.TabIndex = 76;
+            spouseEmailAddressTextBox.Validating += spouseEmailAddressTextBox_Validating;
             // 
             // spouseMobileNumberLabel
             // 
@@ -202,6 +206,7 @@
             spouseMobileNumberTextBox.Name = "spouseMobileNumberTextBox";
             spouseMobileNumberTextBox.Size = new Size(225, 23);
             spouseMobileNumberTextBox.TabIndex = 74;
+            spouseMobileNumberTextBox.Validating += spouseMobileNumberTextBox_Validating;
             // 
             // spousePhoneNumberLabel
             // 
@@ -221,14 +226,16 @@
             spousePhoneNumberTextBox.Name = "spousePhoneNumberTextBox";
             spousePhoneNumberTextBox.Size = new Size(225, 23);
             spousePhoneNumberTextBox.TabIndex = 72;
+            spousePhoneNumberTextBox.Validating += spousePhoneNumberTextBox_Validating;
             // 
-            // spouseOccupationtextBox
+            // spouseOccupationTextBox
             // 
-            spouseOccupationtextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            spouseOccupationtextBox.Location = new Point(654, 105);
-            spouseOccupationtextBox.Name = "spouseOccupationtextBox";
-            spouseOccupationtextBox.Size = new Size(225, 23);
-            spouseOccupationtextBox.TabIndex = 71;
+            spouseOccupationTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            spouseOccupationTextBox.Location = new Point(654, 105);
+            spouseOccupationTextBox.Name = "spouseOccupationTextBox";
+            spouseOccupationTextBox.Size = new Size(225, 23);
+            spouseOccupationTextBox.TabIndex = 71;
+            spouseOccupationTextBox.Validating += spouseOccupationtextBox_Validating;
             // 
             // spouseOccupationLabel
             // 
@@ -259,6 +266,7 @@
             spouseRaceComboBox.Name = "spouseRaceComboBox";
             spouseRaceComboBox.Size = new Size(225, 23);
             spouseRaceComboBox.TabIndex = 64;
+            spouseRaceComboBox.Validating += spouseRaceComboBox_Validating;
             // 
             // spouseGenderLabel
             // 
@@ -276,6 +284,7 @@
             spouseBirthDateTimePicker.Name = "spouseBirthDateTimePicker";
             spouseBirthDateTimePicker.Size = new Size(225, 23);
             spouseBirthDateTimePicker.TabIndex = 62;
+            spouseBirthDateTimePicker.ValueChanged += spouseBirthDateTimePicker_ValueChanged;
             // 
             // spouseBirthDateLabel
             // 
@@ -295,6 +304,7 @@
             spouseGenderComboBox.Name = "spouseGenderComboBox";
             spouseGenderComboBox.Size = new Size(225, 23);
             spouseGenderComboBox.TabIndex = 60;
+            spouseGenderComboBox.Validating += spouseLastNameTextBox_Validating;
             // 
             // spouseMaidenNameTextBox
             // 
@@ -302,6 +312,7 @@
             spouseMaidenNameTextBox.Name = "spouseMaidenNameTextBox";
             spouseMaidenNameTextBox.Size = new Size(225, 23);
             spouseMaidenNameTextBox.TabIndex = 59;
+            spouseMaidenNameTextBox.Validating += spouseMaidenNameTextBox_Validating;
             // 
             // spouseMaidenNameLabel
             // 
@@ -319,6 +330,7 @@
             spouseFirstNameTextBox.Name = "spouseFirstNameTextBox";
             spouseFirstNameTextBox.Size = new Size(225, 23);
             spouseFirstNameTextBox.TabIndex = 57;
+            spouseFirstNameTextBox.Validating += spouseFirstNameTextBox_Validating;
             // 
             // spouseFirstNameLabel
             // 
@@ -344,6 +356,7 @@
             // 
             spouseMembershipNumberTextBox.Location = new Point(192, 143);
             spouseMembershipNumberTextBox.Name = "spouseMembershipNumberTextBox";
+            spouseMembershipNumberTextBox.ReadOnly = true;
             spouseMembershipNumberTextBox.Size = new Size(225, 23);
             spouseMembershipNumberTextBox.TabIndex = 53;
             // 
@@ -371,6 +384,7 @@
             // 
             spouseIDTextBox.Location = new Point(192, 105);
             spouseIDTextBox.Name = "spouseIDTextBox";
+            spouseIDTextBox.ReadOnly = true;
             spouseIDTextBox.Size = new Size(225, 23);
             spouseIDTextBox.TabIndex = 95;
             // 
@@ -380,6 +394,7 @@
             spouseLastNameTextBox.Name = "spouseLastNameTextBox";
             spouseLastNameTextBox.Size = new Size(225, 23);
             spouseLastNameTextBox.TabIndex = 97;
+            spouseLastNameTextBox.Validating += spouseLastNameTextBox_Validating;
             // 
             // spouseLastNameLabel
             // 
@@ -400,14 +415,14 @@
             Controls.Add(spouseLastNameTextBox);
             Controls.Add(spouseLastNameLabel);
             Controls.Add(spouseIDTextBox);
-            Controls.Add(memberEmploymentComboBox);
+            Controls.Add(spouseEmploymentStatusComboBox);
             Controls.Add(memberEmploymentLabel);
             Controls.Add(spousesNextButton);
             Controls.Add(spousePreviousButton);
             Controls.Add(memberDeleteButton);
             Controls.Add(memberUpdateButton);
             Controls.Add(memberClearButton);
-            Controls.Add(memberSaveButton);
+            Controls.Add(spouseSaveButton);
             Controls.Add(spouseReligionLabel);
             Controls.Add(spouseReligionTextBox);
             Controls.Add(spouseEmailAddressLabel);
@@ -416,7 +431,7 @@
             Controls.Add(spouseMobileNumberTextBox);
             Controls.Add(spousePhoneNumberLabel);
             Controls.Add(spousePhoneNumberTextBox);
-            Controls.Add(spouseOccupationtextBox);
+            Controls.Add(spouseOccupationTextBox);
             Controls.Add(spouseOccupationLabel);
             Controls.Add(memberRaceLabel);
             Controls.Add(spouseRaceComboBox);
@@ -442,14 +457,14 @@
 
         #endregion
 
-        private ComboBox memberEmploymentComboBox;
+        private ComboBox spouseEmploymentStatusComboBox;
         private Label memberEmploymentLabel;
         private Button spousesNextButton;
         private Button spousePreviousButton;
         private Button memberDeleteButton;
         private Button memberUpdateButton;
         private Button memberClearButton;
-        private Button memberSaveButton;
+        private Button spouseSaveButton;
         private Label spouseReligionLabel;
         private TextBox spouseReligionTextBox;
         private Label spouseEmailAddressLabel;
@@ -458,7 +473,7 @@
         private TextBox spouseMobileNumberTextBox;
         private Label spousePhoneNumberLabel;
         private TextBox spousePhoneNumberTextBox;
-        private TextBox spouseOccupationtextBox;
+        private TextBox spouseOccupationTextBox;
         private Label spouseOccupationLabel;
         private Label memberRaceLabel;
         private ComboBox spouseRaceComboBox;

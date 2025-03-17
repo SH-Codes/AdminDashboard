@@ -136,7 +136,7 @@ namespace AdminDashboard
 
         private void memberGenderComboBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (memberGenderComboBox.SelectedItem == null || string.IsNullOrWhiteSpace(memberGenderComboBox.Text))
+             if (memberGenderComboBox.SelectedItem == null || string.IsNullOrWhiteSpace(memberGenderComboBox.Text))
             {
                 MessageBox.Show("Please select a gender.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
@@ -173,7 +173,7 @@ namespace AdminDashboard
         private void memberEmploymentComboBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
             // Ensure a valid selection is made
-            if (memberTitleComboBox.SelectedItem == null || string.IsNullOrWhiteSpace(memberTitleComboBox.Text))
+            if (memberEmploymentStatusComboBox.SelectedItem == null || string.IsNullOrWhiteSpace(memberEmploymentStatusComboBox.Text))
             {
                 MessageBox.Show("Employment status cannot be empty.", "Invalid Selection",
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -260,8 +260,6 @@ namespace AdminDashboard
                 e.Cancel = true; // Prevents moving to the next field until valid input is entered
             }
         }
-
-
 
         private void addressLine2TextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
@@ -381,11 +379,11 @@ namespace AdminDashboard
                 genderDigit = (gender == "male") ? rand.Next(5, 10) : rand.Next(0, 5);
             }
 
-            // Get race-based digit
+            // Get race-based digit (Fixed Null Dereference and Case Issue)
             int raceDigit = 5; // Default to 'Other'
             if (memberRaceComboBox.SelectedItem != null)
             {
-                string race = memberRaceComboBox.SelectedItem?.ToString() ?? string.Empty.ToLower();
+                string race = memberRaceComboBox.SelectedItem.ToString().ToLower(); // Ensure it is lowercase
                 switch (race)
                 {
                     case "black":
@@ -412,5 +410,6 @@ namespace AdminDashboard
             // Construct final membership number
             return $"{lastTwoYearDigits}{genderDigit}{raceDigit}{lastFourDigits}";
         }
+
     }
 }

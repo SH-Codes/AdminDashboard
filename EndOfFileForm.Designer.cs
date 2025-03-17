@@ -74,6 +74,7 @@
             // 
             FileIdTextBox.Location = new Point(184, 130);
             FileIdTextBox.Name = "FileIdTextBox";
+            FileIdTextBox.ReadOnly = true;
             FileIdTextBox.Size = new Size(225, 23);
             FileIdTextBox.TabIndex = 114;
             // 
@@ -171,6 +172,7 @@
             // 
             endOfFileMembershipNumberTextBox.Location = new Point(184, 168);
             endOfFileMembershipNumberTextBox.Name = "endOfFileMembershipNumberTextBox";
+            endOfFileMembershipNumberTextBox.ReadOnly = true;
             endOfFileMembershipNumberTextBox.Size = new Size(225, 23);
             endOfFileMembershipNumberTextBox.TabIndex = 103;
             // 

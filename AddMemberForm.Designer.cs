@@ -72,7 +72,7 @@
             memberTitleComboBox = new ComboBox();
             memberTitleLabel = new Label();
             memberLastNameTextBox = new TextBox();
-            comboBox1 = new ComboBox();
+            memberEmploymentStatusComboBox = new ComboBox();
             label1 = new Label();
             SuspendLayout();
             // 
@@ -476,7 +476,7 @@
             // memberNextButton
             // 
             memberNextButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            memberNextButton.Location = new Point(909, 416);
+            memberNextButton.Location = new Point(909, 463);
             memberNextButton.Name = "memberNextButton";
             memberNextButton.Size = new Size(110, 23);
             memberNextButton.TabIndex = 48;
@@ -512,14 +512,14 @@
             memberLastNameTextBox.TabIndex = 52;
             memberLastNameTextBox.Validating += memberLastNameTextBox_Validating;
             // 
-            // comboBox1
+            // memberEmploymentStatusComboBox
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "", "Unemployed", "Employed", "Self-Employed", "Pensioner", "Student" });
-            comboBox1.Location = new Point(657, 102);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(225, 23);
-            comboBox1.TabIndex = 54;
+            memberEmploymentStatusComboBox.FormattingEnabled = true;
+            memberEmploymentStatusComboBox.Items.AddRange(new object[] { "", "Unemployed", "Employed", "Self-Employed", "Pensioner", "Student" });
+            memberEmploymentStatusComboBox.Location = new Point(657, 102);
+            memberEmploymentStatusComboBox.Name = "memberEmploymentStatusComboBox";
+            memberEmploymentStatusComboBox.Size = new Size(225, 23);
+            memberEmploymentStatusComboBox.TabIndex = 54;
             // 
             // label1
             // 
@@ -537,7 +537,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1052, 513);
-            Controls.Add(comboBox1);
+            Controls.Add(memberEmploymentStatusComboBox);
             Controls.Add(label1);
             Controls.Add(memberLastNameTextBox);
             Controls.Add(memberTitleComboBox);
@@ -637,7 +637,7 @@
         private ComboBox memberTitleComboBox;
         private Label memberTitleLabel;
         private TextBox memberLastNameTextBox;
-        private ComboBox comboBox1;
+        private ComboBox memberEmploymentStatusComboBox;
         private Label label1;
     }
 }

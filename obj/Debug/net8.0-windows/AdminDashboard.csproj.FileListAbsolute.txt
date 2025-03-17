@@ -65,3 +65,35 @@ C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net
 C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.FinancesForm.resources
 C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.ReportsForm.resources
 C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.SettingsForm.resources
+D:\source\SH-Codes\AdminDashboard\bin\Debug\net8.0-windows\AdminDashboard.exe
+D:\source\SH-Codes\AdminDashboard\bin\Debug\net8.0-windows\AdminDashboard.deps.json
+D:\source\SH-Codes\AdminDashboard\bin\Debug\net8.0-windows\AdminDashboard.runtimeconfig.json
+D:\source\SH-Codes\AdminDashboard\bin\Debug\net8.0-windows\AdminDashboard.dll
+D:\source\SH-Codes\AdminDashboard\bin\Debug\net8.0-windows\AdminDashboard.pdb
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.AcademicHistoryForm.resources
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.ActivitiesForm.resources
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.AddMemberForm.resources
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.DashboardForm.resources
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.DependentsForm.resources
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.EndOfFileForm.resources
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.FinancesForm.resources
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.LoginForm.resources
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.MainForm.resources
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.PaymentsForm.resources
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.Properties.Resources.resources
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.ReportsForm.resources
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.SacramentalLifeForm.resources
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.SettingsForm.resources
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.SpousesForm.resources
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.ViewMembersForm.resources
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.csproj.GenerateResource.cache
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.GeneratedMSBuildEditorConfig.editorconfig
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.AssemblyInfoInputs.cache
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.AssemblyInfo.cs
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.csproj.CoreCompileInputs.cache
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.sourcelink.json
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.dll
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\refint\AdminDashboard.dll
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.pdb
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.genruntimeconfig.cache
+D:\source\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\ref\AdminDashboard.dll

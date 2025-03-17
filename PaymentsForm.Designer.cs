@@ -133,6 +133,7 @@
             // 
             payementMembershipNumberTextBox.Location = new Point(192, 143);
             payementMembershipNumberTextBox.Name = "payementMembershipNumberTextBox";
+            payementMembershipNumberTextBox.ReadOnly = true;
             payementMembershipNumberTextBox.Size = new Size(225, 23);
             payementMembershipNumberTextBox.TabIndex = 53;
             // 
@@ -160,6 +161,7 @@
             // 
             paymentIdTextBox.Location = new Point(192, 105);
             paymentIdTextBox.Name = "paymentIdTextBox";
+            paymentIdTextBox.ReadOnly = true;
             paymentIdTextBox.Size = new Size(225, 23);
             paymentIdTextBox.TabIndex = 95;
             // 

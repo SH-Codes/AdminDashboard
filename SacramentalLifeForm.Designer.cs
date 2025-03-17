@@ -352,6 +352,7 @@
             sacramentalMembershipNumberTextBox.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             sacramentalMembershipNumberTextBox.Location = new Point(184, 110);
             sacramentalMembershipNumberTextBox.Name = "sacramentalMembershipNumberTextBox";
+            sacramentalMembershipNumberTextBox.ReadOnly = true;
             sacramentalMembershipNumberTextBox.Size = new Size(225, 23);
             sacramentalMembershipNumberTextBox.TabIndex = 53;
             // 
@@ -381,6 +382,7 @@
             sacrementalIDTextBox.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             sacrementalIDTextBox.Location = new Point(184, 72);
             sacrementalIDTextBox.Name = "sacrementalIDTextBox";
+            sacrementalIDTextBox.ReadOnly = true;
             sacrementalIDTextBox.Size = new Size(225, 23);
             sacrementalIDTextBox.TabIndex = 95;
             // 

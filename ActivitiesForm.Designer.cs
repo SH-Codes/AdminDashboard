@@ -293,6 +293,7 @@
             // 
             activityMembershipNumberTextBox.Location = new Point(192, 143);
             activityMembershipNumberTextBox.Name = "activityMembershipNumberTextBox";
+            activityMembershipNumberTextBox.ReadOnly = true;
             activityMembershipNumberTextBox.Size = new Size(225, 23);
             activityMembershipNumberTextBox.TabIndex = 53;
             // 
@@ -320,6 +321,7 @@
             // 
             activityIDTextBox.Location = new Point(192, 108);
             activityIDTextBox.Name = "activityIDTextBox";
+            activityIDTextBox.ReadOnly = true;
             activityIDTextBox.Size = new Size(225, 23);
             activityIDTextBox.TabIndex = 95;
             // 

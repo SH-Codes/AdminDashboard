@@ -162,6 +162,7 @@
             // 
             academicHistoryMembershipNumberTextBox.Location = new Point(192, 143);
             academicHistoryMembershipNumberTextBox.Name = "academicHistoryMembershipNumberTextBox";
+            academicHistoryMembershipNumberTextBox.ReadOnly = true;
             academicHistoryMembershipNumberTextBox.Size = new Size(225, 23);
             academicHistoryMembershipNumberTextBox.TabIndex = 53;
             // 
@@ -189,6 +190,7 @@
             // 
             academicIDTextBox.Location = new Point(192, 105);
             academicIDTextBox.Name = "academicIDTextBox";
+            academicIDTextBox.ReadOnly = true;
             academicIDTextBox.Size = new Size(225, 23);
             academicIDTextBox.TabIndex = 95;
             // 

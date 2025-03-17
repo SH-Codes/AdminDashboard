@@ -1,4 +1,5 @@
 ﻿using System.Drawing.Drawing2D;
+using System.Runtime.InteropServices;
 
 namespace AdminDashboard
 {
@@ -19,6 +20,10 @@ namespace AdminDashboard
             //this.BackColor = Color.White;
 
             dashboardButton.Paint += new PaintEventHandler(dashboardButton_Paint);
+            financesButton.Paint += new PaintEventHandler(financesButton_Paint);
+            reportsButton.Paint += new PaintEventHandler(reportsButton_Paint);
+            settingsButton.Paint += new PaintEventHandler(settingsButton_Paint);
+            logoutButton.Paint += new PaintEventHandler(logoutButton_Paint);
         }
 
         //protected override void OnPaint(PaintEventArgs e)
@@ -37,7 +42,9 @@ namespace AdminDashboard
         //    }
         //}
 
-        private void dashboardButton_Paint(object sender, PaintEventArgs e)
+       
+
+        private void dashboardButton_Paint(object? sender, PaintEventArgs e)
         {
             int cornerRadius = 16; // Adjust for roundness
 
@@ -57,6 +64,85 @@ namespace AdminDashboard
             }
         }
 
+        private void financesButton_Paint(object? sender, PaintEventArgs e)
+        {
+            int cornerRadius = 16; // Adjust for roundness
+
+            // Enable anti-aliasing for smooth edges
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
+            using (System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath())
+            {
+                path.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90);
+                path.AddArc(financesButton.Width - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90);
+                path.AddArc(financesButton.Width - cornerRadius, financesButton.Height - cornerRadius, cornerRadius, cornerRadius, 0, 90);
+                path.AddArc(0, financesButton.Height - cornerRadius, cornerRadius, cornerRadius, 90, 90);
+                path.CloseFigure();
+
+                // Apply rounded region
+                financesButton.Region = new Region(path);
+            }
+        }
+
+        private void reportsButton_Paint(object? sender, PaintEventArgs e)
+        {
+            int cornerRadius = 16; // Adjust for roundness
+
+            // Enable anti-aliasing for smooth edges
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
+            using (System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath())
+            {
+                path.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90);
+                path.AddArc(reportsButton.Width - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90);
+                path.AddArc(reportsButton.Width - cornerRadius, reportsButton.Height - cornerRadius, cornerRadius, cornerRadius, 0, 90);
+                path.AddArc(0, reportsButton.Height - cornerRadius, cornerRadius, cornerRadius, 90, 90);
+                path.CloseFigure();
+
+                // Apply rounded region
+                reportsButton.Region = new Region(path);
+            }
+        }
+
+        private void settingsButton_Paint(object? sender, PaintEventArgs e)
+        {
+            int cornerRadius = 16; // Adjust for roundness
+
+            // Enable anti-aliasing for smooth edges
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
+            using (System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath())
+            {
+                path.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90);
+                path.AddArc(settingsButton.Width - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90);
+                path.AddArc(settingsButton.Width - cornerRadius, settingsButton.Height - cornerRadius, cornerRadius, cornerRadius, 0, 90);
+                path.AddArc(0, settingsButton.Height - cornerRadius, cornerRadius, cornerRadius, 90, 90);
+                path.CloseFigure();
+
+                // Apply rounded region
+                settingsButton.Region = new Region(path);
+            }
+        }
+
+        private void logoutButton_Paint(object? sender, PaintEventArgs e)
+        {
+            int cornerRadius = 16; // Adjust for roundness
+
+            // Enable anti-aliasing for smooth edges
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
+            using (System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath())
+            {
+                path.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90);
+                path.AddArc(logoutButton.Width - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90);
+                path.AddArc(logoutButton.Width - cornerRadius, logoutButton.Height - cornerRadius, cornerRadius, cornerRadius, 0, 90);
+                path.AddArc(0, logoutButton.Height - cornerRadius, cornerRadius, cornerRadius, 90, 90);
+                path.CloseFigure();
+
+                // Apply rounded region
+                logoutButton.Region = new Region(path);
+            }
+        }
         private void overviewButton_Click(object sender, EventArgs e)
         {
 

@@ -58,6 +58,7 @@
             // 
             dependentIDTextBox.Location = new Point(203, 105);
             dependentIDTextBox.Name = "dependentIDTextBox";
+            dependentIDTextBox.ReadOnly = true;
             dependentIDTextBox.Size = new Size(225, 23);
             dependentIDTextBox.TabIndex = 130;
             // 
@@ -244,6 +245,7 @@
             // 
             dependentMembershipNumberTextBox.Location = new Point(203, 143);
             dependentMembershipNumberTextBox.Name = "dependentMembershipNumberTextBox";
+            dependentMembershipNumberTextBox.ReadOnly = true;
             dependentMembershipNumberTextBox.Size = new Size(225, 23);
             dependentMembershipNumberTextBox.TabIndex = 100;
             // 
