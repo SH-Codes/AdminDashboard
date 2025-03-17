@@ -136,7 +136,7 @@ namespace AdminDashboard
 
         private void memberGenderComboBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-             if (memberGenderComboBox.SelectedItem == null || string.IsNullOrWhiteSpace(memberGenderComboBox.Text))
+            if (memberGenderComboBox.SelectedItem == null || string.IsNullOrWhiteSpace(memberGenderComboBox.Text))
             {
                 MessageBox.Show("Please select a gender.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
@@ -411,5 +411,9 @@ namespace AdminDashboard
             return $"{lastTwoYearDigits}{genderDigit}{raceDigit}{lastFourDigits}";
         }
 
+        private void memberEmploymentStatusLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

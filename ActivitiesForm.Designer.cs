@@ -74,7 +74,7 @@
             // activityRole2ComboBox
             // 
             activityRole2ComboBox.FormattingEnabled = true;
-            activityRole2ComboBox.Items.AddRange(new object[] { "", "Unemployed", "Employed", "Self-Employed", "Pensioner", "Student" });
+            activityRole2ComboBox.Items.AddRange(new object[] { "", "Chairperson", "Deputy Chairperson", "Secretary", "Deputy Secretery", "Finance and Fundraising Officer", "Skills and Development Officer", "Sports and Entertainment Officer", "Media and Publicity Officer", "Additional Executive Member", "Member" });
             activityRole2ComboBox.Location = new Point(192, 463);
             activityRole2ComboBox.Name = "activityRole2ComboBox";
             activityRole2ComboBox.Size = new Size(225, 23);
@@ -188,7 +188,7 @@
             // activityName2ComboBox
             // 
             activityName2ComboBox.FormattingEnabled = true;
-            activityName2ComboBox.Items.AddRange(new object[] { "", "Single", "Married", "Devorced", "Separated", "Widowed" });
+            activityName2ComboBox.Items.AddRange(new object[] { "", "Altar Server", "Audio Visual, Electrical Equiptment", "Audio & Projection Team", "Building, Painting, Electrical and Plumbing", "Catering & Cooking", "Care for the Poor", "Care of Seminarians & Priests", "Catholic Nurses Guild", "Cathoic Women's League", "Catholic Women's Union", "Church Gardens", "Cleaning", "Collection Counting", "Daughter's of St. Anne's Sodality", "Floral Arrangement", "Fundraising for the Parish", "Good Shepherd Programm", "Holy Childhood", "Hospital and Hospice Ministry", "Junior Youth (8 - 15)", "Knights of da Gama", "Lector", "Legal Advice and Representation", "Medical Care", "Mid-Youth (20 - 29)", "Music - Instrument Player", "Newsletter and Website Team", "Office Reception", "Other", "Photography, Publicity", "Primary Phase Catechism", "RCIA Team", "Repository and Sales", "Resource Centre and Library", "Secretarial Skills", "Sewing and Dress Making", "Sacred Heart Sodality", "Sacristan", "Social Functions", "Social Media Team", "Sodality of Mary", "St. Anne's Sodality", "St. Cecilia - Choir", "St. Francis Sodality", "St. Dominic's Sodality", "St. Joseph's Sodality", "St. Vincent de Paul", "Support Group for Widows", "Typing and Translating", "Udodana", "Visiting and Caring for the Elderly", "Visiting of the Sick", "Youth Adults (29 - 45)" });
             activityName2ComboBox.Location = new Point(192, 421);
             activityName2ComboBox.Name = "activityName2ComboBox";
             activityName2ComboBox.Size = new Size(225, 23);
@@ -217,7 +217,7 @@
             // departmentName2ComboBox
             // 
             departmentName2ComboBox.FormattingEnabled = true;
-            departmentName2ComboBox.Items.AddRange(new object[] { "", "Black", "Colour", "Indian", "White", "Other" });
+            departmentName2ComboBox.Items.AddRange(new object[] { "", "Administration", "Formation", "Liturgical", "Maintenance", "Pastoral", "Sodalities", "Other" });
             departmentName2ComboBox.Location = new Point(192, 373);
             departmentName2ComboBox.Name = "departmentName2ComboBox";
             departmentName2ComboBox.Size = new Size(225, 23);
@@ -239,6 +239,7 @@
             yearJoinedDateTimePicker1.Name = "yearJoinedDateTimePicker1";
             yearJoinedDateTimePicker1.Size = new Size(225, 23);
             yearJoinedDateTimePicker1.TabIndex = 62;
+            yearJoinedDateTimePicker1.ValueChanged += yearJoinedDateTimePicker1_ValueChanged;
             // 
             // activityRole1Label
             // 
@@ -253,7 +254,7 @@
             // activityRole1ComboBox
             // 
             activityRole1ComboBox.FormattingEnabled = true;
-            activityRole1ComboBox.Items.AddRange(new object[] { "", "Male", "Female" });
+            activityRole1ComboBox.Items.AddRange(new object[] { "", "Chairperson", "Deputy Chairperson", "Secretary", "Deputy Secretery", "Finance and Fundraising Officer", "Skills and Development Officer", "Sports and Entertainment Officer", "Media and Publicity Officer", "Additional Executive Member", "Member" });
             activityRole1ComboBox.Location = new Point(192, 282);
             activityRole1ComboBox.Name = "activityRole1ComboBox";
             activityRole1ComboBox.Size = new Size(225, 23);
@@ -328,11 +329,12 @@
             // activityName1ComboBox
             // 
             activityName1ComboBox.FormattingEnabled = true;
-            activityName1ComboBox.Items.AddRange(new object[] { "", "Male", "Female" });
+            activityName1ComboBox.Items.AddRange(new object[] { "", "Altar Server", "Audio Visual, Electrical Equiptment", "Audio & Projection Team", "Building, Painting, Electrical and Plumbing", "Catering & Cooking", "Care for the Poor", "Care of Seminarians & Priests", "Catholic Nurses Guild", "Cathoic Women's League", "Catholic Women's Union", "Church Gardens", "Cleaning", "Collection Counting", "Daughter's of St. Anne's Sodality", "Floral Arrangement", "Fundraising for the Parish", "Good Shepherd Programm", "Holy Childhood", "Hospital and Hospice Ministry", "Junior Youth (8 - 15)", "Knights of da Gama", "Lector", "Legal Advice and Representation", "Medical Care", "Mid-Youth (20 - 29)", "Music - Instrument Player", "Newsletter and Website Team", "Office Reception", "Other", "Photography, Publicity", "Primary Phase Catechism", "RCIA Team", "Repository and Sales", "Resource Centre and Library", "Secretarial Skills", "Sewing and Dress Making", "Sacred Heart Sodality", "Sacristan", "Social Functions", "Social Media Team", "Sodality of Mary", "St. Anne's Sodality", "St. Cecilia - Choir", "St. Francis Sodality", "St. Dominic's Sodality", "St. Joseph's Sodality", "St. Vincent de Paul", "Support Group for Widows", "Typing and Translating", "Udodana", "Visiting and Caring for the Elderly", "Visiting of the Sick", "Youth Adults (29 - 45)" });
             activityName1ComboBox.Location = new Point(192, 235);
             activityName1ComboBox.Name = "activityName1ComboBox";
             activityName1ComboBox.Size = new Size(225, 23);
             activityName1ComboBox.TabIndex = 96;
+            activityName1ComboBox.SelectedIndexChanged += activityName1ComboBox_SelectedIndexChanged;
             // 
             // yearJoinedDateTimePicker2
             // 
@@ -340,20 +342,22 @@
             yearJoinedDateTimePicker2.Name = "yearJoinedDateTimePicker2";
             yearJoinedDateTimePicker2.Size = new Size(225, 23);
             yearJoinedDateTimePicker2.TabIndex = 97;
+            yearJoinedDateTimePicker2.ValueChanged += yearJoinedDateTimePicker2_ValueChanged;
             // 
             // departmentName1ComboBox
             // 
             departmentName1ComboBox.FormattingEnabled = true;
-            departmentName1ComboBox.Items.AddRange(new object[] { "", "Male", "Female" });
+            departmentName1ComboBox.Items.AddRange(new object[] { "", "Administration", "Formation", "Liturgical", "Maintenance", "Pastoral", "Social", "Sodalities", "Other" });
             departmentName1ComboBox.Location = new Point(192, 190);
             departmentName1ComboBox.Name = "departmentName1ComboBox";
             departmentName1ComboBox.Size = new Size(225, 23);
             departmentName1ComboBox.TabIndex = 98;
+            departmentName1ComboBox.SelectedIndexChanged += departmentName1ComboBox_SelectedIndexChanged;
             // 
             // departmentName3ComboBox
             // 
             departmentName3ComboBox.FormattingEnabled = true;
-            departmentName3ComboBox.Items.AddRange(new object[] { "", "Male", "Female" });
+            departmentName3ComboBox.Items.AddRange(new object[] { "", "Administration", "Formation", "Liturgical", "Maintenance", "Pastoral", "Sodalities", "Other" });
             departmentName3ComboBox.Location = new Point(654, 146);
             departmentName3ComboBox.Name = "departmentName3ComboBox";
             departmentName3ComboBox.Size = new Size(225, 23);
@@ -362,7 +366,7 @@
             // activityName3ComboBox
             // 
             activityName3ComboBox.FormattingEnabled = true;
-            activityName3ComboBox.Items.AddRange(new object[] { "", "Male", "Female" });
+            activityName3ComboBox.Items.AddRange(new object[] { "", "Altar Server", "Audio Visual, Electrical Equiptment", "Audio & Projection Team", "Building, Painting, Electrical and Plumbing", "Catering & Cooking", "Care for the Poor", "Care of Seminarians & Priests", "Catholic Nurses Guild", "Cathoic Women's League", "Catholic Women's Union", "Church Gardens", "Cleaning", "Collection Counting", "Daughter's of St. Anne's Sodality", "Floral Arrangement", "Fundraising for the Parish", "Good Shepherd Programm", "Holy Childhood", "Hospital and Hospice Ministry", "Junior Youth (8 - 15)", "Knights of da Gama", "Lector", "Legal Advice and Representation", "Medical Care", "Mid-Youth (20 - 29)", "Music - Instrument Player", "Newsletter and Website Team", "Office Reception", "Other", "Photography, Publicity", "Primary Phase Catechism", "RCIA Team", "Repository and Sales", "Resource Centre and Library", "Secretarial Skills", "Sewing and Dress Making", "Sacred Heart Sodality", "Sacristan", "Social Functions", "Social Media Team", "Sodality of Mary", "St. Anne's Sodality", "St. Cecilia - Choir", "St. Francis Sodality", "St. Dominic's Sodality", "St. Joseph's Sodality", "St. Vincent de Paul", "Support Group for Widows", "Typing and Translating", "Udodana", "Visiting and Caring for the Elderly", "Visiting of the Sick", "Youth Adults (29 - 45)" });
             activityName3ComboBox.Location = new Point(654, 191);
             activityName3ComboBox.Name = "activityName3ComboBox";
             activityName3ComboBox.Size = new Size(225, 23);
@@ -384,6 +388,7 @@
             yearJoinedDateTimePicker3.Name = "yearJoinedDateTimePicker3";
             yearJoinedDateTimePicker3.Size = new Size(225, 23);
             yearJoinedDateTimePicker3.TabIndex = 103;
+            yearJoinedDateTimePicker3.ValueChanged += yearJoinedDateTimePicker3_ValueChanged;
             // 
             // activityRole3Label
             // 
@@ -398,7 +403,7 @@
             // activityRole3ComboBox
             // 
             activityRole3ComboBox.FormattingEnabled = true;
-            activityRole3ComboBox.Items.AddRange(new object[] { "", "Male", "Female" });
+            activityRole3ComboBox.Items.AddRange(new object[] { "", "Chairperson", "Deputy Chairperson", "Secretary", "Deputy Secretery", "Finance and Fundraising Officer", "Skills and Development Officer", "Sports and Entertainment Officer", "Media and Publicity Officer", "Additional Executive Member", "Member" });
             activityRole3ComboBox.Location = new Point(654, 238);
             activityRole3ComboBox.Name = "activityRole3ComboBox";
             activityRole3ComboBox.Size = new Size(225, 23);
@@ -436,7 +441,7 @@
             // previousExcoComboBox
             // 
             previousExcoComboBox.FormattingEnabled = true;
-            previousExcoComboBox.Items.AddRange(new object[] { "", "Male", "Female" });
+            previousExcoComboBox.Items.AddRange(new object[] { "", "Chairperson", "Deputy Chairperson", "Secretary", "Deputy Secretery", "Finance and Fundraising Officer", "Skills and Development Officer", "Sports and Entertainment Officer", "Media and Publicity Officer", "Additional Executive Member" });
             previousExcoComboBox.Location = new Point(654, 371);
             previousExcoComboBox.Name = "previousExcoComboBox";
             previousExcoComboBox.Size = new Size(225, 23);

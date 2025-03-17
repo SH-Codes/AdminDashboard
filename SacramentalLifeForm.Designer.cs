@@ -58,7 +58,7 @@
             sacramentalIDLabel = new Label();
             sacramentalLifeInformationLabel = new Label();
             sacrementalIDTextBox = new TextBox();
-            isBaptisedcComboBox = new ComboBox();
+            isBaptisedComboBox = new ComboBox();
             baptismDateTimePicker = new DateTimePicker();
             placeOfBaptismTextBox = new TextBox();
             fathersNameTextBox = new TextBox();
@@ -73,7 +73,7 @@
             holyMatrimonyComboBox = new ComboBox();
             holyMatrimonyDateTimePicker = new DateTimePicker();
             dateOfHolyMatrimonyLabel = new Label();
-            catholicMarruageComboBox = new ComboBox();
+            catholicMarriageComboBox = new ComboBox();
             catholicMarriageLabel = new Label();
             SuspendLayout();
             // 
@@ -155,7 +155,7 @@
             placeOfHolyMatrimonyLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             placeOfHolyMatrimonyLabel.AutoSize = true;
             placeOfHolyMatrimonyLabel.Font = new Font("Segoe UI", 11F);
-            placeOfHolyMatrimonyLabel.Location = new Point(460, 393);
+            placeOfHolyMatrimonyLabel.Location = new Point(471, 393);
             placeOfHolyMatrimonyLabel.Name = "placeOfHolyMatrimonyLabel";
             placeOfHolyMatrimonyLabel.Size = new Size(176, 20);
             placeOfHolyMatrimonyLabel.TabIndex = 85;
@@ -168,13 +168,14 @@
             placeOfHolyMatrimonyTextBox.Name = "placeOfHolyMatrimonyTextBox";
             placeOfHolyMatrimonyTextBox.Size = new Size(225, 23);
             placeOfHolyMatrimonyTextBox.TabIndex = 84;
+            placeOfHolyMatrimonyTextBox.Validating += placeOfHolyMatrimonyTextBox_TextChanged;
             // 
             // holyMatrimonyLabel
             // 
             holyMatrimonyLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             holyMatrimonyLabel.AutoSize = true;
             holyMatrimonyLabel.Font = new Font("Segoe UI", 11F);
-            holyMatrimonyLabel.Location = new Point(514, 314);
+            holyMatrimonyLabel.Location = new Point(471, 314);
             holyMatrimonyLabel.Name = "holyMatrimonyLabel";
             holyMatrimonyLabel.Size = new Size(123, 20);
             holyMatrimonyLabel.TabIndex = 83;
@@ -185,7 +186,7 @@
             confirmationClergysNamesLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             confirmationClergysNamesLabel.AutoSize = true;
             confirmationClergysNamesLabel.Font = new Font("Segoe UI", 11F);
-            confirmationClergysNamesLabel.Location = new Point(525, 275);
+            confirmationClergysNamesLabel.Location = new Point(471, 275);
             confirmationClergysNamesLabel.Name = "confirmationClergysNamesLabel";
             confirmationClergysNamesLabel.Size = new Size(113, 20);
             confirmationClergysNamesLabel.TabIndex = 81;
@@ -198,13 +199,14 @@
             confirmationClergysNamesTextBox.Name = "confirmationClergysNamesTextBox";
             confirmationClergysNamesTextBox.Size = new Size(225, 23);
             confirmationClergysNamesTextBox.TabIndex = 80;
+            confirmationClergysNamesTextBox.Validating += confirmationClergysNamesTextBox_TextChanged;
             // 
             // placeOfConfirmationLabel
             // 
             placeOfConfirmationLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             placeOfConfirmationLabel.AutoSize = true;
             placeOfConfirmationLabel.Font = new Font("Segoe UI", 11F);
-            placeOfConfirmationLabel.Location = new Point(480, 235);
+            placeOfConfirmationLabel.Location = new Point(471, 235);
             placeOfConfirmationLabel.Name = "placeOfConfirmationLabel";
             placeOfConfirmationLabel.Size = new Size(156, 20);
             placeOfConfirmationLabel.TabIndex = 79;
@@ -217,13 +219,14 @@
             placeOfConfirmationTextBox.Name = "placeOfConfirmationTextBox";
             placeOfConfirmationTextBox.Size = new Size(225, 23);
             placeOfConfirmationTextBox.TabIndex = 78;
+            placeOfConfirmationTextBox.Validating += placeOfConfirmationTextBox_TextChanged;
             // 
             // confirmationDateLabel
             // 
             confirmationDateLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             confirmationDateLabel.AutoSize = true;
             confirmationDateLabel.Font = new Font("Segoe UI", 11F);
-            confirmationDateLabel.Location = new Point(485, 197);
+            confirmationDateLabel.Location = new Point(471, 197);
             confirmationDateLabel.Name = "confirmationDateLabel";
             confirmationDateLabel.Size = new Size(153, 20);
             confirmationDateLabel.TabIndex = 77;
@@ -234,7 +237,7 @@
             isConfirmedLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             isConfirmedLabel.AutoSize = true;
             isConfirmedLabel.Font = new Font("Segoe UI", 11F);
-            isConfirmedLabel.Location = new Point(550, 153);
+            isConfirmedLabel.Location = new Point(471, 153);
             isConfirmedLabel.Name = "isConfirmedLabel";
             isConfirmedLabel.Size = new Size(86, 20);
             isConfirmedLabel.TabIndex = 75;
@@ -245,7 +248,7 @@
             placeOfHolyEucharistLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             placeOfHolyEucharistLabel.AutoSize = true;
             placeOfHolyEucharistLabel.Font = new Font("Segoe UI", 11F);
-            placeOfHolyEucharistLabel.Location = new Point(474, 111);
+            placeOfHolyEucharistLabel.Location = new Point(471, 111);
             placeOfHolyEucharistLabel.Name = "placeOfHolyEucharistLabel";
             placeOfHolyEucharistLabel.Size = new Size(163, 20);
             placeOfHolyEucharistLabel.TabIndex = 73;
@@ -258,13 +261,14 @@
             placeOfHolyEucharistTextBox.Name = "placeOfHolyEucharistTextBox";
             placeOfHolyEucharistTextBox.Size = new Size(225, 23);
             placeOfHolyEucharistTextBox.TabIndex = 72;
+            placeOfHolyEucharistTextBox.Validating += placeOfHolyEucharistTextBox_TextChanged;
             // 
             // dateOfHolyEucharistLabel
             // 
             dateOfHolyEucharistLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             dateOfHolyEucharistLabel.AutoSize = true;
             dateOfHolyEucharistLabel.Font = new Font("Segoe UI", 11F);
-            dateOfHolyEucharistLabel.Location = new Point(483, 73);
+            dateOfHolyEucharistLabel.Location = new Point(471, 73);
             dateOfHolyEucharistLabel.Name = "dateOfHolyEucharistLabel";
             dateOfHolyEucharistLabel.Size = new Size(160, 20);
             dateOfHolyEucharistLabel.TabIndex = 70;
@@ -308,7 +312,7 @@
             placeOfBaptismLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             placeOfBaptismLabel.AutoSize = true;
             placeOfBaptismLabel.Font = new Font("Segoe UI", 11F);
-            placeOfBaptismLabel.Location = new Point(26, 235);
+            placeOfBaptismLabel.Location = new Point(29, 235);
             placeOfBaptismLabel.Name = "placeOfBaptismLabel";
             placeOfBaptismLabel.Size = new Size(123, 20);
             placeOfBaptismLabel.TabIndex = 61;
@@ -319,7 +323,7 @@
             baptismDateLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             baptismDateLabel.AutoSize = true;
             baptismDateLabel.Font = new Font("Segoe UI", 11F);
-            baptismDateLabel.Location = new Point(26, 197);
+            baptismDateLabel.Location = new Point(29, 197);
             baptismDateLabel.Name = "baptismDateLabel";
             baptismDateLabel.Size = new Size(120, 20);
             baptismDateLabel.TabIndex = 58;
@@ -330,7 +334,7 @@
             isBaptisedLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             isBaptisedLabel.AutoSize = true;
             isBaptisedLabel.Font = new Font("Segoe UI", 11F);
-            isBaptisedLabel.Location = new Point(26, 153);
+            isBaptisedLabel.Location = new Point(29, 153);
             isBaptisedLabel.Name = "isBaptisedLabel";
             isBaptisedLabel.Size = new Size(74, 20);
             isBaptisedLabel.TabIndex = 56;
@@ -341,7 +345,7 @@
             sacramentalMembershipNumberLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             sacramentalMembershipNumberLabel.AutoSize = true;
             sacramentalMembershipNumberLabel.Font = new Font("Segoe UI", 11F);
-            sacramentalMembershipNumberLabel.Location = new Point(26, 111);
+            sacramentalMembershipNumberLabel.Location = new Point(29, 111);
             sacramentalMembershipNumberLabel.Name = "sacramentalMembershipNumberLabel";
             sacramentalMembershipNumberLabel.Size = new Size(153, 20);
             sacramentalMembershipNumberLabel.TabIndex = 55;
@@ -361,7 +365,7 @@
             sacramentalIDLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             sacramentalIDLabel.AutoSize = true;
             sacramentalIDLabel.Font = new Font("Segoe UI", 11F);
-            sacramentalIDLabel.Location = new Point(26, 73);
+            sacramentalIDLabel.Location = new Point(29, 73);
             sacramentalIDLabel.Name = "sacramentalIDLabel";
             sacramentalIDLabel.Size = new Size(113, 20);
             sacramentalIDLabel.TabIndex = 52;
@@ -386,15 +390,16 @@
             sacrementalIDTextBox.Size = new Size(225, 23);
             sacrementalIDTextBox.TabIndex = 95;
             // 
-            // isBaptisedcComboBox
+            // isBaptisedComboBox
             // 
-            isBaptisedcComboBox.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            isBaptisedcComboBox.FormattingEnabled = true;
-            isBaptisedcComboBox.Items.AddRange(new object[] { "", "Yes", "No" });
-            isBaptisedcComboBox.Location = new Point(184, 152);
-            isBaptisedcComboBox.Name = "isBaptisedcComboBox";
-            isBaptisedcComboBox.Size = new Size(225, 23);
-            isBaptisedcComboBox.TabIndex = 96;
+            isBaptisedComboBox.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            isBaptisedComboBox.FormattingEnabled = true;
+            isBaptisedComboBox.Items.AddRange(new object[] { "", "Yes", "No" });
+            isBaptisedComboBox.Location = new Point(184, 152);
+            isBaptisedComboBox.Name = "isBaptisedComboBox";
+            isBaptisedComboBox.Size = new Size(225, 23);
+            isBaptisedComboBox.TabIndex = 96;
+            isBaptisedComboBox.Validating += isBaptisedcComboBox_SelectedIndexChanged;
             // 
             // baptismDateTimePicker
             // 
@@ -403,6 +408,7 @@
             baptismDateTimePicker.Name = "baptismDateTimePicker";
             baptismDateTimePicker.Size = new Size(225, 23);
             baptismDateTimePicker.TabIndex = 97;
+            baptismDateTimePicker.ValueChanged += baptismDateTimePicker_ValueChanged;
             // 
             // placeOfBaptismTextBox
             // 
@@ -411,6 +417,7 @@
             placeOfBaptismTextBox.Name = "placeOfBaptismTextBox";
             placeOfBaptismTextBox.Size = new Size(225, 23);
             placeOfBaptismTextBox.TabIndex = 98;
+            placeOfBaptismTextBox.Validating += placeOfBaptismTextBox_TextChanged;
             // 
             // fathersNameTextBox
             // 
@@ -419,6 +426,7 @@
             fathersNameTextBox.Name = "fathersNameTextBox";
             fathersNameTextBox.Size = new Size(225, 23);
             fathersNameTextBox.TabIndex = 99;
+            fathersNameTextBox.Validating += fathersNameTextBox_TextChanged;
             // 
             // mothersNamesTextBox
             // 
@@ -426,6 +434,7 @@
             mothersNamesTextBox.Name = "mothersNamesTextBox";
             mothersNamesTextBox.Size = new Size(225, 23);
             mothersNamesTextBox.TabIndex = 100;
+            mothersNamesTextBox.Validating += mothersNamesTextBox_TextChanged;
             // 
             // sponsorsNamesTextBox
             // 
@@ -434,6 +443,7 @@
             sponsorsNamesTextBox.Name = "sponsorsNamesTextBox";
             sponsorsNamesTextBox.Size = new Size(225, 23);
             sponsorsNamesTextBox.TabIndex = 101;
+            sponsorsNamesTextBox.Validating += sponsorsNamesTextBox_TextChanged;
             // 
             // clergysNamesTextBox
             // 
@@ -442,6 +452,7 @@
             clergysNamesTextBox.Name = "clergysNamesTextBox";
             clergysNamesTextBox.Size = new Size(225, 23);
             clergysNamesTextBox.TabIndex = 102;
+            clergysNamesTextBox.Validating += clergysNamesTextBox_TextChanged;
             // 
             // holyEucharistLabel
             // 
@@ -463,6 +474,7 @@
             holyEucharistComboBox.Name = "holyEucharistComboBox";
             holyEucharistComboBox.Size = new Size(225, 23);
             holyEucharistComboBox.TabIndex = 104;
+            holyEucharistComboBox.Validating += holyEucharistComboBox_SelectedIndexChanged;
             // 
             // holyEucharistDateTimePicker
             // 
@@ -470,6 +482,7 @@
             holyEucharistDateTimePicker.Name = "holyEucharistDateTimePicker";
             holyEucharistDateTimePicker.Size = new Size(225, 23);
             holyEucharistDateTimePicker.TabIndex = 105;
+            holyEucharistDateTimePicker.ValueChanged += holyEucharistDateTimePicker_ValueChanged;
             // 
             // isConfirmedComboBox
             // 
@@ -479,6 +492,7 @@
             isConfirmedComboBox.Name = "isConfirmedComboBox";
             isConfirmedComboBox.Size = new Size(225, 23);
             isConfirmedComboBox.TabIndex = 106;
+            isConfirmedComboBox.Validating += isConfirmedComboBox_SelectedIndexChanged;
             // 
             // confirmationDateTimePicker
             // 
@@ -486,6 +500,7 @@
             confirmationDateTimePicker.Name = "confirmationDateTimePicker";
             confirmationDateTimePicker.Size = new Size(225, 23);
             confirmationDateTimePicker.TabIndex = 107;
+            confirmationDateTimePicker.ValueChanged += confirmationDateTimePicker_ValueChanged;
             // 
             // holyMatrimonyComboBox
             // 
@@ -495,6 +510,7 @@
             holyMatrimonyComboBox.Name = "holyMatrimonyComboBox";
             holyMatrimonyComboBox.Size = new Size(225, 23);
             holyMatrimonyComboBox.TabIndex = 108;
+            holyMatrimonyComboBox.Validating += holyMatrimonyComboBox_SelectedIndexChanged;
             // 
             // holyMatrimonyDateTimePicker
             // 
@@ -502,32 +518,34 @@
             holyMatrimonyDateTimePicker.Name = "holyMatrimonyDateTimePicker";
             holyMatrimonyDateTimePicker.Size = new Size(225, 23);
             holyMatrimonyDateTimePicker.TabIndex = 110;
+            holyMatrimonyDateTimePicker.ValueChanged += holyMatrimonyDateTimePicker_ValueChanged;
             // 
             // dateOfHolyMatrimonyLabel
             // 
             dateOfHolyMatrimonyLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             dateOfHolyMatrimonyLabel.AutoSize = true;
             dateOfHolyMatrimonyLabel.Font = new Font("Segoe UI", 11F);
-            dateOfHolyMatrimonyLabel.Location = new Point(463, 354);
+            dateOfHolyMatrimonyLabel.Location = new Point(471, 354);
             dateOfHolyMatrimonyLabel.Name = "dateOfHolyMatrimonyLabel";
             dateOfHolyMatrimonyLabel.Size = new Size(173, 20);
             dateOfHolyMatrimonyLabel.TabIndex = 109;
             dateOfHolyMatrimonyLabel.Text = "Date of Holy Matrimony:";
             // 
-            // catholicMarruageComboBox
+            // catholicMarriageComboBox
             // 
-            catholicMarruageComboBox.FormattingEnabled = true;
-            catholicMarruageComboBox.Items.AddRange(new object[] { "", "Yes", "No" });
-            catholicMarruageComboBox.Location = new Point(646, 437);
-            catholicMarruageComboBox.Name = "catholicMarruageComboBox";
-            catholicMarruageComboBox.Size = new Size(225, 23);
-            catholicMarruageComboBox.TabIndex = 112;
+            catholicMarriageComboBox.FormattingEnabled = true;
+            catholicMarriageComboBox.Items.AddRange(new object[] { "", "Yes", "No" });
+            catholicMarriageComboBox.Location = new Point(646, 437);
+            catholicMarriageComboBox.Name = "catholicMarriageComboBox";
+            catholicMarriageComboBox.Size = new Size(225, 23);
+            catholicMarriageComboBox.TabIndex = 112;
+            catholicMarriageComboBox.Validating += catholicMarriageComboBox_SelectedIndexChanged;
             // 
             // catholicMarriageLabel
             // 
             catholicMarriageLabel.AutoSize = true;
             catholicMarriageLabel.Font = new Font("Segoe UI", 11F);
-            catholicMarriageLabel.Location = new Point(491, 438);
+            catholicMarriageLabel.Location = new Point(471, 438);
             catholicMarriageLabel.Name = "catholicMarriageLabel";
             catholicMarriageLabel.Size = new Size(138, 20);
             catholicMarriageLabel.TabIndex = 111;
@@ -539,7 +557,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1036, 474);
-            Controls.Add(catholicMarruageComboBox);
+            Controls.Add(catholicMarriageComboBox);
             Controls.Add(catholicMarriageLabel);
             Controls.Add(holyMatrimonyDateTimePicker);
             Controls.Add(dateOfHolyMatrimonyLabel);
@@ -555,7 +573,7 @@
             Controls.Add(fathersNameTextBox);
             Controls.Add(placeOfBaptismTextBox);
             Controls.Add(baptismDateTimePicker);
-            Controls.Add(isBaptisedcComboBox);
+            Controls.Add(isBaptisedComboBox);
             Controls.Add(sacrementalIDTextBox);
             Controls.Add(clergysNamesLabel);
             Controls.Add(sacramentalNextButton);
@@ -624,7 +642,7 @@
         private Label sacramentalIDLabel;
         private Label sacramentalLifeInformationLabel;
         private TextBox sacrementalIDTextBox;
-        private ComboBox isBaptisedcComboBox;
+        private ComboBox isBaptisedComboBox;
         private DateTimePicker baptismDateTimePicker;
         private TextBox placeOfBaptismTextBox;
         private TextBox fathersNameTextBox;
@@ -639,7 +657,7 @@
         private ComboBox holyMatrimonyComboBox;
         private DateTimePicker holyMatrimonyDateTimePicker;
         private Label dateOfHolyMatrimonyLabel;
-        private ComboBox catholicMarruageComboBox;
+        private ComboBox catholicMarriageComboBox;
         private Label catholicMarriageLabel;
     }
 }

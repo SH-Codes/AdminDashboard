@@ -52,6 +52,10 @@
             dependentIDLabel = new Label();
             dependentsInfoLabel = new Label();
             dependentDeleteButton = new Button();
+            gradeLabel = new Label();
+            dependentGradeComboBox = new ComboBox();
+            label1 = new Label();
+            textBox1 = new TextBox();
             SuspendLayout();
             // 
             // dependentIDTextBox
@@ -66,7 +70,7 @@
             // 
             dependentRelationshipLabel.AutoSize = true;
             dependentRelationshipLabel.Font = new Font("Segoe UI", 11F);
-            dependentRelationshipLabel.Location = new Point(37, 422);
+            dependentRelationshipLabel.Location = new Point(487, 189);
             dependentRelationshipLabel.Name = "dependentRelationshipLabel";
             dependentRelationshipLabel.Size = new Size(94, 20);
             dependentRelationshipLabel.TabIndex = 128;
@@ -137,7 +141,7 @@
             // dependentRelationshipTextBox
             // 
             dependentRelationshipTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            dependentRelationshipTextBox.Location = new Point(203, 419);
+            dependentRelationshipTextBox.Location = new Point(653, 186);
             dependentRelationshipTextBox.Name = "dependentRelationshipTextBox";
             dependentRelationshipTextBox.Size = new Size(225, 23);
             dependentRelationshipTextBox.TabIndex = 113;
@@ -146,7 +150,7 @@
             // 
             memberRaceLabel.AutoSize = true;
             memberRaceLabel.Font = new Font("Segoe UI", 11F);
-            memberRaceLabel.Location = new Point(37, 375);
+            memberRaceLabel.Location = new Point(487, 145);
             memberRaceLabel.Name = "memberRaceLabel";
             memberRaceLabel.Size = new Size(162, 20);
             memberRaceLabel.TabIndex = 111;
@@ -156,10 +160,11 @@
             // 
             attendingSundaySchoolComboBox.FormattingEnabled = true;
             attendingSundaySchoolComboBox.Items.AddRange(new object[] { "", "Yes", "No" });
-            attendingSundaySchoolComboBox.Location = new Point(203, 374);
+            attendingSundaySchoolComboBox.Location = new Point(653, 144);
             attendingSundaySchoolComboBox.Name = "attendingSundaySchoolComboBox";
             attendingSundaySchoolComboBox.Size = new Size(225, 23);
             attendingSundaySchoolComboBox.TabIndex = 110;
+            attendingSundaySchoolComboBox.Validating += attendingSundaySchoolComboBox_SelectedIndexChanged;
             // 
             // dependentGenderLabel
             // 
@@ -196,6 +201,7 @@
             dependentGenderComboBox.Name = "dependentGenderComboBox";
             dependentGenderComboBox.Size = new Size(225, 23);
             dependentGenderComboBox.TabIndex = 106;
+            dependentGenderComboBox.Validating += dependentGenderComboBox_SelectedIndexChanged;
             // 
             // dependentLastNameTextBox
             // 
@@ -203,6 +209,7 @@
             dependentLastNameTextBox.Name = "dependentLastNameTextBox";
             dependentLastNameTextBox.Size = new Size(225, 23);
             dependentLastNameTextBox.TabIndex = 105;
+            dependentLastNameTextBox.Validating += dependentLastNameTextBox_Validating;
             // 
             // dependentLastNameLabel
             // 
@@ -220,6 +227,7 @@
             dependentFirstNameTextBox.Name = "dependentFirstNameTextBox";
             dependentFirstNameTextBox.Size = new Size(225, 23);
             dependentFirstNameTextBox.TabIndex = 103;
+            dependentFirstNameTextBox.Validating += dependentFirstNameTextBox_Validating;
             // 
             // dependentFirstNameLabel
             // 
@@ -279,12 +287,53 @@
             dependentDeleteButton.Text = "Delete";
             dependentDeleteButton.UseVisualStyleBackColor = true;
             // 
+            // gradeLabel
+            // 
+            gradeLabel.AutoSize = true;
+            gradeLabel.Font = new Font("Segoe UI", 11F);
+            gradeLabel.Location = new Point(487, 106);
+            gradeLabel.Name = "gradeLabel";
+            gradeLabel.Size = new Size(52, 20);
+            gradeLabel.TabIndex = 133;
+            gradeLabel.Text = "Grade:";
+            // 
+            // dependentGradeComboBox
+            // 
+            dependentGradeComboBox.FormattingEnabled = true;
+            dependentGradeComboBox.Items.AddRange(new object[] { "", "RR", "Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6", "Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12" });
+            dependentGradeComboBox.Location = new Point(653, 105);
+            dependentGradeComboBox.Name = "dependentGradeComboBox";
+            dependentGradeComboBox.Size = new Size(225, 23);
+            dependentGradeComboBox.TabIndex = 132;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11F);
+            label1.Location = new Point(487, 234);
+            label1.Name = "label1";
+            label1.Size = new Size(94, 20);
+            label1.TabIndex = 135;
+            label1.Text = "Relationship:";
+            // 
+            // textBox1
+            // 
+            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            textBox1.Location = new Point(653, 231);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(225, 23);
+            textBox1.TabIndex = 134;
+            // 
             // DependentsForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1052, 513);
+            Controls.Add(label1);
+            Controls.Add(textBox1);
+            Controls.Add(gradeLabel);
+            Controls.Add(dependentGradeComboBox);
             Controls.Add(dependentDeleteButton);
             Controls.Add(dependentIDTextBox);
             Controls.Add(dependentRelationshipLabel);
@@ -341,5 +390,9 @@
         private Label dependentIDLabel;
         private Label dependentsInfoLabel;
         private Button dependentDeleteButton;
+        private Label gradeLabel;
+        private ComboBox dependentGradeComboBox;
+        private Label label1;
+        private TextBox textBox1;
     }
 }

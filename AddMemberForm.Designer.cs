@@ -73,7 +73,7 @@
             memberTitleLabel = new Label();
             memberLastNameTextBox = new TextBox();
             memberEmploymentStatusComboBox = new ComboBox();
-            label1 = new Label();
+            memberEmploymentStatusLabel = new Label();
             SuspendLayout();
             // 
             // memberFirstNameTextBox
@@ -256,7 +256,7 @@
             memberOccupationLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             memberOccupationLabel.AutoSize = true;
             memberOccupationLabel.Font = new Font("Segoe UI", 11F);
-            memberOccupationLabel.Location = new Point(554, 148);
+            memberOccupationLabel.Location = new Point(509, 148);
             memberOccupationLabel.Name = "memberOccupationLabel";
             memberOccupationLabel.Size = new Size(88, 20);
             memberOccupationLabel.TabIndex = 26;
@@ -285,7 +285,7 @@
             memberPhoneNumberLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             memberPhoneNumberLabel.AutoSize = true;
             memberPhoneNumberLabel.Font = new Font("Segoe UI", 11F);
-            memberPhoneNumberLabel.Location = new Point(531, 184);
+            memberPhoneNumberLabel.Location = new Point(509, 184);
             memberPhoneNumberLabel.Name = "memberPhoneNumberLabel";
             memberPhoneNumberLabel.Size = new Size(111, 20);
             memberPhoneNumberLabel.TabIndex = 29;
@@ -305,7 +305,7 @@
             memberMobileNumberLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             memberMobileNumberLabel.AutoSize = true;
             memberMobileNumberLabel.Font = new Font("Segoe UI", 11F);
-            memberMobileNumberLabel.Location = new Point(525, 229);
+            memberMobileNumberLabel.Location = new Point(509, 229);
             memberMobileNumberLabel.Name = "memberMobileNumberLabel";
             memberMobileNumberLabel.Size = new Size(117, 20);
             memberMobileNumberLabel.TabIndex = 31;
@@ -325,7 +325,7 @@
             memberEmailAddressLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             memberEmailAddressLabel.AutoSize = true;
             memberEmailAddressLabel.Font = new Font("Segoe UI", 11F);
-            memberEmailAddressLabel.Location = new Point(536, 274);
+            memberEmailAddressLabel.Location = new Point(509, 274);
             memberEmailAddressLabel.Name = "memberEmailAddressLabel";
             memberEmailAddressLabel.Size = new Size(106, 20);
             memberEmailAddressLabel.TabIndex = 33;
@@ -345,7 +345,7 @@
             addressLine1Label.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             addressLine1Label.AutoSize = true;
             addressLine1Label.Font = new Font("Segoe UI", 11F);
-            addressLine1Label.Location = new Point(534, 321);
+            addressLine1Label.Location = new Point(509, 321);
             addressLine1Label.Name = "addressLine1Label";
             addressLine1Label.Size = new Size(108, 20);
             addressLine1Label.TabIndex = 35;
@@ -365,7 +365,7 @@
             addressLine2Label.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             addressLine2Label.AutoSize = true;
             addressLine2Label.Font = new Font("Segoe UI", 11F);
-            addressLine2Label.Location = new Point(534, 367);
+            addressLine2Label.Location = new Point(509, 367);
             addressLine2Label.Name = "addressLine2Label";
             addressLine2Label.Size = new Size(108, 20);
             addressLine2Label.TabIndex = 37;
@@ -385,7 +385,7 @@
             zoneAreaLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             zoneAreaLabel.AutoSize = true;
             zoneAreaLabel.Font = new Font("Segoe UI", 11F);
-            zoneAreaLabel.Location = new Point(561, 416);
+            zoneAreaLabel.Location = new Point(509, 416);
             zoneAreaLabel.Name = "zoneAreaLabel";
             zoneAreaLabel.Size = new Size(81, 20);
             zoneAreaLabel.TabIndex = 39;
@@ -405,7 +405,7 @@
             postalCodeLabel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             postalCodeLabel.AutoSize = true;
             postalCodeLabel.Font = new Font("Segoe UI", 11F);
-            postalCodeLabel.Location = new Point(552, 463);
+            postalCodeLabel.Location = new Point(509, 463);
             postalCodeLabel.Name = "postalCodeLabel";
             postalCodeLabel.Size = new Size(90, 20);
             postalCodeLabel.TabIndex = 41;
@@ -521,15 +521,16 @@
             memberEmploymentStatusComboBox.Size = new Size(225, 23);
             memberEmploymentStatusComboBox.TabIndex = 54;
             // 
-            // label1
+            // memberEmploymentStatusLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(502, 103);
-            label1.Name = "label1";
-            label1.Size = new Size(140, 20);
-            label1.TabIndex = 53;
-            label1.Text = "Employment Status:";
+            memberEmploymentStatusLabel.AutoSize = true;
+            memberEmploymentStatusLabel.Font = new Font("Segoe UI", 11F);
+            memberEmploymentStatusLabel.Location = new Point(509, 103);
+            memberEmploymentStatusLabel.Name = "memberEmploymentStatusLabel";
+            memberEmploymentStatusLabel.Size = new Size(140, 20);
+            memberEmploymentStatusLabel.TabIndex = 53;
+            memberEmploymentStatusLabel.Text = "Employment Status:";
+            memberEmploymentStatusLabel.Click += memberEmploymentStatusLabel_Click;
             // 
             // AddMemberForm
             // 
@@ -538,7 +539,7 @@
             BackColor = Color.White;
             ClientSize = new Size(1052, 513);
             Controls.Add(memberEmploymentStatusComboBox);
-            Controls.Add(label1);
+            Controls.Add(memberEmploymentStatusLabel);
             Controls.Add(memberLastNameTextBox);
             Controls.Add(memberTitleComboBox);
             Controls.Add(memberTitleLabel);
@@ -638,6 +639,6 @@
         private Label memberTitleLabel;
         private TextBox memberLastNameTextBox;
         private ComboBox memberEmploymentStatusComboBox;
-        private Label label1;
+        private Label memberEmploymentStatusLabel;
     }
 }

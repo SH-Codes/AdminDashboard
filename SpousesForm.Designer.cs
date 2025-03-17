@@ -235,7 +235,7 @@
             spouseOccupationTextBox.Name = "spouseOccupationTextBox";
             spouseOccupationTextBox.Size = new Size(225, 23);
             spouseOccupationTextBox.TabIndex = 71;
-            spouseOccupationTextBox.Validating += spouseOccupationtextBox_Validating;
+            spouseOccupationTextBox.Validating += spouseOccupationTextBox_Validating;
             // 
             // spouseOccupationLabel
             // 

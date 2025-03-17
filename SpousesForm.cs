@@ -49,30 +49,34 @@ namespace AdminDashboard
 
         private void spouseFirstNameTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (spouseFirstNameTextBox.Text.Length < 3)
+            string text = spouseFirstNameTextBox.Text.Trim();
+            if (!string.IsNullOrEmpty(text) && text.Length < 3)
             {
-                MessageBox.Show("First name cannot be less than 3 characters.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                e.Cancel = true; // Prevents the user from leaving the textbox
+                MessageBox.Show("First name must be at least 3 characters long.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Cancel = true;
             }
         }
 
         private void spouseMaidenNameTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (spouseMaidenNameTextBox.Text.Length < 3)
+            string text = spouseMaidenNameTextBox.Text.Trim();
+            if (!string.IsNullOrEmpty(text) && text.Length < 3)
             {
-                MessageBox.Show("Maiden name cannot be less than 3 characters.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                e.Cancel = true; // Prevents the user from leaving the textbox
+                MessageBox.Show("Maiden name must be at least 3 characters long.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Cancel = true;
             }
         }
 
         private void spouseLastNameTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (spouseLastNameTextBox.Text.Length < 3)
+            string text = spouseLastNameTextBox.Text.Trim();
+            if (!string.IsNullOrEmpty(text) && text.Length < 3)
             {
-                MessageBox.Show("Last name cannot be less than 3 characters.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                e.Cancel = true; // Prevents the user from leaving the textbox
+                MessageBox.Show("Last name must be at least 3 characters long.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Cancel = true;
             }
         }
+
 
         private void spouseBirthDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
@@ -85,109 +89,104 @@ namespace AdminDashboard
 
         private void spouseGenderComboBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (spouseGenderComboBox.SelectedItem == null || string.IsNullOrWhiteSpace(spouseGenderComboBox.Text))
+            if (!string.IsNullOrWhiteSpace(spouseGenderComboBox.Text) && spouseGenderComboBox.SelectedItem == null)
             {
-                MessageBox.Show("Please select a gender.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a valid gender.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 e.Cancel = true;
-
             }
         }
 
         private void spouseRaceComboBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (spouseRaceComboBox.SelectedItem == null || string.IsNullOrWhiteSpace(spouseRaceComboBox.Text))
+            if (!string.IsNullOrWhiteSpace(spouseRaceComboBox.Text) && spouseRaceComboBox.SelectedItem == null)
             {
-                MessageBox.Show("Please select a race.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a valid race.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 e.Cancel = true;
             }
         }
 
         private void spouseEmploymentStatusComboBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (spouseEmploymentStatusComboBox.SelectedItem == null || string.IsNullOrWhiteSpace(spouseEmploymentStatusComboBox.Text))
+            if (!string.IsNullOrWhiteSpace(spouseEmploymentStatusComboBox.Text) && spouseEmploymentStatusComboBox.SelectedItem == null)
             {
-                MessageBox.Show("Please select employment status.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                // Only cancel if it's completely empty, avoiding a validation loop
-                if (string.IsNullOrEmpty(spouseEmploymentStatusComboBox.Text))
-                {
-                    e.Cancel = true;
-                }
+                MessageBox.Show("Please select a valid employment status.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Cancel = true;
             }
         }
 
-        private void spouseOccupationtextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        private void spouseOccupationTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            string spouseEmploymentStatus = spouseEmploymentStatusComboBox.SelectedIndex.ToString(); // Get selected employment status
+            string employmentStatus = spouseEmploymentStatusComboBox.SelectedItem?.ToString() ?? "";
 
-            // If employed or self-employed, occupation cannot be null or less than 3 characters
-            if ((spouseEmploymentStatus == "Employed" || spouseEmploymentStatus == "Self-Employed") &&
+            // If employed or self-employed, occupation cannot be empty and must be at least 3 characters
+            if ((employmentStatus == "Employed" || employmentStatus == "Self-Employed") &&
                 string.IsNullOrWhiteSpace(spouseOccupationTextBox.Text))
             {
-                MessageBox.Show("Occupation is required for employed or self-employed members and must be at least 3 characters.",
+                MessageBox.Show("Occupation is required for employed or self-employed individuals and must be at least 3 characters.",
                                 "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                e.Cancel = true; // Prevents moving to the next field
+                e.Cancel = true;
                 return;
             }
 
-            // If occupation is entered, ensure it has at least 3 characters
+            // If an occupation is entered, it must be at least 3 characters long
             if (!string.IsNullOrWhiteSpace(spouseOccupationTextBox.Text) && spouseOccupationTextBox.Text.Length < 3)
             {
                 MessageBox.Show("Occupation cannot be less than 3 characters.", "Invalid Input",
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 e.Cancel = true;
             }
-
         }
 
         private void spousePhoneNumberTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            string spousePhoneNumber = spousePhoneNumberTextBox.Text.Trim();
+            string phoneNumber = spousePhoneNumberTextBox.Text.Trim();
 
-            // Check if the input is exactly 10 digits and contains only numbers
-            if (!string.IsNullOrWhiteSpace(spousePhoneNumber) && !Regex.IsMatch(spousePhoneNumber, @"^\d{10}$"))
+            // If entered, phone number must be exactly 10 digits
+            if (!string.IsNullOrWhiteSpace(phoneNumber) && !Regex.IsMatch(phoneNumber, @"^\d{10}$"))
             {
                 MessageBox.Show("Phone number must be exactly 10 digits and contain only numbers.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                e.Cancel = true; // Prevents moving to the next field
+                e.Cancel = true;
             }
         }
 
         private void spouseMobileNumberTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            string spouseMobileNumber = spouseMobileNumberTextBox.Text.Trim();
+            string mobileNumber = spouseMobileNumberTextBox.Text.Trim();
 
-            // Check if the input is exactly 10 digits and contains only numbers
-            if (!string.IsNullOrWhiteSpace(spouseMobileNumber) && !Regex.IsMatch(spouseMobileNumber, @"^\d{10}$"))
+            // If entered, mobile number must be exactly 10 digits
+            if (!string.IsNullOrWhiteSpace(mobileNumber) && !Regex.IsMatch(mobileNumber, @"^\d{10}$"))
             {
-                MessageBox.Show("Phone number must be exactly 10 digits and contain only numbers.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                e.Cancel = true; // Prevents moving to the next field
+                MessageBox.Show("Mobile number must be exactly 10 digits and contain only numbers.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Cancel = true;
             }
         }
 
         private void spouseEmailAddressTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
             string email = spouseEmailAddressTextBox.Text.Trim();
-
-            // Regular expression for validating an email address
             string emailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
 
-            // Allow empty input, but if an email is provided, it must be valid
+            // Allow empty email, but if entered, it must be valid
             if (!string.IsNullOrWhiteSpace(email) && !Regex.IsMatch(email, emailPattern))
             {
                 MessageBox.Show("Please enter a valid email address.", "Invalid Email",
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                e.Cancel = true; // Prevents moving to the next field until a valid email is entered
+                e.Cancel = true;
             }
         }
 
         private void spouseReligionTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (spouseReligionTextBox.Text.Length < 3)
+            string religion = spouseReligionTextBox.Text.Trim();
+
+            // Allow empty input, but if entered, it must be at least 3 characters long
+            if (!string.IsNullOrWhiteSpace(religion) && religion.Length < 3)
             {
-                MessageBox.Show("First name cannot be less than 3 characters.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                e.Cancel = true; // Prevents the user from leaving the textbox
+                MessageBox.Show("Religion must be at least 3 characters long.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Cancel = true;
             }
         }
+
 
         private void spouseSaveButton_Click(object sender, EventArgs e)
         {

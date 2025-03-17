@@ -42,5 +42,43 @@ namespace AdminDashboard
             sacramentalLifeForm.Show();
 
         }
+
+        private void dependentFirstNameTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            string text = dependentFirstNameTextBox.Text.Trim();
+            if (!string.IsNullOrEmpty(text) && text.Length < 3)
+            {
+                MessageBox.Show("First name must be at least 3 characters long.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Cancel = true;
+            }
+        }
+
+        private void dependentLastNameTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            string text = dependentLastNameTextBox.Text.Trim();
+            if (!string.IsNullOrEmpty(text) && text.Length < 3)
+            {
+                MessageBox.Show("Last name must be at least 3 characters long.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Cancel = true;
+            }
+        }
+
+        private void dependentGenderComboBox_SelectedIndexChanged(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(dependentGenderComboBox.Text) && dependentGenderComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a valid gender.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Cancel = true;
+            }
+        }
+
+        private void attendingSundaySchoolComboBox_SelectedIndexChanged(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(attendingSundaySchoolComboBox.Text) && attendingSundaySchoolComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a valid gender.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Cancel = true;
+            }
+        }
     }
 }
