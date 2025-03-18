@@ -27,5 +27,59 @@ namespace AdminDashboard
             MainForm.SwitchPanel.Controls.Add(academicHistoryForm);
             academicHistoryForm.Show();
         }
+
+        private void birthDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            if (birthDateTimePicker.Value > DateTime.Now)
+            {
+                MessageBox.Show("Birth date cannot be greater than today.", "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                birthDateTimePicker.Value = DateTime.Now;
+            }
+        }
+
+        private void dateOfDeathTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            if (dateOfDeathTimePicker.Value > DateTime.Now)
+            {
+                MessageBox.Show("Date of death cannot be greater than today.", "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dateOfDeathTimePicker.Value = DateTime.Now;
+            }
+        }
+
+        private void burialDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            if (burialDateTimePicker.Value > DateTime.Now)
+            {
+                MessageBox.Show("Burial date cannot be greater than today.", "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                burialDateTimePicker.Value = DateTime.Now;
+            }
+        }
+
+        private void cemeteryTextBox_TextChanged(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (cemeteryTextBox.Text.Length < 3)
+            {
+                MessageBox.Show("Cemetery cannot be less than 3 characters.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Cancel = true; // Prevents the user from leaving the textbox
+            }
+        }
+
+        private void clergyNameTextBox_TextChanged(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (clergyNameTextBox.Text.Length < 3)
+            {
+                MessageBox.Show("Clergy name cannot be less than 3 characters.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Cancel = true; // Prevents the user from leaving the textbox
+            }
+        }
+
+        private void receivedViaticumComboBox_SelectedIndexChanged(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (receivedViaticumComboBox.SelectedItem == null || string.IsNullOrWhiteSpace(receivedViaticumComboBox.Text))
+            {
+                MessageBox.Show("Please select a race.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Cancel = true;
+            }
+        }
     }
 }

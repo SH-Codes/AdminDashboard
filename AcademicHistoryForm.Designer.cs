@@ -45,7 +45,7 @@
             academicIDTextBox = new TextBox();
             highestGradePassedCombox = new ComboBox();
             subjectPassedCheckedListBox = new CheckedListBox();
-            academicFieldOfStudytextBox = new TextBox();
+            academicFieldOfStudyTextBox = new TextBox();
             fieldOfStudyLabel = new Label();
             SuspendLayout();
             // 
@@ -117,6 +117,7 @@
             academicYearObtainedDateTimePicker.Name = "academicYearObtainedDateTimePicker";
             academicYearObtainedDateTimePicker.Size = new Size(225, 23);
             academicYearObtainedDateTimePicker.TabIndex = 62;
+            academicYearObtainedDateTimePicker.ValueChanged += academicYearObtainedDateTimePicker_ValueChanged;
             // 
             // subjectLabel
             // 
@@ -202,6 +203,7 @@
             highestGradePassedCombox.Name = "highestGradePassedCombox";
             highestGradePassedCombox.Size = new Size(225, 23);
             highestGradePassedCombox.TabIndex = 96;
+            highestGradePassedCombox.Validating += highestGradePassedCombox_SelectedIndexChanged;
             // 
             // subjectPassedCheckedListBox
             // 
@@ -211,13 +213,15 @@
             subjectPassedCheckedListBox.Name = "subjectPassedCheckedListBox";
             subjectPassedCheckedListBox.Size = new Size(225, 112);
             subjectPassedCheckedListBox.TabIndex = 97;
+            subjectPassedCheckedListBox.Validating += subjectPassedCheckedListBox_SelectedIndexChanged;
             // 
-            // academicFieldOfStudytextBox
+            // academicFieldOfStudyTextBox
             // 
-            academicFieldOfStudytextBox.Location = new Point(192, 421);
-            academicFieldOfStudytextBox.Name = "academicFieldOfStudytextBox";
-            academicFieldOfStudytextBox.Size = new Size(225, 23);
-            academicFieldOfStudytextBox.TabIndex = 98;
+            academicFieldOfStudyTextBox.Location = new Point(192, 421);
+            academicFieldOfStudyTextBox.Name = "academicFieldOfStudyTextBox";
+            academicFieldOfStudyTextBox.Size = new Size(225, 23);
+            academicFieldOfStudyTextBox.TabIndex = 98;
+            academicFieldOfStudyTextBox.Validating += academicFieldOfStudyTextBox_TextChanged;
             // 
             // fieldOfStudyLabel
             // 
@@ -236,7 +240,7 @@
             BackColor = Color.White;
             ClientSize = new Size(1052, 513);
             Controls.Add(fieldOfStudyLabel);
-            Controls.Add(academicFieldOfStudytextBox);
+            Controls.Add(academicFieldOfStudyTextBox);
             Controls.Add(subjectPassedCheckedListBox);
             Controls.Add(highestGradePassedCombox);
             Controls.Add(academicIDTextBox);
@@ -280,7 +284,7 @@
         private TextBox academicIDTextBox;
         private ComboBox highestGradePassedCombox;
         private CheckedListBox subjectPassedCheckedListBox;
-        private TextBox academicFieldOfStudytextBox;
+        private TextBox academicFieldOfStudyTextBox;
         private Label fieldOfStudyLabel;
     }
 }

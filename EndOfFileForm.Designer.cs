@@ -62,6 +62,7 @@
             clergyNameTextBox.Name = "clergyNameTextBox";
             clergyNameTextBox.Size = new Size(225, 23);
             clergyNameTextBox.TabIndex = 119;
+            clergyNameTextBox.Validating += clergyNameTextBox_TextChanged;
             // 
             // cemeteryTextBox
             // 
@@ -69,6 +70,7 @@
             cemeteryTextBox.Name = "cemeteryTextBox";
             cemeteryTextBox.Size = new Size(225, 23);
             cemeteryTextBox.TabIndex = 118;
+            cemeteryTextBox.Validating += cemeteryTextBox_TextChanged;
             // 
             // FileIdTextBox
             // 
@@ -202,6 +204,7 @@
             dateOfDeathTimePicker.Name = "dateOfDeathTimePicker";
             dateOfDeathTimePicker.Size = new Size(225, 23);
             dateOfDeathTimePicker.TabIndex = 120;
+            dateOfDeathTimePicker.ValueChanged += dateOfDeathTimePicker_ValueChanged;
             // 
             // birthDateLabel
             // 
@@ -219,6 +222,7 @@
             birthDateTimePicker.Name = "birthDateTimePicker";
             birthDateTimePicker.Size = new Size(225, 23);
             birthDateTimePicker.TabIndex = 115;
+            birthDateTimePicker.ValueChanged += birthDateTimePicker_ValueChanged;
             // 
             // burialDateTimePicker
             // 
@@ -226,6 +230,7 @@
             burialDateTimePicker.Name = "burialDateTimePicker";
             burialDateTimePicker.Size = new Size(225, 23);
             burialDateTimePicker.TabIndex = 121;
+            burialDateTimePicker.ValueChanged += burialDateTimePicker_ValueChanged;
             // 
             // receivedViaticumComboBox
             // 
@@ -235,6 +240,7 @@
             receivedViaticumComboBox.Name = "receivedViaticumComboBox";
             receivedViaticumComboBox.Size = new Size(225, 23);
             receivedViaticumComboBox.TabIndex = 123;
+            receivedViaticumComboBox.Validating += receivedViaticumComboBox_SelectedIndexChanged;
             // 
             // viaticumLabel
             // 

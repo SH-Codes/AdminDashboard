@@ -185,7 +185,7 @@ namespace AdminDashboard
 
         private void memberOccupationTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            string employmentStatus = memberTitleComboBox.SelectedIndex.ToString(); // Get selected employment status
+            string employmentStatus = memberOccupationTextBox.Text.ToString(); // Get selected employment status
 
             // If employed or self-employed, occupation cannot be null or less than 3 characters
             if ((employmentStatus == "Employed" || employmentStatus == "Self-Employed") &&
@@ -345,6 +345,13 @@ namespace AdminDashboard
         {
 
         }
+
+        public static class MembershipData
+        {
+            public static string MembershipNumber { get; set; }
+        }
+
+
         private HashSet<string> existingMembershipNumbers = new HashSet<string>(); // Simulate storage for checking uniqueness
         private void memberSaveButton_Click(object sender, EventArgs e)
         {
@@ -362,8 +369,18 @@ namespace AdminDashboard
             membershipNumberTextBox.Text = membershipNumber;
             existingMembershipNumbers.Add(membershipNumber); // Simulate saving to database
 
-            MessageBox.Show("Member saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Store in shared class
+            MembershipData.MembershipNumber = membershipNumber;
+
+            MessageBox.Show($"Member saved successfully! Membership Number: {membershipNumber}",
+                            "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Open the next form (e.g., SpousesForm)
+            //SpousesForm spousesForm = new SpousesForm();
+            //spousesForm.Show();
+            //this.Hide(); // Hide current form if needed
         }
+
 
         private string GenerateMembershipNumber()
         {

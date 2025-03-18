@@ -67,7 +67,7 @@
             deparmentName3Label = new Label();
             isPreviousExcoComboBox = new ComboBox();
             previousExcoComboBox = new ComboBox();
-            previouseExcoRoledateTimePicker = new DateTimePicker();
+            previousExcoRoleDateTimePicker = new DateTimePicker();
             activityNextButton = new Button();
             SuspendLayout();
             // 
@@ -193,6 +193,7 @@
             activityName2ComboBox.Name = "activityName2ComboBox";
             activityName2ComboBox.Size = new Size(225, 23);
             activityName2ComboBox.TabIndex = 67;
+            activityName2ComboBox.SelectedIndexChanged += activityName2ComboBox_SelectedIndexChanged;
             // 
             // activityName2Label
             // 
@@ -222,6 +223,7 @@
             departmentName2ComboBox.Name = "departmentName2ComboBox";
             departmentName2ComboBox.Size = new Size(225, 23);
             departmentName2ComboBox.TabIndex = 64;
+            departmentName2ComboBox.SelectedIndexChanged += departmentName2ComboBox_SelectedIndexChanged;
             // 
             // yearJoined1Label
             // 
@@ -362,6 +364,7 @@
             departmentName3ComboBox.Name = "departmentName3ComboBox";
             departmentName3ComboBox.Size = new Size(225, 23);
             departmentName3ComboBox.TabIndex = 106;
+            departmentName3ComboBox.SelectedIndexChanged += departmentName3ComboBox_SelectedIndexChanged;
             // 
             // activityName3ComboBox
             // 
@@ -371,6 +374,7 @@
             activityName3ComboBox.Name = "activityName3ComboBox";
             activityName3ComboBox.Size = new Size(225, 23);
             activityName3ComboBox.TabIndex = 105;
+            activityName3ComboBox.SelectedIndexChanged += activityName3ComboBox_SelectedIndexChanged;
             // 
             // yearJoined3Label
             // 
@@ -447,12 +451,13 @@
             previousExcoComboBox.Size = new Size(225, 23);
             previousExcoComboBox.TabIndex = 108;
             // 
-            // previouseExcoRoledateTimePicker
+            // previousExcoRoleDateTimePicker
             // 
-            previouseExcoRoledateTimePicker.Location = new Point(654, 418);
-            previouseExcoRoledateTimePicker.Name = "previouseExcoRoledateTimePicker";
-            previouseExcoRoledateTimePicker.Size = new Size(225, 23);
-            previouseExcoRoledateTimePicker.TabIndex = 109;
+            previousExcoRoleDateTimePicker.Location = new Point(654, 418);
+            previousExcoRoleDateTimePicker.Name = "previousExcoRoleDateTimePicker";
+            previousExcoRoleDateTimePicker.Size = new Size(225, 23);
+            previousExcoRoleDateTimePicker.TabIndex = 109;
+            previousExcoRoleDateTimePicker.ValueChanged += previousExcoRoleDateTimePicker_ValueChanged;
             // 
             // activityNextButton
             // 
@@ -472,7 +477,7 @@
             BackColor = Color.White;
             ClientSize = new Size(1052, 513);
             Controls.Add(activityNextButton);
-            Controls.Add(previouseExcoRoledateTimePicker);
+            Controls.Add(previousExcoRoleDateTimePicker);
             Controls.Add(previousExcoComboBox);
             Controls.Add(isPreviousExcoComboBox);
             Controls.Add(departmentName3ComboBox);
@@ -560,7 +565,7 @@
         private Label deparmentName3Label;
         private ComboBox isPreviousExcoComboBox;
         private ComboBox previousExcoComboBox;
-        private DateTimePicker previouseExcoRoledateTimePicker;
+        private DateTimePicker previousExcoRoleDateTimePicker;
         private Button activityNextButton;
     }
 }
