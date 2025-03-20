@@ -15,13 +15,14 @@ namespace AdminDashboard
         public MainForm()
         {
             InitializeComponent();
+
             //this.FormBorderStyle = FormBorderStyle.Sizable;
             //this.StartPosition = FormStartPosition.CenterScreen;
             //this.BackColor = Color.White;
 
             dashboardButton.Paint += new PaintEventHandler(dashboardButton_Paint);
             financesButton.Paint += new PaintEventHandler(financesButton_Paint);
-            reportsButton.Paint += new PaintEventHandler(reportsButton_Paint);
+            inventoryButton.Paint += new PaintEventHandler(reportsButton_Paint);
             settingsButton.Paint += new PaintEventHandler(settingsButton_Paint);
             logoutButton.Paint += new PaintEventHandler(logoutButton_Paint);
         }
@@ -42,7 +43,7 @@ namespace AdminDashboard
         //    }
         //}
 
-       
+
 
         private void dashboardButton_Paint(object? sender, PaintEventArgs e)
         {
@@ -81,6 +82,26 @@ namespace AdminDashboard
 
                 // Apply rounded region
                 financesButton.Region = new Region(path);
+            }
+        }
+
+        private void inventoryButton_Paint(object? sender, PaintEventArgs e)
+        {
+            int cornerRadius = 16; // Adjust for roundness
+
+            // Enable anti-aliasing for smooth edges
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
+            using (System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath())
+            {
+                path.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90);
+                path.AddArc(inventoryButton.Width - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90);
+                path.AddArc(inventoryButton.Width - cornerRadius, inventoryButton.Height - cornerRadius, cornerRadius, cornerRadius, 0, 90);
+                path.AddArc(0, inventoryButton.Height - cornerRadius, cornerRadius, cornerRadius, 90, 90);
+                path.CloseFigure();
+
+                // Apply rounded region
+                inventoryButton.Region = new Region(path);
             }
         }
 
@@ -143,15 +164,7 @@ namespace AdminDashboard
                 logoutButton.Region = new Region(path);
             }
         }
-        private void overviewButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //private void button2_Click(object sender, EventArgs e)
-        //{
-
-        //}
+    
 
         private void switchPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -174,10 +187,10 @@ namespace AdminDashboard
         private void dashboardButton_Click(object sender, EventArgs e)
         {
             switchPanel.Controls.Clear();
-            DashboardForm overviewForm = new DashboardForm();
-            overviewForm.TopLevel = false;
-            switchPanel.Controls.Add(overviewForm);
-            overviewForm.Show();
+            DashboardForm dashboardForm = new DashboardForm();
+            dashboardForm.TopLevel = false;
+            switchPanel.Controls.Add(dashboardForm);
+            dashboardForm.Show();
 
         }
 
@@ -188,6 +201,15 @@ namespace AdminDashboard
             financesForm.TopLevel = false;
             switchPanel.Controls.Add(financesForm);
             financesForm.Show();
+        }
+
+        private void inventoryButton_Click(object sender, EventArgs e)
+        {
+            switchPanel.Controls.Clear();
+            InventoryForm inventoryForm = new InventoryForm();
+            inventoryForm.TopLevel = false;
+            switchPanel.Controls.Add(inventoryForm);
+            inventoryForm.Show();
         }
 
         private void reportsButton_Click(object sender, EventArgs e)

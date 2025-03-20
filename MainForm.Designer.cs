@@ -31,10 +31,10 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             mainPanel = new Panel();
-            menuButton = new Button();
+            reportsButton = new Button();
             dashboardButton = new Button();
             timeDisplayLabel = new Label();
-            reportsButton = new Button();
+            inventoryButton = new Button();
             financesButton = new Button();
             containerPanel = new Panel();
             switchPanel = new Panel();
@@ -54,10 +54,10 @@
             // 
             mainPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             mainPanel.BackColor = SystemColors.Highlight;
-            mainPanel.Controls.Add(menuButton);
+            mainPanel.Controls.Add(reportsButton);
             mainPanel.Controls.Add(dashboardButton);
             mainPanel.Controls.Add(timeDisplayLabel);
-            mainPanel.Controls.Add(reportsButton);
+            mainPanel.Controls.Add(inventoryButton);
             mainPanel.Controls.Add(financesButton);
             mainPanel.Controls.Add(containerPanel);
             mainPanel.Controls.Add(logoutButton);
@@ -68,25 +68,27 @@
             mainPanel.TabIndex = 0;
             mainPanel.Paint += mainPanel_Paint;
             // 
-            // menuButton
+            // reportsButton
             // 
-            menuButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            menuButton.BackColor = SystemColors.Highlight;
-            menuButton.BackgroundImageLayout = ImageLayout.Center;
-            menuButton.Cursor = Cursors.Hand;
-            menuButton.FlatAppearance.BorderColor = SystemColors.Highlight;
-            menuButton.FlatAppearance.CheckedBackColor = Color.White;
-            menuButton.FlatStyle = FlatStyle.Flat;
-            menuButton.Font = new Font("Segoe UI", 11F);
-            menuButton.ForeColor = Color.White;
-            menuButton.Image = (Image)resources.GetObject("menuButton.Image");
-            menuButton.ImageAlign = ContentAlignment.MiddleLeft;
-            menuButton.Location = new Point(12, 27);
-            menuButton.Name = "menuButton";
-            menuButton.Padding = new Padding(15, 0, 0, 0);
-            menuButton.Size = new Size(68, 45);
-            menuButton.TabIndex = 6;
-            menuButton.UseVisualStyleBackColor = false;
+            reportsButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            reportsButton.BackColor = SystemColors.Highlight;
+            reportsButton.Cursor = Cursors.Hand;
+            reportsButton.FlatAppearance.BorderColor = SystemColors.Highlight;
+            reportsButton.FlatAppearance.CheckedBackColor = Color.White;
+            reportsButton.FlatStyle = FlatStyle.Flat;
+            reportsButton.Font = new Font("Segoe UI", 11F);
+            reportsButton.ForeColor = Color.White;
+            reportsButton.Image = (Image)resources.GetObject("reportsButton.Image");
+            reportsButton.ImageAlign = ContentAlignment.MiddleLeft;
+            reportsButton.Location = new Point(8, 413);
+            reportsButton.Name = "reportsButton";
+            reportsButton.Padding = new Padding(15, 0, 0, 0);
+            reportsButton.Size = new Size(214, 45);
+            reportsButton.TabIndex = 6;
+            reportsButton.Tag = "reports";
+            reportsButton.Text = "Reports";
+            reportsButton.UseVisualStyleBackColor = false;
+            reportsButton.Click += reportsButton_Click;
             // 
             // dashboardButton
             // 
@@ -101,11 +103,12 @@
             dashboardButton.ForeColor = Color.White;
             dashboardButton.Image = (Image)resources.GetObject("dashboardButton.Image");
             dashboardButton.ImageAlign = ContentAlignment.MiddleLeft;
-            dashboardButton.Location = new Point(8, 264);
+            dashboardButton.Location = new Point(8, 195);
             dashboardButton.Name = "dashboardButton";
             dashboardButton.Padding = new Padding(15, 0, 0, 0);
             dashboardButton.Size = new Size(214, 45);
             dashboardButton.TabIndex = 0;
+            dashboardButton.Tag = "dashboard";
             dashboardButton.Text = "Dashboard";
             dashboardButton.UseVisualStyleBackColor = false;
             dashboardButton.Click += dashboardButton_Click;
@@ -121,26 +124,27 @@
             timeDisplayLabel.TabIndex = 5;
             timeDisplayLabel.Text = "DDMMMYYY, HH:MM:SS";
             // 
-            // reportsButton
+            // inventoryButton
             // 
-            reportsButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            reportsButton.BackColor = SystemColors.Highlight;
-            reportsButton.Cursor = Cursors.Hand;
-            reportsButton.FlatAppearance.BorderColor = SystemColors.Highlight;
-            reportsButton.FlatAppearance.CheckedBackColor = Color.White;
-            reportsButton.FlatStyle = FlatStyle.Flat;
-            reportsButton.Font = new Font("Segoe UI", 11F);
-            reportsButton.ForeColor = Color.White;
-            reportsButton.Image = (Image)resources.GetObject("reportsButton.Image");
-            reportsButton.ImageAlign = ContentAlignment.MiddleLeft;
-            reportsButton.Location = new Point(8, 409);
-            reportsButton.Name = "reportsButton";
-            reportsButton.Padding = new Padding(15, 0, 0, 0);
-            reportsButton.Size = new Size(214, 45);
-            reportsButton.TabIndex = 2;
-            reportsButton.Text = "Reports";
-            reportsButton.UseVisualStyleBackColor = false;
-            reportsButton.Click += reportsButton_Click;
+            inventoryButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            inventoryButton.BackColor = SystemColors.Highlight;
+            inventoryButton.Cursor = Cursors.Hand;
+            inventoryButton.FlatAppearance.BorderColor = SystemColors.Highlight;
+            inventoryButton.FlatAppearance.CheckedBackColor = Color.White;
+            inventoryButton.FlatStyle = FlatStyle.Flat;
+            inventoryButton.Font = new Font("Segoe UI", 11F);
+            inventoryButton.ForeColor = Color.White;
+            inventoryButton.Image = (Image)resources.GetObject("inventoryButton.Image");
+            inventoryButton.ImageAlign = ContentAlignment.MiddleLeft;
+            inventoryButton.Location = new Point(8, 340);
+            inventoryButton.Name = "inventoryButton";
+            inventoryButton.Padding = new Padding(15, 0, 0, 0);
+            inventoryButton.Size = new Size(214, 45);
+            inventoryButton.TabIndex = 2;
+            inventoryButton.Tag = "inventory";
+            inventoryButton.Text = "Inventory";
+            inventoryButton.UseVisualStyleBackColor = false;
+            inventoryButton.Click += inventoryButton_Click;
             // 
             // financesButton
             // 
@@ -154,11 +158,12 @@
             financesButton.ForeColor = Color.White;
             financesButton.Image = (Image)resources.GetObject("financesButton.Image");
             financesButton.ImageAlign = ContentAlignment.MiddleLeft;
-            financesButton.Location = new Point(8, 337);
+            financesButton.Location = new Point(8, 268);
             financesButton.Name = "financesButton";
             financesButton.Padding = new Padding(15, 0, 0, 0);
             financesButton.Size = new Size(214, 45);
             financesButton.TabIndex = 1;
+            financesButton.Tag = "finances";
             financesButton.Text = "Finances";
             financesButton.UseVisualStyleBackColor = false;
             financesButton.Click += financesButton_Click;
@@ -264,6 +269,7 @@
             logoutButton.Padding = new Padding(15, 0, 0, 0);
             logoutButton.Size = new Size(214, 45);
             logoutButton.TabIndex = 4;
+            logoutButton.Tag = "logout";
             logoutButton.Text = "Logout";
             logoutButton.UseVisualStyleBackColor = true;
             logoutButton.Click += logoutButton_Click;
@@ -284,6 +290,7 @@
             settingsButton.Padding = new Padding(15, 0, 0, 0);
             settingsButton.Size = new Size(214, 45);
             settingsButton.TabIndex = 3;
+            settingsButton.Tag = "settings";
             settingsButton.Text = "Settings";
             settingsButton.UseVisualStyleBackColor = true;
             settingsButton.Click += settingsButton_Click;
@@ -324,13 +331,13 @@
         private TextBox searchbarTextBox;
         private Button searchbarRunButton;
         private Panel switchPanel;
-        private Button reportsButton;
+        private Button inventoryButton;
         private Button financesButton;
         private Button dashboardButton;
         private Button logoutButton;
         private Button settingsButton;
         private Label timeDisplayLabel;
         private System.Windows.Forms.Timer mainFormTimer;
-        private Button menuButton;
+        private Button reportsButton;
     }
 }
