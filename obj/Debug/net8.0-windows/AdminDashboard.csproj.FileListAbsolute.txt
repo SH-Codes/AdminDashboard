@@ -58,3 +58,4 @@ C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net
 C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.FinancesForm.resources
 C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.ReportsForm.resources
 C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.SettingsForm.resources
+C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.InventoryForm.resources

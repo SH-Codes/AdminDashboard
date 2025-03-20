@@ -16,33 +16,51 @@ namespace AdminDashboard
         {
             InitializeComponent();
 
-            //this.FormBorderStyle = FormBorderStyle.Sizable;
-            //this.StartPosition = FormStartPosition.CenterScreen;
-            //this.BackColor = Color.White;
-
             dashboardButton.Paint += new PaintEventHandler(dashboardButton_Paint);
             financesButton.Paint += new PaintEventHandler(financesButton_Paint);
-            inventoryButton.Paint += new PaintEventHandler(reportsButton_Paint);
+            inventoryButton.Paint += new PaintEventHandler(inventoryButton_Paint);
+            reportsButton.Paint += new PaintEventHandler(reportsButton_Paint);
             settingsButton.Paint += new PaintEventHandler(settingsButton_Paint);
             logoutButton.Paint += new PaintEventHandler(logoutButton_Paint);
+
+            inventoryButton.HandleCreated += (s, e) => ApplyRoundedRegion(inventoryButton);
+            dashboardButton.HandleCreated += (s, e) => ApplyRoundedRegion(dashboardButton);
+            financesButton.HandleCreated += (s, e) => ApplyRoundedRegion(financesButton);
+            reportsButton.HandleCreated += (s, e) => ApplyRoundedRegion(reportsButton);
+            settingsButton.HandleCreated += (s, e) => ApplyRoundedRegion(settingsButton);
+            logoutButton.HandleCreated += (s, e) => ApplyRoundedRegion(logoutButton);
+
+            inventoryButton.GotFocus += (s, e) => ApplyRoundedRegion(inventoryButton);
+            dashboardButton.GotFocus += (s, e) => ApplyRoundedRegion(dashboardButton);
+            financesButton.GotFocus += (s, e) => ApplyRoundedRegion(financesButton);
+            reportsButton.GotFocus += (s, e) => ApplyRoundedRegion(reportsButton);
+            settingsButton.GotFocus += (s, e) => ApplyRoundedRegion(settingsButton);
+            logoutButton.GotFocus += (s, e) => ApplyRoundedRegion(logoutButton);
+
+            inventoryButton.LostFocus += (s, e) => ApplyRoundedRegion(inventoryButton);
+            dashboardButton.LostFocus += (s, e) => ApplyRoundedRegion(dashboardButton);
+            financesButton.LostFocus += (s, e) => ApplyRoundedRegion(financesButton);
+            reportsButton.LostFocus += (s, e) => ApplyRoundedRegion(reportsButton);
+            settingsButton.LostFocus += (s, e) => ApplyRoundedRegion(settingsButton);
+            logoutButton.LostFocus += (s, e) => ApplyRoundedRegion(logoutButton);
+
         }
 
-        //protected override void OnPaint(PaintEventArgs e)
-        //{
-        //    base.OnPaint(e);
+        private void ApplyRoundedRegion(Button button)
+        {
+            int cornerRadius = 16; // Adjust for roundness
 
-        //    using (GraphicsPath path = new GraphicsPath())
-        //    {
-        //        path.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90);
-        //        path.AddArc(this.Width - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90);
-        //        path.AddArc(this.Width - cornerRadius, this.Height - cornerRadius, cornerRadius, cornerRadius, 0, 90);
-        //        path.AddArc(0, this.Height - cornerRadius, cornerRadius, cornerRadius, 90, 90);
-        //        path.CloseFigure();
+            using (GraphicsPath path = new GraphicsPath())
+            {
+                path.AddArc(0, 0, cornerRadius, cornerRadius, 180, 90);
+                path.AddArc(button.Width - cornerRadius, 0, cornerRadius, cornerRadius, 270, 90);
+                path.AddArc(button.Width - cornerRadius, button.Height - cornerRadius, cornerRadius, cornerRadius, 0, 90);
+                path.AddArc(0, button.Height - cornerRadius, cornerRadius, cornerRadius, 90, 90);
+                path.CloseFigure();
 
-        //        this.Region = new Region(path);
-        //    }
-        //}
-
+                button.Region = new Region(path);
+            }
+        }
 
 
         private void dashboardButton_Paint(object? sender, PaintEventArgs e)
