@@ -47,5 +47,22 @@ namespace AdminDashboard
         {
 
         }
+
+        private void totalFundsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void totalMemberPanel_Paint(object sender, PaintEventArgs e)
+        {
+            if (totalMemberPanel.BackgroundImage != null)
+            {
+                Image img = totalMemberPanel.BackgroundImage;
+                int x = totalMemberPanel.Width - img.Width;
+                int y = (totalMemberPanel.Height - img.Height) / 2;
+
+                e.Graphics.DrawImage(img, x, y);
+            }
+        }
     }
 }

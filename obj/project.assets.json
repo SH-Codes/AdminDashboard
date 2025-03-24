@@ -1,11 +1,199 @@
 {
   "version": 3,
   "targets": {
-    "net8.0-windows7.0": {}
+    "net8.0-windows7.0": {
+      "Highsoft.Highcharts/11.4.6.5": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Highcharts.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Highcharts.dll": {}
+        }
+      },
+      "LiveCharts.Core/0.9.8": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/LiveCharts.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/LiveCharts.dll": {}
+        }
+      },
+      "LiveCharts.WinForms.NetCore3/0.9.8": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.DataSetExtensions": "4.5.0"
+        },
+        "compile": {
+          "lib/net8.0-windows7.0/LiveCharts.WinForms.dll": {},
+          "lib/net8.0-windows7.0/LiveCharts.Wpf.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/LiveCharts.dll": {
+            "related": ".Wpf.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/LiveCharts.WinForms.dll": {},
+          "lib/net8.0-windows7.0/LiveCharts.Wpf.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0-windows7.0/LiveCharts.dll": {
+            "related": ".Wpf.xml;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App"
+        ]
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Data.DataSetExtensions/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Data.DataSetExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Data.DataSetExtensions.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Highsoft.Highcharts/11.4.6.5": {
+      "sha512": "RUTTlIbkzSm2Zz/u/gOxhV77n6RAaJTf4jwgEcNWNJdVdpT74Qp9m9nmlOX1uAbLuWOe5WsX2GPLkBjTOiEeTA==",
+      "type": "package",
+      "path": "highsoft.highcharts/11.4.6.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CONTRIBUTING.md",
+        "highsoft.highcharts.11.4.6.5.nupkg.sha512",
+        "highsoft.highcharts.nuspec",
+        "lib/netstandard2.0/Highcharts.dll",
+        "license.txt"
+      ]
+    },
+    "LiveCharts.Core/0.9.8": {
+      "sha512": "USb2TBOeER19X0ar5Zgki1ezjrSXBOmUoz3IqzTeksDm6hoaLFqs3iW9+wjHFuWNQGy9lLcVh2YIhhxVIg+zNQ==",
+      "type": "package",
+      "path": "livecharts.core/0.9.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/LiveCharts.dll",
+        "lib/netstandard2.0/LiveCharts.dll",
+        "livecharts.core.0.9.8.nupkg.sha512",
+        "livecharts.core.nuspec"
+      ]
+    },
+    "LiveCharts.WinForms.NetCore3/0.9.8": {
+      "sha512": "pIiJErHE6mxIktJiLBKAmEoas8dOmEtodJQZ0o0KUnelTYfQJJqgUB2kR5476x33TM19yvC9rUjnei3US61Jbg==",
+      "type": "package",
+      "path": "livecharts.winforms.netcore3/0.9.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/LiveCharts.WinForms.dll",
+        "lib/net45/LiveCharts.Wpf.dll",
+        "lib/net45/LiveCharts.Wpf.xml",
+        "lib/net45/LiveCharts.dll",
+        "lib/net45/LiveCharts.xml",
+        "lib/net6.0-windows7.0/LiveCharts.WinForms.dll",
+        "lib/net6.0-windows7.0/LiveCharts.Wpf.dll",
+        "lib/net6.0-windows7.0/LiveCharts.Wpf.xml",
+        "lib/net6.0-windows7.0/LiveCharts.dll",
+        "lib/net6.0-windows7.0/LiveCharts.xml",
+        "lib/net7.0-windows7.0/LiveCharts.WinForms.dll",
+        "lib/net7.0-windows7.0/LiveCharts.Wpf.dll",
+        "lib/net7.0-windows7.0/LiveCharts.Wpf.xml",
+        "lib/net7.0-windows7.0/LiveCharts.dll",
+        "lib/net7.0-windows7.0/LiveCharts.xml",
+        "lib/net8.0-windows7.0/LiveCharts.WinForms.dll",
+        "lib/net8.0-windows7.0/LiveCharts.Wpf.dll",
+        "lib/net8.0-windows7.0/LiveCharts.Wpf.xml",
+        "lib/net8.0-windows7.0/LiveCharts.dll",
+        "lib/net8.0-windows7.0/LiveCharts.xml",
+        "lib/netcoreapp3.1/LiveCharts.WinForms.dll",
+        "lib/netcoreapp3.1/LiveCharts.Wpf.dll",
+        "lib/netcoreapp3.1/LiveCharts.Wpf.xml",
+        "lib/netcoreapp3.1/LiveCharts.dll",
+        "lib/netcoreapp3.1/LiveCharts.xml",
+        "livecharts.winforms.netcore3.0.9.8.nupkg.sha512",
+        "livecharts.winforms.netcore3.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "System.Data.DataSetExtensions/4.5.0": {
+      "sha512": "221clPs1445HkTBZPL+K9sDBdJRB8UN8rgjO3ztB0CQ26z//fmJXtlsr6whGatscsKGBrhJl5bwJuKSA8mwFOw==",
+      "type": "package",
+      "path": "system.data.datasetextensions/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net45/_._",
+        "lib/netstandard2.0/System.Data.DataSetExtensions.dll",
+        "ref/net45/_._",
+        "ref/netstandard2.0/System.Data.DataSetExtensions.dll",
+        "system.data.datasetextensions.4.5.0.nupkg.sha512",
+        "system.data.datasetextensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0-windows7.0": []
+    "net8.0-windows7.0": [
+      "Highsoft.Highcharts >= 11.4.6.5",
+      "LiveCharts.Core >= 0.9.8",
+      "LiveCharts.WinForms.NetCore3 >= 0.9.8"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Sacred Heart Catholi\\.nuget\\packages\\": {},
@@ -57,6 +245,20 @@
     "frameworks": {
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
+        "dependencies": {
+          "Highsoft.Highcharts": {
+            "target": "Package",
+            "version": "[11.4.6.5, )"
+          },
+          "LiveCharts.Core": {
+            "target": "Package",
+            "version": "[0.9.8, )"
+          },
+          "LiveCharts.WinForms.NetCore3": {
+            "target": "Package",
+            "version": "[0.9.8, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
