@@ -121,7 +121,7 @@
   <data name="totalMembersPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAmRSURBVHhe7Z17
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAmRSURBVHhe7Z17
         8G7VGMdzC7kU5RbJuBtDOB1KOVGoYWjG5T/XMWMajIPMYBJTamqkUqJCGaSRcSuXMsYflcuRkDhyyRil
         MjjuhPAxT+d5f3v/vu33st+919prv+f5zLwzv/m9a6/nWWs979rr8qxn7bRTEARBEARBEARBEARBEKwi
         wB2BRwBPBp7pH/v74fadpg9GDnAX4HDgfcDVwL+Yjn1naU4Hng/cWfMLRoL/yj8A/EFbuQX27Putd9D8
@@ -168,7 +168,7 @@
   <data name="financeIconPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAsVSURBVHhe7Z0J
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAsVSURBVHhe7Z0J
         rCVFFYZxd1hkVUdEUdxRA244olFQBOIGhgAqYATcGCQ6boNGBIwLgcE4KoJGEzXjQlwwyqgjIzEKSmRc
         ANdBjaigICAqKrh95p85Pfb73+279ntddW99yU1e3u2uPudUd9+qc06d2mqrzAB2Ak4CvgD8GvhbfPT3
         BcCJwA5+XiFzgG2AM4G/M5hbgbcDS7ydQoYAewK/8F4egp8AD/b2ChkB7AXc4j07AjcAD/V2CxkA7AL8
@@ -222,7 +222,7 @@
   <data name="monthlyMembersPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAmRSURBVHhe7Z17
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAmRSURBVHhe7Z17
         8G7VGMdzC7kU5RbJuBtDOB1KOVGoYWjG5T/XMWMajIPMYBJTamqkUqJCGaSRcSuXMsYflcuRkDhyyRil
         MjjuhPAxT+d5f3v/vu33st+919prv+f5zLwzv/m9a6/nWWs979rr8qxn7bRTEARBEARBEARBEARBEKwi
         wB2BRwBPBp7pH/v74fadpg9GDnAX4HDgfcDVwL+Yjn1naU4Hng/cWfMLRoL/yj8A/EFbuQX27Putd9D8

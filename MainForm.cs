@@ -1,5 +1,7 @@
 ﻿using System.Drawing.Drawing2D;
 using System.Runtime.InteropServices;
+using System.Windows.Forms.DataVisualization.Charting;
+
 
 namespace AdminDashboard
 {
@@ -282,6 +284,12 @@ namespace AdminDashboard
         {
             UpdateTimeAndGreeting();
             mainFormTimer.Start();
+
+            switchPanel.Controls.Clear();
+            DashboardForm dashboardForm = new DashboardForm();
+            dashboardForm.TopLevel = false;
+            switchPanel.Controls.Add(dashboardForm);
+            dashboardForm.Show();
         }
 
         internal void LoadForm(SpousesForm spousesForm)

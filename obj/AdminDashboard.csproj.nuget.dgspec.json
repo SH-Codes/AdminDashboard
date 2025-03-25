@@ -51,17 +51,13 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
-            "Highsoft.Highcharts": {
+            "OxyPlot.WindowsForms": {
               "target": "Package",
-              "version": "[11.4.6.5, )"
+              "version": "[2.2.0, )"
             },
-            "LiveCharts.Core": {
+            "WinForms.DataVisualization": {
               "target": "Package",
-              "version": "[0.9.8, )"
-            },
-            "LiveCharts.WinForms.NetCore3": {
-              "target": "Package",
-              "version": "[0.9.8, )"
+              "version": "[1.10.0, )"
             }
           },
           "imports": [

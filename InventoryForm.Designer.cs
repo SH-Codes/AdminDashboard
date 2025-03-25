@@ -28,247 +28,117 @@
         /// </summary>
         private void InitializeComponent()
         {
-            endOfFilePreviousButton = new Button();
-            phoneNumberTextBox = new TextBox();
-            phoneNumberLabel = new Label();
-            nextOfKinTextBox = new TextBox();
-            nextOfKinLabel = new Label();
-            receivedViaticumComboBox = new ComboBox();
-            viaticumLabel = new Label();
-            burialDateTimePicker = new DateTimePicker();
-            dateOfDeathTimePicker = new DateTimePicker();
-            clergyNameTextBox = new TextBox();
-            cemeteryTextBox = new TextBox();
-            birthDateTimePicker = new DateTimePicker();
-            FileIdTextBox = new TextBox();
-            endOfFileDeleteButton = new Button();
-            endOfFileUpdateButton = new Button();
-            endOfFileClearButton = new Button();
-            endOfLifeSaveButton = new Button();
-            clergyNameLabel = new Label();
-            cemeteryLabel = new Label();
+            viewInventoryButton = new Button();
+            itemLoggedDateTimePicker = new DateTimePicker();
+            inventoryIdTextBox = new TextBox();
+            inventoryDeleteButton = new Button();
+            inventoryUpdateButton = new Button();
+            inventoryClearButton = new Button();
+            inventorySaveButton = new Button();
             burialDateLabel = new Label();
             dateOfDeathLabel = new Label();
-            birthDateLabel = new Label();
-            endOfFileMembershipNumberLabel = new Label();
-            endOfFileMembershipNumberTextBox = new TextBox();
+            itemNameLabel = new Label();
             FileIdLabel = new Label();
             PaymentLabel = new Label();
+            itemNameTextBox = new TextBox();
+            itemQuantityTextBox = new TextBox();
             SuspendLayout();
             // 
-            // endOfFilePreviousButton
+            // viewInventoryButton
             // 
-            endOfFilePreviousButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            endOfFilePreviousButton.Location = new Point(914, 369);
-            endOfFilePreviousButton.Name = "endOfFilePreviousButton";
-            endOfFilePreviousButton.Size = new Size(110, 23);
-            endOfFilePreviousButton.TabIndex = 154;
-            endOfFilePreviousButton.Text = "Previous";
-            endOfFilePreviousButton.UseVisualStyleBackColor = true;
+            viewInventoryButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            viewInventoryButton.Location = new Point(914, 271);
+            viewInventoryButton.Name = "viewInventoryButton";
+            viewInventoryButton.Size = new Size(110, 23);
+            viewInventoryButton.TabIndex = 154;
+            viewInventoryButton.Text = "View Inventory";
+            viewInventoryButton.UseVisualStyleBackColor = true;
+            viewInventoryButton.Click += viewInventoryButton_Click;
             // 
-            // phoneNumberTextBox
+            // itemLoggedDateTimePicker
             // 
-            phoneNumberTextBox.Location = new Point(624, 185);
-            phoneNumberTextBox.Name = "phoneNumberTextBox";
-            phoneNumberTextBox.Size = new Size(225, 23);
-            phoneNumberTextBox.TabIndex = 153;
+            itemLoggedDateTimePicker.Location = new Point(192, 229);
+            itemLoggedDateTimePicker.Name = "itemLoggedDateTimePicker";
+            itemLoggedDateTimePicker.Size = new Size(225, 23);
+            itemLoggedDateTimePicker.TabIndex = 147;
             // 
-            // phoneNumberLabel
+            // inventoryIdTextBox
             // 
-            phoneNumberLabel.AutoSize = true;
-            phoneNumberLabel.Font = new Font("Segoe UI", 11F);
-            phoneNumberLabel.Location = new Point(469, 186);
-            phoneNumberLabel.Name = "phoneNumberLabel";
-            phoneNumberLabel.Size = new Size(111, 20);
-            phoneNumberLabel.TabIndex = 152;
-            phoneNumberLabel.Text = "Phone Number:";
+            inventoryIdTextBox.Location = new Point(192, 100);
+            inventoryIdTextBox.Name = "inventoryIdTextBox";
+            inventoryIdTextBox.ReadOnly = true;
+            inventoryIdTextBox.Size = new Size(225, 23);
+            inventoryIdTextBox.TabIndex = 142;
             // 
-            // nextOfKinTextBox
+            // inventoryDeleteButton
             // 
-            nextOfKinTextBox.Location = new Point(624, 140);
-            nextOfKinTextBox.Name = "nextOfKinTextBox";
-            nextOfKinTextBox.Size = new Size(225, 23);
-            nextOfKinTextBox.TabIndex = 151;
+            inventoryDeleteButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            inventoryDeleteButton.Location = new Point(914, 227);
+            inventoryDeleteButton.Name = "inventoryDeleteButton";
+            inventoryDeleteButton.Size = new Size(110, 23);
+            inventoryDeleteButton.TabIndex = 141;
+            inventoryDeleteButton.Text = "Delete";
+            inventoryDeleteButton.UseVisualStyleBackColor = true;
             // 
-            // nextOfKinLabel
+            // inventoryUpdateButton
             // 
-            nextOfKinLabel.AutoSize = true;
-            nextOfKinLabel.Font = new Font("Segoe UI", 11F);
-            nextOfKinLabel.Location = new Point(469, 141);
-            nextOfKinLabel.Name = "nextOfKinLabel";
-            nextOfKinLabel.Size = new Size(86, 20);
-            nextOfKinLabel.TabIndex = 150;
-            nextOfKinLabel.Text = "Next of Kin:";
+            inventoryUpdateButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            inventoryUpdateButton.Location = new Point(914, 183);
+            inventoryUpdateButton.Name = "inventoryUpdateButton";
+            inventoryUpdateButton.Size = new Size(110, 23);
+            inventoryUpdateButton.TabIndex = 140;
+            inventoryUpdateButton.Text = "Update";
+            inventoryUpdateButton.UseVisualStyleBackColor = true;
             // 
-            // receivedViaticumComboBox
+            // inventoryClearButton
             // 
-            receivedViaticumComboBox.FormattingEnabled = true;
-            receivedViaticumComboBox.Items.AddRange(new object[] { "", "Yes", "No" });
-            receivedViaticumComboBox.Location = new Point(624, 100);
-            receivedViaticumComboBox.Name = "receivedViaticumComboBox";
-            receivedViaticumComboBox.Size = new Size(225, 23);
-            receivedViaticumComboBox.TabIndex = 149;
+            inventoryClearButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            inventoryClearButton.Location = new Point(914, 140);
+            inventoryClearButton.Name = "inventoryClearButton";
+            inventoryClearButton.Size = new Size(110, 23);
+            inventoryClearButton.TabIndex = 139;
+            inventoryClearButton.Text = "Clear";
+            inventoryClearButton.UseVisualStyleBackColor = true;
             // 
-            // viaticumLabel
+            // inventorySaveButton
             // 
-            viaticumLabel.AutoSize = true;
-            viaticumLabel.Font = new Font("Segoe UI", 11F);
-            viaticumLabel.Location = new Point(466, 101);
-            viaticumLabel.Name = "viaticumLabel";
-            viaticumLabel.Size = new Size(134, 20);
-            viaticumLabel.TabIndex = 148;
-            viaticumLabel.Text = "Received Viaticum:";
-            // 
-            // burialDateTimePicker
-            // 
-            burialDateTimePicker.Location = new Point(192, 272);
-            burialDateTimePicker.Name = "burialDateTimePicker";
-            burialDateTimePicker.Size = new Size(225, 23);
-            burialDateTimePicker.TabIndex = 147;
-            // 
-            // dateOfDeathTimePicker
-            // 
-            dateOfDeathTimePicker.Location = new Point(192, 225);
-            dateOfDeathTimePicker.Name = "dateOfDeathTimePicker";
-            dateOfDeathTimePicker.Size = new Size(225, 23);
-            dateOfDeathTimePicker.TabIndex = 146;
-            // 
-            // clergyNameTextBox
-            // 
-            clergyNameTextBox.Location = new Point(192, 370);
-            clergyNameTextBox.Name = "clergyNameTextBox";
-            clergyNameTextBox.Size = new Size(225, 23);
-            clergyNameTextBox.TabIndex = 145;
-            // 
-            // cemeteryTextBox
-            // 
-            cemeteryTextBox.Location = new Point(192, 321);
-            cemeteryTextBox.Name = "cemeteryTextBox";
-            cemeteryTextBox.Size = new Size(225, 23);
-            cemeteryTextBox.TabIndex = 144;
-            // 
-            // birthDateTimePicker
-            // 
-            birthDateTimePicker.Location = new Point(192, 184);
-            birthDateTimePicker.Name = "birthDateTimePicker";
-            birthDateTimePicker.Size = new Size(225, 23);
-            birthDateTimePicker.TabIndex = 143;
-            // 
-            // FileIdTextBox
-            // 
-            FileIdTextBox.Location = new Point(192, 100);
-            FileIdTextBox.Name = "FileIdTextBox";
-            FileIdTextBox.ReadOnly = true;
-            FileIdTextBox.Size = new Size(225, 23);
-            FileIdTextBox.TabIndex = 142;
-            // 
-            // endOfFileDeleteButton
-            // 
-            endOfFileDeleteButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            endOfFileDeleteButton.Location = new Point(914, 227);
-            endOfFileDeleteButton.Name = "endOfFileDeleteButton";
-            endOfFileDeleteButton.Size = new Size(110, 23);
-            endOfFileDeleteButton.TabIndex = 141;
-            endOfFileDeleteButton.Text = "Delete";
-            endOfFileDeleteButton.UseVisualStyleBackColor = true;
-            // 
-            // endOfFileUpdateButton
-            // 
-            endOfFileUpdateButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            endOfFileUpdateButton.Location = new Point(914, 183);
-            endOfFileUpdateButton.Name = "endOfFileUpdateButton";
-            endOfFileUpdateButton.Size = new Size(110, 23);
-            endOfFileUpdateButton.TabIndex = 140;
-            endOfFileUpdateButton.Text = "Update";
-            endOfFileUpdateButton.UseVisualStyleBackColor = true;
-            // 
-            // endOfFileClearButton
-            // 
-            endOfFileClearButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            endOfFileClearButton.Location = new Point(914, 140);
-            endOfFileClearButton.Name = "endOfFileClearButton";
-            endOfFileClearButton.Size = new Size(110, 23);
-            endOfFileClearButton.TabIndex = 139;
-            endOfFileClearButton.Text = "Clear";
-            endOfFileClearButton.UseVisualStyleBackColor = true;
-            // 
-            // endOfLifeSaveButton
-            // 
-            endOfLifeSaveButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            endOfLifeSaveButton.Location = new Point(914, 100);
-            endOfLifeSaveButton.Name = "endOfLifeSaveButton";
-            endOfLifeSaveButton.Size = new Size(110, 23);
-            endOfLifeSaveButton.TabIndex = 138;
-            endOfLifeSaveButton.Text = "Save";
-            endOfLifeSaveButton.UseVisualStyleBackColor = true;
-            // 
-            // clergyNameLabel
-            // 
-            clergyNameLabel.AutoSize = true;
-            clergyNameLabel.Font = new Font("Segoe UI", 11F);
-            clergyNameLabel.Location = new Point(37, 369);
-            clergyNameLabel.Name = "clergyNameLabel";
-            clergyNameLabel.Size = new Size(98, 20);
-            clergyNameLabel.TabIndex = 137;
-            clergyNameLabel.Text = "Clergy Name:";
-            // 
-            // cemeteryLabel
-            // 
-            cemeteryLabel.AutoSize = true;
-            cemeteryLabel.Font = new Font("Segoe UI", 11F);
-            cemeteryLabel.Location = new Point(37, 322);
-            cemeteryLabel.Name = "cemeteryLabel";
-            cemeteryLabel.Size = new Size(75, 20);
-            cemeteryLabel.TabIndex = 136;
-            cemeteryLabel.Text = "Cemetery:";
+            inventorySaveButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            inventorySaveButton.Location = new Point(914, 100);
+            inventorySaveButton.Name = "inventorySaveButton";
+            inventorySaveButton.Size = new Size(110, 23);
+            inventorySaveButton.TabIndex = 138;
+            inventorySaveButton.Text = "Save";
+            inventorySaveButton.UseVisualStyleBackColor = true;
             // 
             // burialDateLabel
             // 
             burialDateLabel.AutoSize = true;
             burialDateLabel.Font = new Font("Segoe UI", 11F);
-            burialDateLabel.Location = new Point(34, 276);
+            burialDateLabel.Location = new Point(34, 233);
             burialDateLabel.Name = "burialDateLabel";
-            burialDateLabel.Size = new Size(86, 20);
+            burialDateLabel.Size = new Size(99, 20);
             burialDateLabel.TabIndex = 135;
-            burialDateLabel.Text = "Burial Date:";
+            burialDateLabel.Text = "Logged Date:";
             // 
             // dateOfDeathLabel
             // 
             dateOfDeathLabel.AutoSize = true;
             dateOfDeathLabel.Font = new Font("Segoe UI", 11F);
-            dateOfDeathLabel.Location = new Point(34, 229);
+            dateOfDeathLabel.Location = new Point(34, 186);
             dateOfDeathLabel.Name = "dateOfDeathLabel";
-            dateOfDeathLabel.Size = new Size(106, 20);
+            dateOfDeathLabel.Size = new Size(65, 20);
             dateOfDeathLabel.TabIndex = 134;
-            dateOfDeathLabel.Text = "Date of Death:";
+            dateOfDeathLabel.Text = "Quantity";
             // 
-            // birthDateLabel
+            // itemNameLabel
             // 
-            birthDateLabel.AutoSize = true;
-            birthDateLabel.Font = new Font("Segoe UI", 11F);
-            birthDateLabel.Location = new Point(34, 184);
-            birthDateLabel.Name = "birthDateLabel";
-            birthDateLabel.Size = new Size(79, 20);
-            birthDateLabel.TabIndex = 133;
-            birthDateLabel.Text = "Birth Date:";
-            // 
-            // endOfFileMembershipNumberLabel
-            // 
-            endOfFileMembershipNumberLabel.AutoSize = true;
-            endOfFileMembershipNumberLabel.Font = new Font("Segoe UI", 11F);
-            endOfFileMembershipNumberLabel.Location = new Point(34, 141);
-            endOfFileMembershipNumberLabel.Name = "endOfFileMembershipNumberLabel";
-            endOfFileMembershipNumberLabel.Size = new Size(153, 20);
-            endOfFileMembershipNumberLabel.TabIndex = 132;
-            endOfFileMembershipNumberLabel.Text = "Membership Number:";
-            // 
-            // endOfFileMembershipNumberTextBox
-            // 
-            endOfFileMembershipNumberTextBox.Location = new Point(192, 138);
-            endOfFileMembershipNumberTextBox.Name = "endOfFileMembershipNumberTextBox";
-            endOfFileMembershipNumberTextBox.ReadOnly = true;
-            endOfFileMembershipNumberTextBox.Size = new Size(225, 23);
-            endOfFileMembershipNumberTextBox.TabIndex = 131;
+            itemNameLabel.AutoSize = true;
+            itemNameLabel.Font = new Font("Segoe UI", 11F);
+            itemNameLabel.Location = new Point(34, 141);
+            itemNameLabel.Name = "itemNameLabel";
+            itemNameLabel.Size = new Size(86, 20);
+            itemNameLabel.TabIndex = 133;
+            itemNameLabel.Text = "Item Name:";
             // 
             // FileIdLabel
             // 
@@ -276,9 +146,9 @@
             FileIdLabel.Font = new Font("Segoe UI", 11F);
             FileIdLabel.Location = new Point(34, 101);
             FileIdLabel.Name = "FileIdLabel";
-            FileIdLabel.Size = new Size(54, 20);
+            FileIdLabel.Size = new Size(92, 20);
             FileIdLabel.TabIndex = 130;
-            FileIdLabel.Text = "File ID:";
+            FileIdLabel.Text = "Inventory ID:";
             // 
             // PaymentLabel
             // 
@@ -290,36 +160,38 @@
             PaymentLabel.TabIndex = 129;
             PaymentLabel.Text = "Iventory";
             // 
+            // itemNameTextBox
+            // 
+            itemNameTextBox.Location = new Point(192, 142);
+            itemNameTextBox.Name = "itemNameTextBox";
+            itemNameTextBox.Size = new Size(225, 23);
+            itemNameTextBox.TabIndex = 155;
+            // 
+            // itemQuantityTextBox
+            // 
+            itemQuantityTextBox.Location = new Point(192, 187);
+            itemQuantityTextBox.Name = "itemQuantityTextBox";
+            itemQuantityTextBox.Size = new Size(225, 23);
+            itemQuantityTextBox.TabIndex = 156;
+            // 
             // InventoryForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1052, 513);
-            Controls.Add(endOfFilePreviousButton);
-            Controls.Add(phoneNumberTextBox);
-            Controls.Add(phoneNumberLabel);
-            Controls.Add(nextOfKinTextBox);
-            Controls.Add(nextOfKinLabel);
-            Controls.Add(receivedViaticumComboBox);
-            Controls.Add(viaticumLabel);
-            Controls.Add(burialDateTimePicker);
-            Controls.Add(dateOfDeathTimePicker);
-            Controls.Add(clergyNameTextBox);
-            Controls.Add(cemeteryTextBox);
-            Controls.Add(birthDateTimePicker);
-            Controls.Add(FileIdTextBox);
-            Controls.Add(endOfFileDeleteButton);
-            Controls.Add(endOfFileUpdateButton);
-            Controls.Add(endOfFileClearButton);
-            Controls.Add(endOfLifeSaveButton);
-            Controls.Add(clergyNameLabel);
-            Controls.Add(cemeteryLabel);
+            Controls.Add(itemQuantityTextBox);
+            Controls.Add(itemNameTextBox);
+            Controls.Add(viewInventoryButton);
+            Controls.Add(itemLoggedDateTimePicker);
+            Controls.Add(inventoryIdTextBox);
+            Controls.Add(inventoryDeleteButton);
+            Controls.Add(inventoryUpdateButton);
+            Controls.Add(inventoryClearButton);
+            Controls.Add(inventorySaveButton);
             Controls.Add(burialDateLabel);
             Controls.Add(dateOfDeathLabel);
-            Controls.Add(birthDateLabel);
-            Controls.Add(endOfFileMembershipNumberLabel);
-            Controls.Add(endOfFileMembershipNumberTextBox);
+            Controls.Add(itemNameLabel);
             Controls.Add(FileIdLabel);
             Controls.Add(PaymentLabel);
             FormBorderStyle = FormBorderStyle.None;
@@ -331,31 +203,26 @@
 
         #endregion
 
-        private Button endOfFilePreviousButton;
-        private TextBox phoneNumberTextBox;
-        private Label phoneNumberLabel;
+        private Button viewInventoryButton;
         private TextBox nextOfKinTextBox;
         private Label nextOfKinLabel;
         private ComboBox receivedViaticumComboBox;
         private Label viaticumLabel;
-        private DateTimePicker burialDateTimePicker;
-        private DateTimePicker dateOfDeathTimePicker;
-        private TextBox clergyNameTextBox;
-        private TextBox cemeteryTextBox;
+        private DateTimePicker itemLoggedDateTimePicker;
         private DateTimePicker birthDateTimePicker;
-        private TextBox FileIdTextBox;
-        private Button endOfFileDeleteButton;
-        private Button endOfFileUpdateButton;
-        private Button endOfFileClearButton;
-        private Button endOfLifeSaveButton;
-        private Label clergyNameLabel;
-        private Label cemeteryLabel;
+        private TextBox inventoryIdTextBox;
+        private Button inventoryDeleteButton;
+        private Button inventoryUpdateButton;
+        private Button inventoryClearButton;
+        private Button inventorySaveButton;
         private Label burialDateLabel;
         private Label dateOfDeathLabel;
-        private Label birthDateLabel;
+        private Label itemNameLabel;
         private Label endOfFileMembershipNumberLabel;
         private TextBox endOfFileMembershipNumberTextBox;
         private Label FileIdLabel;
         private Label PaymentLabel;
+        private TextBox itemNameTextBox;
+        private TextBox itemQuantityTextBox;
     }
 }

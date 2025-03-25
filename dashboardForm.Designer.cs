@@ -29,6 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             overviewLabel = new Label();
             totalMemberPanel = new Panel();
             totalMembersText = new Label();
@@ -42,12 +51,18 @@
             monthlyMembersText = new Label();
             monthlyMembersLabel = new Label();
             monthlyMembersPictureBox = new PictureBox();
+            totalMembersChart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            totalIncomeChart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            monthlyMembersChart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             totalMemberPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)totalMembersPictureBox).BeginInit();
             totalFundsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)financeIconPictureBox).BeginInit();
             monthlyNewMemberTotalpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)monthlyMembersPictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)totalMembersChart1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)totalIncomeChart1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)monthlyMembersChart1).BeginInit();
             SuspendLayout();
             // 
             // overviewLabel
@@ -194,6 +209,56 @@
             monthlyMembersPictureBox.TabIndex = 5;
             monthlyMembersPictureBox.TabStop = false;
             // 
+            // totalMembersChart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            totalMembersChart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            totalMembersChart1.Legends.Add(legend1);
+            totalMembersChart1.Location = new Point(37, 292);
+            totalMembersChart1.Name = "totalMembersChart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            totalMembersChart1.Series.Add(series1);
+            totalMembersChart1.Size = new Size(309, 209);
+            totalMembersChart1.TabIndex = 4;
+            totalMembersChart1.Text = "totalMembers";
+            // 
+            // totalIncomeChart1
+            // 
+            chartArea2.Name = "ChartArea1";
+            totalIncomeChart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            totalIncomeChart1.Legends.Add(legend2);
+            totalIncomeChart1.Location = new Point(373, 292);
+            totalIncomeChart1.Name = "totalIncomeChart1";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            totalIncomeChart1.Series.Add(series2);
+            totalIncomeChart1.Size = new Size(309, 209);
+            totalIncomeChart1.TabIndex = 5;
+            totalIncomeChart1.Text = "totalIncomeChart";
+            // 
+            // monthlyMembersChart1
+            // 
+            chartArea3.Name = "ChartArea1";
+            monthlyMembersChart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            monthlyMembersChart1.Legends.Add(legend3);
+            monthlyMembersChart1.Location = new Point(710, 292);
+            monthlyMembersChart1.Name = "monthlyMembersChart1";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            monthlyMembersChart1.Series.Add(series3);
+            monthlyMembersChart1.Size = new Size(309, 209);
+            monthlyMembersChart1.TabIndex = 6;
+            monthlyMembersChart1.Text = "monthlyMembersChart";
+            // 
             // DashboardForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -201,6 +266,9 @@
             AutoSize = true;
             BackColor = Color.White;
             ClientSize = new Size(1052, 513);
+            Controls.Add(monthlyMembersChart1);
+            Controls.Add(totalIncomeChart1);
+            Controls.Add(totalMembersChart1);
             Controls.Add(monthlyNewMemberTotalpanel);
             Controls.Add(totalFundsPanel);
             Controls.Add(totalMemberPanel);
@@ -218,6 +286,9 @@
             monthlyNewMemberTotalpanel.ResumeLayout(false);
             monthlyNewMemberTotalpanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)monthlyMembersPictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)totalMembersChart1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)totalIncomeChart1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)monthlyMembersChart1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -237,5 +308,8 @@
         private Label monthlyMembersText;
         private Label monthlyMembersLabel;
         private PictureBox monthlyMembersPictureBox;
+        private System.Windows.Forms.DataVisualization.Charting.Chart totalMembersChart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart totalIncomeChart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart monthlyMembersChart1;
     }
 }

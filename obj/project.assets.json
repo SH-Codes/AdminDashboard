@@ -2,197 +2,142 @@
   "version": 3,
   "targets": {
     "net8.0-windows7.0": {
-      "Highsoft.Highcharts/11.4.6.5": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "13.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/Highcharts.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Highcharts.dll": {}
-        }
-      },
-      "LiveCharts.Core/0.9.8": {
+      "OxyPlot.Core/2.2.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/LiveCharts.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/LiveCharts.dll": {}
-        }
-      },
-      "LiveCharts.WinForms.NetCore3/0.9.8": {
-        "type": "package",
-        "dependencies": {
-          "System.Data.DataSetExtensions": "4.5.0"
-        },
-        "compile": {
-          "lib/net8.0-windows7.0/LiveCharts.WinForms.dll": {},
-          "lib/net8.0-windows7.0/LiveCharts.Wpf.dll": {
+          "lib/net8.0/OxyPlot.dll": {
             "related": ".xml"
-          },
-          "lib/net8.0-windows7.0/LiveCharts.dll": {
-            "related": ".Wpf.xml;.xml"
           }
         },
         "runtime": {
-          "lib/net8.0-windows7.0/LiveCharts.WinForms.dll": {},
-          "lib/net8.0-windows7.0/LiveCharts.Wpf.dll": {
+          "lib/net8.0/OxyPlot.dll": {
             "related": ".xml"
-          },
-          "lib/net8.0-windows7.0/LiveCharts.dll": {
-            "related": ".Wpf.xml;.xml"
+          }
+        }
+      },
+      "OxyPlot.WindowsForms/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "OxyPlot.Core": "2.2.0"
+        },
+        "compile": {
+          "lib/net8.0-windows7.0/OxyPlot.WindowsForms.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/OxyPlot.WindowsForms.dll": {
+            "related": ".xml"
           }
         },
         "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App"
+          "Microsoft.WindowsDesktop.App.WindowsForms"
         ]
       },
-      "Newtonsoft.Json/13.0.3": {
+      "WinForms.DataVisualization/1.10.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/Newtonsoft.Json.dll": {
-            "related": ".xml"
+          "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net6.0-windows7.0/WinForms.DataVisualization.dll": {
+            "related": ".pdb;.Utilities.pdb;.Utilities.xml;.xml"
           }
         },
         "runtime": {
-          "lib/net6.0/Newtonsoft.Json.dll": {
-            "related": ".xml"
+          "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net6.0-windows7.0/WinForms.DataVisualization.dll": {
+            "related": ".pdb;.Utilities.pdb;.Utilities.xml;.xml"
           }
-        }
-      },
-      "System.Data.DataSetExtensions/4.5.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard2.0/System.Data.DataSetExtensions.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Data.DataSetExtensions.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Highsoft.Highcharts/11.4.6.5": {
-      "sha512": "RUTTlIbkzSm2Zz/u/gOxhV77n6RAaJTf4jwgEcNWNJdVdpT74Qp9m9nmlOX1uAbLuWOe5WsX2GPLkBjTOiEeTA==",
+    "OxyPlot.Core/2.2.0": {
+      "sha512": "QhXNdXR5FPpro/VoLx3BOp6AhQo7YrbfmWEZ9cgY+pnYM7RYORZjnu+aDMA8ka9A1r8hLkX//NbCPZNUv+l8qA==",
       "type": "package",
-      "path": "highsoft.highcharts/11.4.6.5",
+      "path": "oxyplot.core/2.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "CONTRIBUTING.md",
-        "highsoft.highcharts.11.4.6.5.nupkg.sha512",
-        "highsoft.highcharts.nuspec",
-        "lib/netstandard2.0/Highcharts.dll",
-        "license.txt"
-      ]
-    },
-    "LiveCharts.Core/0.9.8": {
-      "sha512": "USb2TBOeER19X0ar5Zgki1ezjrSXBOmUoz3IqzTeksDm6hoaLFqs3iW9+wjHFuWNQGy9lLcVh2YIhhxVIg+zNQ==",
-      "type": "package",
-      "path": "livecharts.core/0.9.8",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/LiveCharts.dll",
-        "lib/netstandard2.0/LiveCharts.dll",
-        "livecharts.core.0.9.8.nupkg.sha512",
-        "livecharts.core.nuspec"
-      ]
-    },
-    "LiveCharts.WinForms.NetCore3/0.9.8": {
-      "sha512": "pIiJErHE6mxIktJiLBKAmEoas8dOmEtodJQZ0o0KUnelTYfQJJqgUB2kR5476x33TM19yvC9rUjnei3US61Jbg==",
-      "type": "package",
-      "path": "livecharts.winforms.netcore3/0.9.8",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/LiveCharts.WinForms.dll",
-        "lib/net45/LiveCharts.Wpf.dll",
-        "lib/net45/LiveCharts.Wpf.xml",
-        "lib/net45/LiveCharts.dll",
-        "lib/net45/LiveCharts.xml",
-        "lib/net6.0-windows7.0/LiveCharts.WinForms.dll",
-        "lib/net6.0-windows7.0/LiveCharts.Wpf.dll",
-        "lib/net6.0-windows7.0/LiveCharts.Wpf.xml",
-        "lib/net6.0-windows7.0/LiveCharts.dll",
-        "lib/net6.0-windows7.0/LiveCharts.xml",
-        "lib/net7.0-windows7.0/LiveCharts.WinForms.dll",
-        "lib/net7.0-windows7.0/LiveCharts.Wpf.dll",
-        "lib/net7.0-windows7.0/LiveCharts.Wpf.xml",
-        "lib/net7.0-windows7.0/LiveCharts.dll",
-        "lib/net7.0-windows7.0/LiveCharts.xml",
-        "lib/net8.0-windows7.0/LiveCharts.WinForms.dll",
-        "lib/net8.0-windows7.0/LiveCharts.Wpf.dll",
-        "lib/net8.0-windows7.0/LiveCharts.Wpf.xml",
-        "lib/net8.0-windows7.0/LiveCharts.dll",
-        "lib/net8.0-windows7.0/LiveCharts.xml",
-        "lib/netcoreapp3.1/LiveCharts.WinForms.dll",
-        "lib/netcoreapp3.1/LiveCharts.Wpf.dll",
-        "lib/netcoreapp3.1/LiveCharts.Wpf.xml",
-        "lib/netcoreapp3.1/LiveCharts.dll",
-        "lib/netcoreapp3.1/LiveCharts.xml",
-        "livecharts.winforms.netcore3.0.9.8.nupkg.sha512",
-        "livecharts.winforms.netcore3.nuspec"
-      ]
-    },
-    "Newtonsoft.Json/13.0.3": {
-      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
-      "type": "package",
-      "path": "newtonsoft.json/13.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.md",
+        "OxyPlot_128.png",
         "README.md",
-        "lib/net20/Newtonsoft.Json.dll",
-        "lib/net20/Newtonsoft.Json.xml",
-        "lib/net35/Newtonsoft.Json.dll",
-        "lib/net35/Newtonsoft.Json.xml",
-        "lib/net40/Newtonsoft.Json.dll",
-        "lib/net40/Newtonsoft.Json.xml",
-        "lib/net45/Newtonsoft.Json.dll",
-        "lib/net45/Newtonsoft.Json.xml",
-        "lib/net6.0/Newtonsoft.Json.dll",
-        "lib/net6.0/Newtonsoft.Json.xml",
-        "lib/netstandard1.0/Newtonsoft.Json.dll",
-        "lib/netstandard1.0/Newtonsoft.Json.xml",
-        "lib/netstandard1.3/Newtonsoft.Json.dll",
-        "lib/netstandard1.3/Newtonsoft.Json.xml",
-        "lib/netstandard2.0/Newtonsoft.Json.dll",
-        "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "newtonsoft.json.13.0.3.nupkg.sha512",
-        "newtonsoft.json.nuspec",
-        "packageIcon.png"
+        "lib/net462/OxyPlot.dll",
+        "lib/net462/OxyPlot.xml",
+        "lib/net6.0/OxyPlot.dll",
+        "lib/net6.0/OxyPlot.xml",
+        "lib/net8.0/OxyPlot.dll",
+        "lib/net8.0/OxyPlot.xml",
+        "lib/netstandard2.0/OxyPlot.dll",
+        "lib/netstandard2.0/OxyPlot.xml",
+        "oxyplot.core.2.2.0.nupkg.sha512",
+        "oxyplot.core.nuspec"
       ]
     },
-    "System.Data.DataSetExtensions/4.5.0": {
-      "sha512": "221clPs1445HkTBZPL+K9sDBdJRB8UN8rgjO3ztB0CQ26z//fmJXtlsr6whGatscsKGBrhJl5bwJuKSA8mwFOw==",
+    "OxyPlot.WindowsForms/2.2.0": {
+      "sha512": "jkveaQ7d3PanUP6OKaZ+IXFPuwpyabifPQiQZ40pQls8Tuedf0mUZ8JcLkMltK5Jkj/JRwGP2cNn1oJ8NwaV3A==",
       "type": "package",
-      "path": "system.data.datasetextensions/4.5.0",
+      "path": "oxyplot.windowsforms/2.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net45/_._",
-        "lib/netstandard2.0/System.Data.DataSetExtensions.dll",
-        "ref/net45/_._",
-        "ref/netstandard2.0/System.Data.DataSetExtensions.dll",
-        "system.data.datasetextensions.4.5.0.nupkg.sha512",
-        "system.data.datasetextensions.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "OxyPlot_128.png",
+        "README.md",
+        "lib/net462/OxyPlot.WindowsForms.dll",
+        "lib/net462/OxyPlot.WindowsForms.xml",
+        "lib/net6.0-windows7.0/OxyPlot.WindowsForms.dll",
+        "lib/net6.0-windows7.0/OxyPlot.WindowsForms.xml",
+        "lib/net8.0-windows7.0/OxyPlot.WindowsForms.dll",
+        "lib/net8.0-windows7.0/OxyPlot.WindowsForms.xml",
+        "oxyplot.windowsforms.2.2.0.nupkg.sha512",
+        "oxyplot.windowsforms.nuspec"
+      ]
+    },
+    "WinForms.DataVisualization/1.10.0": {
+      "sha512": "QKFQUf6xnsseiRsWfIeKvbWRJWvOKOvkoec/pWxEjwYrr4Vix4xmAWmvTpJGxoeWRXOzV7Pprm5SCFqzXzBA4g==",
+      "type": "package",
+      "path": "winforms.datavisualization/1.10.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "NuGetReadme.md",
+        "lib/net6.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.Server.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Utilities.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.Client.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Utilities.dll",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.dll",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.pdb",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.xml",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.dll",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.pdb",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.xml",
+        "lib/net9.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net9.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.Server.dll",
+        "lib/net9.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Utilities.dll",
+        "lib/net9.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.Client.dll",
+        "lib/net9.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net9.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Utilities.dll",
+        "lib/net9.0-windows7.0/WinForms.DataVisualization.Utilities.dll",
+        "lib/net9.0-windows7.0/WinForms.DataVisualization.Utilities.pdb",
+        "lib/net9.0-windows7.0/WinForms.DataVisualization.Utilities.xml",
+        "lib/net9.0-windows7.0/WinForms.DataVisualization.dll",
+        "lib/net9.0-windows7.0/WinForms.DataVisualization.pdb",
+        "lib/net9.0-windows7.0/WinForms.DataVisualization.xml",
+        "winforms.datavisualization.1.10.0.nupkg.sha512",
+        "winforms.datavisualization.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
-      "Highsoft.Highcharts >= 11.4.6.5",
-      "LiveCharts.Core >= 0.9.8",
-      "LiveCharts.WinForms.NetCore3 >= 0.9.8"
+      "OxyPlot.WindowsForms >= 2.2.0",
+      "WinForms.DataVisualization >= 1.10.0"
     ]
   },
   "packageFolders": {
@@ -246,17 +191,13 @@
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
         "dependencies": {
-          "Highsoft.Highcharts": {
+          "OxyPlot.WindowsForms": {
             "target": "Package",
-            "version": "[11.4.6.5, )"
+            "version": "[2.2.0, )"
           },
-          "LiveCharts.Core": {
+          "WinForms.DataVisualization": {
             "target": "Package",
-            "version": "[0.9.8, )"
-          },
-          "LiveCharts.WinForms.NetCore3": {
-            "target": "Package",
-            "version": "[0.9.8, )"
+            "version": "[1.10.0, )"
           }
         },
         "imports": [
