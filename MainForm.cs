@@ -226,7 +226,7 @@ namespace AdminDashboard
         private void inventoryButton_Click(object sender, EventArgs e)
         {
             switchPanel.Controls.Clear();
-            InventoryForm inventoryForm = new InventoryForm();
+            InventoryForm inventoryForm = new InventoryForm(this);
             inventoryForm.TopLevel = false;
             switchPanel.Controls.Add(inventoryForm);
             inventoryForm.Show();

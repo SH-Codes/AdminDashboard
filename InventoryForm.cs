@@ -22,7 +22,7 @@ namespace AdminDashboard
         private void viewInventoryButton_Click(object sender, EventArgs e)
         {
             MainForm.SwitchPanel.Controls.Clear();
-            ViewInventoryForm viewInventoryForm = new ViewInventoryForm(MainForm); // Pass the required 'mainForm' parameter
+            ViewInventoryForm viewInventoryForm = new ViewInventoryForm(MainForm);
             viewInventoryForm.TopLevel = false;
             MainForm.SwitchPanel.Controls.Add(viewInventoryForm);
             viewInventoryForm.Show();

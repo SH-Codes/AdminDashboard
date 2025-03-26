@@ -22,7 +22,7 @@ namespace AdminDashboard
         private void inventoryAddNewButton_Click(object sender, EventArgs e)
         {
             MainForm.SwitchPanel.Controls.Clear();
-            InventoryForm inventoryForm = new InventoryForm();
+            InventoryForm inventoryForm = new InventoryForm(MainForm);
             inventoryForm.TopLevel = false;
             MainForm.SwitchPanel.Controls.Add(inventoryForm);
             inventoryForm.Show();
@@ -30,11 +30,11 @@ namespace AdminDashboard
 
         private void inventoryBackButton_Click(object sender, EventArgs e)
         {
-            //MainForm.SwitchPanel.Controls.Clear();
-            //ViewInventoryForm viewInventoryForm = new ViewInventoryForm();
-            //viewInventoryForm.TopLevel = false;
-            //MainForm.SwitchPanel.Controls.Add(viewInventoryForm);
-            //viewInventoryForm.Show();
+            MainForm.SwitchPanel.Controls.Clear();
+            InventoryForm inventoryForm = new InventoryForm(MainForm);
+            inventoryForm.TopLevel = false;
+            MainForm.SwitchPanel.Controls.Add(inventoryForm);
+            inventoryForm.Show();
         }
     }
 }

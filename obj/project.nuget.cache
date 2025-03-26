@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "wzE/aqvPFu4=",
+  "dgSpecHash": "j3mRh2ehAq0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sacred Heart Catholi\\source\\repos\\SH-Codes\\AdminDashboard\\AdminDashboard.csproj",
+  "projectFilePath": "D:\\SH-Codes\\AdminDashboard\\AdminDashboard.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Sacred Heart Catholi\\.nuget\\packages\\oxyplot.core\\2.2.0\\oxyplot.core.2.2.0.nupkg.sha512",
-    "C:\\Users\\Sacred Heart Catholi\\.nuget\\packages\\oxyplot.windowsforms\\2.2.0\\oxyplot.windowsforms.2.2.0.nupkg.sha512",
-    "C:\\Users\\Sacred Heart Catholi\\.nuget\\packages\\winforms.datavisualization\\1.10.0\\winforms.datavisualization.1.10.0.nupkg.sha512"
+    "C:\\Users\\sihle\\.nuget\\packages\\oxyplot.core\\2.2.0\\oxyplot.core.2.2.0.nupkg.sha512",
+    "C:\\Users\\sihle\\.nuget\\packages\\oxyplot.windowsforms\\2.2.0\\oxyplot.windowsforms.2.2.0.nupkg.sha512",
+    "C:\\Users\\sihle\\.nuget\\packages\\winforms.datavisualization\\1.10.0\\winforms.datavisualization.1.10.0.nupkg.sha512"
   ],
   "logs": []
 }

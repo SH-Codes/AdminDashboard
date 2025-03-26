@@ -35,11 +35,7 @@
             inventoryUpdateButton = new Button();
             inventoryClearButton = new Button();
             inventorySaveButton = new Button();
-            burialDateLabel = new Label();
-            dateOfDeathLabel = new Label();
             itemNameLabel = new Label();
-            FileIdLabel = new Label();
-            PaymentLabel = new Label();
             itemNameTextBox = new TextBox();
             itemQuantityTextBox = new TextBox();
             SuspendLayout();
