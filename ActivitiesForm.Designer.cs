@@ -124,7 +124,7 @@
             // activityClearButton
             // 
             activityClearButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            activityClearButton.Location = new Point(914, 145);
+            activityClearButton.Location = new Point(914, 146);
             activityClearButton.Name = "activityClearButton";
             activityClearButton.Size = new Size(110, 23);
             activityClearButton.TabIndex = 87;
@@ -475,7 +475,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1052, 513);
+            ClientSize = new Size(1052, 530);
             Controls.Add(activityNextButton);
             Controls.Add(previousExcoRoleDateTimePicker);
             Controls.Add(previousExcoComboBox);

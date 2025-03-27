@@ -130,7 +130,7 @@
             // memberClearButton
             // 
             memberClearButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            memberClearButton.Location = new Point(914, 145);
+            memberClearButton.Location = new Point(914, 144);
             memberClearButton.Name = "memberClearButton";
             memberClearButton.Size = new Size(110, 23);
             memberClearButton.TabIndex = 87;
@@ -140,7 +140,7 @@
             // spouseSaveButton
             // 
             spouseSaveButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            spouseSaveButton.Location = new Point(914, 107);
+            spouseSaveButton.Location = new Point(914, 106);
             spouseSaveButton.Name = "spouseSaveButton";
             spouseSaveButton.Size = new Size(110, 23);
             spouseSaveButton.TabIndex = 86;
@@ -411,7 +411,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1052, 513);
+            ClientSize = new Size(1052, 530);
             Controls.Add(spouseLastNameTextBox);
             Controls.Add(spouseLastNameLabel);
             Controls.Add(spouseIDTextBox);

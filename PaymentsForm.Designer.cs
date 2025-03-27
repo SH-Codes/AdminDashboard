@@ -52,7 +52,7 @@
             // viewStatementButton
             // 
             viewStatementButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            viewStatementButton.Location = new Point(914, 232);
+            viewStatementButton.Location = new Point(909, 231);
             viewStatementButton.Name = "viewStatementButton";
             viewStatementButton.Size = new Size(110, 23);
             viewStatementButton.TabIndex = 91;
@@ -62,7 +62,7 @@
             // paymentsClearButton
             // 
             paymentsClearButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            paymentsClearButton.Location = new Point(914, 145);
+            paymentsClearButton.Location = new Point(909, 144);
             paymentsClearButton.Name = "paymentsClearButton";
             paymentsClearButton.Size = new Size(110, 23);
             paymentsClearButton.TabIndex = 87;
@@ -72,7 +72,7 @@
             // paymentsSaveButton
             // 
             paymentsSaveButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            paymentsSaveButton.Location = new Point(914, 107);
+            paymentsSaveButton.Location = new Point(909, 106);
             paymentsSaveButton.Name = "paymentsSaveButton";
             paymentsSaveButton.Size = new Size(110, 23);
             paymentsSaveButton.TabIndex = 86;
@@ -215,7 +215,7 @@
             // paymentsUpdateButton
             // 
             paymentsUpdateButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            paymentsUpdateButton.Location = new Point(914, 188);
+            paymentsUpdateButton.Location = new Point(909, 186);
             paymentsUpdateButton.Name = "paymentsUpdateButton";
             paymentsUpdateButton.Size = new Size(110, 23);
             paymentsUpdateButton.TabIndex = 88;
@@ -227,7 +227,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1052, 513);
+            ClientSize = new Size(1052, 530);
             Controls.Add(changeTextBox);
             Controls.Add(amountTenderedTextBox);
             Controls.Add(amountTotalTextBox);

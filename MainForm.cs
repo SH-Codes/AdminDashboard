@@ -226,10 +226,10 @@ namespace AdminDashboard
         private void inventoryButton_Click(object sender, EventArgs e)
         {
             switchPanel.Controls.Clear();
-            InventoryForm inventoryForm = new InventoryForm(this);
-            inventoryForm.TopLevel = false;
-            switchPanel.Controls.Add(inventoryForm);
-            inventoryForm.Show();
+            ViewInventoryForm viewInventoryForm = new ViewInventoryForm(this);
+            viewInventoryForm.TopLevel = false;
+            switchPanel.Controls.Add(viewInventoryForm);
+            viewInventoryForm.Show();
         }
 
         private void reportsButton_Click(object sender, EventArgs e)
@@ -340,6 +340,16 @@ namespace AdminDashboard
             }
         }
 
+        public Panel MainPanel
+        {
+            get { return mainPanel; }
+        }
+
+        public Panel ContainerPanel
+        {
+            get { return containerPanel; }
+        }
+
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
             int cornerRadius = 20; // Adjust this to change the roundness
@@ -358,5 +368,36 @@ namespace AdminDashboard
             }
 
         }
+
+        public void EnableDarkMode()
+        {
+            this.BackColor = Color.FromArgb(37, 37, 38); // Main form background
+            mainPanel.BackColor = Color.FromArgb(30, 30, 30); // Darker gray
+            containerPanel.BackColor = Color.FromArgb(36, 36, 37); // Slightly lighter gray
+            switchPanel.BackColor = Color.FromArgb(37, 37, 38); // Match mainPanel
+
+            ApplyDarkModeToControls(this);
+        }
+
+        private void ApplyDarkModeToControls(Control parent)
+        {
+            foreach (Control control in parent.Controls)
+            {
+                if (control is Panel panel)
+                {
+                    // Differentiate containerPanel from other panels
+                    panel.BackColor = panel == containerPanel ? Color.FromArgb(36, 36, 37) : Color.FromArgb(30, 30, 30);
+                }
+                else if (control is Label || control is Button)
+                {
+                    control.ForeColor = Color.White; // Make text readable
+                    control.BackColor = Color.FromArgb(62, 62, 66); // Darker buttons
+                }
+
+                ApplyDarkModeToControls(control); // Recursively apply to all child controls
+            }
+        }
+
+
     }
 }

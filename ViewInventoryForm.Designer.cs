@@ -45,7 +45,7 @@
             inventoryBackButton.FlatAppearance.BorderColor = Color.White;
             inventoryBackButton.FlatStyle = FlatStyle.Flat;
             inventoryBackButton.Image = (Image)resources.GetObject("inventoryBackButton.Image");
-            inventoryBackButton.Location = new Point(975, 12);
+            inventoryBackButton.Location = new Point(951, 48);
             inventoryBackButton.Name = "inventoryBackButton";
             inventoryBackButton.Size = new Size(41, 23);
             inventoryBackButton.TabIndex = 163;
@@ -55,7 +55,7 @@
             // inventoryAddNewButton
             // 
             inventoryAddNewButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            inventoryAddNewButton.Location = new Point(906, 105);
+            inventoryAddNewButton.Location = new Point(911, 105);
             inventoryAddNewButton.Name = "inventoryAddNewButton";
             inventoryAddNewButton.Size = new Size(110, 23);
             inventoryAddNewButton.TabIndex = 162;
@@ -75,16 +75,18 @@
             // 
             // inventoryDataGridView
             // 
+            inventoryDataGridView.BackgroundColor = Color.WhiteSmoke;
+            inventoryDataGridView.BorderStyle = BorderStyle.None;
             inventoryDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            inventoryDataGridView.Location = new Point(21, 105);
+            inventoryDataGridView.Location = new Point(31, 105);
             inventoryDataGridView.Name = "inventoryDataGridView";
-            inventoryDataGridView.Size = new Size(695, 334);
+            inventoryDataGridView.Size = new Size(847, 385);
             inventoryDataGridView.TabIndex = 164;
             // 
             // printButton
             // 
             printButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            printButton.Location = new Point(906, 151);
+            printButton.Location = new Point(911, 148);
             printButton.Name = "printButton";
             printButton.Size = new Size(110, 23);
             printButton.TabIndex = 165;
@@ -96,7 +98,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1036, 474);
+            ClientSize = new Size(1052, 530);
             Controls.Add(printButton);
             Controls.Add(inventoryDataGridView);
             Controls.Add(inventoryBackButton);

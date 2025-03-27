@@ -265,7 +265,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.White;
-            ClientSize = new Size(1052, 513);
+            ClientSize = new Size(1052, 530);
             Controls.Add(monthlyMembersChart1);
             Controls.Add(totalIncomeChart1);
             Controls.Add(totalMembersChart1);

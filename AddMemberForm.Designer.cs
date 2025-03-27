@@ -488,7 +488,7 @@
             // 
             memberTitleComboBox.FormattingEnabled = true;
             memberTitleComboBox.Items.AddRange(new object[] { "", "Mr", "Ms", "Mrs", "Dr", "Adv" });
-            memberTitleComboBox.Location = new Point(187, 185);
+            memberTitleComboBox.Location = new Point(187, 183);
             memberTitleComboBox.Name = "memberTitleComboBox";
             memberTitleComboBox.Size = new Size(225, 23);
             memberTitleComboBox.TabIndex = 50;
@@ -498,7 +498,7 @@
             // 
             memberTitleLabel.AutoSize = true;
             memberTitleLabel.Font = new Font("Segoe UI", 11F);
-            memberTitleLabel.Location = new Point(29, 185);
+            memberTitleLabel.Location = new Point(29, 183);
             memberTitleLabel.Name = "memberTitleLabel";
             memberTitleLabel.Size = new Size(41, 20);
             memberTitleLabel.TabIndex = 49;

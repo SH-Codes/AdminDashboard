@@ -101,7 +101,7 @@
             // dependentUpdateButton
             // 
             dependentUpdateButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            dependentUpdateButton.Location = new Point(914, 233);
+            dependentUpdateButton.Location = new Point(914, 234);
             dependentUpdateButton.Name = "dependentUpdateButton";
             dependentUpdateButton.Size = new Size(110, 23);
             dependentUpdateButton.TabIndex = 125;
@@ -111,7 +111,7 @@
             // memberUpdateButton
             // 
             memberUpdateButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            memberUpdateButton.Location = new Point(914, 188);
+            memberUpdateButton.Location = new Point(914, 189);
             memberUpdateButton.Name = "memberUpdateButton";
             memberUpdateButton.Size = new Size(110, 23);
             memberUpdateButton.TabIndex = 124;
@@ -131,7 +131,7 @@
             // dependentAddNewButton
             // 
             dependentAddNewButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            dependentAddNewButton.Location = new Point(914, 107);
+            dependentAddNewButton.Location = new Point(914, 105);
             dependentAddNewButton.Name = "dependentAddNewButton";
             dependentAddNewButton.Size = new Size(110, 23);
             dependentAddNewButton.TabIndex = 122;
@@ -329,7 +329,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1052, 513);
+            ClientSize = new Size(1052, 530);
             Controls.Add(label1);
             Controls.Add(textBox1);
             Controls.Add(gradeLabel);

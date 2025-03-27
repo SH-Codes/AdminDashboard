@@ -74,7 +74,7 @@
             // academicDeleteButton
             // 
             academicDeleteButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            academicDeleteButton.Location = new Point(914, 233);
+            academicDeleteButton.Location = new Point(914, 231);
             academicDeleteButton.Name = "academicDeleteButton";
             academicDeleteButton.Size = new Size(110, 23);
             academicDeleteButton.TabIndex = 89;
@@ -84,7 +84,7 @@
             // academicUpdateButton
             // 
             academicUpdateButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            academicUpdateButton.Location = new Point(914, 188);
+            academicUpdateButton.Location = new Point(914, 186);
             academicUpdateButton.Name = "academicUpdateButton";
             academicUpdateButton.Size = new Size(110, 23);
             academicUpdateButton.TabIndex = 88;
@@ -94,7 +94,7 @@
             // academicClearButton
             // 
             academicClearButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            academicClearButton.Location = new Point(914, 145);
+            academicClearButton.Location = new Point(914, 144);
             academicClearButton.Name = "academicClearButton";
             academicClearButton.Size = new Size(110, 23);
             academicClearButton.TabIndex = 87;
@@ -104,7 +104,7 @@
             // academicSaveButton
             // 
             academicSaveButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            academicSaveButton.Location = new Point(914, 107);
+            academicSaveButton.Location = new Point(914, 106);
             academicSaveButton.Name = "academicSaveButton";
             academicSaveButton.Size = new Size(110, 23);
             academicSaveButton.TabIndex = 86;
@@ -238,7 +238,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1052, 513);
+            ClientSize = new Size(1052, 530);
             Controls.Add(fieldOfStudyLabel);
             Controls.Add(academicFieldOfStudyTextBox);
             Controls.Add(subjectPassedCheckedListBox);

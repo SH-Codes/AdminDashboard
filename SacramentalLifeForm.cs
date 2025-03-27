@@ -108,7 +108,7 @@ namespace AdminDashboard
 
         private void holyEucharistComboBox_SelectedIndexChanged(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(holyEucharistComboBox.Text) && holyEucharistComboBox.SelectedItem == null)
+            if (!string.IsNullOrWhiteSpace(holyCommunionComboBox.Text) && holyCommunionComboBox.SelectedItem == null)
             {
                 MessageBox.Show("Please select a valid option.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 e.Cancel = true;
@@ -117,16 +117,16 @@ namespace AdminDashboard
 
         private void holyEucharistDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
-            if (holyEucharistDateTimePicker.Value.Date >= DateTime.Now.Date)
+            if (holyCommunionDateTimePicker.Value.Date >= DateTime.Now.Date)
             {
                 MessageBox.Show("Holy Eucharist date cannot be today or a future date.", "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                holyEucharistDateTimePicker.Value = DateTime.Now.AddDays(-1);
+                holyCommunionDateTimePicker.Value = DateTime.Now.AddDays(-1);
             }
         }
 
         private void placeOfHolyEucharistTextBox_TextChanged(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            string text = placeOfHolyEucharistTextBox.Text.Trim();
+            string text = placeOfHolyCommunionTextBox.Text.Trim();
             if (!string.IsNullOrEmpty(text) && text.Length < 3)
             {
                 MessageBox.Show("Place of holy eucharist must be at least 3 characters long.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);

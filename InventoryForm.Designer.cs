@@ -38,12 +38,16 @@
             itemNameLabel = new Label();
             itemNameTextBox = new TextBox();
             itemQuantityTextBox = new TextBox();
+            inventoryIDLabel = new Label();
+            itemQuantityLabel = new Label();
+            itemLoggedDateLabel = new Label();
+            addNewItemLabel = new Label();
             SuspendLayout();
             // 
             // viewInventoryButton
             // 
             viewInventoryButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            viewInventoryButton.Location = new Point(914, 271);
+            viewInventoryButton.Location = new Point(909, 272);
             viewInventoryButton.Name = "viewInventoryButton";
             viewInventoryButton.Size = new Size(110, 23);
             viewInventoryButton.TabIndex = 154;
@@ -53,14 +57,15 @@
             // 
             // itemLoggedDateTimePicker
             // 
-            itemLoggedDateTimePicker.Location = new Point(192, 229);
+            itemLoggedDateTimePicker.Location = new Point(139, 230);
             itemLoggedDateTimePicker.Name = "itemLoggedDateTimePicker";
             itemLoggedDateTimePicker.Size = new Size(225, 23);
             itemLoggedDateTimePicker.TabIndex = 147;
+            itemLoggedDateTimePicker.ValueChanged += itemLoggedDateTimePicker_ValueChanged;
             // 
             // inventoryIdTextBox
             // 
-            inventoryIdTextBox.Location = new Point(192, 100);
+            inventoryIdTextBox.Location = new Point(139, 101);
             inventoryIdTextBox.Name = "inventoryIdTextBox";
             inventoryIdTextBox.ReadOnly = true;
             inventoryIdTextBox.Size = new Size(225, 23);
@@ -69,7 +74,7 @@
             // inventoryDeleteButton
             // 
             inventoryDeleteButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            inventoryDeleteButton.Location = new Point(914, 227);
+            inventoryDeleteButton.Location = new Point(909, 228);
             inventoryDeleteButton.Name = "inventoryDeleteButton";
             inventoryDeleteButton.Size = new Size(110, 23);
             inventoryDeleteButton.TabIndex = 141;
@@ -79,7 +84,7 @@
             // inventoryUpdateButton
             // 
             inventoryUpdateButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            inventoryUpdateButton.Location = new Point(914, 183);
+            inventoryUpdateButton.Location = new Point(909, 184);
             inventoryUpdateButton.Name = "inventoryUpdateButton";
             inventoryUpdateButton.Size = new Size(110, 23);
             inventoryUpdateButton.TabIndex = 140;
@@ -89,7 +94,7 @@
             // inventoryClearButton
             // 
             inventoryClearButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            inventoryClearButton.Location = new Point(914, 140);
+            inventoryClearButton.Location = new Point(909, 144);
             inventoryClearButton.Name = "inventoryClearButton";
             inventoryClearButton.Size = new Size(110, 23);
             inventoryClearButton.TabIndex = 139;
@@ -99,32 +104,12 @@
             // inventorySaveButton
             // 
             inventorySaveButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            inventorySaveButton.Location = new Point(914, 100);
+            inventorySaveButton.Location = new Point(909, 104);
             inventorySaveButton.Name = "inventorySaveButton";
             inventorySaveButton.Size = new Size(110, 23);
             inventorySaveButton.TabIndex = 138;
             inventorySaveButton.Text = "Save";
             inventorySaveButton.UseVisualStyleBackColor = true;
-            // 
-            // burialDateLabel
-            // 
-            burialDateLabel.AutoSize = true;
-            burialDateLabel.Font = new Font("Segoe UI", 11F);
-            burialDateLabel.Location = new Point(34, 233);
-            burialDateLabel.Name = "burialDateLabel";
-            burialDateLabel.Size = new Size(99, 20);
-            burialDateLabel.TabIndex = 135;
-            burialDateLabel.Text = "Logged Date:";
-            // 
-            // dateOfDeathLabel
-            // 
-            dateOfDeathLabel.AutoSize = true;
-            dateOfDeathLabel.Font = new Font("Segoe UI", 11F);
-            dateOfDeathLabel.Location = new Point(34, 186);
-            dateOfDeathLabel.Name = "dateOfDeathLabel";
-            dateOfDeathLabel.Size = new Size(65, 20);
-            dateOfDeathLabel.TabIndex = 134;
-            dateOfDeathLabel.Text = "Quantity";
             // 
             // itemNameLabel
             // 
@@ -136,46 +121,72 @@
             itemNameLabel.TabIndex = 133;
             itemNameLabel.Text = "Item Name:";
             // 
-            // FileIdLabel
-            // 
-            FileIdLabel.AutoSize = true;
-            FileIdLabel.Font = new Font("Segoe UI", 11F);
-            FileIdLabel.Location = new Point(34, 101);
-            FileIdLabel.Name = "FileIdLabel";
-            FileIdLabel.Size = new Size(92, 20);
-            FileIdLabel.TabIndex = 130;
-            FileIdLabel.Text = "Inventory ID:";
-            // 
-            // PaymentLabel
-            // 
-            PaymentLabel.AutoSize = true;
-            PaymentLabel.Font = new Font("Segoe UI", 26F, FontStyle.Bold);
-            PaymentLabel.Location = new Point(29, 21);
-            PaymentLabel.Name = "PaymentLabel";
-            PaymentLabel.Size = new Size(159, 47);
-            PaymentLabel.TabIndex = 129;
-            PaymentLabel.Text = "Iventory";
-            // 
             // itemNameTextBox
             // 
-            itemNameTextBox.Location = new Point(192, 142);
+            itemNameTextBox.Location = new Point(139, 143);
             itemNameTextBox.Name = "itemNameTextBox";
             itemNameTextBox.Size = new Size(225, 23);
             itemNameTextBox.TabIndex = 155;
+            itemNameTextBox.Validating += itemNameTextBox_TextChanged;
             // 
             // itemQuantityTextBox
             // 
-            itemQuantityTextBox.Location = new Point(192, 187);
+            itemQuantityTextBox.Location = new Point(139, 183);
             itemQuantityTextBox.Name = "itemQuantityTextBox";
             itemQuantityTextBox.Size = new Size(225, 23);
             itemQuantityTextBox.TabIndex = 156;
+            itemQuantityTextBox.Validating += itemQuantityTextBox_TextChanged;
+            // 
+            // inventoryIDLabel
+            // 
+            inventoryIDLabel.AutoSize = true;
+            inventoryIDLabel.Font = new Font("Segoe UI", 11F);
+            inventoryIDLabel.Location = new Point(34, 103);
+            inventoryIDLabel.Name = "inventoryIDLabel";
+            inventoryIDLabel.Size = new Size(92, 20);
+            inventoryIDLabel.TabIndex = 157;
+            inventoryIDLabel.Text = "Inventory ID:";
+            // 
+            // itemQuantityLabel
+            // 
+            itemQuantityLabel.AutoSize = true;
+            itemQuantityLabel.Font = new Font("Segoe UI", 11F);
+            itemQuantityLabel.Location = new Point(34, 185);
+            itemQuantityLabel.Name = "itemQuantityLabel";
+            itemQuantityLabel.Size = new Size(68, 20);
+            itemQuantityLabel.TabIndex = 158;
+            itemQuantityLabel.Text = "Quantity:";
+            // 
+            // itemLoggedDateLabel
+            // 
+            itemLoggedDateLabel.AutoSize = true;
+            itemLoggedDateLabel.Font = new Font("Segoe UI", 11F);
+            itemLoggedDateLabel.Location = new Point(34, 232);
+            itemLoggedDateLabel.Name = "itemLoggedDateLabel";
+            itemLoggedDateLabel.Size = new Size(99, 20);
+            itemLoggedDateLabel.TabIndex = 159;
+            itemLoggedDateLabel.Text = "Logged Date:";
+            // 
+            // addNewItemLabel
+            // 
+            addNewItemLabel.AutoSize = true;
+            addNewItemLabel.Font = new Font("Segoe UI", 26F, FontStyle.Bold);
+            addNewItemLabel.Location = new Point(34, 27);
+            addNewItemLabel.Name = "addNewItemLabel";
+            addNewItemLabel.Size = new Size(260, 47);
+            addNewItemLabel.TabIndex = 160;
+            addNewItemLabel.Text = "Add New Item";
             // 
             // InventoryForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1052, 513);
+            ClientSize = new Size(1052, 530);
+            Controls.Add(addNewItemLabel);
+            Controls.Add(itemLoggedDateLabel);
+            Controls.Add(itemQuantityLabel);
+            Controls.Add(inventoryIDLabel);
             Controls.Add(itemQuantityTextBox);
             Controls.Add(itemNameTextBox);
             Controls.Add(viewInventoryButton);
@@ -185,11 +196,7 @@
             Controls.Add(inventoryUpdateButton);
             Controls.Add(inventoryClearButton);
             Controls.Add(inventorySaveButton);
-            Controls.Add(burialDateLabel);
-            Controls.Add(dateOfDeathLabel);
             Controls.Add(itemNameLabel);
-            Controls.Add(FileIdLabel);
-            Controls.Add(PaymentLabel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "InventoryForm";
             Text = "InventoryForm";
@@ -200,25 +207,18 @@
         #endregion
 
         private Button viewInventoryButton;
-        private TextBox nextOfKinTextBox;
-        private Label nextOfKinLabel;
-        private ComboBox receivedViaticumComboBox;
-        private Label viaticumLabel;
         private DateTimePicker itemLoggedDateTimePicker;
-        private DateTimePicker birthDateTimePicker;
         private TextBox inventoryIdTextBox;
         private Button inventoryDeleteButton;
         private Button inventoryUpdateButton;
         private Button inventoryClearButton;
         private Button inventorySaveButton;
-        private Label burialDateLabel;
-        private Label dateOfDeathLabel;
         private Label itemNameLabel;
-        private Label endOfFileMembershipNumberLabel;
-        private TextBox endOfFileMembershipNumberTextBox;
-        private Label FileIdLabel;
-        private Label PaymentLabel;
         private TextBox itemNameTextBox;
         private TextBox itemQuantityTextBox;
+        private Label inventoryIDLabel;
+        private Label itemQuantityLabel;
+        private Label itemLoggedDateLabel;
+        private Label addNewItemLabel;
     }
 }

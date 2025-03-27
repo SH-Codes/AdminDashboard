@@ -257,6 +257,7 @@
             // logoutButton
             // 
             logoutButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            logoutButton.BackColor = SystemColors.Highlight;
             logoutButton.Cursor = Cursors.Hand;
             logoutButton.FlatAppearance.BorderColor = SystemColors.Highlight;
             logoutButton.FlatStyle = FlatStyle.Flat;
@@ -271,12 +272,13 @@
             logoutButton.TabIndex = 4;
             logoutButton.Tag = "logout";
             logoutButton.Text = "Logout";
-            logoutButton.UseVisualStyleBackColor = true;
+            logoutButton.UseVisualStyleBackColor = false;
             logoutButton.Click += logoutButton_Click;
             // 
             // settingsButton
             // 
             settingsButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            settingsButton.BackColor = SystemColors.Highlight;
             settingsButton.Cursor = Cursors.Hand;
             settingsButton.FlatAppearance.BorderColor = SystemColors.Highlight;
             settingsButton.FlatAppearance.CheckedBackColor = Color.White;
@@ -292,7 +294,7 @@
             settingsButton.TabIndex = 3;
             settingsButton.Tag = "settings";
             settingsButton.Text = "Settings";
-            settingsButton.UseVisualStyleBackColor = true;
+            settingsButton.UseVisualStyleBackColor = false;
             settingsButton.Click += settingsButton_Click;
             // 
             // mainFormTimer

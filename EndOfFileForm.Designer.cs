@@ -58,7 +58,7 @@
             // 
             // clergyNameTextBox
             // 
-            clergyNameTextBox.Location = new Point(184, 400);
+            clergyNameTextBox.Location = new Point(184, 380);
             clergyNameTextBox.Name = "clergyNameTextBox";
             clergyNameTextBox.Size = new Size(225, 23);
             clergyNameTextBox.TabIndex = 119;
@@ -66,7 +66,7 @@
             // 
             // cemeteryTextBox
             // 
-            cemeteryTextBox.Location = new Point(184, 351);
+            cemeteryTextBox.Location = new Point(184, 331);
             cemeteryTextBox.Name = "cemeteryTextBox";
             cemeteryTextBox.Size = new Size(225, 23);
             cemeteryTextBox.TabIndex = 118;
@@ -74,7 +74,7 @@
             // 
             // FileIdTextBox
             // 
-            FileIdTextBox.Location = new Point(184, 130);
+            FileIdTextBox.Location = new Point(184, 110);
             FileIdTextBox.Name = "FileIdTextBox";
             FileIdTextBox.ReadOnly = true;
             FileIdTextBox.Size = new Size(225, 23);
@@ -83,7 +83,7 @@
             // endOfFileDeleteButton
             // 
             endOfFileDeleteButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            endOfFileDeleteButton.Location = new Point(906, 257);
+            endOfFileDeleteButton.Location = new Point(912, 237);
             endOfFileDeleteButton.Name = "endOfFileDeleteButton";
             endOfFileDeleteButton.Size = new Size(110, 23);
             endOfFileDeleteButton.TabIndex = 113;
@@ -93,7 +93,7 @@
             // endOfFileUpdateButton
             // 
             endOfFileUpdateButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            endOfFileUpdateButton.Location = new Point(906, 213);
+            endOfFileUpdateButton.Location = new Point(912, 151);
             endOfFileUpdateButton.Name = "endOfFileUpdateButton";
             endOfFileUpdateButton.Size = new Size(110, 23);
             endOfFileUpdateButton.TabIndex = 112;
@@ -103,7 +103,7 @@
             // endOfFileClearButton
             // 
             endOfFileClearButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            endOfFileClearButton.Location = new Point(906, 170);
+            endOfFileClearButton.Location = new Point(912, 196);
             endOfFileClearButton.Name = "endOfFileClearButton";
             endOfFileClearButton.Size = new Size(110, 23);
             endOfFileClearButton.TabIndex = 111;
@@ -113,7 +113,7 @@
             // endOfLifeSaveButton
             // 
             endOfLifeSaveButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            endOfLifeSaveButton.Location = new Point(906, 130);
+            endOfLifeSaveButton.Location = new Point(912, 110);
             endOfLifeSaveButton.Name = "endOfLifeSaveButton";
             endOfLifeSaveButton.Size = new Size(110, 23);
             endOfLifeSaveButton.TabIndex = 110;
@@ -124,7 +124,7 @@
             // 
             clergyNameLabel.AutoSize = true;
             clergyNameLabel.Font = new Font("Segoe UI", 11F);
-            clergyNameLabel.Location = new Point(29, 399);
+            clergyNameLabel.Location = new Point(29, 379);
             clergyNameLabel.Name = "clergyNameLabel";
             clergyNameLabel.Size = new Size(98, 20);
             clergyNameLabel.TabIndex = 109;
@@ -134,7 +134,7 @@
             // 
             cemeteryLabel.AutoSize = true;
             cemeteryLabel.Font = new Font("Segoe UI", 11F);
-            cemeteryLabel.Location = new Point(29, 352);
+            cemeteryLabel.Location = new Point(29, 332);
             cemeteryLabel.Name = "cemeteryLabel";
             cemeteryLabel.Size = new Size(75, 20);
             cemeteryLabel.TabIndex = 108;
@@ -144,7 +144,7 @@
             // 
             burialDateLabel.AutoSize = true;
             burialDateLabel.Font = new Font("Segoe UI", 11F);
-            burialDateLabel.Location = new Point(26, 306);
+            burialDateLabel.Location = new Point(26, 286);
             burialDateLabel.Name = "burialDateLabel";
             burialDateLabel.Size = new Size(86, 20);
             burialDateLabel.TabIndex = 107;
@@ -154,7 +154,7 @@
             // 
             dateOfDeathLabel.AutoSize = true;
             dateOfDeathLabel.Font = new Font("Segoe UI", 11F);
-            dateOfDeathLabel.Location = new Point(26, 259);
+            dateOfDeathLabel.Location = new Point(26, 239);
             dateOfDeathLabel.Name = "dateOfDeathLabel";
             dateOfDeathLabel.Size = new Size(106, 20);
             dateOfDeathLabel.TabIndex = 106;
@@ -164,7 +164,7 @@
             // 
             endOfFileMembershipNumberLabel.AutoSize = true;
             endOfFileMembershipNumberLabel.Font = new Font("Segoe UI", 11F);
-            endOfFileMembershipNumberLabel.Location = new Point(26, 171);
+            endOfFileMembershipNumberLabel.Location = new Point(26, 151);
             endOfFileMembershipNumberLabel.Name = "endOfFileMembershipNumberLabel";
             endOfFileMembershipNumberLabel.Size = new Size(153, 20);
             endOfFileMembershipNumberLabel.TabIndex = 104;
@@ -172,7 +172,7 @@
             // 
             // endOfFileMembershipNumberTextBox
             // 
-            endOfFileMembershipNumberTextBox.Location = new Point(184, 168);
+            endOfFileMembershipNumberTextBox.Location = new Point(184, 148);
             endOfFileMembershipNumberTextBox.Name = "endOfFileMembershipNumberTextBox";
             endOfFileMembershipNumberTextBox.ReadOnly = true;
             endOfFileMembershipNumberTextBox.Size = new Size(225, 23);
@@ -182,7 +182,7 @@
             // 
             FileIdLabel.AutoSize = true;
             FileIdLabel.Font = new Font("Segoe UI", 11F);
-            FileIdLabel.Location = new Point(26, 131);
+            FileIdLabel.Location = new Point(26, 111);
             FileIdLabel.Name = "FileIdLabel";
             FileIdLabel.Size = new Size(54, 20);
             FileIdLabel.TabIndex = 102;
@@ -192,7 +192,7 @@
             // 
             PaymentLabel.AutoSize = true;
             PaymentLabel.Font = new Font("Segoe UI", 26F, FontStyle.Bold);
-            PaymentLabel.Location = new Point(21, 51);
+            PaymentLabel.Location = new Point(21, 31);
             PaymentLabel.Name = "PaymentLabel";
             PaymentLabel.Size = new Size(192, 47);
             PaymentLabel.TabIndex = 101;
@@ -200,7 +200,7 @@
             // 
             // dateOfDeathTimePicker
             // 
-            dateOfDeathTimePicker.Location = new Point(184, 255);
+            dateOfDeathTimePicker.Location = new Point(184, 235);
             dateOfDeathTimePicker.Name = "dateOfDeathTimePicker";
             dateOfDeathTimePicker.Size = new Size(225, 23);
             dateOfDeathTimePicker.TabIndex = 120;
@@ -210,7 +210,7 @@
             // 
             birthDateLabel.AutoSize = true;
             birthDateLabel.Font = new Font("Segoe UI", 11F);
-            birthDateLabel.Location = new Point(26, 214);
+            birthDateLabel.Location = new Point(26, 194);
             birthDateLabel.Name = "birthDateLabel";
             birthDateLabel.Size = new Size(79, 20);
             birthDateLabel.TabIndex = 105;
@@ -218,7 +218,7 @@
             // 
             // birthDateTimePicker
             // 
-            birthDateTimePicker.Location = new Point(184, 214);
+            birthDateTimePicker.Location = new Point(184, 194);
             birthDateTimePicker.Name = "birthDateTimePicker";
             birthDateTimePicker.Size = new Size(225, 23);
             birthDateTimePicker.TabIndex = 115;
@@ -226,7 +226,7 @@
             // 
             // burialDateTimePicker
             // 
-            burialDateTimePicker.Location = new Point(184, 302);
+            burialDateTimePicker.Location = new Point(184, 282);
             burialDateTimePicker.Name = "burialDateTimePicker";
             burialDateTimePicker.Size = new Size(225, 23);
             burialDateTimePicker.TabIndex = 121;
@@ -236,7 +236,7 @@
             // 
             receivedViaticumComboBox.FormattingEnabled = true;
             receivedViaticumComboBox.Items.AddRange(new object[] { "", "Yes", "No" });
-            receivedViaticumComboBox.Location = new Point(616, 130);
+            receivedViaticumComboBox.Location = new Point(616, 110);
             receivedViaticumComboBox.Name = "receivedViaticumComboBox";
             receivedViaticumComboBox.Size = new Size(225, 23);
             receivedViaticumComboBox.TabIndex = 123;
@@ -246,7 +246,7 @@
             // 
             viaticumLabel.AutoSize = true;
             viaticumLabel.Font = new Font("Segoe UI", 11F);
-            viaticumLabel.Location = new Point(458, 131);
+            viaticumLabel.Location = new Point(458, 111);
             viaticumLabel.Name = "viaticumLabel";
             viaticumLabel.Size = new Size(134, 20);
             viaticumLabel.TabIndex = 122;
@@ -254,7 +254,7 @@
             // 
             // nextOfKinTextBox
             // 
-            nextOfKinTextBox.Location = new Point(616, 170);
+            nextOfKinTextBox.Location = new Point(616, 150);
             nextOfKinTextBox.Name = "nextOfKinTextBox";
             nextOfKinTextBox.Size = new Size(225, 23);
             nextOfKinTextBox.TabIndex = 125;
@@ -263,7 +263,7 @@
             // 
             nextOfKinLabel.AutoSize = true;
             nextOfKinLabel.Font = new Font("Segoe UI", 11F);
-            nextOfKinLabel.Location = new Point(461, 171);
+            nextOfKinLabel.Location = new Point(461, 151);
             nextOfKinLabel.Name = "nextOfKinLabel";
             nextOfKinLabel.Size = new Size(86, 20);
             nextOfKinLabel.TabIndex = 124;
@@ -271,7 +271,7 @@
             // 
             // phoneNumberTextBox
             // 
-            phoneNumberTextBox.Location = new Point(616, 215);
+            phoneNumberTextBox.Location = new Point(616, 195);
             phoneNumberTextBox.Name = "phoneNumberTextBox";
             phoneNumberTextBox.Size = new Size(225, 23);
             phoneNumberTextBox.TabIndex = 127;
@@ -280,7 +280,7 @@
             // 
             phoneNumberLabel.AutoSize = true;
             phoneNumberLabel.Font = new Font("Segoe UI", 11F);
-            phoneNumberLabel.Location = new Point(461, 216);
+            phoneNumberLabel.Location = new Point(461, 196);
             phoneNumberLabel.Name = "phoneNumberLabel";
             phoneNumberLabel.Size = new Size(111, 20);
             phoneNumberLabel.TabIndex = 126;
@@ -289,7 +289,7 @@
             // endOfFilePreviousButton
             // 
             endOfFilePreviousButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            endOfFilePreviousButton.Location = new Point(906, 399);
+            endOfFilePreviousButton.Location = new Point(912, 379);
             endOfFilePreviousButton.Name = "endOfFilePreviousButton";
             endOfFilePreviousButton.Size = new Size(110, 23);
             endOfFilePreviousButton.TabIndex = 128;
@@ -302,7 +302,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1036, 474);
+            ClientSize = new Size(1052, 530);
             Controls.Add(endOfFilePreviousButton);
             Controls.Add(phoneNumberTextBox);
             Controls.Add(phoneNumberLabel);
