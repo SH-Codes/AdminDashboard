@@ -44,8 +44,6 @@
             FileIdLabel = new Label();
             PaymentLabel = new Label();
             dateOfDeathTimePicker = new DateTimePicker();
-            birthDateLabel = new Label();
-            birthDateTimePicker = new DateTimePicker();
             burialDateTimePicker = new DateTimePicker();
             receivedViaticumComboBox = new ComboBox();
             viaticumLabel = new Label();
@@ -58,7 +56,7 @@
             // 
             // clergyNameTextBox
             // 
-            clergyNameTextBox.Location = new Point(184, 380);
+            clergyNameTextBox.Location = new Point(184, 341);
             clergyNameTextBox.Name = "clergyNameTextBox";
             clergyNameTextBox.Size = new Size(225, 23);
             clergyNameTextBox.TabIndex = 119;
@@ -66,7 +64,7 @@
             // 
             // cemeteryTextBox
             // 
-            cemeteryTextBox.Location = new Point(184, 331);
+            cemeteryTextBox.Location = new Point(184, 292);
             cemeteryTextBox.Name = "cemeteryTextBox";
             cemeteryTextBox.Size = new Size(225, 23);
             cemeteryTextBox.TabIndex = 118;
@@ -124,7 +122,7 @@
             // 
             clergyNameLabel.AutoSize = true;
             clergyNameLabel.Font = new Font("Segoe UI", 11F);
-            clergyNameLabel.Location = new Point(29, 379);
+            clergyNameLabel.Location = new Point(29, 340);
             clergyNameLabel.Name = "clergyNameLabel";
             clergyNameLabel.Size = new Size(98, 20);
             clergyNameLabel.TabIndex = 109;
@@ -134,7 +132,7 @@
             // 
             cemeteryLabel.AutoSize = true;
             cemeteryLabel.Font = new Font("Segoe UI", 11F);
-            cemeteryLabel.Location = new Point(29, 332);
+            cemeteryLabel.Location = new Point(29, 293);
             cemeteryLabel.Name = "cemeteryLabel";
             cemeteryLabel.Size = new Size(75, 20);
             cemeteryLabel.TabIndex = 108;
@@ -144,7 +142,7 @@
             // 
             burialDateLabel.AutoSize = true;
             burialDateLabel.Font = new Font("Segoe UI", 11F);
-            burialDateLabel.Location = new Point(26, 286);
+            burialDateLabel.Location = new Point(26, 247);
             burialDateLabel.Name = "burialDateLabel";
             burialDateLabel.Size = new Size(86, 20);
             burialDateLabel.TabIndex = 107;
@@ -154,7 +152,7 @@
             // 
             dateOfDeathLabel.AutoSize = true;
             dateOfDeathLabel.Font = new Font("Segoe UI", 11F);
-            dateOfDeathLabel.Location = new Point(26, 239);
+            dateOfDeathLabel.Location = new Point(26, 200);
             dateOfDeathLabel.Name = "dateOfDeathLabel";
             dateOfDeathLabel.Size = new Size(106, 20);
             dateOfDeathLabel.TabIndex = 106;
@@ -200,33 +198,15 @@
             // 
             // dateOfDeathTimePicker
             // 
-            dateOfDeathTimePicker.Location = new Point(184, 235);
+            dateOfDeathTimePicker.Location = new Point(184, 196);
             dateOfDeathTimePicker.Name = "dateOfDeathTimePicker";
             dateOfDeathTimePicker.Size = new Size(225, 23);
             dateOfDeathTimePicker.TabIndex = 120;
             dateOfDeathTimePicker.ValueChanged += dateOfDeathTimePicker_ValueChanged;
             // 
-            // birthDateLabel
-            // 
-            birthDateLabel.AutoSize = true;
-            birthDateLabel.Font = new Font("Segoe UI", 11F);
-            birthDateLabel.Location = new Point(26, 194);
-            birthDateLabel.Name = "birthDateLabel";
-            birthDateLabel.Size = new Size(79, 20);
-            birthDateLabel.TabIndex = 105;
-            birthDateLabel.Text = "Birth Date:";
-            // 
-            // birthDateTimePicker
-            // 
-            birthDateTimePicker.Location = new Point(184, 194);
-            birthDateTimePicker.Name = "birthDateTimePicker";
-            birthDateTimePicker.Size = new Size(225, 23);
-            birthDateTimePicker.TabIndex = 115;
-            birthDateTimePicker.ValueChanged += birthDateTimePicker_ValueChanged;
-            // 
             // burialDateTimePicker
             // 
-            burialDateTimePicker.Location = new Point(184, 282);
+            burialDateTimePicker.Location = new Point(184, 243);
             burialDateTimePicker.Name = "burialDateTimePicker";
             burialDateTimePicker.Size = new Size(225, 23);
             burialDateTimePicker.TabIndex = 121;
@@ -314,7 +294,6 @@
             Controls.Add(dateOfDeathTimePicker);
             Controls.Add(clergyNameTextBox);
             Controls.Add(cemeteryTextBox);
-            Controls.Add(birthDateTimePicker);
             Controls.Add(FileIdTextBox);
             Controls.Add(endOfFileDeleteButton);
             Controls.Add(endOfFileUpdateButton);
@@ -324,7 +303,6 @@
             Controls.Add(cemeteryLabel);
             Controls.Add(burialDateLabel);
             Controls.Add(dateOfDeathLabel);
-            Controls.Add(birthDateLabel);
             Controls.Add(endOfFileMembershipNumberLabel);
             Controls.Add(endOfFileMembershipNumberTextBox);
             Controls.Add(FileIdLabel);
@@ -355,8 +333,6 @@
         private Label FileIdLabel;
         private Label PaymentLabel;
         private DateTimePicker dateOfDeathTimePicker;
-        private Label birthDateLabel;
-        private DateTimePicker birthDateTimePicker;
         private DateTimePicker burialDateTimePicker;
         private ComboBox receivedViaticumComboBox;
         private Label viaticumLabel;
