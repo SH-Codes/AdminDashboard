@@ -492,7 +492,7 @@
             memberTitleComboBox.Name = "memberTitleComboBox";
             memberTitleComboBox.Size = new Size(225, 23);
             memberTitleComboBox.TabIndex = 50;
-            memberTitleComboBox.Validating += memberEmploymentComboBox_Validating;
+            memberTitleComboBox.Validating += memberTitleComboBox_SelectedIndexChanged;
             // 
             // memberTitleLabel
             // 

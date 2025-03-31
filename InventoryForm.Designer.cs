@@ -42,6 +42,8 @@
             itemQuantityLabel = new Label();
             itemLoggedDateLabel = new Label();
             addNewItemLabel = new Label();
+            itemCategoryComboBox = new ComboBox();
+            itemCategoryLabel = new Label();
             SuspendLayout();
             // 
             // viewInventoryButton
@@ -57,7 +59,7 @@
             // 
             // itemLoggedDateTimePicker
             // 
-            itemLoggedDateTimePicker.Location = new Point(139, 230);
+            itemLoggedDateTimePicker.Location = new Point(139, 270);
             itemLoggedDateTimePicker.Name = "itemLoggedDateTimePicker";
             itemLoggedDateTimePicker.Size = new Size(225, 23);
             itemLoggedDateTimePicker.TabIndex = 147;
@@ -161,7 +163,7 @@
             // 
             itemLoggedDateLabel.AutoSize = true;
             itemLoggedDateLabel.Font = new Font("Segoe UI", 11F);
-            itemLoggedDateLabel.Location = new Point(34, 232);
+            itemLoggedDateLabel.Location = new Point(34, 272);
             itemLoggedDateLabel.Name = "itemLoggedDateLabel";
             itemLoggedDateLabel.Size = new Size(99, 20);
             itemLoggedDateLabel.TabIndex = 159;
@@ -177,12 +179,32 @@
             addNewItemLabel.TabIndex = 160;
             addNewItemLabel.Text = "Add New Item";
             // 
+            // itemCategoryComboBox
+            // 
+            itemCategoryComboBox.FormattingEnabled = true;
+            itemCategoryComboBox.Location = new Point(139, 228);
+            itemCategoryComboBox.Name = "itemCategoryComboBox";
+            itemCategoryComboBox.Size = new Size(225, 23);
+            itemCategoryComboBox.TabIndex = 161;
+            // 
+            // itemCategoryLabel
+            // 
+            itemCategoryLabel.AutoSize = true;
+            itemCategoryLabel.Font = new Font("Segoe UI", 11F);
+            itemCategoryLabel.Location = new Point(34, 228);
+            itemCategoryLabel.Name = "itemCategoryLabel";
+            itemCategoryLabel.Size = new Size(72, 20);
+            itemCategoryLabel.TabIndex = 162;
+            itemCategoryLabel.Text = "Category:";
+            // 
             // InventoryForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1052, 530);
+            Controls.Add(itemCategoryLabel);
+            Controls.Add(itemCategoryComboBox);
             Controls.Add(addNewItemLabel);
             Controls.Add(itemLoggedDateLabel);
             Controls.Add(itemQuantityLabel);
@@ -220,5 +242,7 @@
         private Label itemQuantityLabel;
         private Label itemLoggedDateLabel;
         private Label addNewItemLabel;
+        private ComboBox itemCategoryComboBox;
+        private Label itemCategoryLabel;
     }
 }

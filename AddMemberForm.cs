@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
 using System.Drawing.Drawing2D; // Required for GraphicsPath
 using System.Text.RegularExpressions; // Required for regex validation
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
@@ -355,30 +356,78 @@ namespace AdminDashboard
         private HashSet<string> existingMembershipNumbers = new HashSet<string>(); // Simulate storage for checking uniqueness
         private void memberSaveButton_Click(object sender, EventArgs e)
         {
-            string membershipNumber = GenerateMembershipNumber();
-
-            // Check if membership number already exists
-            if (existingMembershipNumbers.Contains(membershipNumber))
+            try
             {
-                MessageBox.Show("Membership number already exists! Please try again.", "Duplicate Entry",
-                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                string connectionString = "Server=tcp:admindashboarddbserver.database.windows.net;" +
+                                          "Authentication=Active Directory Default;Database=AdminDashboard_db;";
+
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+
+                    string query = "INSERT INTO members (registration_date, membership_id, title, first_name, last_name, " +
+                                   "gender, birth_date, race, marital_status, employment_status, occupation, phone_number, " +
+                                   "work_number, email_address, address_line1, address_line2, zone_area, postal_code, membership_status) " +
+                                   "VALUES (@registration_date, @membership_id, @title, @first_name, @last_name, @gender, @birth_date, " +
+                                   "@race, @marital_status, @employment_status, @occupation, @phone_number, @work_number, @email_address, " +
+                                   "@address_line1, @address_line2, @zone_area, @postal_code, @membership_status)";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        // Use parameterized queries to prevent SQL injection
+                        cmd.Parameters.AddWithValue("@registration_date", registrationDateTimePicker.Value);
+                        cmd.Parameters.AddWithValue("@membership_id", GenerateMembershipNumber());
+                        cmd.Parameters.AddWithValue("@title", memberTitleComboBox.Text);
+                        cmd.Parameters.AddWithValue("@first_name", memberFirstNameTextBox.Text);
+                        cmd.Parameters.AddWithValue("@last_name", memberLastNameTextBox.Text);
+                        cmd.Parameters.AddWithValue("@gender", memberGenderComboBox.Text);
+                        cmd.Parameters.AddWithValue("@birth_date", birthDateTimePicker.Value);
+                        cmd.Parameters.AddWithValue("@race", memberRaceComboBox.Text);
+                        cmd.Parameters.AddWithValue("@marital_status", memberMaritalStatusComboBox.Text);
+                        cmd.Parameters.AddWithValue("@employment_status", memberEmploymentStatusComboBox.Text);
+                        cmd.Parameters.AddWithValue("@occupation", memberOccupationTextBox.Text);
+                        cmd.Parameters.AddWithValue("@phone_number", memberPhoneNumberTextBox.Text);
+                        cmd.Parameters.AddWithValue("@work_number", memberMobileNumberTextBox.Text);
+                        cmd.Parameters.AddWithValue("@email_address", memberEmailAddressTextBox.Text);
+                        cmd.Parameters.AddWithValue("@address_line1", addressLine1TextBox.Text);
+                        cmd.Parameters.AddWithValue("@address_line2", addressLine2TextBox.Text);
+                        cmd.Parameters.AddWithValue("@zone_area", zoneAreaTextBox.Text);
+                        cmd.Parameters.AddWithValue("@postal_code", postalCodeTextBox.Text);
+                        cmd.Parameters.AddWithValue("@membership_status", memberStatusComboBox.Text);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            string membershipNumber = GenerateMembershipNumber();
+
+                            // Check for duplicate membership number
+                            if (existingMembershipNumbers.Contains(membershipNumber))
+                            {
+                                MessageBox.Show("Membership number already exists! Please try again.", "Duplicate Entry",
+                                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+
+                            // Save membership number
+                            membershipNumberTextBox.Text = membershipNumber;
+                            existingMembershipNumbers.Add(membershipNumber); // Simulate saving to database
+                            MembershipData.MembershipNumber = membershipNumber;
+
+                            MessageBox.Show($"Member saved successfully! Membership Number: {membershipNumber}",
+                                            "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error saving data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
             }
-
-            // Save membership number
-            membershipNumberTextBox.Text = membershipNumber;
-            existingMembershipNumbers.Add(membershipNumber); // Simulate saving to database
-
-            // Store in shared class
-            MembershipData.MembershipNumber = membershipNumber;
-
-            MessageBox.Show($"Member saved successfully! Membership Number: {membershipNumber}",
-                            "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            // Open the next form (e.g., SpousesForm)
-            //SpousesForm spousesForm = new SpousesForm();
-            //spousesForm.Show();
-            //this.Hide(); // Hide current form if needed
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 

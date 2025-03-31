@@ -1,4 +1,5 @@
-/* CREATE TABLE Members (
+/*
+CREATE TABLE members (
     registration_date DATE NOT NULL,
     membership_id VARCHAR(8) PRIMARY KEY,
     title VARCHAR(5) NOT NULL,
@@ -18,7 +19,8 @@
     occupation VARCHAR(100),
     marital_status VARCHAR(10),
     membership_status VARCHAR(10)
-); */
+);
+*/
 
 /*
 CREATE TABLE Spousal_Information (
@@ -34,9 +36,9 @@ CREATE TABLE Spousal_Information (
     employment_status VARCHAR(20),
     occupation VARCHAR(100),
     spouse_religion VARCHAR(50),
-    FOREIGN KEY (membership_id) REFERENCES Members(membership_id)
-);*/
-
+    FOREIGN KEY (membership_id) REFERENCES members(membership_id)
+);
+*/
 /*
 create table dependents(
 dependent_id int identity (1,1) primary key,
@@ -48,23 +50,23 @@ birth_date date,
 school_grade varchar(12),
 in_sunday_school varchar(3),
 relationship varchar(20),
- FOREIGN KEY (membership_id) REFERENCES Members(membership_id)
-)*/
-
+ FOREIGN KEY (membership_id) REFERENCES members(membership_id)
+)
+*/
 /*
 ALTER TABLE dependents
 ADD CONSTRAINT uc_Dependents UNIQUE (first_name, last_name, birth_date);
 */
 
 /*
-CREATE TABLE Departments (
+CREATE TABLE departments (
     department_id INT identity(1,1) PRIMARY KEY not null,
     department_name VARCHAR(100) NOT NULL UNIQUE
 );
 */
 
 /*
-INSERT INTO Departments (department_name) VALUES 
+INSERT INTO departments (department_name) VALUES 
 ('Administrator'), 
 ('Formation'), 
 ('Liturgical'), 
@@ -96,7 +98,7 @@ place_married VARCHAR(80),
 year_married DATE,
 catholic_marriage VARCHAR(3),
 marriage_clergy_name VARCHAR(60)
-FOREIGN KEY (membership_id) REFERENCES Members(membership_id)
+FOREIGN KEY (membership_id) REFERENCES members(membership_id)
 );
 */
 
@@ -119,11 +121,11 @@ CREATE TABLE activities (
     previous_exco_role VARCHAR(60),
     previous_role VARCHAR(60),
     year_of_previous_role DATE,
-    FOREIGN KEY (membership_id) REFERENCES Members(membership_id)
-)
+    FOREIGN KEY (membership_id) REFERENCES members(membership_id)
+);
 */
 /*
-Create Table end_of_File (
+Create Table end_of_file (
 eof_id int identity (1,1) Primary key,
 membership_id VARCHAR(8) NOT NULL,
 date_of_death DATE,
@@ -133,6 +135,39 @@ recieved_viaticum VARCHAR(3),
 next_of_kin VARCHAR(60),
 phone_number VARCHAR(10),
 burial_clergy_name VARCHAR(60),
-FOREIGN KEY (membership_id) REFERENCES Members(membership_id)
+FOREIGN KEY (membership_id) REFERENCES members(membership_id)
 );
-*/ 
+*/
+/*
+create table inventory (
+    inventory_id int identity(1,1) primary key not null,
+    item_name varchar(100) not null,
+    item_quantity int not null,
+    item_category varchar(50) not null,
+    logged_date date not null
+);
+*/
+
+/*
+create table payment (
+    payment_id int identity(1,1) primary key not null,
+    membership_id varchar(8) not null,
+    payment_date date not null,
+    account_type varchar(50) not null,
+    amount_total decimal(10,2) not null,
+    amount_tendered varchar(50) not null,
+    payment_method varchar(20),
+    change_given decimal(10,2),
+    FOREIGN KEY (membership_id) REFERENCES members(membership_id)
+);
+*/
+
+create table academic_history (
+    academic_id int identity(1,1) primary key not null,
+    membership_id varchar(8) not null,
+    highest_qualification varchar(50) not null,
+    year_obtained date not null,
+    subjects_passed varchar(250) not null,
+    field_of_study varchar(65) not null,
+    FOREIGN KEY (membership_id) REFERENCES members(membership_id)
+);

@@ -47,6 +47,8 @@
             memberRaceLabel = new Label();
             changeTextBox = new TextBox();
             paymentsUpdateButton = new Button();
+            paymentMethodLabel = new Label();
+            paymentMethodComboBox = new ComboBox();
             SuspendLayout();
             // 
             // viewStatementButton
@@ -115,9 +117,9 @@
             paymentDateLabel.Font = new Font("Segoe UI", 11F);
             paymentDateLabel.Location = new Point(34, 189);
             paymentDateLabel.Name = "paymentDateLabel";
-            paymentDateLabel.Size = new Size(99, 20);
+            paymentDateLabel.Size = new Size(104, 20);
             paymentDateLabel.TabIndex = 56;
-            paymentDateLabel.Text = "First Name(s):";
+            paymentDateLabel.Text = "Payment Date:";
             // 
             // membershipNumberLabel
             // 
@@ -222,12 +224,33 @@
             paymentsUpdateButton.Text = "Delete";
             paymentsUpdateButton.UseVisualStyleBackColor = true;
             // 
+            // paymentMethodLabel
+            // 
+            paymentMethodLabel.AutoSize = true;
+            paymentMethodLabel.Font = new Font("Segoe UI", 11F);
+            paymentMethodLabel.Location = new Point(37, 425);
+            paymentMethodLabel.Name = "paymentMethodLabel";
+            paymentMethodLabel.Size = new Size(124, 20);
+            paymentMethodLabel.TabIndex = 101;
+            paymentMethodLabel.Text = "Payment Method:";
+            // 
+            // paymentMethodComboBox
+            // 
+            paymentMethodComboBox.FormattingEnabled = true;
+            paymentMethodComboBox.Items.AddRange(new object[] { "Cash", "Bank Transfer" });
+            paymentMethodComboBox.Location = new Point(192, 422);
+            paymentMethodComboBox.Name = "paymentMethodComboBox";
+            paymentMethodComboBox.Size = new Size(225, 23);
+            paymentMethodComboBox.TabIndex = 102;
+            // 
             // PaymentsForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1052, 530);
+            Controls.Add(paymentMethodComboBox);
+            Controls.Add(paymentMethodLabel);
             Controls.Add(changeTextBox);
             Controls.Add(amountTenderedTextBox);
             Controls.Add(amountTotalTextBox);
@@ -274,5 +297,7 @@
         private Label memberRaceLabel;
         private TextBox changeTextBox;
         private Button paymentsUpdateButton;
+        private Label paymentMethodLabel;
+        private ComboBox paymentMethodComboBox;
     }
 }

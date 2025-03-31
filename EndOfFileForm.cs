@@ -28,14 +28,6 @@ namespace AdminDashboard
             academicHistoryForm.Show();
         }
 
-        private void birthDateTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-            if (birthDateTimePicker.Value > DateTime.Now)
-            {
-                MessageBox.Show("Birth date cannot be greater than today.", "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                birthDateTimePicker.Value = DateTime.Now;
-            }
-        }
 
         private void dateOfDeathTimePicker_ValueChanged(object sender, EventArgs e)
         {
