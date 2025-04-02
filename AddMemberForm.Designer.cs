@@ -244,7 +244,7 @@
             // 
             memberStatusComboBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             memberStatusComboBox.FormattingEnabled = true;
-            memberStatusComboBox.Items.AddRange(new object[] { "", "Active", "Inactive", "Deceased" });
+            memberStatusComboBox.Items.AddRange(new object[] { "Active", "Inactive", "Deceased" });
             memberStatusComboBox.Location = new Point(844, 44);
             memberStatusComboBox.Name = "memberStatusComboBox";
             memberStatusComboBox.Size = new Size(175, 23);

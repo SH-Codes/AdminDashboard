@@ -353,7 +353,13 @@ namespace AdminDashboard
         {
             try
             {
-                string connectionString = "Data Source=SenamileNdaba;Initial Catalog=ChurchAdminSys;Integrated Security=True;Trust Server Certificate=True";
+                // Azure SQL Server connection string
+                // string connectionString = "tcp:admindashboarddbserver.database.windows.net; Authentication = Active Directory Default; Database = AdminDashboard_db";
+                // SenamileNdaba Computer Connection String
+                // string connectionString = "Data Source=SenamileNdaba;Initial Catalog=ChurchAdminSys;Integrated Security=True;Trust Server Certificate=True";
+                // SacredHeart Computer Connection String
+                string connectionString = "Data Source=SACREDHEART\\SQLEXPRESS;Initial Catalog=ChurchAdminSys;Integrated Security=True;Trust Server Certificate=True";
+
 
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
@@ -363,9 +369,9 @@ namespace AdminDashboard
 
                     string query = "INSERT INTO members (registration_date, membership_id, title, first_name, last_name, " +
                                    "gender, birth_date, race, marital_status, employment_status, occupation, phone_number, " +
-                                   "work_number, email_address, address_line1, address_line2, zone_area, postal_code, membership_status) " +
+                                   "mobile_number, email_address, address_line1, address_line2, zone_area, postal_code, membership_status) " +
                                    "VALUES (@registration_date, @membership_id, @title, @first_name, @last_name, @gender, @birth_date, " +
-                                   "@race, @marital_status, @employment_status, @occupation, @phone_number, @work_number, @email_address, " +
+                                   "@race, @marital_status, @employment_status, @occupation, @phone_number, @mobile_number, @email_address, " +
                                    "@address_line1, @address_line2, @zone_area, @postal_code, @membership_status)";
 
                     using (SqlCommand cmd = new SqlCommand(query, con))
@@ -382,7 +388,7 @@ namespace AdminDashboard
                         cmd.Parameters.AddWithValue("@employment_status", memberEmploymentStatusComboBox.Text);
                         cmd.Parameters.AddWithValue("@occupation", memberOccupationTextBox.Text);
                         cmd.Parameters.AddWithValue("@phone_number", memberPhoneNumberTextBox.Text);
-                        cmd.Parameters.AddWithValue("@work_number", memberMobileNumberTextBox.Text);
+                        cmd.Parameters.AddWithValue("@mobile_number", memberMobileNumberTextBox.Text);
                         cmd.Parameters.AddWithValue("@email_address", memberEmailAddressTextBox.Text);
                         cmd.Parameters.AddWithValue("@address_line1", addressLine1TextBox.Text);
                         cmd.Parameters.AddWithValue("@address_line2", addressLine2TextBox.Text);
@@ -395,6 +401,7 @@ namespace AdminDashboard
                         if (rowsAffected > 0)
                         {
                             MembershipData.MembershipNumber = membershipNumber; // Store globally
+                            membershipNumberTextBox.Text = membershipNumber;
 
                             MessageBox.Show($"Member saved successfully! Membership Number: {membershipNumber}",
                                             "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

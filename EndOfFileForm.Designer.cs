@@ -310,6 +310,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "EndOfFileForm";
             Text = "EndOfFileForm";
+            Load += EndOfFileForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

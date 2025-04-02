@@ -23,7 +23,7 @@ CREATE TABLE members (
 */
 
 /*
-CREATE TABLE Spousal_Information (
+CREATE TABLE spouses (
     spouse_id int identity(1,1) PRIMARY KEY NOT NULL,
     membership_id VARCHAR(8) NOT NULL,
     first_name VARCHAR(50) NOT NULL,
@@ -53,6 +53,7 @@ relationship varchar(20),
  FOREIGN KEY (membership_id) REFERENCES members(membership_id)
 )
 */
+
 /*
 ALTER TABLE dependents
 ADD CONSTRAINT uc_Dependents UNIQUE (first_name, last_name, birth_date);
@@ -138,6 +139,7 @@ burial_clergy_name VARCHAR(60),
 FOREIGN KEY (membership_id) REFERENCES members(membership_id)
 );
 */
+
 /*
 create table inventory (
     inventory_id int identity(1,1) primary key not null,
@@ -172,6 +174,7 @@ create table academic_history (
     FOREIGN KEY (membership_id) REFERENCES members(membership_id)
 );*/
 
+/*
 create table bookings (
     booking_id int identity(1,1) primary key not null,
 	first_name varchar(50),
@@ -182,3 +185,8 @@ create table bookings (
 	event_venue varchar(250) not null,
     booking_type varchar(250) not null,
 );
+
+*/
+
+ALTER TABLE spouses
+ADD mobile_number VARCHAR(10);

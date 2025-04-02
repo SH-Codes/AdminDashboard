@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -195,15 +196,53 @@ namespace AdminDashboard
 
         private void spouseSaveButton_Click(object sender, EventArgs e)
         {
-            // Validate all controls
-            if (!ValidateChildren())
+            try
             {
-                MessageBox.Show("Please correct the errors before saving.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Stop the save process if validation fails
-            }
+                string connectionString = "Data Source=SACREDHEART\\SQLEXPRESS;Initial Catalog=ChurchAdminSys;Integrated Security=True;Trust Server Certificate=True";
 
-            // Proceed with saving the data (replace with actual saving logic)
-            MessageBox.Show("Spouse details saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+
+                    // Query to insert data and return the generated spouse_id
+                    string query = @"
+                INSERT INTO members (first_name, last_name, gender, birth_date, race, 
+                                     employment_status, occupation, phone_number, 
+                                     mobile_number, email_address, spouse_religion) 
+                VALUES (@first_name, @last_name, @gender, @birth_date, 
+                        @race, @employment_status, @occupation, @phone_number, 
+                        @mobile_number, @email_address, @spouse_religion);
+                SELECT SCOPE_IDENTITY();"; // Get the last inserted ID
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@first_name", spouseFirstNameTextBox.Text);
+                        cmd.Parameters.AddWithValue("@last_name", spouseLastNameTextBox.Text);
+                        cmd.Parameters.AddWithValue("@gender", spouseGenderComboBox.Text);
+                        cmd.Parameters.AddWithValue("@birth_date", spouseBirthDateTimePicker.Value);
+                        cmd.Parameters.AddWithValue("@race", spouseRaceComboBox.Text);
+                        cmd.Parameters.AddWithValue("@employment_status", spouseEmploymentStatusComboBox.Text);
+                        cmd.Parameters.AddWithValue("@occupation", spouseOccupationTextBox.Text);
+                        cmd.Parameters.AddWithValue("@phone_number", spousePhoneNumberTextBox.Text);
+                        cmd.Parameters.AddWithValue("@mobile_number", spouseMobileNumberTextBox.Text);
+                        cmd.Parameters.AddWithValue("@email_address", spouseEmailAddressTextBox.Text);
+                        cmd.Parameters.AddWithValue("@spouse_religion", spouseReligionTextBox.Text);
+
+                        // Execute query and retrieve the new spouse_id
+                        object result = cmd.ExecuteScalar();
+                        if (result != null)
+                        {
+                            spouseIDTextBox.Text = result.ToString(); // Set the spouse_id in the textbox
+                        }
+                    }
+                }
+
+                MessageBox.Show("Spouse details saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
     }

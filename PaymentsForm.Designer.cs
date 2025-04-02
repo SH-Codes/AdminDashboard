@@ -36,7 +36,7 @@
             accountTypeLabel = new Label();
             paymentDateLabel = new Label();
             membershipNumberLabel = new Label();
-            payementMembershipNumberTextBox = new TextBox();
+            paymentsMembershipNumberTextBox = new TextBox();
             paymentIdLabel = new Label();
             PaymentLabel = new Label();
             paymentIdTextBox = new TextBox();
@@ -80,6 +80,7 @@
             paymentsSaveButton.TabIndex = 86;
             paymentsSaveButton.Text = "Save";
             paymentsSaveButton.UseVisualStyleBackColor = true;
+            paymentsSaveButton.Click += paymentsSaveButton_Click;
             // 
             // amountTenderdLabel
             // 
@@ -131,13 +132,13 @@
             membershipNumberLabel.TabIndex = 55;
             membershipNumberLabel.Text = "Membership Number:";
             // 
-            // payementMembershipNumberTextBox
+            // paymentsMembershipNumberTextBox
             // 
-            payementMembershipNumberTextBox.Location = new Point(192, 143);
-            payementMembershipNumberTextBox.Name = "payementMembershipNumberTextBox";
-            payementMembershipNumberTextBox.ReadOnly = true;
-            payementMembershipNumberTextBox.Size = new Size(225, 23);
-            payementMembershipNumberTextBox.TabIndex = 53;
+            paymentsMembershipNumberTextBox.Location = new Point(192, 143);
+            paymentsMembershipNumberTextBox.Name = "paymentsMembershipNumberTextBox";
+            paymentsMembershipNumberTextBox.ReadOnly = true;
+            paymentsMembershipNumberTextBox.Size = new Size(225, 23);
+            paymentsMembershipNumberTextBox.TabIndex = 53;
             // 
             // paymentIdLabel
             // 
@@ -173,6 +174,7 @@
             paymentDateTimePicker.Name = "paymentDateTimePicker";
             paymentDateTimePicker.Size = new Size(225, 23);
             paymentDateTimePicker.TabIndex = 96;
+            paymentDateTimePicker.ValueChanged += paymentDateTimePicker_ValueChanged;
             // 
             // accountTypeComboBox
             // 
@@ -182,6 +184,7 @@
             accountTypeComboBox.Name = "accountTypeComboBox";
             accountTypeComboBox.Size = new Size(225, 23);
             accountTypeComboBox.TabIndex = 97;
+            accountTypeComboBox.Validating += accountTypeComboBox_SelectedIndexChanged;
             // 
             // amountTotalTextBox
             // 
@@ -189,6 +192,7 @@
             amountTotalTextBox.Name = "amountTotalTextBox";
             amountTotalTextBox.Size = new Size(225, 23);
             amountTotalTextBox.TabIndex = 98;
+            amountTotalTextBox.Validating += amountTotalTextBox_TextChanged;
             // 
             // amountTenderedTextBox
             // 
@@ -196,6 +200,7 @@
             amountTenderedTextBox.Name = "amountTenderedTextBox";
             amountTenderedTextBox.Size = new Size(225, 23);
             amountTenderedTextBox.TabIndex = 99;
+            amountTenderedTextBox.Validating += amountTenderedTextBox_TextChanged;
             // 
             // memberRaceLabel
             // 
@@ -213,6 +218,7 @@
             changeTextBox.Name = "changeTextBox";
             changeTextBox.Size = new Size(225, 23);
             changeTextBox.TabIndex = 100;
+            changeTextBox.TextChanged += changeTextBox_TextChanged;
             // 
             // paymentsUpdateButton
             // 
@@ -242,6 +248,7 @@
             paymentMethodComboBox.Name = "paymentMethodComboBox";
             paymentMethodComboBox.Size = new Size(225, 23);
             paymentMethodComboBox.TabIndex = 102;
+            paymentMethodComboBox.SelectedIndexChanged += paymentMethodComboBox_SelectedIndexChanged;
             // 
             // PaymentsForm
             // 
@@ -267,12 +274,13 @@
             Controls.Add(accountTypeLabel);
             Controls.Add(paymentDateLabel);
             Controls.Add(membershipNumberLabel);
-            Controls.Add(payementMembershipNumberTextBox);
+            Controls.Add(paymentsMembershipNumberTextBox);
             Controls.Add(paymentIdLabel);
             Controls.Add(PaymentLabel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "PaymentsForm";
             Text = "PaymentsForm";
+            Load += PaymentsForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -286,7 +294,7 @@
         private Label accountTypeLabel;
         private Label paymentDateLabel;
         private Label membershipNumberLabel;
-        private TextBox payementMembershipNumberTextBox;
+        private TextBox paymentsMembershipNumberTextBox;
         private Label paymentIdLabel;
         private Label PaymentLabel;
         private TextBox paymentIdTextBox;

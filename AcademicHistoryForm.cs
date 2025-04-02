@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static AdminDashboard.AddMemberForm;
 
 namespace AdminDashboard
 {
@@ -78,6 +79,14 @@ namespace AdminDashboard
             {
                 MessageBox.Show("Last name cannot be less than 3 characters.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 e.Cancel = true; // Prevents the user from leaving the textbox
+            }
+        }
+
+        private void AcademicHistoryForm_Load(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(MembershipData.MembershipNumber))
+            {
+                academicHistoryMembershipNumberTextBox.Text = MembershipData.MembershipNumber;
             }
         }
     }

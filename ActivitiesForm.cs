@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static AdminDashboard.AddMemberForm;
 
 namespace AdminDashboard
 {
@@ -213,6 +214,14 @@ namespace AdminDashboard
             {
                 MessageBox.Show("Date joined cannot be today or a future date.", "Invalid Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 yearJoinedDateTimePicker3.Value = DateTime.Now.AddDays(-1);
+            }
+        }
+
+        private void ActivitiesForm_Load(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(MembershipData.MembershipNumber))
+            {
+                activityMembershipNumberTextBox.Text = MembershipData.MembershipNumber;
             }
         }
     }

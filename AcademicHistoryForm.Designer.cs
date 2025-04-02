@@ -261,6 +261,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "AcademicHistoryForm";
             Text = "AcademicHistoryForm";
+            Load += AcademicHistoryForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

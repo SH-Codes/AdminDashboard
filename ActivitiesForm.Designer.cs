@@ -520,6 +520,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "ActivitiesForm";
             Text = "ActivitiesForm";
+            Load += ActivitiesForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

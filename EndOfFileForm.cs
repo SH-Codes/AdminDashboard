@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static AdminDashboard.AddMemberForm;
 
 namespace AdminDashboard
 {
@@ -71,6 +72,14 @@ namespace AdminDashboard
             {
                 MessageBox.Show("Please select a race.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 e.Cancel = true;
+            }
+        }
+
+        private void EndOfFileForm_Load(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(MembershipData.MembershipNumber))
+            {
+                endOfFileMembershipNumberTextBox.Text = MembershipData.MembershipNumber;
             }
         }
     }
