@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static AdminDashboard.AddMemberForm;
 
 namespace AdminDashboard
 {
@@ -206,6 +207,14 @@ namespace AdminDashboard
             {
                 MessageBox.Show("Please select a valid option.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 e.Cancel = true;
+            }
+        }
+
+        private void SacramentalLifeForm_Load(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(MembershipData.MembershipNumber))
+            {
+                sacramentalMembershipNumberTextBox.Text = MembershipData.MembershipNumber;
             }
         }
     }

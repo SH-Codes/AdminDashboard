@@ -161,7 +161,7 @@ create table payment (
     FOREIGN KEY (membership_id) REFERENCES members(membership_id)
 );
 */
-
+/*
 create table academic_history (
     academic_id int identity(1,1) primary key not null,
     membership_id varchar(8) not null,
@@ -170,4 +170,15 @@ create table academic_history (
     subjects_passed varchar(250) not null,
     field_of_study varchar(65) not null,
     FOREIGN KEY (membership_id) REFERENCES members(membership_id)
+);*/
+
+create table bookings (
+    booking_id int identity(1,1) primary key not null,
+	first_name varchar(50),
+    last_name varchar(50) not null,
+	phone_number varchar(10) not null,
+	email_address varchar(80),
+    event_date date not null,
+	event_venue varchar(250) not null,
+    booking_type varchar(250) not null,
 );

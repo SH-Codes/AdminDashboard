@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static AdminDashboard.AddMemberForm;
 
 
 namespace AdminDashboard
@@ -26,6 +27,10 @@ namespace AdminDashboard
 
         private void SpousesForm_Load(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(MembershipData.MembershipNumber))
+            {
+                spouseMembershipNumberTextBox.Text = MembershipData.MembershipNumber;
+            }
 
         }
 

@@ -361,6 +361,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "DependentsForm";
             Text = "DependentsForm";
+            Load += DependentsForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

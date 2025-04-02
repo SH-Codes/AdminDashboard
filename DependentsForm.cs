@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static AdminDashboard.AddMemberForm;
 
 namespace AdminDashboard
 {
@@ -78,6 +79,14 @@ namespace AdminDashboard
             {
                 MessageBox.Show("Please select a valid gender.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 e.Cancel = true;
+            }
+        }
+
+        private void DependentsForm_Load(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(MembershipData.MembershipNumber))
+            {
+                dependentMembershipNumberTextBox.Text = MembershipData.MembershipNumber;
             }
         }
     }

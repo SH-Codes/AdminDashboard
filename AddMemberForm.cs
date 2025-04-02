@@ -347,23 +347,19 @@ namespace AdminDashboard
 
         }
 
-        public static class MembershipData
-        {
-            public static string MembershipNumber { get; set; }
-        }
-
 
         private HashSet<string> existingMembershipNumbers = new HashSet<string>(); // Simulate storage for checking uniqueness
         private void memberSaveButton_Click(object sender, EventArgs e)
         {
             try
             {
-                string connectionString = "Server=tcp:admindashboarddbserver.database.windows.net;" +
-                                          "Authentication=Active Directory Default;Database=AdminDashboard_db;";
+                string connectionString = "Data Source=SenamileNdaba;Initial Catalog=ChurchAdminSys;Integrated Security=True;Trust Server Certificate=True";
 
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
+
+                    string membershipNumber = GenerateMembershipNumber();
 
                     string query = "INSERT INTO members (registration_date, membership_id, title, first_name, last_name, " +
                                    "gender, birth_date, race, marital_status, employment_status, occupation, phone_number, " +
@@ -374,9 +370,8 @@ namespace AdminDashboard
 
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        // Use parameterized queries to prevent SQL injection
                         cmd.Parameters.AddWithValue("@registration_date", registrationDateTimePicker.Value);
-                        cmd.Parameters.AddWithValue("@membership_id", GenerateMembershipNumber());
+                        cmd.Parameters.AddWithValue("@membership_id", membershipNumber);
                         cmd.Parameters.AddWithValue("@title", memberTitleComboBox.Text);
                         cmd.Parameters.AddWithValue("@first_name", memberFirstNameTextBox.Text);
                         cmd.Parameters.AddWithValue("@last_name", memberLastNameTextBox.Text);
@@ -399,20 +394,7 @@ namespace AdminDashboard
 
                         if (rowsAffected > 0)
                         {
-                            string membershipNumber = GenerateMembershipNumber();
-
-                            // Check for duplicate membership number
-                            if (existingMembershipNumbers.Contains(membershipNumber))
-                            {
-                                MessageBox.Show("Membership number already exists! Please try again.", "Duplicate Entry",
-                                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                return;
-                            }
-
-                            // Save membership number
-                            membershipNumberTextBox.Text = membershipNumber;
-                            existingMembershipNumbers.Add(membershipNumber); // Simulate saving to database
-                            MembershipData.MembershipNumber = membershipNumber;
+                            MembershipData.MembershipNumber = membershipNumber; // Store globally
 
                             MessageBox.Show($"Member saved successfully! Membership Number: {membershipNumber}",
                                             "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -429,6 +411,7 @@ namespace AdminDashboard
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
 
         private string GenerateMembershipNumber()
@@ -475,6 +458,11 @@ namespace AdminDashboard
 
             // Construct final membership number
             return $"{lastTwoYearDigits}{genderDigit}{raceDigit}{lastFourDigits}";
+        }
+
+        public static class MembershipData
+        {
+            public static string MembershipNumber { get; set; }
         }
 
         private void memberEmploymentStatusLabel_Click(object sender, EventArgs e)

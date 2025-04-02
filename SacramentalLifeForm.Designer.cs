@@ -607,6 +607,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "SacramentalLifeForm";
             Text = "SacramentalLifeForm";
+            Load += SacramentalLifeForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
