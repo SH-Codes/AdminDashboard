@@ -187,6 +187,14 @@ create table bookings (
 );
 
 */
-
 ALTER TABLE spouses
-ADD mobile_number VARCHAR(10);
+ADD mobile_number VARCHAR(10),
+birth_date date;
+
+
+
+
+/*
+EXEC sp_rename 'spouses.email', 'email_address', 'COLUMN';
+ALTER TABLE spouses DROP COLUMN spouse_religion;
+*/
