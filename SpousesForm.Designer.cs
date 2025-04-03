@@ -52,8 +52,6 @@
             spouseBirthDateTimePicker = new DateTimePicker();
             spouseBirthDateLabel = new Label();
             spouseGenderComboBox = new ComboBox();
-            spouseMaidenNameTextBox = new TextBox();
-            spouseMaidenNameLabel = new Label();
             spouseFirstNameTextBox = new TextBox();
             spouseFirstNameLabel = new Label();
             spouseMembershipNumberLabel = new Label();
@@ -69,7 +67,7 @@
             // 
             spouseEmploymentStatusComboBox.FormattingEnabled = true;
             spouseEmploymentStatusComboBox.Items.AddRange(new object[] { "", "Unemployed", "Employed", "Self-Employed", "Pensioner", "Student" });
-            spouseEmploymentStatusComboBox.Location = new Point(192, 463);
+            spouseEmploymentStatusComboBox.Location = new Point(192, 421);
             spouseEmploymentStatusComboBox.Name = "spouseEmploymentStatusComboBox";
             spouseEmploymentStatusComboBox.Size = new Size(225, 23);
             spouseEmploymentStatusComboBox.TabIndex = 94;
@@ -79,7 +77,7 @@
             // 
             memberEmploymentLabel.AutoSize = true;
             memberEmploymentLabel.Font = new Font("Segoe UI", 11F);
-            memberEmploymentLabel.Location = new Point(37, 464);
+            memberEmploymentLabel.Location = new Point(37, 422);
             memberEmploymentLabel.Name = "memberEmploymentLabel";
             memberEmploymentLabel.Size = new Size(140, 20);
             memberEmploymentLabel.TabIndex = 93;
@@ -252,7 +250,7 @@
             // 
             memberRaceLabel.AutoSize = true;
             memberRaceLabel.Font = new Font("Segoe UI", 11F);
-            memberRaceLabel.Location = new Point(37, 417);
+            memberRaceLabel.Location = new Point(37, 375);
             memberRaceLabel.Name = "memberRaceLabel";
             memberRaceLabel.Size = new Size(41, 20);
             memberRaceLabel.TabIndex = 65;
@@ -262,7 +260,7 @@
             // 
             spouseRaceComboBox.FormattingEnabled = true;
             spouseRaceComboBox.Items.AddRange(new object[] { "", "Black", "Colour", "Indian", "White", "Other" });
-            spouseRaceComboBox.Location = new Point(192, 416);
+            spouseRaceComboBox.Location = new Point(192, 374);
             spouseRaceComboBox.Name = "spouseRaceComboBox";
             spouseRaceComboBox.Size = new Size(225, 23);
             spouseRaceComboBox.TabIndex = 64;
@@ -272,7 +270,7 @@
             // 
             spouseGenderLabel.AutoSize = true;
             spouseGenderLabel.Font = new Font("Segoe UI", 11F);
-            spouseGenderLabel.Location = new Point(37, 370);
+            spouseGenderLabel.Location = new Point(37, 328);
             spouseGenderLabel.Name = "spouseGenderLabel";
             spouseGenderLabel.Size = new Size(60, 20);
             spouseGenderLabel.TabIndex = 63;
@@ -280,7 +278,7 @@
             // 
             // spouseBirthDateTimePicker
             // 
-            spouseBirthDateTimePicker.Location = new Point(192, 323);
+            spouseBirthDateTimePicker.Location = new Point(192, 281);
             spouseBirthDateTimePicker.Name = "spouseBirthDateTimePicker";
             spouseBirthDateTimePicker.Size = new Size(225, 23);
             spouseBirthDateTimePicker.TabIndex = 62;
@@ -290,7 +288,7 @@
             // 
             spouseBirthDateLabel.AutoSize = true;
             spouseBirthDateLabel.Font = new Font("Segoe UI", 11F);
-            spouseBirthDateLabel.Location = new Point(34, 324);
+            spouseBirthDateLabel.Location = new Point(34, 282);
             spouseBirthDateLabel.Name = "spouseBirthDateLabel";
             spouseBirthDateLabel.Size = new Size(79, 20);
             spouseBirthDateLabel.TabIndex = 61;
@@ -300,29 +298,11 @@
             // 
             spouseGenderComboBox.FormattingEnabled = true;
             spouseGenderComboBox.Items.AddRange(new object[] { "", "Male", "Female" });
-            spouseGenderComboBox.Location = new Point(192, 369);
+            spouseGenderComboBox.Location = new Point(192, 327);
             spouseGenderComboBox.Name = "spouseGenderComboBox";
             spouseGenderComboBox.Size = new Size(225, 23);
             spouseGenderComboBox.TabIndex = 60;
             spouseGenderComboBox.Validating += spouseLastNameTextBox_Validating;
-            // 
-            // spouseMaidenNameTextBox
-            // 
-            spouseMaidenNameTextBox.Location = new Point(192, 233);
-            spouseMaidenNameTextBox.Name = "spouseMaidenNameTextBox";
-            spouseMaidenNameTextBox.Size = new Size(225, 23);
-            spouseMaidenNameTextBox.TabIndex = 59;
-            spouseMaidenNameTextBox.Validating += spouseMaidenNameTextBox_Validating;
-            // 
-            // spouseMaidenNameLabel
-            // 
-            spouseMaidenNameLabel.AutoSize = true;
-            spouseMaidenNameLabel.Font = new Font("Segoe UI", 11F);
-            spouseMaidenNameLabel.Location = new Point(34, 234);
-            spouseMaidenNameLabel.Name = "spouseMaidenNameLabel";
-            spouseMaidenNameLabel.Size = new Size(106, 20);
-            spouseMaidenNameLabel.TabIndex = 58;
-            spouseMaidenNameLabel.Text = "Maiden Name:";
             // 
             // spouseFirstNameTextBox
             // 
@@ -390,7 +370,7 @@
             // 
             // spouseLastNameTextBox
             // 
-            spouseLastNameTextBox.Location = new Point(192, 280);
+            spouseLastNameTextBox.Location = new Point(192, 238);
             spouseLastNameTextBox.Name = "spouseLastNameTextBox";
             spouseLastNameTextBox.Size = new Size(225, 23);
             spouseLastNameTextBox.TabIndex = 97;
@@ -400,7 +380,7 @@
             // 
             spouseLastNameLabel.AutoSize = true;
             spouseLastNameLabel.Font = new Font("Segoe UI", 11F);
-            spouseLastNameLabel.Location = new Point(34, 281);
+            spouseLastNameLabel.Location = new Point(34, 239);
             spouseLastNameLabel.Name = "spouseLastNameLabel";
             spouseLastNameLabel.Size = new Size(82, 20);
             spouseLastNameLabel.TabIndex = 96;
@@ -439,8 +419,6 @@
             Controls.Add(spouseBirthDateTimePicker);
             Controls.Add(spouseBirthDateLabel);
             Controls.Add(spouseGenderComboBox);
-            Controls.Add(spouseMaidenNameTextBox);
-            Controls.Add(spouseMaidenNameLabel);
             Controls.Add(spouseFirstNameTextBox);
             Controls.Add(spouseFirstNameLabel);
             Controls.Add(spouseMembershipNumberLabel);
@@ -481,8 +459,6 @@
         private DateTimePicker spouseBirthDateTimePicker;
         private Label spouseBirthDateLabel;
         private ComboBox spouseGenderComboBox;
-        private TextBox spouseMaidenNameTextBox;
-        private Label spouseMaidenNameLabel;
         private TextBox spouseFirstNameTextBox;
         private Label spouseFirstNameLabel;
         private Label spouseMembershipNumberLabel;

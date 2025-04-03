@@ -49,6 +49,9 @@
     <Compile Update="SpousesForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ViewDependentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ViewInventoryForm.cs">
       <SubType>Form</SubType>
     </Compile>

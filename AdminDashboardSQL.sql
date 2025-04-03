@@ -82,6 +82,7 @@ Create table sacramental_life (
 sacramental_id int identity(1,1) primary key not null,
 membership_id VARCHAR(8) NOT NULL,
 is_baptised VARCHAR(3),
+baptismal_number VARCHAR(20),
 baptism_place VARCHAR(80),
 baptism_year DATE,
 father_name VARCHAR(60),
@@ -187,14 +188,16 @@ create table bookings (
 );
 
 */
+/*
 ALTER TABLE spouses
 ADD mobile_number VARCHAR(10),
 birth_date date;
-
-
-
-
-/*
-EXEC sp_rename 'spouses.email', 'email_address', 'COLUMN';
-ALTER TABLE spouses DROP COLUMN spouse_religion;
 */
+
+
+
+
+EXEC sp_rename 'activities.previous_exco_role', 'previous_role_is_exco', 'COLUMN';
+
+
+

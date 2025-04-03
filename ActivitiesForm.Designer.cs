@@ -140,6 +140,7 @@
             activitySaveButton.TabIndex = 86;
             activitySaveButton.Text = "Save";
             activitySaveButton.UseVisualStyleBackColor = true;
+            activitySaveButton.Click += activitySaveButton_Click;
             // 
             // yearPorftfolioLabel
             // 
@@ -436,7 +437,7 @@
             // isPreviousExcoComboBox
             // 
             isPreviousExcoComboBox.FormattingEnabled = true;
-            isPreviousExcoComboBox.Items.AddRange(new object[] { "", "Male", "Female" });
+            isPreviousExcoComboBox.Items.AddRange(new object[] { "", "Yes", "No" });
             isPreviousExcoComboBox.Location = new Point(654, 326);
             isPreviousExcoComboBox.Name = "isPreviousExcoComboBox";
             isPreviousExcoComboBox.Size = new Size(225, 23);

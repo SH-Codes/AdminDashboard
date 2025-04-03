@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -79,7 +80,7 @@ namespace AdminDashboard
 
         private void mothersNamesTextBox_TextChanged(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            string text = mothersNamesTextBox.Text.Trim();
+            string text = mothersNameTextBox.Text.Trim();
             if (!string.IsNullOrEmpty(text) && text.Length < 3)
             {
                 MessageBox.Show("Mother's names must be at least 3 characters long.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -89,7 +90,7 @@ namespace AdminDashboard
 
         private void sponsorsNamesTextBox_TextChanged(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            string text = sponsorsNamesTextBox.Text.Trim();
+            string text = sponsorsNameTextBox.Text.Trim();
             if (!string.IsNullOrEmpty(text) && text.Length < 3)
             {
                 MessageBox.Show("Mother's names must be at least 3 characters long.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -99,7 +100,7 @@ namespace AdminDashboard
 
         private void clergysNamesTextBox_TextChanged(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            string text = clergysNamesTextBox.Text.Trim();
+            string text = baptismClergyNameTextBox.Text.Trim();
             if (!string.IsNullOrEmpty(text) && text.Length < 3)
             {
                 MessageBox.Show("Mother's names must be at least 3 characters long.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -217,5 +218,97 @@ namespace AdminDashboard
                 sacramentalMembershipNumberTextBox.Text = MembershipData.MembershipNumber;
             }
         }
+
+        private void placeOfBaptismTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void baptismalNumberTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string isBaptisedText = isBaptisedComboBox.Text.Trim();
+
+            if (!string.IsNullOrEmpty(isBaptisedText) && isBaptisedText.Equals("Yes", StringComparison.OrdinalIgnoreCase))
+            {
+                if (string.IsNullOrEmpty(baptismalNumberTextBox.Text.Trim()))
+                {
+                    MessageBox.Show("Baptismal number cannot be empty when baptism is confirmed.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void sacramentalSaveButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Azure SQL Server connection string
+                // string connectionString = "tcp:admindashboarddbserver.database.windows.net; Authentication = Active Directory Default; Database = AdminDashboard_db";
+                // SenamileNdaba Computer Connection String
+                // string connectionString = "Data Source=SenamileNdaba;Initial Catalog=ChurchAdminSys;Integrated Security=True;Trust Server Certificate=True";
+                // SacredHeart Computer Connection String
+                string connectionString = "Data Source=SACREDHEART\\SQLEXPRESS;Initial Catalog=ChurchAdminSys;Integrated Security=True;Trust Server Certificate=True";
+
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+
+                    // Fixed INSERT Query (removed duplicate baptism_date)
+                    string query = @"
+            INSERT INTO sacramental_life (
+                membership_id, is_baptised, baptismal_number, baptism_date, baptism_place,  
+                sponsor_name, father_name, mother_name, baptism_clergy_name, received_communion, communion_date,
+                communion_place, is_confirmed, date_confirmed, place_confirmed, confirmation_clergy_name, is_married,
+                date_married, place_married, catholic_marriage, marriage_clergy_name
+            ) 
+            VALUES (
+                @membership_id, @is_baptised, @baptismal_number, @baptism_date, @baptism_place,  
+                @sponsor_name, @father_name, @mother_name, @baptism_clergy_name, @received_communion, @communion_date,
+                @communion_place, @is_confirmed, @date_confirmed, @place_confirmed, @confirmation_clergy_name, @is_married,
+                @date_married, @place_married, @catholic_marriage, @marriage_clergy_name
+            );
+            SELECT SCOPE_IDENTITY();"; // Get the last inserted ID
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        // Convert values to match DB types
+                        cmd.Parameters.AddWithValue("@membership_id", sacramentalMembershipNumberTextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@is_baptised", isBaptisedComboBox.Text == "Yes" ? 1 : 0); // Convert Yes/No to 1/0
+                        cmd.Parameters.AddWithValue("@baptismal_number", baptismalNumberTextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@baptism_date", baptismDateTimePicker.Value);
+                        cmd.Parameters.AddWithValue("@baptism_place", placeOfBaptismTextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@sponsor_name", sponsorsNameTextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@father_name", fathersNameTextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@mother_name", mothersNameTextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@baptism_clergy_name", baptismClergyNameTextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@received_communion", holyCommunionComboBox.Text == "Yes" ? 1 : 0);
+                        cmd.Parameters.AddWithValue("@communion_date", holyCommunionDateTimePicker.Value);
+                        cmd.Parameters.AddWithValue("@communion_place", placeOfHolyCommunionTextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@is_confirmed", isConfirmedComboBox.Text == "Yes" ? 1 : 0);
+                        cmd.Parameters.AddWithValue("@date_confirmed", confirmationDateTimePicker.Value);
+                        cmd.Parameters.AddWithValue("@place_confirmed", placeOfConfirmationTextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@confirmation_clergy_name", confirmationClergysNamesTextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@is_married", holyMatrimonyComboBox.Text == "Yes" ? 1 : 0);
+                        cmd.Parameters.AddWithValue("@date_married", holyMatrimonyDateTimePicker.Value);
+                        cmd.Parameters.AddWithValue("@place_married", placeOfHolyMatrimonyTextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@catholic_marriage", catholicMarriageComboBox.Text == "Yes" ? 1 : 0);
+                        cmd.Parameters.AddWithValue("@marriage_clergy_name", holyMatrimonyClergyNameTextBox.Text.Trim());
+
+                        // Execute query and retrieve the new sacramental_id
+                        object result = cmd.ExecuteScalar();
+                        if (result != null)
+                        {
+                            sacramentalIDTextBox.Text = result.ToString(); // Set the sacramental_id in the textbox
+                        }
+                    }
+                }
+
+                MessageBox.Show("Sacramental details saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

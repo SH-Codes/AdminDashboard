@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -224,5 +225,72 @@ namespace AdminDashboard
                 activityMembershipNumberTextBox.Text = MembershipData.MembershipNumber;
             }
         }
+
+        private void activitySaveButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Azure SQL Server connection string
+                // string connectionString = "tcp:admindashboarddbserver.database.windows.net; Authentication = Active Directory Default; Database = AdminDashboard_db";
+                // SenamileNdaba Computer Connection String
+                // string connectionString = "Data Source=SenamileNdaba;Initial Catalog=ChurchAdminSys;Integrated Security=True;Trust Server Certificate=True";
+                // SacredHeart Computer Connection String
+                string connectionString = "Data Source=SACREDHEART\\SQLEXPRESS;Initial Catalog=ChurchAdminSys;Integrated Security=True;Trust Server Certificate=True";
+
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+
+                    // Fixed INSERT Query (removed duplicate baptism_date)
+                    string query = @"
+            INSERT INTO activities (
+                membership_id, department_name1, activity_name1, activity1_year_joined, activity1_role,  
+                department_name2, activity_name2, activity2_year_joined, activity2_role, department_name3, activity_name3,
+                activity3_role, activity3_year_joined, previous_role_is_exco, previous_role, year_of_previous_role
+            ) 
+            VALUES (
+                @membership_id, @department_name1, @activity_name1, @activity1_year_joined, @activity1_role,  
+                @department_name2, @activity_name2, @activity2_year_joined, @activity2_role, @department_name3, @activity_name3,
+                @activity3_role, @activity3_year_joined, @previous_role_is_exco, @previous_role, @year_of_previous_role
+            );
+            SELECT SCOPE_IDENTITY();"; // Get the last inserted ID
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        // Convert values to match DB types
+                        cmd.Parameters.AddWithValue("@membership_id", activityMembershipNumberTextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@department_name1", departmentName1ComboBox.Text.Trim() );
+                        cmd.Parameters.AddWithValue("@activity_name1", activityName1ComboBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@activity1_year_joined", yearJoinedDateTimePicker1.Value);
+                        cmd.Parameters.AddWithValue("@activity1_role", activityRole1ComboBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@department_name2", departmentName2ComboBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@activity_name2", activityName2ComboBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@activity2_year_joined", yearJoinedDateTimePicker2.Value);
+                        cmd.Parameters.AddWithValue("@activity2_role", activityRole2ComboBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@department_name3", departmentName3ComboBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@activity_name3", activityName3ComboBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@activity3_year_joined", yearJoinedDateTimePicker3.Value);
+                        cmd.Parameters.AddWithValue("@activity3_role", activityRole3ComboBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("previous_role", previousExcoComboBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@previous_role_is_exco", isPreviousExcoComboBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@year_of_previous_role", previousExcoRoleDateTimePicker.Value);
+
+                        // Execute query and retrieve the new sacramental_id
+                        object result = cmd.ExecuteScalar();
+                        if (result != null)
+                        {
+                            activityIDTextBox.Text = result.ToString(); // Set the activity_id in the textbox
+                        }
+                    }
+                }
+
+                MessageBox.Show("Activity details saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

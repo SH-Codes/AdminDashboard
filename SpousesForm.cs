@@ -63,16 +63,6 @@ namespace AdminDashboard
             }
         }
 
-        private void spouseMaidenNameTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            string text = spouseMaidenNameTextBox.Text.Trim();
-            if (!string.IsNullOrEmpty(text) && text.Length < 3)
-            {
-                MessageBox.Show("Maiden name must be at least 3 characters long.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                e.Cancel = true;
-            }
-        }
-
         private void spouseLastNameTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
             string text = spouseLastNameTextBox.Text.Trim();
@@ -201,9 +191,9 @@ namespace AdminDashboard
                 // Azure SQL Server connection string
                 // string connectionString = "tcp:admindashboarddbserver.database.windows.net; Authentication = Active Directory Default; Database = AdminDashboard_db";
                 // SenamileNdaba Computer Connection String
-                string connectionString = "Data Source=SenamileNdaba;Initial Catalog=ChurchAdminSys;Integrated Security=True;Trust Server Certificate=True";
+                //string connectionString = "Data Source=SenamileNdaba;Initial Catalog=ChurchAdminSys;Integrated Security=True;Trust Server Certificate=True";
                 // SacredHeart Computer Connection String
-                //string connectionString = "Data Source=SACREDHEART\\SQLEXPRESS;Initial Catalog=ChurchAdminSys;Integrated Security=True;Trust Server Certificate=True";
+                string connectionString = "Data Source=SACREDHEART\\SQLEXPRESS;Initial Catalog=ChurchAdminSys;Integrated Security=True;Trust Server Certificate=True";
 
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
@@ -211,10 +201,10 @@ namespace AdminDashboard
 
                     // Query to insert data and return the generated spouse_id
                     string query = @"
-                INSERT INTO spouses (membership_id, first_name, maiden_name, last_name, gender, birth_date, race, 
+                INSERT INTO spouses (membership_id, first_name, last_name, gender, birth_date, race, 
                                      employment_status, occupation, phone_number, 
                                      mobile_number, email_address, spouse_religion) 
-                VALUES (@membership_id, @first_name, @maiden_name, @last_name, @gender, @birth_date, 
+                VALUES (@membership_id, @first_name, @last_name, @gender, @birth_date, 
                         @race, @employment_status, @occupation, @phone_number, 
                         @mobile_number, @email_address, @spouse_religion);
                 SELECT SCOPE_IDENTITY();"; // Get the last inserted ID
@@ -223,7 +213,6 @@ namespace AdminDashboard
                     {
                         cmd.Parameters.AddWithValue("@membership_id", spouseMembershipNumberTextBox.Text.Trim());
                         cmd.Parameters.AddWithValue("@first_name", spouseFirstNameTextBox.Text);
-                        cmd.Parameters.AddWithValue("@maiden_name", spouseMaidenNameTextBox.Text);
                         cmd.Parameters.AddWithValue("@last_name", spouseLastNameTextBox.Text);
                         cmd.Parameters.AddWithValue("@gender", spouseGenderComboBox.Text);
                         cmd.Parameters.AddWithValue("@birth_date", spouseBirthDateTimePicker.Value);
