@@ -189,15 +189,13 @@ create table bookings (
 
 */
 /*
-ALTER TABLE spouses
-ADD mobile_number VARCHAR(10),
-birth_date date;
+ALTER TABLE sacramental_life
+ADD date_confirmed date;
 */
 
 
 
 
 EXEC sp_rename 'activities.previous_exco_role', 'previous_role_is_exco', 'COLUMN';
-
 
 

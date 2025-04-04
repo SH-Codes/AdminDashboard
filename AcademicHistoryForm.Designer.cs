@@ -110,6 +110,7 @@
             academicSaveButton.TabIndex = 86;
             academicSaveButton.Text = "Save";
             academicSaveButton.UseVisualStyleBackColor = true;
+            academicSaveButton.Click += academicSaveButton_Click;
             // 
             // academicYearObtainedDateTimePicker
             // 
