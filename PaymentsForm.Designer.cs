@@ -64,7 +64,7 @@
             // paymentsClearButton
             // 
             paymentsClearButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            paymentsClearButton.Location = new Point(909, 144);
+            paymentsClearButton.Location = new Point(909, 141);
             paymentsClearButton.Name = "paymentsClearButton";
             paymentsClearButton.Size = new Size(110, 23);
             paymentsClearButton.TabIndex = 87;
@@ -74,7 +74,7 @@
             // paymentsSaveButton
             // 
             paymentsSaveButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            paymentsSaveButton.Location = new Point(909, 106);
+            paymentsSaveButton.Location = new Point(909, 103);
             paymentsSaveButton.Name = "paymentsSaveButton";
             paymentsSaveButton.Size = new Size(110, 23);
             paymentsSaveButton.TabIndex = 86;

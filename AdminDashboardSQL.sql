@@ -151,6 +151,7 @@ create table inventory (
 );
 */
 
+
 /*
 create table payment (
     payment_id int identity(1,1) primary key not null,
@@ -190,12 +191,11 @@ create table bookings (
 */
 /*
 ALTER TABLE sacramental_life
-ADD date_confirmed date;
+add date_confirmed date
+
 */
 
 
 
-
-EXEC sp_rename 'activities.previous_exco_role', 'previous_role_is_exco', 'COLUMN';
-
+EXEC sp_rename 'sacramental_life.commuion_year', 'communion_date', 'COLUMN';
 

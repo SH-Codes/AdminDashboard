@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -99,7 +100,52 @@ namespace AdminDashboard
 
         private void paymentsSaveButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                // Azure SQL Server connection string
+                //string connectionString = "Data Source=tcp:admindashboarddbserver.database.windows.net; Authentication = Active Directory Default; Database = AdminDashboard_db; Trust Sever Certificate=True";
+                // SenamileNdaba Computer Connection String
+                  string connectionString = "Data Source=SenamileNdaba;Initial Catalog=ChurchAdminSys;Integrated Security=True;Trust Server Certificate=True";
+                // SacredHeart Computer Connection String
+                // string connectionString = "Data Source=SACREDHEART\\SQLEXPRESS;Initial Catalog=ChurchAdminSys;Integrated Security=True;Trust Server Certificate=True";
 
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+
+                    // Query to insert data and return the generated dependent_id
+                    string query = @"
+                INSERT INTO dependents (membership_id, payment_date, account_type, amount_total, amount_tendered,  
+                                     change_given, payment_method) 
+                VALUES (@membership_id, @payment_date, @account_type, @amount_total, @amount_tendered,  
+                                     @change_given, @payment_method);
+                SELECT SCOPE_IDENTITY();"; // Get the last inserted ID
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@membership_id", paymentsMembershipNumberTextBox.Text.Trim());
+                        cmd.Parameters.AddWithValue("@payment_date", paymentDateTimePicker.Value);
+                        cmd.Parameters.AddWithValue("@account_type", accountTypeComboBox.Text);
+                        cmd.Parameters.AddWithValue("@amount_total", amountTotalTextBox.Text);
+                        cmd.Parameters.AddWithValue("@amount_tandered", amountTenderedTextBox.Text);
+                        cmd.Parameters.AddWithValue("@change_given", changeTextBox.Text);
+                        cmd.Parameters.AddWithValue("@payment_method", paymentMethodComboBox.Text);
+
+                        // Execute query and retrieve the new spouse_id
+                        object result = cmd.ExecuteScalar();
+                        if (result != null)
+                        {
+                            paymentIdTextBox.Text = result.ToString(); // Set the dependent_id in the textbox
+                        }
+                    }
+                }
+
+                MessageBox.Show("Dependent details saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

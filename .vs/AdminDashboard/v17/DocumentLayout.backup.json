@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "D:\\SH-Codes\\AdminDashboard\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\spousesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:spousesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\viewdependentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:viewdependentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\addmemberform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:addmemberform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\endoffileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:endoffileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\academichistoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:academichistoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\paymentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:paymentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\sacramentallifeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:sacramentallifeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\activitiesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:activitiesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\academichistoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:academichistoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\academichistoryform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:academichistoryform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\dependentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,16 +43,20 @@
       "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:admindashboardsql.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\sacramentallifeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:sacramentallifeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|D:\\SH-Codes\\AdminDashboard\\paymentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:paymentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\spousesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:spousesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|D:\\SH-Codes\\AdminDashboard\\endoffileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:endoffileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\addmemberform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:addmemberform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|D:\\SH-Codes\\AdminDashboard\\academichistoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:academichistoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\academichistoryform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:academichistoryform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|D:\\SH-Codes\\AdminDashboard\\addmemberform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -51,24 +71,12 @@
       "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:sacramentallifeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\sacramentallifeform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:sacramentallifeform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\viewdependentsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:viewdependentsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\endoffileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:endoffileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|D:\\SH-Codes\\AdminDashboard\\dependentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:dependentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\viewdependentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:viewdependentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\dependentsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -81,18 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|D:\\SH-Codes\\AdminDashboard\\spousesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:spousesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\paymentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:paymentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|D:\\SH-Codes\\AdminDashboard\\paymentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:paymentsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|D:\\SH-Codes\\AdminDashboard\\endoffileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|solutionrelative:endoffileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D409137F-6351-406D-B0D5-E1864C60B57F}|AdminDashboard.csproj|d:\\sh-codes\\admindashboard\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -114,87 +110,88 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AcademicHistoryForm.Designer.cs",
-              "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\AcademicHistoryForm.Designer.cs",
-              "RelativeDocumentMoniker": "AcademicHistoryForm.Designer.cs",
-              "ToolTip": "D:\\SH-Codes\\AdminDashboard\\AcademicHistoryForm.Designer.cs",
-              "RelativeToolTip": "AcademicHistoryForm.Designer.cs",
-              "ViewState": "AgIAANkAAAAAAAAAAAAUwOAAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T17:37:11.02Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AcademicHistoryForm.cs [Design]",
-              "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\AcademicHistoryForm.cs",
-              "RelativeDocumentMoniker": "AcademicHistoryForm.cs",
-              "ToolTip": "D:\\SH-Codes\\AdminDashboard\\AcademicHistoryForm.cs [Design]",
-              "RelativeToolTip": "AcademicHistoryForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T17:20:40.07Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "AcademicHistoryForm.cs",
               "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\AcademicHistoryForm.cs",
               "RelativeDocumentMoniker": "AcademicHistoryForm.cs",
               "ToolTip": "D:\\SH-Codes\\AdminDashboard\\AcademicHistoryForm.cs",
               "RelativeToolTip": "AcademicHistoryForm.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAAwBAAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAqwGQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T17:20:28.268Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ActivitiesForm.cs",
-              "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\ActivitiesForm.cs",
-              "RelativeDocumentMoniker": "ActivitiesForm.cs",
-              "ToolTip": "D:\\SH-Codes\\AdminDashboard\\ActivitiesForm.cs",
-              "RelativeToolTip": "ActivitiesForm.cs",
-              "ViewState": "AgIAAO4AAAAAAAAAAAAwwOsAAAAQAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "EndOfFileForm.cs",
+              "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\EndOfFileForm.cs",
+              "RelativeDocumentMoniker": "EndOfFileForm.cs",
+              "ToolTip": "D:\\SH-Codes\\AdminDashboard\\EndOfFileForm.cs",
+              "RelativeToolTip": "EndOfFileForm.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAYwF0AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T14:43:25.406Z",
+              "WhenOpened": "2025-04-02T10:20:41.135Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
+              "Title": "AddMemberForm.cs",
+              "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\AddMemberForm.cs",
+              "RelativeDocumentMoniker": "AddMemberForm.cs",
+              "ToolTip": "D:\\SH-Codes\\AdminDashboard\\AddMemberForm.cs",
+              "RelativeToolTip": "AddMemberForm.cs",
+              "ViewState": "AgIAAFcBAAAAAAAAAAAswGYBAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T08:58:07.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ViewDependentsForm.cs",
+              "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\ViewDependentsForm.cs",
+              "RelativeDocumentMoniker": "ViewDependentsForm.cs",
+              "ToolTip": "D:\\SH-Codes\\AdminDashboard\\ViewDependentsForm.cs",
+              "RelativeToolTip": "ViewDependentsForm.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T07:55:20.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "SpousesForm.cs",
               "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\SpousesForm.cs",
               "RelativeDocumentMoniker": "SpousesForm.cs",
               "ToolTip": "D:\\SH-Codes\\AdminDashboard\\SpousesForm.cs",
               "RelativeToolTip": "SpousesForm.cs",
-              "ViewState": "AgIAALYAAAAAAAAAAAAqwMEAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAALwAAAAAAAAAAAAAAMEAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-02T13:33:46.243Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DependentsForm.cs",
-              "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\DependentsForm.cs",
-              "RelativeDocumentMoniker": "DependentsForm.cs",
-              "ToolTip": "D:\\SH-Codes\\AdminDashboard\\DependentsForm.cs",
-              "RelativeToolTip": "DependentsForm.cs",
-              "ViewState": "AgIAAIkAAAAAAAAAAAAAAJYAAAANAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "PaymentsForm.cs",
+              "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\PaymentsForm.cs",
+              "RelativeDocumentMoniker": "PaymentsForm.cs",
+              "ToolTip": "D:\\SH-Codes\\AdminDashboard\\PaymentsForm.cs",
+              "RelativeToolTip": "PaymentsForm.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAYwGsAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T10:18:08.451Z",
+              "WhenOpened": "2025-04-02T10:21:56.355Z",
               "EditorCaption": ""
             },
             {
@@ -205,14 +202,40 @@
               "RelativeDocumentMoniker": "SacramentalLifeForm.cs",
               "ToolTip": "D:\\SH-Codes\\AdminDashboard\\SacramentalLifeForm.cs",
               "RelativeToolTip": "SacramentalLifeForm.cs",
-              "ViewState": "AgIAAPgAAAAAAAAAAAAIwPgAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAO4AAAAAAAAAAAAqwPYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T08:40:39.895Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
+              "Title": "ActivitiesForm.cs",
+              "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\ActivitiesForm.cs",
+              "RelativeDocumentMoniker": "ActivitiesForm.cs",
+              "ToolTip": "D:\\SH-Codes\\AdminDashboard\\ActivitiesForm.cs",
+              "RelativeToolTip": "ActivitiesForm.cs",
+              "ViewState": "AgIAAOUAAAAAAAAAAAAwwOkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T14:43:25.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DependentsForm.cs",
+              "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\DependentsForm.cs",
+              "RelativeDocumentMoniker": "DependentsForm.cs",
+              "ToolTip": "D:\\SH-Codes\\AdminDashboard\\DependentsForm.cs",
+              "RelativeToolTip": "DependentsForm.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAYwHIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T10:18:08.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "AdminDashboardSQL.sql ",
               "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\AdminDashboardSQL.sql",
               "RelativeDocumentMoniker": "AdminDashboardSQL.sql",
@@ -224,44 +247,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AddMemberForm.cs",
-              "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\AddMemberForm.cs",
-              "RelativeDocumentMoniker": "AddMemberForm.cs",
-              "ToolTip": "D:\\SH-Codes\\AdminDashboard\\AddMemberForm.cs",
-              "RelativeToolTip": "AddMemberForm.cs",
-              "ViewState": "AgIAAFgBAAAAAAAAAAAQwGYBAAAQAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "PaymentsForm.cs [Design]",
+              "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\PaymentsForm.cs",
+              "RelativeDocumentMoniker": "PaymentsForm.cs",
+              "ToolTip": "D:\\SH-Codes\\AdminDashboard\\PaymentsForm.cs [Design]",
+              "RelativeToolTip": "PaymentsForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T08:58:07.274Z",
+              "WhenOpened": "2025-04-02T13:02:54.524Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EndOfFileForm.cs [Design]",
+              "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\EndOfFileForm.cs",
+              "RelativeDocumentMoniker": "EndOfFileForm.cs",
+              "ToolTip": "D:\\SH-Codes\\AdminDashboard\\EndOfFileForm.cs [Design]",
+              "RelativeToolTip": "EndOfFileForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T21:11:27.797Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AcademicHistoryForm.cs [Design]",
+              "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\AcademicHistoryForm.cs",
+              "RelativeDocumentMoniker": "AcademicHistoryForm.cs",
+              "ToolTip": "D:\\SH-Codes\\AdminDashboard\\AcademicHistoryForm.cs [Design]",
+              "RelativeToolTip": "AcademicHistoryForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T17:20:40.07Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AcademicHistoryForm.Designer.cs",
+              "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\AcademicHistoryForm.Designer.cs",
+              "RelativeDocumentMoniker": "AcademicHistoryForm.Designer.cs",
+              "ToolTip": "D:\\SH-Codes\\AdminDashboard\\AcademicHistoryForm.Designer.cs",
+              "RelativeToolTip": "AcademicHistoryForm.Designer.cs",
+              "ViewState": "AgIAANkAAAAAAAAAAAAUwOAAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T17:37:11.02Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "AddMemberForm.cs [Design]",
               "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\AddMemberForm.cs",
               "RelativeDocumentMoniker": "AddMemberForm.cs",
               "ToolTip": "D:\\SH-Codes\\AdminDashboard\\AddMemberForm.cs [Design]",
               "RelativeToolTip": "AddMemberForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T09:08:00.778Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-02T09:08:00.778Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "SacramentalLifeForm.Designer.cs",
-              "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\SacramentalLifeForm.Designer.cs",
-              "RelativeDocumentMoniker": "SacramentalLifeForm.Designer.cs",
-              "ToolTip": "D:\\SH-Codes\\AdminDashboard\\SacramentalLifeForm.Designer.cs",
-              "RelativeToolTip": "SacramentalLifeForm.Designer.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAD4v0IAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T10:08:45.673Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "ActivitiesForm.cs [Design]",
               "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\ActivitiesForm.cs",
               "RelativeDocumentMoniker": "ActivitiesForm.cs",
@@ -271,7 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "SacramentalLifeForm.cs [Design]",
               "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\SacramentalLifeForm.cs",
               "RelativeDocumentMoniker": "SacramentalLifeForm.cs",
@@ -281,7 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "ViewDependentsForm.Designer.cs",
               "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\ViewDependentsForm.Designer.cs",
               "RelativeDocumentMoniker": "ViewDependentsForm.Designer.cs",
@@ -289,11 +335,12 @@
               "RelativeToolTip": "ViewDependentsForm.Designer.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAA1wBgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T08:09:53.301Z"
+              "WhenOpened": "2025-04-03T08:09:53.301Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "DependentsForm.Designer.cs",
               "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\DependentsForm.Designer.cs",
               "RelativeDocumentMoniker": "DependentsForm.Designer.cs",
@@ -306,20 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ViewDependentsForm.cs",
-              "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\ViewDependentsForm.cs",
-              "RelativeDocumentMoniker": "ViewDependentsForm.cs",
-              "ToolTip": "D:\\SH-Codes\\AdminDashboard\\ViewDependentsForm.cs",
-              "RelativeToolTip": "ViewDependentsForm.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAawBoAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T07:55:20.557Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "ViewDependentsForm.cs [Design]",
               "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\ViewDependentsForm.cs",
               "RelativeDocumentMoniker": "ViewDependentsForm.cs",
@@ -329,77 +363,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "DependentsForm.cs [Design]",
               "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\DependentsForm.cs",
               "RelativeDocumentMoniker": "DependentsForm.cs",
               "ToolTip": "D:\\SH-Codes\\AdminDashboard\\DependentsForm.cs [Design]",
               "RelativeToolTip": "DependentsForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T07:49:46.416Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-03T07:49:46.416Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "SpousesForm.cs [Design]",
               "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\SpousesForm.cs",
               "RelativeDocumentMoniker": "SpousesForm.cs",
               "ToolTip": "D:\\SH-Codes\\AdminDashboard\\SpousesForm.cs [Design]",
               "RelativeToolTip": "SpousesForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T13:33:42.962Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "PaymentsForm.cs",
-              "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\PaymentsForm.cs",
-              "RelativeDocumentMoniker": "PaymentsForm.cs",
-              "ToolTip": "D:\\SH-Codes\\AdminDashboard\\PaymentsForm.cs",
-              "RelativeToolTip": "PaymentsForm.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAuwD0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T10:21:56.355Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "PaymentsForm.cs [Design]",
-              "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\PaymentsForm.cs",
-              "RelativeDocumentMoniker": "PaymentsForm.cs",
-              "ToolTip": "C:\\Users\\Sacred Heart Catholi\\source\\repos\\SH-Codes\\AdminDashboard\\PaymentsForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T13:02:54.524Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "EndOfFileForm.cs",
-              "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\EndOfFileForm.cs",
-              "RelativeDocumentMoniker": "EndOfFileForm.cs",
-              "ToolTip": "D:\\SH-Codes\\AdminDashboard\\EndOfFileForm.cs",
-              "RelativeToolTip": "EndOfFileForm.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAYwFEAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T10:20:41.135Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T13:33:42.962Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "EndOfFileForm.cs [Design]",
-              "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\EndOfFileForm.cs",
-              "RelativeDocumentMoniker": "EndOfFileForm.cs",
-              "ToolTip": "C:\\Users\\Sacred Heart Catholi\\source\\repos\\SH-Codes\\AdminDashboard\\EndOfFileForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T21:11:27.797Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
               "Title": "MainForm.cs",
               "DocumentMoniker": "D:\\SH-Codes\\AdminDashboard\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
@@ -407,7 +393,8 @@
               "RelativeToolTip": "MainForm.cs",
               "ViewState": "AgIAAFYBAAAAAAAAAAAswHoBAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T23:47:29.575Z"
+              "WhenOpened": "2025-03-26T23:47:29.575Z",
+              "EditorCaption": ""
             }
           ]
         }

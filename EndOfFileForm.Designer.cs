@@ -30,7 +30,7 @@
         {
             clergyNameTextBox = new TextBox();
             cemeteryTextBox = new TextBox();
-            FileIdTextBox = new TextBox();
+            fileIdTextBox = new TextBox();
             endOfFileDeleteButton = new Button();
             endOfFileUpdateButton = new Button();
             endOfFileClearButton = new Button();
@@ -70,13 +70,13 @@
             cemeteryTextBox.TabIndex = 118;
             cemeteryTextBox.Validating += cemeteryTextBox_TextChanged;
             // 
-            // FileIdTextBox
+            // fileIdTextBox
             // 
-            FileIdTextBox.Location = new Point(184, 110);
-            FileIdTextBox.Name = "FileIdTextBox";
-            FileIdTextBox.ReadOnly = true;
-            FileIdTextBox.Size = new Size(225, 23);
-            FileIdTextBox.TabIndex = 114;
+            fileIdTextBox.Location = new Point(184, 110);
+            fileIdTextBox.Name = "fileIdTextBox";
+            fileIdTextBox.ReadOnly = true;
+            fileIdTextBox.Size = new Size(225, 23);
+            fileIdTextBox.TabIndex = 114;
             // 
             // endOfFileDeleteButton
             // 
@@ -117,6 +117,7 @@
             endOfLifeSaveButton.TabIndex = 110;
             endOfLifeSaveButton.Text = "Save";
             endOfLifeSaveButton.UseVisualStyleBackColor = true;
+            endOfLifeSaveButton.Click += endOfLifeSaveButton_Click;
             // 
             // clergyNameLabel
             // 
@@ -294,7 +295,7 @@
             Controls.Add(dateOfDeathTimePicker);
             Controls.Add(clergyNameTextBox);
             Controls.Add(cemeteryTextBox);
-            Controls.Add(FileIdTextBox);
+            Controls.Add(fileIdTextBox);
             Controls.Add(endOfFileDeleteButton);
             Controls.Add(endOfFileUpdateButton);
             Controls.Add(endOfFileClearButton);
@@ -320,7 +321,7 @@
         private TextBox clergyNameTextBox;
         private TextBox cemeteryTextBox;
         //private TextBox amountTotalTextBox;
-        private TextBox FileIdTextBox;
+        private TextBox fileIdTextBox;
         private Button endOfFileDeleteButton;
         private Button endOfFileUpdateButton;
         private Button endOfFileClearButton;

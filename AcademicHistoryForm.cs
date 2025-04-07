@@ -96,9 +96,9 @@ namespace AdminDashboard
             try
             {
                 // Azure SQL Server connection string
-                // string connectionString = "tcp:admindashboarddbserver.database.windows.net; Authentication = Active Directory Default; Database = AdminDashboard_db";
+                // string connectionString = "Data Source=tcp:admindashboarddbserver.database.windows.net; Authentication = Active Directory Default; Database = AdminDashboard_db";
                 // SenamileNdaba Computer Connection String
-                string connectionString = "Data Source=SenamileNdaba;Initial Catalog=ChurchAdminSys;Integrated Security=True;Trust Server Certificate=True";
+                   string connectionString = "Data Source=SenamileNdaba;Initial Catalog=ChurchAdminSys;Integrated Security=True;Trust Server Certificate=True";
                 // SacredHeart Computer Connection String
                 // string connectionString = "Data Source=SACREDHEART\\SQLEXPRESS;Initial Catalog=ChurchAdminSys;Integrated Security=True;Trust Server Certificate=True";
 
@@ -108,9 +108,9 @@ namespace AdminDashboard
 
                     // Query to insert data and return the generated dependent_id
                     string query = @"
-                INSERT INTO dependents (membership_id, highest_qualification, year_obtained
+                INSERT INTO academic_history (membership_id, highest_qualification, year_obtained,
                                         subjects_passed, field_of_study) 
-                VALUES (@membership_id, @highest_qualification, @year_obtained
+                VALUES (@membership_id, @highest_qualification, @year_obtained,
                         @subjects_passed, @field_of_study);
                 SELECT SCOPE_IDENTITY();"; // Get the last inserted ID
 

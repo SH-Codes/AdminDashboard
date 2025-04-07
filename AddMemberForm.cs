@@ -354,7 +354,7 @@ namespace AdminDashboard
             try
             {
                 // Azure SQL Server connection string
-                // string connectionString = "tcp:admindashboarddbserver.database.windows.net; Authentication = Active Directory Default; Database = AdminDashboard_db";
+                // string connectionString = "Server=tcp:admindashboarddbserver.database.windows.net; Authentication = Active Directory Default; Database = AdminDashboard_db; Trust Server Certificate=True";
                 // SenamileNdaba Computer Connection String
                  string connectionString = "Data Source=SenamileNdaba;Initial Catalog=ChurchAdminSys;Integrated Security=True;Trust Server Certificate=True";
                 // SacredHeart Computer Connection String

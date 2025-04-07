@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace AdminDashboard
@@ -15,6 +16,12 @@ namespace AdminDashboard
         public ViewMembersForm()
         {
             InitializeComponent();
+        }
+
+        public void viewList()
+        {
+            con.open();
+
         }
     }
 }
