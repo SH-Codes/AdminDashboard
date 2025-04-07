@@ -20,7 +20,6 @@ namespace AdminDashboard
 
         public void viewList()
         {
-            con.open();
 
         }
     }

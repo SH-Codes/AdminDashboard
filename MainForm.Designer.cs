@@ -231,6 +231,7 @@
             bookingsButton.TabIndex = 2;
             bookingsButton.Text = "Bookings";
             bookingsButton.UseVisualStyleBackColor = true;
+            bookingsButton.Click += bookingsButton_Click;
             // 
             // addMembersButton
             // 

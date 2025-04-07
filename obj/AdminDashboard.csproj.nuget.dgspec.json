@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SH-Codes\\AdminDashboard\\AdminDashboard.csproj": {}
+    "C:\\Users\\Sacred Heart Catholi\\source\\repos\\SH-Codes\\AdminDashboard\\AdminDashboard.csproj": {}
   },
   "projects": {
-    "D:\\SH-Codes\\AdminDashboard\\AdminDashboard.csproj": {
+    "C:\\Users\\Sacred Heart Catholi\\source\\repos\\SH-Codes\\AdminDashboard\\AdminDashboard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SH-Codes\\AdminDashboard\\AdminDashboard.csproj",
+        "projectUniqueName": "C:\\Users\\Sacred Heart Catholi\\source\\repos\\SH-Codes\\AdminDashboard\\AdminDashboard.csproj",
         "projectName": "AdminDashboard",
-        "projectPath": "D:\\SH-Codes\\AdminDashboard\\AdminDashboard.csproj",
-        "packagesPath": "C:\\Users\\sihle\\.nuget\\packages\\",
-        "outputPath": "D:\\SH-Codes\\AdminDashboard\\obj\\",
+        "projectPath": "C:\\Users\\Sacred Heart Catholi\\source\\repos\\SH-Codes\\AdminDashboard\\AdminDashboard.csproj",
+        "packagesPath": "C:\\Users\\Sacred Heart Catholi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sacred Heart Catholi\\source\\repos\\SH-Codes\\AdminDashboard\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\sihle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sacred Heart Catholi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

@@ -12,9 +12,11 @@ namespace AdminDashboard
 {
     public partial class BookingsForm : Form
     {
-        public BookingsForm()
+        public MainForm MainForm { get; private set; }
+        public BookingsForm(MainForm mainForm)
         {
             InitializeComponent();
+            MainForm = mainForm;
         }
     }
 }

@@ -10,23 +10,27 @@ using System.Windows.Forms;
 
 namespace AdminDashboard
 {
-    public partial class ViewInventoryForm : Form
+    public partial class NonDatedReportsForm : Form
     {
         public MainForm MainForm { get; private set; }
-        public ViewInventoryForm(MainForm mainForm)
+        public NonDatedReportsForm(MainForm mainForm)
         {
             InitializeComponent();
             MainForm = mainForm;
         }
 
-        private void inventoryAddNewButton_Click(object sender, EventArgs e)
+        //public NonDatedReportsForm()
+        //{
+       
+        //}
+
+        private void datedReportsButton_Click(object sender, EventArgs e)
         {
             MainForm.SwitchPanel.Controls.Clear();
-            InventoryForm inventoryForm = new InventoryForm(MainForm);
-            inventoryForm.TopLevel = false;
-            MainForm.SwitchPanel.Controls.Add(inventoryForm);
-            inventoryForm.Show();
+            ReportsForm reportsForm = new ReportsForm(MainForm);
+            reportsForm.TopLevel = false;
+            MainForm.SwitchPanel.Controls.Add(reportsForm);
+            reportsForm.Show();
         }
-
     }
 }

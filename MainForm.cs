@@ -184,7 +184,7 @@ namespace AdminDashboard
                 logoutButton.Region = new Region(path);
             }
         }
-    
+
 
         private void switchPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -235,7 +235,7 @@ namespace AdminDashboard
         private void reportsButton_Click(object sender, EventArgs e)
         {
             switchPanel.Controls.Clear();
-            ReportsForm reportsForm = new ReportsForm();
+            ReportsForm reportsForm = new ReportsForm(this);
             reportsForm.TopLevel = false;
             switchPanel.Controls.Add(reportsForm);
             reportsForm.Show();
@@ -278,6 +278,15 @@ namespace AdminDashboard
             addNewMember.TopLevel = false;
             switchPanel.Controls.Add(addNewMember);
             addNewMember.Show();
+        }
+
+        private void bookingsButton_Click(object sender, EventArgs e)
+        {
+            switchPanel.Controls.Clear();
+            BookingsForm bookingsForm = new BookingsForm(this);
+            bookingsForm.TopLevel = false;
+            switchPanel.Controls.Add(bookingsForm);
+            bookingsForm.Show();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -397,7 +406,5 @@ namespace AdminDashboard
                 ApplyDarkModeToControls(control); // Recursively apply to all child controls
             }
         }
-
-
     }
 }

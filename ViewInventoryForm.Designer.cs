@@ -28,29 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewInventoryForm));
-            inventoryBackButton = new Button();
             inventoryAddNewButton = new Button();
             PaymentLabel = new Label();
             inventoryDataGridView = new DataGridView();
             printButton = new Button();
             ((System.ComponentModel.ISupportInitialize)inventoryDataGridView).BeginInit();
             SuspendLayout();
-            // 
-            // inventoryBackButton
-            // 
-            inventoryBackButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            inventoryBackButton.BackColor = Color.Transparent;
-            inventoryBackButton.Cursor = Cursors.Hand;
-            inventoryBackButton.FlatAppearance.BorderColor = Color.White;
-            inventoryBackButton.FlatStyle = FlatStyle.Flat;
-            inventoryBackButton.Image = (Image)resources.GetObject("inventoryBackButton.Image");
-            inventoryBackButton.Location = new Point(951, 48);
-            inventoryBackButton.Name = "inventoryBackButton";
-            inventoryBackButton.Size = new Size(41, 23);
-            inventoryBackButton.TabIndex = 163;
-            inventoryBackButton.UseVisualStyleBackColor = false;
-            inventoryBackButton.Click += inventoryBackButton_Click;
             // 
             // inventoryAddNewButton
             // 
@@ -101,7 +84,6 @@
             ClientSize = new Size(1052, 530);
             Controls.Add(printButton);
             Controls.Add(inventoryDataGridView);
-            Controls.Add(inventoryBackButton);
             Controls.Add(inventoryAddNewButton);
             Controls.Add(PaymentLabel);
             FormBorderStyle = FormBorderStyle.None;
@@ -113,7 +95,6 @@
         }
 
         #endregion
-        private Button inventoryBackButton;
         private Button inventoryAddNewButton;
         private Label PaymentLabel;
         private DataGridView inventoryDataGridView;
