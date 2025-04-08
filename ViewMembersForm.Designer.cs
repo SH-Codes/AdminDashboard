@@ -119,6 +119,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "ViewMembersForm";
             Text = "ViewMembersForm";
+            Load += ViewMembersForm_Load;
             ((System.ComponentModel.ISupportInitialize)membersListDataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();

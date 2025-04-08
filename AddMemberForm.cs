@@ -30,6 +30,11 @@ namespace AdminDashboard
 
         }
 
+        public AddMemberForm(string? membershipId)
+        {
+            this.membershipId = membershipId;
+        }
+
         private int cornerRadius = 16; // Adjust this for roundnes
 
         protected override void OnPaint(PaintEventArgs e)
@@ -349,6 +354,8 @@ namespace AdminDashboard
 
 
         private HashSet<string> existingMembershipNumbers = new HashSet<string>(); // Simulate storage for checking uniqueness
+        private string? membershipId;
+
         private void memberSaveButton_Click(object sender, EventArgs e)
         {
             try

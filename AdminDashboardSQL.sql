@@ -196,6 +196,18 @@ add date_confirmed date
 */
 
 
-
+/*
 EXEC sp_rename 'sacramental_life.commuion_year', 'communion_date', 'COLUMN';
+*/
 
+
+SELECT
+                    m.membership_id AS[Membership ID],
+                    m.first_name AS[First Name],
+                    m.last_name AS[Last Name],
+                    m.mobile_number AS[Phone Number],
+                    m.zone_area AS[Zone Area],
+                    a.activity_name1 AS[Activity Name 1],
+                    a.activity_name2 AS[Activity Name 2]
+                FROM Members m
+                LEFT JOIN Activities a ON m.membership_id = a.membership_id
