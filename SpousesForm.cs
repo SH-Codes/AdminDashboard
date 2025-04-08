@@ -188,12 +188,7 @@ namespace AdminDashboard
         {
             try
             {
-                // Azure SQL Server connection string
-                 //string connectionString = "Data Source=tcp:admindashboarddbserver.database.windows.net; Authentication = Active Directory Default; Database = AdminDashboard_db";
-                // SenamileNdaba Computer Connection String
-                // string connectionString = "Data Source=SenamileNdaba;Initial Catalog=ChurchAdminSys;Integrated Security=True;Trust Server Certificate=True";
-                // SacredHeart Computer Connection String
-                   string connectionString = "Data Source=SACREDHEART\\SQLEXPRESS;Initial Catalog=ChurchAdminSys;Integrated Security=True;Trust Server Certificate=True";
+                string connectionString = ConnectionConfig.ConnectionString;
 
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {

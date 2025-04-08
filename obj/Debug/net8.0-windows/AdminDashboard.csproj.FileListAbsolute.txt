@@ -203,3 +203,4 @@ C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net
 C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.pdb
 C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.genruntimeconfig.cache
 C:\Users\Sacred Heart Catholi\source\repos\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\ref\AdminDashboard.dll
+D:\SH-Codes\AdminDashboard\obj\Debug\net8.0-windows\AdminDashboard.NonDatedReportsForm.resources
